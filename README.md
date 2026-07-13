@@ -37,6 +37,16 @@ python run.py
   **`hasPhip==true` 即过会/PHIP已发 = 触发选题**,自动打 `★可选题`。PDF 链接 =
   `https://www1.hkexnews.hk/app/` + 文档相对路径。
 
+
+### A股招股说明书直链(v4 已接通,三所详情接口均实测)
+- 上交所:`query.sse.com.cn/commonSoaQuery.do?sqlId=GP_COMMON_FILE_SEARCH&auditId={审核编号}`(Referer必带);
+  文件类型码 I0011申报稿/I0012上会稿/I0013注册稿,直链 = `static.sse.com.cn`+filePath(运行时HEAD自检兜底)
+- 深交所:`www.szse.cn/api/ras/projectrends/details?id={prjid}`;disclosureMaterials 里 matnm=招股说明书取最新,
+  直链 = `reportdocs.static.szse.cn`+dfpth;enquiryResponseAttachment 为问询回复PDF(留给问询监控)
+- 北交所:`POST www.bse.cn/projectNewsController/infoDetailResult.do?id={记录id}`;xxgkInfo 递归扫
+  disclosureTitle 含"招股说明书"取最新,直链 = `www.bse.cn`+destFilePath
+- 接入点:`collectors/resolve.py`;dossier_runner 对 A股★可选题公司自动解析直链后建档
+
 ## 阶段归一化(架子的核心)
 
 四所的审核状态叫法各不相同(港交所"招股/配发",上交所"已受理/上市委会议通过/提交注册/

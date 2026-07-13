@@ -10,6 +10,7 @@ import re
 import traceback
 from pathlib import Path
 
+from collectors.resolve import resolve_prospectus
 from extractor import load_pdf, cid_trap_ratio, Page
 from dossier import generate_dossier, md_to_html
 from stages import is_trigger
@@ -34,12 +35,20 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
     if not os.environ.get("DEEPSEEK_API_KEY"):
         print("[档案] 未配置 DEEPSEEK_API_KEY,跳过建档(监控/看板不受影响)")
         return dossier_link_map(out_dir)
+    # A股触发公司先解析招股书直链(港交所自带;解析失败则跳过该公司,不猜)
+    import requests as _rq
+    _sess = _rq.Session()
+    for f in filings:
+        if is_trigger(f.stage) and not f.prospectus_url:
+            url = resolve_prospectus(f, _sess)
+            if url:
+                f.prospectus_url = url
     targets = [f for f in filings if is_trigger(f.stage) and f.prospectus_url]
-    print(f"[档案] 符合条件的目标公司: {len(targets)} 家,本次最多建 {max_new} 篇")
+    print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (本次上限 {max_new} 篇)")
     built = 0
     for f in targets:
         if built >= max_new:
-            print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets)-built} 家下次再建")
+            print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets) - built} 家下次再建")
             break
         path = out_dir / f"{_safe_name(f.company_name)}.md"
         if path.exists():

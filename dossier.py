@@ -164,7 +164,7 @@ def build_prompt(company: str, pages: list[Page], max_chars: int = 120000) -> st
         sections="\n".join(SECTIONS), company=company, pages_text="\n\n".join(chunks))
 
 
-def call_llm(prompt: str, model: str = "deepseek-chat", max_tokens: int = 8000) -> str:
+def call_deepseek(prompt: str, model: str = "deepseek-chat", max_tokens: int = 8000) -> str:
     """调用 DeepSeek API(需环境变量 DEEPSEEK_API_KEY)。"""
     import requests
     key = os.environ.get("DEEPSEEK_API_KEY")
@@ -172,15 +172,14 @@ def call_llm(prompt: str, model: str = "deepseek-chat", max_tokens: int = 8000) 
         raise RuntimeError("未配置 DEEPSEEK_API_KEY(GitHub Secrets 或环境变量)")
     resp = requests.post(
         "https://api.deepseek.com/v1/chat/completions",
-        headers={"Authorization": f"Bearer {key}",
-                 "content-type": "application/json"},
-        json={"model": model, "max_tokens": max_tokens,
+        headers={"Authorization": f"Bearer {key}", "content-type": "application/json"},
+        json={"model": model, "max_tokens": max_tokens, "temperature": 0.3,
               "messages": [{"role": "user", "content": prompt}]},
         timeout=300,
     )
     resp.raise_for_status()
     data = resp.json()
-    return data["choices"][0]["message"]["content"]
+    return data.get("choices", [{}])[0].get("message", {}).get("content", "")
 
 
 FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未取得出处的一律标红待核;"
@@ -188,7 +187,7 @@ FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未
 
 
 def generate_dossier(company: str, meta_line: str, pages: list[Page],
-                     llm=call_llm) -> tuple[str, GateReport]:
+                     llm=call_deepseek) -> tuple[str, GateReport]:
     """全流程:prompt -> LLM -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
     raw = llm(build_prompt(company, pages))
     cleaned, report = gate(raw, pages)
