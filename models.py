@@ -85,3 +85,29 @@ class Filing:
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
+
+
+# ===== 财报披露模型 =====
+
+@dataclass
+class FinReport:
+    """一条财报披露公告记录。"""
+    exchange: str                 # 上交所 / 深交所 / 北交所 / 港交所
+    company_name: str
+    stock_code: str
+    report_type: str              # 年报/半年报/一季报/三季报/业绩预告/业绩快报
+    report_period: str = ""       # 报告期，如 "2026年半年度"
+    title: str = ""
+    announcement_date: str = ""   # YYYY-MM-DD
+    announcement_url: str = ""
+    source: str = ""              # CNINFO / HKEX
+
+    @property
+    def uid(self) -> str:
+        basis = "|".join([self.exchange, self.stock_code, self.report_type, self.report_period, self.title])
+        return hashlib.sha1(basis.encode("utf-8")).hexdigest()[:16]
+
+    def to_dict(self) -> dict:
+        d = asdict(self)
+        d["uid"] = self.uid
+        return d
