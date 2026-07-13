@@ -182,12 +182,12 @@ class CNINFOFinReportCollector(BaseCollector):
         return results
 
     def _build_cninfo_url(self, adjunct_url: str) -> str:
-        """构建 CNINFO PDF 直链。adjunctUrl 可能不带前导 /。"""
+        """构建 CNINFO PDF 直链。PDF 在 static.cninfo.com.cn 上。"""
         if not adjunct_url:
             return ""
         if not adjunct_url.startswith("/"):
             adjunct_url = "/" + adjunct_url
-        return f"https://www.cninfo.com.cn{adjunct_url}"
+        return f"https://static.cninfo.com.cn{adjunct_url}"
 
     def _map_record(self, rec: dict, report_type: str) -> FinReport | None:
         code = str(rec.get("secCode", "")).strip()
