@@ -91,7 +91,9 @@ def main() -> int:
     print(f"[财报] 共 {len(finreports)} 条，已保存 finreports.json")
 
     # 拆解业绩预告 + 业绩快报
-    finreport_dossier_map = run_finreport_dossiers(finreports, DATA_DIR / "finreport_dossiers", max_new=15)
+    # max_new=50: 首跑处理上周积压(~30篇)，日常只处理新增(淡季0-5，旺季20-40)
+    # 已有的会自动跳过(按uid去重)，所以50是安全上限而非每轮定额
+    finreport_dossier_map = run_finreport_dossiers(finreports, DATA_DIR / "finreport_dossiers", max_new=50)
 
     # 生成可读网页看板(dashboard.html 放项目根,方便 GitHub Pages 直接服务)
     new_uids = {f.uid for f in diff["new"]}
