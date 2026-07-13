@@ -1,0 +1,38 @@
+name: IPO每日监控
+
+# 每周一到五,北京时间早上 9:00(UTC 1:00)自动跑;也可在 Actions 页手动点运行
+on:
+  schedule:
+    - cron: "0 1 * * 1-5"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write        # 允许把更新后的状态和网页写回仓库
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 取代码(含上次的 state.json)
+        uses: actions/checkout@v4
+
+      - name: 装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: 装依赖
+        run: pip install -r requirements.txt
+
+      - name: 跑监控 + 生成网页 + 建档
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python run.py
+
+      - name: 回写状态与网页
+        run: |
+          git config user.name "ipo-monitor-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add -A data/ dashboard.html index.html
+          git commit -m "监控更新 $(date -u +%Y-%m-%d)" || echo "无变化,跳过提交"
+          git push

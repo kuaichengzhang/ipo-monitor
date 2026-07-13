@@ -1,0 +1,5 @@
+cb4([{"countsInfo":[{"cnt":79,"status":"P01"},{"cnt":88,"status":"P02"},{"cnt":32,"status":"P06"},{"cnt":284,"status":"P10"}],"listInfo":{"content":[
+{"companyName":"浙江德硕科技股份有限公司","status":"P06","sponsorOrg":"国泰海通证券股份有限公司","stockCode":"874669","id":637,"receiveDate":{"time":1750758855433},"updateDate":{"time":1783612800000}},
+{"companyName":"广东百利食品股份有限公司","status":"P06","sponsorOrg":"招商证券股份有限公司","stockCode":"874543","id":712,"receiveDate":{"time":1759145184387},"updateDate":{"time":1783612800000}},
+{"companyName":"浙江信胜科技股份有限公司","status":"P07","sponsorOrg":"国信证券股份有限公司","stockCode":"874100","id":598,"receiveDate":{"time":1750931411005},"updateDate":{"time":1783612800000}}],
+"totalPages":44,"totalElements":871,"number":0,"size":20}}])

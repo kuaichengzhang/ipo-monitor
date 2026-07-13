@@ -1,0 +1,198 @@
+"""拆解档案生成器 —— "说人话"的机器底稿,带校验闸门。
+
+产品定位(Paodekuai 2026-07 拍板):
+- 档案 ≠ 三棱镜成稿。成稿(脊/结尾/判断)永远由人写;档案只做"罗列清楚"。
+- 每家 ★可选题 公司自动建档,挂在看板网站,页面标注"机器生成底稿"。
+
+流水线:招股书按页文本 -> 分块喂给 Claude API 按六板块模板写作 -> 校验闸门 -> 出稿/打回。
+
+【校验闸门(代码强制,模型骗不过)】
+1. 含数字的句子必须挂 【招股书... p.N】 出处,否则该句替换为 [缺出处·待核]
+2. 定性/煽动词(涉嫌/造假/暴雷/割韭菜/警惕/骗局/必然/值得买/不值得)出现即打回该句
+3. 引用页码回查:句中数字必须真的出现在所引页的原文里,对不上即打回该句
+4. 免责与"机器生成底稿"标识强制附加
+"""
+from __future__ import annotations
+
+import json
+import os
+import re
+from dataclasses import dataclass, field
+
+from extractor import Page, normalize_text
+
+BANNED = ["涉嫌", "造假", "暴雷", "割韭菜", "警惕", "骗局", "必然", "值得买", "不值得买",
+          "建议买入", "建议卖出", "必将", "肯定会"]
+
+CITE_RE = re.compile(r"【招股书[^】]*p\.(\d+)】")
+MISSING = "[缺出处·待核]"
+
+SECTIONS = [
+    "一、这是个什么生意",
+    "二、赚不赚钱",
+    "三、过去怎么走的,未来怎么说的",
+    "四、行业什么样",
+    "五、生意里的数字反差",
+    "六、值得关注的点 + 待核清单",
+]
+
+PROMPT_TEMPLATE = """你是「IPO三棱镜」的拆解档案写手。基于下面提供的招股书逐页文本,为公司写一份"说人话"的拆解底稿。
+
+铁律(违反即废稿):
+1. 每一个数字后面必须紧跟出处【招股书 p.N】,N 必须是下方文本中该数字真实所在的页码。文本里没有的数字,一个都不许写。
+2. 不下任何定性判断:不写"涉嫌/造假/风险大/不行/值得买"。"问题"一律写成客观的数字反差。
+3. 市占率/排名/"第一"类表述:必须连同口径限定语和委托研究机构名原文照录。
+4. 拿不准的信息写 [缺出处·待核],不许编。
+5. 语言:短句,大白话,像给聪明但不懂财务的朋友讲清楚这门生意。
+
+按以下六个板块输出 markdown(标题原样保留):
+{sections}
+
+公司:{company}
+招股书逐页文本(格式为 [p.页码] 内容):
+{pages_text}
+"""
+
+
+@dataclass
+class GateReport:
+    """校验闸门报告。"""
+    passed_sentences: int = 0
+    rejected_no_cite: list[str] = field(default_factory=list)     # 有数字无出处
+    rejected_banned: list[str] = field(default_factory=list)      # 定性词
+    rejected_bad_cite: list[str] = field(default_factory=list)    # 页码对不上
+
+    @property
+    def clean(self) -> bool:
+        return not (self.rejected_no_cite or self.rejected_banned or self.rejected_bad_cite)
+
+
+def _sentences(md: str):
+    """按句拆(保留 markdown 行结构:逐行内再按句号拆)。"""
+    for line in md.splitlines():
+        if line.strip().startswith(("#", ">", "-", "*", "|")) or not line.strip():
+            yield line, True   # 结构行整行处理
+        else:
+            yield line, True
+
+
+def _numbers_in(text: str) -> list[str]:
+    # 去掉出处标记和年份后再找数字(年份/页码本身不算"需出处的数字")
+    t = CITE_RE.sub("", text)
+    t = re.sub(r"\b(?:19|20)\d{2}\b", "", t)
+    return re.findall(r"\d[\d,,]*(?:\.\d+)?", t)
+
+
+def _num_variants(num: str) -> set[str]:
+    n = num.replace(",", "").replace(",", "")
+    out = {num, n}
+    if "." in n:
+        out.add(n.rstrip("0").rstrip("."))
+    # 千分位版本
+    try:
+        if "." in n:
+            i, f = n.split(".")
+            out.add(f"{int(i):,}.{f}")
+        else:
+            out.add(f"{int(n):,}")
+    except ValueError:
+        pass
+    return out
+
+
+def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
+    """校验闸门:逐行检查,违规行替换为待核标记。返回(净化稿, 报告)。"""
+    page_text = {p.number: normalize_text(p.text or "").replace(",", ",") for p in pages}
+    report = GateReport()
+    out_lines = []
+
+    for line in md.splitlines():
+        stripped = line.strip()
+        if not stripped or stripped.startswith("#"):
+            out_lines.append(line)
+            continue
+
+        # 1) 定性词
+        hit_banned = next((w for w in BANNED if w in line), None)
+        if hit_banned:
+            report.rejected_banned.append(f"[{hit_banned}] {stripped[:60]}")
+            out_lines.append(f"- {MISSING}(原句含定性措辞,已拦截)")
+            continue
+
+        nums = _numbers_in(line)
+        cites = [int(m) for m in CITE_RE.findall(line)]
+
+        # 2) 有数字必须有出处(允许行内已是待核标记)
+        if nums and not cites and MISSING not in line:
+            report.rejected_no_cite.append(stripped[:70])
+            out_lines.append(f"- {MISSING}(原句含无出处数字,已拦截)")
+            continue
+
+        # 3) 页码回查:行内每个数字须出现在所引任一页的原文中
+        if nums and cites:
+            joined = "".join(page_text.get(c, "") for c in cites)
+            joined_nospace = joined.replace(" ", "")
+            bad = None
+            for num in nums:
+                variants = _num_variants(num)
+                if not any(v in joined or v in joined_nospace for v in variants):
+                    bad = num
+                    break
+            if bad is not None:
+                report.rejected_bad_cite.append(f"[{bad}] {stripped[:60]}")
+                out_lines.append(f"- {MISSING}(原句数字 {bad} 与所引页码原文对不上,已拦截)")
+                continue
+
+        report.passed_sentences += 1
+        out_lines.append(line)
+
+    return "\n".join(out_lines), report
+
+
+def build_prompt(company: str, pages: list[Page], max_chars: int = 120000) -> str:
+    chunks, used = [], 0
+    for p in pages:
+        t = normalize_text(p.text or "").strip()
+        if not t:
+            continue
+        block = f"[p.{p.number}] {t}"
+        if used + len(block) > max_chars:
+            break
+        chunks.append(block)
+        used += len(block)
+    return PROMPT_TEMPLATE.format(
+        sections="\n".join(SECTIONS), company=company, pages_text="\n\n".join(chunks))
+
+
+def call_claude(prompt: str, model: str = "claude-sonnet-4-6", max_tokens: int = 8000) -> str:
+    """调用 Anthropic API(需环境变量 ANTHROPIC_API_KEY)。"""
+    import requests
+    key = os.environ.get("ANTHROPIC_API_KEY")
+    if not key:
+        raise RuntimeError("未配置 ANTHROPIC_API_KEY(GitHub Secrets 或环境变量)")
+    resp = requests.post(
+        "https://api.anthropic.com/v1/messages",
+        headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+                 "content-type": "application/json"},
+        json={"model": model, "max_tokens": max_tokens,
+              "messages": [{"role": "user", "content": prompt}]},
+        timeout=300,
+    )
+    resp.raise_for_status()
+    data = resp.json()
+    return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+
+
+FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未取得出处的一律标红待核;"
+          "机器不填充、不定性、不给买卖建议。三棱镜成稿(脊/结尾/判断)由作者本人撰写。*\n")
+
+
+def generate_dossier(company: str, meta_line: str, pages: list[Page],
+                     llm=call_claude) -> tuple[str, GateReport]:
+    """全流程:prompt -> LLM -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
+    raw = llm(build_prompt(company, pages))
+    cleaned, report = gate(raw, pages)
+    head = (f"# 【拆解档案】{company}\n\n> {meta_line}\n"
+            f"> 机器生成底稿 · 校验闸门:{report.passed_sentences} 句通过,"
+            f"{len(report.rejected_no_cite)+len(report.rejected_banned)+len(report.rejected_bad_cite)} 句拦截\n\n")
+    return head + cleaned + FOOTER, report
