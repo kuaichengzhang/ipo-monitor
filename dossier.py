@@ -4,7 +4,7 @@
 - 档案 ≠ 三棱镜成稿。成稿(脊/结尾/判断)永远由人写;档案只做"罗列清楚"。
 - 每家 ★可选题 公司自动建档,挂在看板网站,页面标注"机器生成底稿"。
 
-流水线:招股书按页文本 -> 分块喂给 Claude API 按六板块模板写作 -> 校验闸门 -> 出稿/打回。
+流水线:招股书按页文本 -> 分块喂给 DeepSeek API 按六板块模板写作 -> 校验闸门 -> 出稿/打回。
 
 【校验闸门(代码强制,模型骗不过)】
 1. 含数字的句子必须挂 【招股书... p.N】 出处,否则该句替换为 [缺出处·待核]
@@ -164,15 +164,15 @@ def build_prompt(company: str, pages: list[Page], max_chars: int = 120000) -> st
         sections="\n".join(SECTIONS), company=company, pages_text="\n\n".join(chunks))
 
 
-def call_claude(prompt: str, model: str = "claude-sonnet-4-6", max_tokens: int = 8000) -> str:
-    """调用 Anthropic API(需环境变量 ANTHROPIC_API_KEY)。"""
+def call_llm(prompt: str, model: str = "deepseek-chat", max_tokens: int = 8000) -> str:
+    """调用 DeepSeek API(需环境变量 DEEPSEEK_API_KEY)。"""
     import requests
-    key = os.environ.get("ANTHROPIC_API_KEY")
+    key = os.environ.get("DEEPSEEK_API_KEY")
     if not key:
-        raise RuntimeError("未配置 ANTHROPIC_API_KEY(GitHub Secrets 或环境变量)")
+        raise RuntimeError("未配置 DEEPSEEK_API_KEY(GitHub Secrets 或环境变量)")
     resp = requests.post(
-        "https://api.anthropic.com/v1/messages",
-        headers={"x-api-key": key, "anthropic-version": "2023-06-01",
+        "https://api.deepseek.com/v1/chat/completions",
+        headers={"Authorization": f"Bearer {key}",
                  "content-type": "application/json"},
         json={"model": model, "max_tokens": max_tokens,
               "messages": [{"role": "user", "content": prompt}]},
@@ -180,7 +180,7 @@ def call_claude(prompt: str, model: str = "claude-sonnet-4-6", max_tokens: int =
     )
     resp.raise_for_status()
     data = resp.json()
-    return "".join(b.get("text", "") for b in data.get("content", []) if b.get("type") == "text")
+    return data["choices"][0]["message"]["content"]
 
 
 FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未取得出处的一律标红待核;"
@@ -188,7 +188,7 @@ FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未
 
 
 def generate_dossier(company: str, meta_line: str, pages: list[Page],
-                     llm=call_claude) -> tuple[str, GateReport]:
+                     llm=call_llm) -> tuple[str, GateReport]:
     """全流程:prompt -> LLM -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
     raw = llm(build_prompt(company, pages))
     cleaned, report = gate(raw, pages)

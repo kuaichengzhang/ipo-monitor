@@ -28,16 +28,18 @@ def dossier_link_map(out_dir: Path) -> dict:
     return m
 
 
-def run_dossiers(filings, out_dir: Path, max_new: int = 5) -> dict:
+def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
     """为触发公司建档。返回 {公司名: 档案html相对路径}。无 API key 时跳过建档但仍返回已有档案。"""
     out_dir.mkdir(parents=True, exist_ok=True)
-    if not os.environ.get("ANTHROPIC_API_KEY"):
-        print("[档案] 未配置 ANTHROPIC_API_KEY,跳过建档(监控/看板不受影响)")
+    if not os.environ.get("DEEPSEEK_API_KEY"):
+        print("[档案] 未配置 DEEPSEEK_API_KEY,跳过建档(监控/看板不受影响)")
         return dossier_link_map(out_dir)
     targets = [f for f in filings if is_trigger(f.stage) and f.prospectus_url]
+    print(f"[档案] 符合条件的目标公司: {len(targets)} 家,本次最多建 {max_new} 篇")
     built = 0
     for f in targets:
         if built >= max_new:
+            print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets)-built} 家下次再建")
             break
         path = out_dir / f"{_safe_name(f.company_name)}.md"
         if path.exists():
