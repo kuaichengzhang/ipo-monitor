@@ -181,6 +181,14 @@ class CNINFOFinReportCollector(BaseCollector):
 
         return results
 
+    def _build_cninfo_url(self, adjunct_url: str) -> str:
+        """构建 CNINFO PDF 直链。adjunctUrl 可能不带前导 /。"""
+        if not adjunct_url:
+            return ""
+        if not adjunct_url.startswith("/"):
+            adjunct_url = "/" + adjunct_url
+        return f"https://www.cninfo.com.cn{adjunct_url}"
+
     def _map_record(self, rec: dict, report_type: str) -> FinReport | None:
         code = str(rec.get("secCode", "")).strip()
         exchange = _exchange_by_code(code)
@@ -195,7 +203,7 @@ class CNINFOFinReportCollector(BaseCollector):
             report_period=_extract_period(title),
             title=title,
             announcement_date=_fmt_timestamp(rec.get("announcementTime")),
-            announcement_url=f"http://www.cninfo.com.cn{rec.get('adjunctUrl', '')}" if rec.get("adjunctUrl") else "",
+            announcement_url=self._build_cninfo_url(rec.get("adjunctUrl", "")),
             source="CNINFO",
         )
 
@@ -264,7 +272,7 @@ class HKEXFinReportCollector(BaseCollector):
                                 report_period=_extract_period(title),
                                 title=title,
                                 announcement_date=str(rec.get("DATE_TIME", ""))[:10],
-                                announcement_url=str(rec.get("FILE_LINK", "")),
+                                announcement_url=f"https://www1.hkexnews.hk{rec.get('FILE_LINK', '')}" if rec.get("FILE_LINK") else "",
                                 source="HKEX",
                             )
                             if fr.uid not in seen_uids:

@@ -67,9 +67,14 @@ def _safe_name(s: str) -> str:
 def _download_pdf(url: str, dest: str, session: requests.Session | None = None,
                   timeout: int = 60) -> bool:
     s = session or requests.Session()
-    s.headers.setdefault("User-Agent", "Mozilla/5.0")
+    s.headers.setdefault("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)")
+    # CNINFO 需要 Referer 才能下载 PDF
+    if "cninfo.com.cn" in url:
+        s.headers.setdefault("Referer", "https://www.cninfo.com.cn/new/commonUrl?url=disclosure/list/notice")
+    elif "hkexnews.hk" in url:
+        s.headers.setdefault("Referer", "https://www1.hkexnews.hk/")
     try:
-        r = s.get(url, timeout=timeout, stream=True)
+        r = s.get(url, timeout=timeout, stream=True, allow_redirects=True)
         r.raise_for_status()
         with open(dest, "wb") as f:
             for chunk in r.iter_content(8192):
@@ -155,7 +160,15 @@ def run_finreport_dossiers(reports: list, out_dir: Path,
     print(f"[财报拆解] 待处理: {len(targets)} 篇 (上限 {max_new})")
 
     session = requests.Session()
-    session.headers.update({"User-Agent": "Mozilla/5.0"})
+    session.headers.update({
+        "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)",
+        "Referer": "https://www.cninfo.com.cn/new/commonUrl?url=disclosure/list/notice",
+    })
+    # 先访问 CNINFO 首页拿 cookie
+    try:
+        session.get("https://www.cninfo.com.cn/", timeout=10)
+    except Exception:
+        pass
 
     built = 0
     for r in targets:
