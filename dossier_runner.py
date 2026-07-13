@@ -2,18 +2,36 @@
 
 策略(Paodekuai 拍板):只给过会及以后的公司建档(一周几家,成本可忽略);
 其余公司不自动跑。已建档且招股书未更新的不重复建。
+
+★ 重要限流(Paodekuai 要求):resolve_prospectus 和建档都只看最近 7 天更新的公司,
+不把上千家历史公司逐一查。首次运行也只处理一周内的。
 """
 from __future__ import annotations
 
 import os
 import re
 import traceback
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from collectors.resolve import resolve_prospectus
 from extractor import load_pdf, cid_trap_ratio, Page
 from dossier import generate_dossier, md_to_html
 from stages import is_trigger
+
+CST = timezone(timedelta(hours=8))
+RECENT_DAYS = 7
+
+
+def _is_recent(page_updated: str | None, days: int = RECENT_DAYS) -> bool:
+    """page_updated 是 'yyyy-mm-dd' 格式;7 天内算近期。无日期信息默认放过。"""
+    if not page_updated:
+        return True
+    try:
+        d = datetime.strptime(str(page_updated)[:10], "%Y-%m-%d").replace(tzinfo=CST)
+        return (datetime.now(CST) - d).days <= days
+    except (ValueError, TypeError):
+        return True
 
 
 def _safe_name(s: str) -> str:
@@ -36,14 +54,18 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
         print("[档案] 未配置 DEEPSEEK_API_KEY,跳过建档(监控/看板不受影响)")
         return dossier_link_map(out_dir)
     # A股触发公司先解析招股书直链(港交所自带;解析失败则跳过该公司,不猜)
+    # ★ 只对最近 7 天更新的公司 resolve,不逐一查上千家历史公司
     import requests as _rq
     _sess = _rq.Session()
+    resolve_count = 0
     for f in filings:
-        if is_trigger(f.stage) and not f.prospectus_url:
+        if is_trigger(f.stage) and not f.prospectus_url and _is_recent(f.page_updated):
             url = resolve_prospectus(f, _sess)
             if url:
                 f.prospectus_url = url
-    targets = [f for f in filings if is_trigger(f.stage) and f.prospectus_url]
+                resolve_count += 1
+    print(f"[档案] 本次 resolve_prospectus 查询 {resolve_count} 家(7天内的触发公司)")
+    targets = [f for f in filings if is_trigger(f.stage) and f.prospectus_url and _is_recent(f.page_updated)]
     print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (本次上限 {max_new} 篇)")
     built = 0
     for f in targets:

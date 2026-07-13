@@ -58,7 +58,10 @@ def main() -> int:
     )
 
     # ★可选题建档(在看板之前,让看板能挂档案链接)
-    dmap_raw = run_dossiers(all_filings, DATA_DIR / "dossiers")
+    # ★ 只对本次新增/变化的触发公司建档,不把全部历史公司传进去逐一查
+    recent_filings = [f for f in diff["new"] + diff["changed"] if is_trigger(f.stage)]
+    print(f"[建档] 本次新增/变化的触发公司: {len(recent_filings)} 家(全量 {len(all_filings)} 条)")
+    dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers")
     # safe_name -> 还原到公司名匹配(看板按公司名查)
     from dossier_runner import _safe_name
     dossier_map = {}
