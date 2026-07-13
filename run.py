@@ -17,8 +17,10 @@ from collectors.hkex import HKEXNewListingInfoCollector, HKEXAppProofCollector
 from collectors.sse import SSECollector
 from collectors.szse import SZSECollector
 from collectors.bse import BSECollector
+from collectors.finreport import CNINFOFinReportCollector, HKEXFinReportCollector
 from dashboard import generate_dashboard
 from dossier_runner import run_dossiers, dossier_link_map
+from finreport_dossier import run_finreport_dossiers
 from stages import is_trigger
 from state import StateStore
 
@@ -70,11 +72,34 @@ def main() -> int:
         if key in dmap_raw:
             dossier_map[f.company_name] = dmap_raw[key]
 
+    # ===== 财报披露 =====
+    print("\n===== 财报披露扫描 =====")
+    finreports = []
+    for fc in [CNINFOFinReportCollector(days=7), HKEXFinReportCollector(days=7)]:
+        try:
+            got = fc.collect()
+            print(f"[{fc.name}] 抓到 {len(got)} 条财报")
+            finreports.extend(got)
+        except Exception:
+            print(f"[{fc.name}] 出错:")
+            traceback.print_exc()
+
+    (DATA_DIR / "finreports.json").write_text(
+        json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
+    print(f"[财报] 共 {len(finreports)} 条，已保存 finreports.json")
+
+    # 拆解业绩预告 + 业绩快报
+    finreport_dossier_map = run_finreport_dossiers(finreports, DATA_DIR / "finreport_dossiers", max_new=15)
+
     # 生成可读网页看板(dashboard.html 放项目根,方便 GitHub Pages 直接服务)
     new_uids = {f.uid for f in diff["new"]}
     changed_uids = {f.uid for f in diff["changed"]}
     dashboard_html = generate_dashboard(all_filings, new_uids, changed_uids,
-                                        dossier_map=dossier_map)
+                                        dossier_map=dossier_map,
+                                        finreports=finreports,
+                                        finreport_dossier_map=finreport_dossier_map)
     (Path(__file__).parent / "dashboard.html").write_text(dashboard_html, encoding="utf-8")
     (Path(__file__).parent / "index.html").write_text(dashboard_html, encoding="utf-8")
 

@@ -32,6 +32,13 @@ STAGE_COLORS = {
     "已上市": "#8a94a6", "中止": "#b08900", "终止/退回/未通过": "#a0522d", "未知": "#999",
 }
 
+FR_TYPE_COLORS = {
+    "业绩预告": "#e8730c", "业绩快报": "#1f6feb",
+    "Profit Warning": "#dc3545", "Profit Alert": "#28a745",
+    "Annual Results": "#6f42c1", "Interim Results": "#6f42c1",
+    "Quarterly Results": "#6f42c1",
+}
+
 
 def _row(f, new_uids, changed_uids, dossier_map):
     return {
@@ -49,11 +56,25 @@ def _row(f, new_uids, changed_uids, dossier_map):
     }
 
 
+def _finreport_row(r, dossier_map):
+    return {
+        "ex": r.exchange, "code": r.stock_code or "",
+        "name": r.company_name, "type": r.report_type,
+        "period": r.report_period or "", "date": r.announcement_date or "",
+        "url": r.announcement_url or "",
+        "dossier": dossier_map.get(r.uid, ""),
+        "title": r.title or "",
+    }
+
+
 def generate_dashboard(filings, new_uids=None, changed_uids=None,
-                       updated_at=None, dossier_map=None) -> str:
+                       updated_at=None, dossier_map=None,
+                       finreports=None, finreport_dossier_map=None) -> str:
     new_uids = new_uids or set()
     changed_uids = changed_uids or set()
     dossier_map = dossier_map or {}
+    finreports = finreports or []
+    finreport_dossier_map = finreport_dossier_map or {}
     updated_at = updated_at or datetime.now(CST).strftime("%Y-%m-%d %H:%M")
 
     rows = [_row(f, new_uids, changed_uids, dossier_map) for f in filings]
@@ -68,6 +89,11 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
     stage_colors_json = json.dumps(STAGE_COLORS, ensure_ascii=False)
     stage_order_json = json.dumps(STAGE_ORDER, ensure_ascii=False)
     ex_tabs = "".join(f'<button class="tab" data-ex="{html.escape(e)}">{html.escape(e)}</button>' for e in exchanges)
+
+    # 财报披露数据
+    fr_rows = [_finreport_row(r, finreport_dossier_map) for r in finreports]
+    fr_data_json = json.dumps(fr_rows, ensure_ascii=False).replace("</", "<\\/")
+    fr_type_colors_json = json.dumps(FR_TYPE_COLORS, ensure_ascii=False)
 
     return r"""<!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -108,6 +134,11 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
  .pager select { border:1px solid var(--line); border-radius:8px; padding:6px 8px; font-size:13px; background:#fff; }
  .pager .jump { width:56px; padding:6px 8px; border:1px solid var(--line); border-radius:8px; font-size:13px; }
  mark { background:#ffe9a8; padding:0 1px; border-radius:2px; }
+ .view-toggle { display:flex; gap:0; max-width:860px; margin:0 auto; padding:0 12px; }
+ .vt-btn { flex:1; border:none; background:#fff; border-bottom:3px solid transparent; padding:10px 16px; font-size:14px; cursor:pointer; color:var(--muted); }
+ .vt-btn.on { color:var(--blue); border-bottom-color:var(--blue); font-weight:600; }
+ .fr-card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:8px; }
+ .fr-type { color:#fff; padding:1px 8px; border-radius:20px; font-size:12px; }
  footer { text-align:center; color:var(--muted); font-size:12px; padding:20px; }
 </style></head><body>
 <header>
@@ -115,7 +146,12 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
   <div class="sub">港交所 / 上交所 / 深交所 / 北交所 · 更新于 __UPDATED__</div>
   <div class="stats"><b>__TOTAL__</b> 家在管线 · <b>__TRIG__</b> 家 ★可选题 · __NEWLABEL__ · <b>__DOSSIERS__</b> 篇拆解档案</div>
 </header>
+<div class="view-toggle">
+  <button class="vt-btn on" data-view="ipo">IPO监控 (__TOTAL__)</button>
+  <button class="vt-btn" data-view="fin">财报披露 (__FRTOTAL__)</button>
+</div>
 <main>
+  <div id="ipo-view">
   <div class="controls">
     <input class="search" id="q" placeholder="搜公司名 / 保荐机构 / 代码…">
     <div class="tabs"><button class="tab on" data-ex="">全部</button>__EXTABS__</div>
@@ -129,6 +165,20 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
   </div>
   <div id="list"></div>
   <div class="pager" id="pager"></div>
+  </div>
+  <div id="fin-view" style="display:none">
+    <div class="controls">
+      <div class="chips">
+        <span class="chip on" data-fr-type="">全部</span>
+        <span class="chip" data-fr-type="业绩预告">业绩预告</span>
+        <span class="chip" data-fr-type="业绩快报">业绩快报</span>
+        <span class="chip" data-fr-type="Profit Warning">Profit Warning</span>
+        <span class="chip" data-fr-type="Profit Alert">Profit Alert</span>
+        <span class="count" id="fr-count"></span>
+      </div>
+    </div>
+    <div id="fr-list"></div>
+  </div>
 </main>
 <footer>★可选题 = 过会/PHIP及以后 · 档案为机器生成底稿 · 三棱镜成稿由作者本人撰写</footer>
 <script>
@@ -249,10 +299,48 @@ document.querySelectorAll('.chip[data-f]').forEach(c=>{
     c.classList.toggle('on'); state.flags[c.dataset.f]=c.classList.contains('on'); state.page=1; render();
   });
 });
+// —— 财报披露 ——
+const FR_DATA = __FRDATA__;
+const FR_COLORS = __FRCOLORS__;
+let frFilter = '';
+function renderFR(){
+  let rows = FR_DATA.slice();
+  if(frFilter) rows = rows.filter(r=>r.type===frFilter);
+  rows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  document.getElementById('fr-count').textContent = rows.length + ' 条';
+  document.getElementById('fr-list').innerHTML = rows.map(r=>{
+    const color = FR_COLORS[r.type] || '#5b7db1';
+    const links = [];
+    if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
+    if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
+    return '<div class="fr-card">'
+      +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span><span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
+      +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+      +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+  }).join('') || '<div class="card"><span class="meta">暂无财报数据</span></div>';
+}
+document.querySelectorAll('.chip[data-fr-type]').forEach(c=>{
+  c.addEventListener('click', ()=>{
+    document.querySelectorAll('.chip[data-fr-type]').forEach(x=>x.classList.remove('on'));
+    c.classList.add('on'); frFilter = c.dataset.frType; renderFR();
+  });
+});
+document.querySelectorAll('.vt-btn').forEach(b=>{
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    const v = b.dataset.view;
+    document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
+    document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
+  });
+});
+renderFR();
 render();
 </script>
 </body></html>""".replace("__UPDATED__", updated_at) \
    .replace("__TOTAL__", str(len(rows))).replace("__TRIG__", str(trigger_total)) \
    .replace("__NEWLABEL__", new_label).replace("__DOSSIERS__", str(dossier_total)) \
    .replace("__EXTABS__", ex_tabs).replace("__DATA__", data_json) \
-   .replace("__COLORS__", stage_colors_json).replace("__ORDER__", stage_order_json)
+   .replace("__COLORS__", stage_colors_json).replace("__ORDER__", stage_order_json) \
+   .replace("__FRTOTAL__", str(len(fr_rows))).replace("__FRDATA__", fr_data_json) \
+   .replace("__FRCOLORS__", fr_type_colors_json)
