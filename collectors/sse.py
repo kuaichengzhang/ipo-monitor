@@ -29,6 +29,8 @@ from models import Filing, utc_now_iso
 from stages import normalize_stage, PASSED, TERMINATED
 
 ENTRY_PAGE = "https://www.sse.com.cn/listing/renewal/ipo/"
+# 每家公司的官方详情页(含信息披露/招股说明书),auditId=审核编号 —— 经多个公开链接验证
+DETAIL_URL = "https://www.sse.com.cn/listing/renewal/ipo/index_listing_detail.shtml?auditId={num}"
 QUERY_URL = "https://query.sse.com.cn/commonSoaQuery.do"
 SQL_ID = "SH_XM_LB"
 SSE_HEADERS = {"Referer": "https://www.sse.com.cn/"}
@@ -109,7 +111,7 @@ def map_record(record: dict) -> Filing:
         stock_code=str(record.get("stockAuditNum") or "") or None,
         sponsor=_sponsor(record.get("intermediary")),
         page_updated=_fmt_date(record.get("updateDate")),
-        source_url=ENTRY_PAGE,
+        source_url=DETAIL_URL.format(num=record.get("stockAuditNum")) if record.get("stockAuditNum") else ENTRY_PAGE,
         first_seen=now,
         last_seen=now,
     )

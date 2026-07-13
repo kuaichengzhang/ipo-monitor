@@ -45,6 +45,7 @@ def test_szse_parse_real_sample():
 
     ty = by["广西田园生化股份有限公司"]
     assert ty.board == "主板" and ty.stage == INQUIRED and ty.sponsor == "国海证券"
+    assert ty.source_url == "https://www.szse.cn/listing/projectdynamic/ipo/detail/index.html?id=1003977"
     assert ty.page_updated == "2026-07-13"
 
     hfc = by["深圳市鸿富诚新材料股份有限公司"]
@@ -79,6 +80,7 @@ def test_bse_parse_real_sample():
     assert is_trigger(ds.stage)                       # 提交注册 = ★可选题
     assert ds.sponsor == "国泰海通证券股份有限公司"
     assert ds.stock_code == "874669"
+    assert ds.source_url == "https://www.bse.cn/audit/project_news_detail.html?id=637"
     assert ds.page_updated == "2026-07-10"            # Java Date {time:毫秒} -> 日期
 
     xs = by["浙江信胜科技股份有限公司"]

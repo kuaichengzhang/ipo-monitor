@@ -25,6 +25,8 @@ from models import Filing, utc_now_iso
 from stages import normalize_stage
 
 ENTRY_PAGE = "https://www.szse.cn/listing/projectdynamic/ipo/index.html"
+# 每家公司的官方详情页(含信息披露/招股说明书),id=prjid —— 经公开链接验证
+DETAIL_URL = "https://www.szse.cn/listing/projectdynamic/ipo/detail/index.html?id={num}"
 QUERY_URL = "https://www.szse.cn/api/ras/projectrends/query"
 PAGE_SIZE = 200
 
@@ -56,7 +58,7 @@ def map_record(record: dict) -> Filing:
         stock_code=str(record.get("prjid")) if record.get("prjid") is not None else None,
         sponsor=sponsor,
         page_updated=_fmt_date(record.get("updtdt")),
-        source_url=ENTRY_PAGE,
+        source_url=DETAIL_URL.format(num=record.get("prjid")) if record.get("prjid") is not None else ENTRY_PAGE,
         first_seen=now,
         last_seen=now,
     )

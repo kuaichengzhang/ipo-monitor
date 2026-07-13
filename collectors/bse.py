@@ -26,6 +26,8 @@ from models import Filing, utc_now_iso
 from stages import normalize_stage
 
 ENTRY_PAGE = "https://www.bse.cn/audit/project_news.html"
+# 每家公司的官方详情页(招股说明书等文件披露于此)—— 经公司公告原文引用验证
+DETAIL_URL = "https://www.bse.cn/audit/project_news_detail.html?id={num}"
 QUERY_URL = "https://www.bse.cn/projectNewsController/infoResult.do?callback=cb"
 
 BSE_HEADERS = {
@@ -88,7 +90,7 @@ def map_record(record: dict) -> Filing:
         stock_code=str(record.get("stockCode") or "") or None,
         sponsor=str(record.get("sponsorOrg") or "").strip() or None,
         page_updated=_fmt_java_date(record.get("updateDate")),
-        source_url=ENTRY_PAGE,
+        source_url=DETAIL_URL.format(num=record.get("id")) if record.get("id") is not None else ENTRY_PAGE,
         first_seen=now,
         last_seen=now,
     )

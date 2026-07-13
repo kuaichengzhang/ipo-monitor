@@ -45,6 +45,7 @@ def test_parse_real_sample():
     assert silang.status == "已受理" and silang.stage == ACCEPTED
     assert silang.sponsor == "国泰海通"          # 只取 type==1 的保荐机构
     assert silang.stock_code == "2239"
+    assert silang.source_url.endswith("index_listing_detail.shtml?auditId=2239")
     assert silang.page_updated == "2026-07-07"
 
     # 沈鼓:提交注册 = 过会后 = 触发选题

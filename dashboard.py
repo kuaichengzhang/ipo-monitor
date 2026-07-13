@@ -191,7 +191,7 @@ function card(r, terms){
   if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解档案</a>');
   if(r.phip) links.push('<a href="'+esc(r.phip)+'" target="_blank">聆讯后资料集</a>');
   if(r.pros && r.pros!==r.phip) links.push('<a href="'+esc(r.pros)+'" target="_blank">招股书</a>');
-  if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">交易所审核页</a>');
+  if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">'+(r.src.includes('detail')?'详情页·招股书披露':'交易所审核页')+'</a>');
   return '<div class="card '+(r.trig?'trig':'')+'">'
     +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+hl(r.name,terms)+'</span>'+(r.mk?'<span class="board">'+esc(r.mk)+'</span>':'')+badges+'</div>'
     +'<div class="l2"><span class="stage" style="background:'+(COLORS[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
