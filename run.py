@@ -18,7 +18,7 @@ from collectors.sse import SSECollector
 from collectors.szse import SZSECollector
 from collectors.bse import BSECollector
 from dashboard import generate_dashboard
-from dossier_runner import run_dossiers
+from dossier_runner import run_dossiers, dossier_link_map
 from stages import is_trigger
 from state import StateStore
 
@@ -57,10 +57,21 @@ def main() -> int:
         encoding="utf-8",
     )
 
+    # ★可选题建档(在看板之前,让看板能挂档案链接)
+    dmap_raw = run_dossiers(all_filings, DATA_DIR / "dossiers")
+    # safe_name -> 还原到公司名匹配(看板按公司名查)
+    from dossier_runner import _safe_name
+    dossier_map = {}
+    for f in all_filings:
+        key = _safe_name(f.company_name)
+        if key in dmap_raw:
+            dossier_map[f.company_name] = dmap_raw[key]
+
     # 生成可读网页看板(dashboard.html 放项目根,方便 GitHub Pages 直接服务)
     new_uids = {f.uid for f in diff["new"]}
     changed_uids = {f.uid for f in diff["changed"]}
-    dashboard_html = generate_dashboard(all_filings, new_uids, changed_uids)
+    dashboard_html = generate_dashboard(all_filings, new_uids, changed_uids,
+                                        dossier_map=dossier_map)
     (Path(__file__).parent / "dashboard.html").write_text(dashboard_html, encoding="utf-8")
     (Path(__file__).parent / "index.html").write_text(dashboard_html, encoding="utf-8")
 
@@ -74,9 +85,6 @@ def main() -> int:
         print(f"  + [{f.exchange}·{f.board}] {code}  {f.company_name}{mk} — {f.stage}({f.status}){trig}")
         if f.prospectus_url:
             print(f"      招股书: {f.prospectus_url}")
-
-    # ★可选题自动建档(需 ANTHROPIC_API_KEY;未配置则跳过并提示)
-    run_dossiers(all_filings, DATA_DIR / "dossiers")
 
     print("\n===== 状态变化 =====")
     if not diff["changed"]:

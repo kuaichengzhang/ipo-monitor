@@ -196,3 +196,54 @@ def generate_dossier(company: str, meta_line: str, pages: list[Page],
             f"> 机器生成底稿 · 校验闸门:{report.passed_sentences} 句通过,"
             f"{len(report.rejected_no_cite)+len(report.rejected_banned)+len(report.rejected_bad_cite)} 句拦截\n\n")
     return head + cleaned + FOOTER, report
+
+
+# —— 档案 markdown -> 简易 HTML(无第三方依赖,供看板链接直接打开)——
+_MD_CSS = """<style>body{max-width:760px;margin:0 auto;padding:24px 16px 60px;
+font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif;line-height:1.75;color:#1a2233;background:#fff}
+h1{font-size:22px;border-bottom:2px solid #1f6feb;padding-bottom:8px}h2{font-size:17px;margin-top:28px;color:#0f4faf}
+blockquote{border-left:3px solid #bcd3ff;background:#f6f8fb;margin:8px 0;padding:8px 12px;color:#48566e;font-size:13.5px}
+li{margin:4px 0}hr{border:none;border-top:1px solid #e6ebf2;margin:24px 0}
+strong{color:#1a5fd0}a{color:#1f6feb}.back{font-size:13px}</style>"""
+
+
+def md_to_html(md: str, title: str = "拆解档案") -> str:
+    import html as _h
+    import re as _re
+    out, in_ul, in_bq = [], False, False
+    for line in md.splitlines():
+        s = line.rstrip()
+        esc = _h.escape(s)
+        # 行内:加粗
+        esc = _re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", esc)
+        if s.startswith("- ") or s.startswith("* "):
+            if not in_ul:
+                out.append("<ul>"); in_ul = True
+            out.append(f"<li>{esc[2:]}</li>"); continue
+        if in_ul:
+            out.append("</ul>"); in_ul = False
+        if s.startswith(">"):
+            if not in_bq:
+                out.append("<blockquote>"); in_bq = True
+            out.append(esc.lstrip("&gt;").strip() + "<br>"); continue
+        if in_bq:
+            out.append("</blockquote>"); in_bq = False
+        if s.startswith("### "):
+            out.append(f"<h3>{esc[4:]}</h3>")
+        elif s.startswith("## "):
+            out.append(f"<h2>{esc[3:]}</h2>")
+        elif s.startswith("# "):
+            out.append(f"<h1>{esc[2:]}</h1>")
+        elif s.strip() in ("---", "***"):
+            out.append("<hr>")
+        elif s.strip():
+            out.append(f"<p>{esc}</p>")
+    if in_ul:
+        out.append("</ul>")
+    if in_bq:
+        out.append("</blockquote>")
+    body = "\n".join(out)
+    return (f"<!doctype html><html lang=\"zh\"><head><meta charset=\"utf-8\">"
+            f"<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">"
+            f"<title>{_h.escape(title)}</title>{_MD_CSS}</head><body>"
+            f"<p class=\"back\"><a href=\"../../index.html\">← 返回监控看板</a></p>{body}</body></html>")
