@@ -30,6 +30,10 @@ STAGE_ORDER = [
 # Paodekuai 的选题触发阶段:过会及其后、尚未上市之前
 TRIGGER_STAGES = {PASSED, SUBMITTED_REG, EFFECTIVE}
 
+# 拆解档案范围:比选题触发更宽,只要有招股书 PDF 就可以拆
+# (申报受理 ~ 注册生效/招股 都拆;已上市/中止/终止不拆)
+DOSSIER_STAGES = {ACCEPTED, INQUIRED, HEARING, PASSED, SUBMITTED_REG, EFFECTIVE}
+
 # —— 港交所原始状态 -> 统一阶段 ——
 _HKEX_MAP = {
     "上市公告": EFFECTIVE,
@@ -107,3 +111,8 @@ def normalize_stage(exchange: str, raw_status: str) -> str:
 
 def is_trigger(stage: str) -> bool:
     return stage in TRIGGER_STAGES
+
+
+def is_dossier_eligible(stage: str) -> bool:
+    """是否有资格生成拆解档案（比 is_trigger 更宽，含申报受理/已问询/上会）。"""
+    return stage in DOSSIER_STAGES
