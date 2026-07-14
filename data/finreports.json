@@ -294,8 +294,8 @@
     "announcement_date": "2026-07-15",
     "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425389.PDF",
     "source": "CNINFO",
-    "industry": "",
-    "sub_industry": "",
+    "industry": "医疗健康",
+    "sub_industry": "医药商业",
     "is_18a": false,
     "uid": "959c47cc774267cf"
   },
@@ -354,8 +354,8 @@
     "announcement_date": "2026-07-15",
     "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425372.PDF",
     "source": "CNINFO",
-    "industry": "医疗健康",
-    "sub_industry": "生物制品",
+    "industry": "",
+    "sub_industry": "",
     "is_18a": false,
     "uid": "f9c57474aeccb590"
   },
@@ -385,7 +385,7 @@
     "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425370.PDF",
     "source": "CNINFO",
     "industry": "医疗健康",
-    "sub_industry": "其他医疗",
+    "sub_industry": "化学制药",
     "is_18a": false,
     "uid": "205d63036ff1c3fe"
   },
@@ -564,8 +564,8 @@
     "announcement_date": "2026-07-15",
     "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225424829.PDF",
     "source": "CNINFO",
-    "industry": "",
-    "sub_industry": "",
+    "industry": "医疗健康",
+    "sub_industry": "中药",
     "is_18a": false,
     "uid": "71a76c8dc13d8763"
   },
@@ -609,8 +609,8 @@
     "announcement_date": "2026-07-15",
     "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225424041.PDF",
     "source": "CNINFO",
-    "industry": "",
-    "sub_industry": "",
+    "industry": "医疗健康",
+    "sub_industry": "中药",
     "is_18a": false,
     "uid": "5d557fb028a7942c"
   },
