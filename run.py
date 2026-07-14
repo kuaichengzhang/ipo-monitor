@@ -21,6 +21,7 @@ from collectors.finreport import CNINFOFinReportCollector, HKEXFinReportCollecto
 from dashboard import generate_dashboard
 from dossier_runner import run_dossiers, dossier_link_map
 from finreport_dossier import run_finreport_dossiers
+from industry import classify_industry
 from stages import is_trigger
 from state import StateStore
 
@@ -48,6 +49,18 @@ def main() -> int:
         except Exception:
             print(f"[{c.name}] 出错:")
             traceback.print_exc()
+
+    # ===== 行业标签 enrichment =====
+    # 给每家公司打行业标签（医疗健康子行业 + 18A标记）
+    med_count = 0
+    for f in all_filings:
+        ind, sind, is18a = classify_industry(f.company_name, f.markers)
+        f.industry = ind
+        f.sub_industry = sind
+        f.is_18a = is18a
+        if ind:
+            med_count += 1
+    print(f"[行业标签] 医疗健康公司: {med_count} 家 / 共 {len(all_filings)} 家")
 
     store = StateStore(DATA_DIR / "state.json")
     diff = store.diff_and_update(all_filings)
@@ -83,6 +96,17 @@ def main() -> int:
         except Exception:
             print(f"[{fc.name}] 出错:")
             traceback.print_exc()
+
+    # 财报也打行业标签
+    fin_med_count = 0
+    for r in finreports:
+        ind, sind, is18a = classify_industry(r.company_name)
+        r.industry = ind
+        r.sub_industry = sind
+        r.is_18a = is18a
+        if ind:
+            fin_med_count += 1
+    print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条")
 
     (DATA_DIR / "finreports.json").write_text(
         json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),
