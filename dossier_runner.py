@@ -87,7 +87,10 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
             if cid_trap_ratio(pages) < 0.02:
                 lang_note = "(注意:该PDF中文不可提取或为英文版,页码以该版本为准)"
             meta = f"{f.exchange}·{f.board} · {f.stage} · {f.prospectus_url} {lang_note}"
-            doc, report = generate_dossier(f.company_name, meta, pages)
+            is_med = getattr(f, 'industry', '') == '医疗健康'
+            if is_med:
+                print(f"[医疗] ", end="")
+            doc, report = generate_dossier(f.company_name, meta, pages, medical=is_med)
             path.write_text(doc, encoding="utf-8")
             path.with_suffix(".html").write_text(
                 md_to_html(doc, title=f"拆解档案 · {f.company_name}"), encoding="utf-8")
