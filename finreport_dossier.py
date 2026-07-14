@@ -198,7 +198,11 @@ def parse_finreport(company: str, report_type: str, title: str, period: str,
         if not _download_pdf(pdf_url, tmp_path, session):
             return None
 
-        pages = load_pdf(tmp_path, max_pages=10)
+        # 年报/半年报 PDF 很厚，多读几页；业绩预告/快报通常只有几页
+        _LONG_TYPES = {"年报", "半年报", "一季报", "三季报",
+                       "Annual Results", "Interim Results", "Quarterly Results"}
+        max_pages = 20 if report_type in _LONG_TYPES else 10
+        pages = load_pdf(tmp_path, max_pages=max_pages)
         if not pages:
             return None
 
@@ -264,8 +268,13 @@ def run_finreport_dossiers(reports: list, out_dir: Path,
         print("[财报拆解] 未配置 DEEPSEEK_API_KEY，跳过拆解")
         return dossier_map
 
-    # 只拆业绩预告和业绩快报
-    target_types = {"业绩预告", "业绩快报", "Profit Warning", "Profit Alert"}
+    # 所有报告类型都拆解
+    target_types = {
+        "年报", "半年报", "一季报", "三季报",
+        "业绩预告", "业绩快报",
+        "Profit Warning", "Profit Alert",
+        "Annual Results", "Interim Results", "Quarterly Results",
+    }
     targets = [r for r in reports if r.report_type in target_types and r.announcement_url]
 
     print(f"[财报拆解] 待处理: {len(targets)} 篇 (上限 {max_new})")
