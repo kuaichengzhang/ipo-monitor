@@ -1,13 +1,15 @@
 """CLI 入口。
 
 用法:
-    python run.py            # 抓取 -> 更新状态 -> 打印今日新增/变化 -> 导出 data/filings.json
+    python run.py                # 抓取 -> 更新状态 -> 打印今日新增/变化 -> 导出 data/filings.json
+    python run.py --rebuild-all  # 同上,但重建所有已有拆解档案(闸门代码更新后用)
 
 每周一到五用 cron 跑一次即可,例如:
     0 9 * * 1-5  cd /path/to/ipo_monitor && python run.py >> data/run.log 2>&1
 """
 from __future__ import annotations
 
+import argparse
 import json
 import sys
 import traceback
@@ -55,6 +57,11 @@ def _collector_exchange(name: str) -> str:
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description="IPO 监控系统")
+    parser.add_argument("--rebuild-all", action="store_true",
+                        help="重建所有已有拆解档案(闸门代码更新后用)")
+    args = parser.parse_args()
+
     # 加载上次 filings.json，按交易所分组（采集失败时兜底用）
     prev_by_exchange: dict[str, list[dict]] = {}
     prev_path = DATA_DIR / "filings.json"
@@ -118,9 +125,16 @@ def main() -> int:
     # ★可选题建档(在看板之前,让看板能挂档案链接)
     # ★ 拆解范围:申报受理~注册生效/招股都拆(比选题触发更宽)
     changed_uids = {f.uid for f in diff["changed"]}
-    recent_filings = [f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)]
-    print(f"[建档] 本次新增/变化的触发公司: {len(recent_filings)} 家(全量 {len(all_filings)} 条)")
-    dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers", changed_uids=changed_uids)
+    if args.rebuild_all:
+        # 重建模式:传入所有 filings,重建已有档案
+        recent_filings = [f for f in all_filings if is_dossier_eligible(f.stage)]
+        print(f"[建档] 重建模式: {len(recent_filings)} 家可拆解公司(全量 {len(all_filings)} 条)")
+    else:
+        recent_filings = [f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)]
+        print(f"[建档] 本次新增/变化的触发公司: {len(recent_filings)} 家(全量 {len(all_filings)} 条)")
+    dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers",
+                            changed_uids=changed_uids,
+                            rebuild_all=args.rebuild_all)
     # safe_name -> 还原到公司名匹配(看板按公司名查)
     from dossier_runner import _safe_name
     dossier_map = {}
