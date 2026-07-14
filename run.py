@@ -24,6 +24,7 @@ from dashboard import generate_dashboard
 from dossier_runner import run_dossiers, dossier_link_map
 from finreport_dossier import run_finreport_dossiers
 from industry import classify_industry
+from collectors.sw_industry import SWIndustryCache, is_sw_medical_sub, normalize_sub
 from models import Filing
 from stages import is_trigger, is_dossier_eligible
 from state import StateStore
@@ -161,41 +162,47 @@ def main() -> int:
             print(f"[{fc.name}] 出错:")
             traceback.print_exc()
 
-    # 财报行业标签: 优先从 filings.json 继承(IPO 申报时已标记), 再用公司名关键词兜底
-    # 建索引: 公司名 → (industry, sub_industry, is_18a), 只含有行业标签的
-    ipo_industry_map = {}
-    for f in all_filings:
-        if f.industry:
-            ipo_industry_map[f.company_name] = (f.industry, f.sub_industry, f.is_18a)
-
+    # 财报行业标签: 按股票代码查申万行业 (A 股) —— 比 IPO 继承更准
+    #   (已上市公司财报 与 未上市公司 IPO 申报 数据集几乎不重叠, 继承方案无效)
+    #   A 股(6 位代码): 东方财富 f127 = 申万二级行业; 命中医药生物二级 -> 医疗健康
+    #   北交所(无申万分类) / 查询失败: 回退到公司名关键词兜底
+    #   港交所(5 位代码): 申万覆盖不到, 保留 markers/关键词逻辑
+    sw_cache = SWIndustryCache(DATA_DIR / "sw_industry_cache.json")
     fin_med_count = 0
-    fin_inherited = 0
+    fin_sw_medical = 0      # 申万命中且为医疗
+    fin_sw_nonmed = 0       # 申万命中但非医疗(如白酒/银行)
+    fin_fallback = 0         # 关键词兜底(港交所 / 北交所 / 查询失败)
     for r in finreports:
-        # 1. 精确匹配: 财报公司名与 IPO 申报公司名完全一致
-        if r.company_name in ipo_industry_map:
-            ind, sind, is18a = ipo_industry_map[r.company_name]
-            fin_inherited += 1
-        else:
-            # 2. 模糊匹配: 财报公司名是 IPO 公司名的子串或反过来(至少4字,避免误匹配)
-            matched = None
-            rname = r.company_name or ""
-            if len(rname) >= 4:
-                for fname, tags in ipo_industry_map.items():
-                    if rname in fname or fname in rname:
-                        matched = tags
-                        break
-            if matched:
-                ind, sind, is18a = matched
-                fin_inherited += 1
+        code = (r.stock_code or "").strip()
+        if len(code) == 6 and code.isdigit():
+            # A 股: 查申万二级行业
+            sub = sw_cache.get_sub(code)
+            if sub:
+                if is_sw_medical_sub(sub):
+                    r.industry = "医疗健康"
+                    r.sub_industry = normalize_sub(sub)
+                    fin_sw_medical += 1
+                else:
+                    # 申万命中但非医疗 -> 不标记
+                    r.industry = ""
+                    r.sub_industry = ""
+                    fin_sw_nonmed += 1
             else:
-                # 3. 兜底: 公司名关键词匹配
+                # 查不到(北交所 f127 空 / 网络失败) -> 关键词兜底
                 ind, sind, is18a = classify_industry(r.company_name)
-        r.industry = ind
-        r.sub_industry = sind
-        r.is_18a = is18a
-        if ind:
+                r.industry, r.sub_industry, r.is_18a = ind, sind, is18a
+                fin_fallback += 1
+        else:
+            # 港交所(5 位)或代码缺失 -> markers/关键词兜底
+            ind, sind, is18a = classify_industry(r.company_name, r.markers)
+            r.industry, r.sub_industry, r.is_18a = ind, sind, is18a
+            fin_fallback += 1
+        if r.industry:
             fin_med_count += 1
-    print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条 (其中 {fin_inherited} 条从 IPO 标签继承)")
+    sw_cache.save()
+    print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条 "
+          f"(申万医疗 {fin_sw_medical}, 申万非医疗 {fin_sw_nonmed}, 关键词兜底 {fin_fallback}; "
+          f"缓存命中 {sw_cache.hit}, 新查询 {sw_cache.miss})")
 
     (DATA_DIR / "finreports.json").write_text(
         json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),
