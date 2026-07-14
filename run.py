@@ -24,7 +24,7 @@ from dashboard import generate_dashboard
 from dossier_runner import run_dossiers, dossier_link_map
 from finreport_dossier import run_finreport_dossiers
 from industry import classify_industry
-from collectors.sw_industry import SWIndustryCache, is_sw_medical_sub, normalize_sub
+from collectors.sw_industry import SWMedicalCache, _is_ashare
 from models import Filing
 from stages import is_trigger, is_dossier_eligible
 from state import StateStore
@@ -162,48 +162,47 @@ def main() -> int:
             print(f"[{fc.name}] 出错:")
             traceback.print_exc()
 
-    # 财报行业标签: 按股票代码查申万行业 (A 股) —— 比 IPO 继承更准
+    # 财报行业标签: 按股票代码查申万医药生物(板块成分股, 按周缓存) —— 比 IPO 继承更准
     #   (已上市公司财报 与 未上市公司 IPO 申报 数据集几乎不重叠, 继承方案无效)
-    #   A 股(6 位代码): 东方财富 f127 = 申万二级行业; 命中医药生物二级 -> 医疗健康
-    #   北交所(无申万分类) / 查询失败: 回退到公司名关键词兜底
-    #   港交所(5 位代码): 申万覆盖不到, 保留 markers/关键词逻辑
-    sw_cache = SWIndustryCache(DATA_DIR / "sw_industry_cache.json")
+    #   A 股(6 位, 沪深): 命中申万医药生物成分 -> 医疗健康 + 申万二级子行业
+    #   未命中(板块权威): 非医疗, 不标记
+    #   北交所 / 港交所 / 代码缺失: 申万不覆盖, 走公司名关键词兜底
+    #   若板块映射为空(东方财富限流拉取失败): 整体回退关键词兜底
+    sw = SWMedicalCache(DATA_DIR / "sw_medical.json")
+    sw_available = sw.available()
     fin_med_count = 0
     fin_sw_medical = 0      # 申万命中且为医疗
-    fin_sw_nonmed = 0       # 申万命中但非医疗(如白酒/银行)
-    fin_fallback = 0         # 关键词兜底(港交所 / 北交所 / 查询失败)
+    fin_sw_nonmed = 0       # 申万权威排除(非医药生物 A 股)
+    fin_fallback = 0         # 关键词兜底(港/北交所 / 映射不可用)
     for r in finreports:
         code = (r.stock_code or "").strip()
-        if len(code) == 6 and code.isdigit():
-            # A 股: 查申万二级行业
-            sub = sw_cache.get_sub(code)
-            if sub:
-                if is_sw_medical_sub(sub):
-                    r.industry = "医疗健康"
-                    r.sub_industry = normalize_sub(sub)
-                    fin_sw_medical += 1
-                else:
-                    # 申万命中但非医疗 -> 不标记
-                    r.industry = ""
-                    r.sub_industry = ""
-                    fin_sw_nonmed += 1
+        if _is_ashare(code):
+            if sw_available and sw.is_medical(code):
+                r.industry = "医疗健康"
+                r.sub_industry = sw.get_sub(code)
+                fin_sw_medical += 1
+            elif sw_available:
+                # 板块权威: A 股但不在医药生物名单 -> 非医疗
+                r.industry = ""
+                r.sub_industry = ""
+                fin_sw_nonmed += 1
             else:
-                # 查不到(北交所 f127 空 / 网络失败) -> 关键词兜底
+                # 映射不可用(拉取失败) -> 关键词兜底
                 ind, sind, is18a = classify_industry(r.company_name)
                 r.industry, r.sub_industry, r.is_18a = ind, sind, is18a
                 fin_fallback += 1
         else:
-            # 港交所(5 位)或代码缺失 -> 关键词兜底
-            # 注: FinReport 模型无 markers 字段, 即便传入也为 None, 故此处不传
+            # 北交所 / 港交所(5 位) / 代码缺失 -> 关键词兜底
             ind, sind, is18a = classify_industry(r.company_name)
             r.industry, r.sub_industry, r.is_18a = ind, sind, is18a
             fin_fallback += 1
         if r.industry:
             fin_med_count += 1
-    sw_cache.save()
+    sw.save()
     print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条 "
           f"(申万医疗 {fin_sw_medical}, 申万非医疗 {fin_sw_nonmed}, 关键词兜底 {fin_fallback}; "
-          f"缓存命中 {sw_cache.hit}, 新查询 {sw_cache.miss})")
+          f"申万成分股映射 {'可用' if sw_available else '不可用(已回退关键词)'}, "
+          f"共 {len(sw._map)} 只)")
 
     (DATA_DIR / "finreports.json").write_text(
         json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),
