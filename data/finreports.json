@@ -688,20 +688,5 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "cc25e2aa6d9a03ec"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "ANGANG STEEL",
-    "stock_code": "00347",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning &#x2f; Inside Information]",
-    "announcement_date": "13/07/2026",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0713/2026071301063.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "f6605f343e7a3be3"
   }
 ]
