@@ -1,7 +1,8 @@
-"""档案批处理:对 ★可选题 且有招股书 PDF 的公司自动建档。
+"""档案批处理:对有招股书 PDF 的公司自动建档(申报受理~注册生效/招股)。
 
-策略(Paodekuai 拍板):只给过会及以后的公司建档(一周几家,成本可忽略);
-其余公司不自动跑。已建档且招股书未更新的不重复建。
+策略(Paodekuai 拍板):拆解范围比"★可选题"更宽——申报受理、已问询、上会
+这三个早期阶段也建档案(只要有招股书 PDF)。已上市/中止/终止不建。
+已建档且招股书未更新的不重复建。
 
 ★ 重要限流(Paodekuai 要求):resolve_prospectus 和建档都只看最近 7 天更新的公司,
 不把上千家历史公司逐一查。首次运行也只处理一周内的。
@@ -17,7 +18,7 @@ from pathlib import Path
 from collectors.resolve import resolve_prospectus
 from extractor import load_pdf, cid_trap_ratio, Page
 from dossier import generate_dossier, md_to_html
-from stages import is_trigger
+from stages import is_dossier_eligible
 
 CST = timezone(timedelta(hours=8))
 RECENT_DAYS = 7
@@ -59,13 +60,13 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
     _sess = _rq.Session()
     resolve_count = 0
     for f in filings:
-        if is_trigger(f.stage) and not f.prospectus_url and _is_recent(f.page_updated):
+        if is_dossier_eligible(f.stage) and not f.prospectus_url and _is_recent(f.page_updated):
             url = resolve_prospectus(f, _sess)
             if url:
                 f.prospectus_url = url
                 resolve_count += 1
     print(f"[档案] 本次 resolve_prospectus 查询 {resolve_count} 家(7天内的触发公司)")
-    targets = [f for f in filings if is_trigger(f.stage) and f.prospectus_url and _is_recent(f.page_updated)]
+    targets = [f for f in filings if is_dossier_eligible(f.stage) and f.prospectus_url and _is_recent(f.page_updated)]
     print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (本次上限 {max_new} 篇)")
     built = 0
     for f in targets:
