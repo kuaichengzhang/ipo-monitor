@@ -33,6 +33,10 @@ QUERY_URL = "https://www.bse.cn/projectNewsController/infoResult.do?callback=cb"
 BSE_HEADERS = {
     "Referer": ENTRY_PAGE,
     "X-Requested-With": "XMLHttpRequest",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
 }
 
 # P码 -> 状态文字(官方筛选器实测)
@@ -110,15 +114,38 @@ class BSECollector(BaseCollector):
     name = "bse_project_news"
 
     def collect(self) -> list[Filing]:
+        import time as _time
         self.session.headers.update(BSE_HEADERS)
+
+        # 预热：先访问入口页
+        try:
+            self.session.get(ENTRY_PAGE, timeout=15)
+        except Exception:
+            pass
+
         out: list[Filing] = []
         page = 0
         total = 1
+        max_retries = 3
         while page < total and page < 100:
             payload = {"page": str(page), "shzt": "", "sortfield": "updateDate",
                        "sorttype": "desc", "keyword": ""}
-            resp = self.session.post(QUERY_URL, data=payload, timeout=self.timeout)
-            resp.raise_for_status()
+
+            # 重试 + 退避
+            resp = None
+            for attempt in range(max_retries):
+                try:
+                    resp = self.session.post(QUERY_URL, data=payload, timeout=self.timeout)
+                    resp.raise_for_status()
+                    break
+                except Exception:
+                    if attempt < max_retries - 1:
+                        wait = 3 * (attempt + 1)
+                        print(f"  [bse] 第 {attempt+1} 次失败，{wait}s 后重试...")
+                        _time.sleep(wait)
+                    else:
+                        raise
+
             filings, total = parse_response(unwrap_callback(resp.text))
             out.extend(filings)
             page += 1
