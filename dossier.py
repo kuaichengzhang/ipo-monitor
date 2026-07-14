@@ -111,17 +111,45 @@ def _sentences(md: str):
             yield line, True
 
 
+# 中文数字单位 → 倍数(用于页码回查时的等价匹配)
+_UNIT_MULT = {
+    "千万": 10_000_000,
+    "百万": 1_000_000,
+    "亿":   100_000_000,
+    "万":   10_000,
+    "千":   1_000,
+    "百":   100,
+}
+
+
 def _numbers_in(text: str) -> list[str]:
     # 去掉出处标记和年份后再找数字(年份/页码本身不算"需出处的数字")
     t = CITE_RE.sub("", text)
     # 用数字边界而非 \b(后者在中文"年"前不生效,导致"2023年"中的2023未被过滤)
     t = re.sub(r"(?<![0-9])(?:19|20)\d{2}(?![0-9])", "", t)
-    return re.findall(r"\d[\d,,]*(?:\.\d+)?", t)
+    # 排除 "4G"/"5G"/"6G" 等通信技术名称中的数字
+    t = re.sub(r"(?<![0-9])[456]G(?![0-9])", "", t)
+    # 捕获数字 + 可选中文单位(千万/百万/亿/万/千/百)
+    return re.findall(r"\d[\d,,]*(?:\.\d+)?\s*(?:千万|百万|亿|万|千|百)?", t)
 
 
 def _num_variants(num: str) -> set[str]:
-    n = num.replace(",", "").replace(",", "")
-    out = {num, n}
+    """生成数字的各种等价写法,用于页码回查时的子串匹配。
+
+    支持中文单位换算:2.6亿 → 260000000 / 260,000,000 / 26000(万值) 等。
+    跨单位:亿→万值(原文常写"XX,XXX万"),千万→万值,百万→万值。
+    """
+    # 检测并分离中文单位(先匹配长单位,再匹配短单位)
+    unit = None
+    base = num.strip()
+    for u in ("千万", "百万", "亿", "万", "千", "百"):
+        if base.endswith(u):
+            unit = u
+            base = base[:-len(u)].strip()
+            break
+
+    n = base.replace(",", "").replace("，", "")
+    out = {num, n, base}
     if "." in n:
         out.add(n.rstrip("0").rstrip("."))
     # 千分位版本
@@ -133,6 +161,64 @@ def _num_variants(num: str) -> set[str]:
             out.add(f"{int(n):,}")
     except ValueError:
         pass
+
+    # 中文单位展开:2.6亿 → 260000000, 260,000,000
+    if unit and unit in _UNIT_MULT:
+        try:
+            val = float(n) * _UNIT_MULT[unit]
+            int_val = int(val)
+            out.add(str(int_val))
+            out.add(f"{int_val:,}")
+            if val != int_val:
+                out.add(str(val))
+
+            # 跨单位:生成万值(原文常写"XX,XXX.XX万"格式)
+            # 12.2亿 → 122000 → 匹配"122,000.00万"
+            if int_val >= 10000:
+                wan = int_val // 10000
+                out.add(str(wan))
+                out.add(f"{wan:,}")
+
+            # 跨单位:亿值(原文常写"X.XX亿"格式)
+            # 3,200万 → 0.32亿 → 匹配"0.32亿"
+            if int_val >= 100_000_000 and int_val % 100_000_000 == 0:
+                yi = int_val // 100_000_000
+                out.add(f"{yi}亿")
+            elif int_val >= 100_000_000:
+                yi_val = val / 100_000_000
+                out.add(f"{yi_val}亿")
+
+        except (ValueError, OverflowError):
+            pass
+
+    return out
+
+
+def _num_value(num: str) -> float | None:
+    """解析数字(含中文单位)为浮点值。用于近似匹配。"""
+    unit = None
+    base = num.strip()
+    for u in ("千万", "百万", "亿", "万", "千", "百"):
+        if base.endswith(u):
+            unit = u
+            base = base[:-len(u)].strip()
+            break
+    try:
+        n = float(base.replace(",", "").replace("，", ""))
+        if unit and unit in _UNIT_MULT:
+            n *= _UNIT_MULT[unit]
+        return n
+    except ValueError:
+        return None
+
+
+def _extract_page_numbers(text: str) -> list[float]:
+    """从页面文本中提取所有数字(含中文单位),返回浮点值列表。用于近似匹配。"""
+    out = []
+    for m in re.finditer(r"\d[\d,]*(?:\.\d+)?\s*(?:千万|百万|亿|万|千|百)?", text):
+        val = _num_value(m.group())
+        if val is not None:
+            out.append(val)
     return out
 
 
@@ -154,7 +240,7 @@ def _parse_cites(cite_strs: list[str]) -> list[int]:
 
 def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
     """校验闸门:逐行检查,违规行静默移除(不污染正文),末尾汇总待核清单。返回(净化稿, 报告)。"""
-    page_text = {p.number: normalize_text(p.text or "").replace(",", ",") for p in pages}
+    page_text = {p.number: normalize_text(p.text or "") for p in pages}
     report = GateReport()
     out_lines = []
 
@@ -164,8 +250,8 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
             out_lines.append(line)
             continue
 
-        # 去掉行首列表序号(如 "6. " 或 "- " 再检查数字)
-        check_line = re.sub(r"^\d+\.\s*", "", stripped)
+        # 去掉行首列表序号(支持 **N. 格式的粗体标题)
+        check_line = re.sub(r"^(?:\*\*)?\d+\.\s*(?:\*\*)?", "", stripped)
 
         # 1) 定性词
         hit_banned = next((w for w in BANNED if w in line), None)
@@ -186,12 +272,24 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
         if nums and cites:
             joined = "".join(page_text.get(c, "") for c in cites)
             joined_nospace = joined.replace(" ", "")
+            joined_nocomma = joined.replace(",", "").replace("，", "")
+            page_nums = None  # 延迟初始化(仅子串匹配失败时才提取)
             bad = None
             for num in nums:
                 variants = _num_variants(num)
-                if not any(v in joined or v in joined_nospace for v in variants):
-                    bad = num
-                    break
+                if any(v in joined or v in joined_nospace or v in joined_nocomma
+                       for v in variants):
+                    continue  # 子串匹配成功
+                # 兜底:数值近似匹配(处理 LLM 四舍五入,如 2.6亿 vs 26,014.32万)
+                num_val = _num_value(num)
+                if num_val is not None and num_val > 0:
+                    if page_nums is None:
+                        page_nums = _extract_page_numbers(joined)
+                    if any(abs(pn - num_val) / max(abs(num_val), 1) <= 0.05
+                           for pn in page_nums):
+                        continue  # 数值近似,放行
+                bad = num
+                break
             if bad is not None:
                 report.rejected_bad_cite.append(f"[{bad}] {stripped[:60]}")
                 continue  # 静默移除
