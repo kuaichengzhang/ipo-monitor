@@ -114,7 +114,8 @@ def _sentences(md: str):
 def _numbers_in(text: str) -> list[str]:
     # 去掉出处标记和年份后再找数字(年份/页码本身不算"需出处的数字")
     t = CITE_RE.sub("", text)
-    t = re.sub(r"\b(?:19|20)\d{2}\b", "", t)
+    # 用数字边界而非 \b(后者在中文"年"前不生效,导致"2023年"中的2023未被过滤)
+    t = re.sub(r"(?<![0-9])(?:19|20)\d{2}(?![0-9])", "", t)
     return re.findall(r"\d[\d,,]*(?:\.\d+)?", t)
 
 
@@ -136,7 +137,7 @@ def _num_variants(num: str) -> set[str]:
 
 
 def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
-    """校验闸门:逐行检查,违规行替换为待核标记。返回(净化稿, 报告)。"""
+    """校验闸门:逐行检查,违规行静默移除(不污染正文),末尾汇总待核清单。返回(净化稿, 报告)。"""
     page_text = {p.number: normalize_text(p.text or "").replace(",", ",") for p in pages}
     report = GateReport()
     out_lines = []
@@ -151,8 +152,7 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
         hit_banned = next((w for w in BANNED if w in line), None)
         if hit_banned:
             report.rejected_banned.append(f"[{hit_banned}] {stripped[:60]}")
-            out_lines.append(f"- {MISSING}(原句含定性措辞,已拦截)")
-            continue
+            continue  # 静默移除,不污染正文
 
         nums = _numbers_in(line)
         cites = [int(m) for m in CITE_RE.findall(line)]
@@ -160,8 +160,7 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
         # 2) 有数字必须有出处(允许行内已是待核标记)
         if nums and not cites and MISSING not in line:
             report.rejected_no_cite.append(stripped[:70])
-            out_lines.append(f"- {MISSING}(原句含无出处数字,已拦截)")
-            continue
+            continue  # 静默移除
 
         # 3) 页码回查:行内每个数字须出现在所引任一页的原文中
         if nums and cites:
@@ -175,11 +174,17 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
                     break
             if bad is not None:
                 report.rejected_bad_cite.append(f"[{bad}] {stripped[:60]}")
-                out_lines.append(f"- {MISSING}(原句数字 {bad} 与所引页码原文对不上,已拦截)")
-                continue
+                continue  # 静默移除
 
         report.passed_sentences += 1
         out_lines.append(line)
+
+    # 末尾追加待核清单(紧凑汇总,不逐条占行)
+    total_rejected = len(report.rejected_no_cite) + len(report.rejected_banned) + len(report.rejected_bad_cite)
+    if total_rejected:
+        out_lines.append("")
+        out_lines.append(f"---")
+        out_lines.append(f"*闸门拦截 {total_rejected} 句（无出处 {len(report.rejected_no_cite)} · 定性词 {len(report.rejected_banned)} · 页码对不上 {len(report.rejected_bad_cite)}），已从正文移除。*")
 
     return "\n".join(out_lines), report
 
