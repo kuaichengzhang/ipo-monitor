@@ -48,8 +48,13 @@ def dossier_link_map(out_dir: Path) -> dict:
     return m
 
 
-def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
-    """为触发公司建档。返回 {公司名: 档案html相对路径}。无 API key 时跳过建档但仍返回已有档案。"""
+def run_dossiers(filings, out_dir: Path, max_new: int = 3,
+                 changed_uids: set | None = None) -> dict:
+    """为触发公司建档。返回 {公司名: 档案html相对路径}。无 API key 时跳过建档但仍返回已有档案。
+
+    changed_uids: 状态变化的公司 uid 集合。这些公司即使已有档案也会重建
+    （招股书可能更新了，要看新的）。
+    """
     out_dir.mkdir(parents=True, exist_ok=True)
     if not os.environ.get("DEEPSEEK_API_KEY"):
         print("[档案] 未配置 DEEPSEEK_API_KEY,跳过建档(监控/看板不受影响)")
@@ -74,8 +79,11 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3) -> dict:
             print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets) - built} 家下次再建")
             break
         path = out_dir / f"{_safe_name(f.company_name)}.md"
-        if path.exists():
-            continue
+        is_changed = changed_uids and f.uid in changed_uids
+        if path.exists() and not is_changed:
+            continue  # 已有档案且无变化,跳过
+        if is_changed and path.exists():
+            print(f"[档案] ↻ {f.company_name} 状态变化,重建档案")
         try:
             import requests as rq
             pdf_path = out_dir / "_tmp.pdf"
