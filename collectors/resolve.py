@@ -54,11 +54,17 @@ def sse_resolve(stock_audit_num: str, session: requests.Session | None = None) -
            f"&isPagination=true&pageHelp.pageSize=50&pageHelp.pageNo=1"
            f"&pageHelp.beginPage=1&pageHelp.endPage=1&_={int(time.time()*1000)}")
     r = s.get(url, headers={"Referer": "https://www.sse.com.cn/"}, timeout=30)
-    r.raise_for_status()
+    try:
+        r.raise_for_status()
+    except Exception as e:
+        print(f"[resolve] 上交所 auditId={stock_audit_num} 查询HTTP异常: {e}")
+        raise
     m = re.search(r"\{.*\}", r.text, re.S)
     if not m:
+        print(f"[resolve] 上交所 auditId={stock_audit_num} 响应无JSON: {r.text[:160]!r}")
         return None
     files = json.loads(m.group(0)).get("result") or []
+    print(f"[resolve] 上交所 auditId={stock_audit_num} 文件数={len(files)}")
     return sse_pick(files, session=s)
 
 
@@ -77,17 +83,24 @@ def sse_pick(files: list[dict], session=None) -> str | None:
         return None
     rank = {t: i for i, t in enumerate(SSE_PROSPECTUS_TYPES)}
     cands.sort(key=lambda f: (rank.get(f.get("fileTypeMap"), -1),
-                              str(f.get("fileUpdTime") or "")), reverse=True)
+                             str(f.get("fileUpdTime") or "")), reverse=True)
+    best = None
     for c in cands:
         path = c.get("filePath") or ""
         if not path:
             continue
         primary = "https://static.sse.com.cn" + path
+        best = primary
         if session is None or _head_ok(primary, session):
             return primary
         fallback = "https://www.sse.com.cn" + path
         if _head_ok(fallback, session):
             return fallback
+    # HEAD 自检全不可达:跑批环境可能拒 HEAD / 限网络(误杀有效直链),
+    # 退而返回最优候选,交由下载步骤(404 会触发重解析)做最终校验
+    if best:
+        print(f"[sse_pick] auditId 候选 {len(cands)} 个,HEAD 均不可达,退而返回最优候选 {best}")
+        return best
     return None
 
 
