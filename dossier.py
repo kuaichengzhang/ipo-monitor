@@ -280,7 +280,7 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
                 if any(v in joined or v in joined_nospace or v in joined_nocomma
                        for v in variants):
                     continue  # 子串匹配成功
-                # 兜底:数值近似匹配(处理 LLM 四舍五入,如 2.6亿 vs 26,014.32万)
+                # 兜底1:数值近似匹配(处理 LLM 四舍五入,如 2.6亿 vs 26,014.32万)
                 num_val = _num_value(num)
                 if num_val is not None and num_val > 0:
                     if page_nums is None:
@@ -288,6 +288,25 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
                     if any(abs(pn - num_val) / max(abs(num_val), 1) <= 0.05
                            for pn in page_nums):
                         continue  # 数值近似,放行
+                # 兜底2:相邻页搜索(处理 LLM 页码偏移 ±1~2 页)
+                adjacent = set()
+                for c in cites:
+                    for delta in (-2, -1, 1, 2):
+                        a = c + delta
+                        if a > 0 and a not in cites:
+                            adjacent.add(a)
+                if adjacent:
+                    adj_text = "".join(page_text.get(c, "") for c in sorted(adjacent))
+                    adj_ns = adj_text.replace(" ", "")
+                    adj_nc = adj_text.replace(",", "").replace("，", "")
+                    if any(v in adj_text or v in adj_ns or v in adj_nc
+                           for v in variants):
+                        continue  # 相邻页子串匹配,放行
+                    if num_val is not None and num_val > 0:
+                        adj_nums = _extract_page_numbers(adj_text)
+                        if any(abs(pn - num_val) / max(abs(num_val), 1) <= 0.05
+                               for pn in adj_nums):
+                            continue  # 相邻页数值近似,放行
                 bad = num
                 break
             if bad is not None:
