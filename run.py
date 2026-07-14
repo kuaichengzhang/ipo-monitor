@@ -117,9 +117,10 @@ def main() -> int:
 
     # ★可选题建档(在看板之前,让看板能挂档案链接)
     # ★ 拆解范围:申报受理~注册生效/招股都拆(比选题触发更宽)
+    changed_uids = {f.uid for f in diff["changed"]}
     recent_filings = [f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)]
     print(f"[建档] 本次新增/变化的触发公司: {len(recent_filings)} 家(全量 {len(all_filings)} 条)")
-    dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers")
+    dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers", changed_uids=changed_uids)
     # safe_name -> 还原到公司名匹配(看板按公司名查)
     from dossier_runner import _safe_name
     dossier_map = {}
@@ -164,7 +165,6 @@ def main() -> int:
 
     # 生成可读网页看板(dashboard.html 放项目根,方便 GitHub Pages 直接服务)
     new_uids = {f.uid for f in diff["new"]}
-    changed_uids = {f.uid for f in diff["changed"]}
     dashboard_html = generate_dashboard(all_filings, new_uids, changed_uids,
                                         dossier_map=dossier_map,
                                         finreports=finreports,
