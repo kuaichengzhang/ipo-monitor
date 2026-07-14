@@ -131,11 +131,19 @@ class HKEXAppProofCollector(BaseCollector):
     """申请版本 / 聆讯后资料集(PHIP)源 —— 已接通真实接口。
 
     数据源(经浏览器 Network 实测确认):
-      https://www1.hkexnews.hk/ncms/json/eds/appactive_app_sehk_c.json  (主板,中文名)
-      https://www1.hkexnews.hk/ncms/json/eds/appactive_app_gem_c.json   (GEM,中文名)
+      AP 接口(申请版本):
+        https://www1.hkexnews.hk/ncms/json/eds/appactive_app_sehk_c.json  (主板,中文名)
+        https://www1.hkexnews.hk/ncms/json/eds/appactive_app_gem_c.json   (GEM,中文名)
+      PHIP 接口(聆讯后资料集):
+        https://www1.hkexnews.hk/ncms/json/eds/appactive_appphip_sehk_c.json  (主板,中文名)
+        https://www1.hkexnews.hk/ncms/json/eds/appactive_appphip_gem_c.json   (GEM,中文名)
+
+      港交所于 2026 年将 PHIP 公司从 AP 接口拆出,AP 接口 hasPhip 全部为 false,
+      PHIP 公司需从 apphip 接口单独获取。
+
       纯 JSON,记录在 .app;每条:id(=文件夹号)、d(日期)、a(公司名)、hasPhip(是否已发PHIP)、
       ls/ps(文档数组,文档名在 nF/nS1,相对路径在 u1)。
-    触发信号:hasPhip==true 即「过会/PHIP已发」= Paodekuai 的选题触发点。
+    触发信号:hasPhip==true 即「过会/PHIP已发」= 选题触发点。
     PDF 链接 = https://www1.hkexnews.hk/app/ + u1。
     """
     name = "hkex_app_phip"
@@ -144,10 +152,20 @@ class HKEXAppProofCollector(BaseCollector):
         "主板": "https://www1.hkexnews.hk/ncms/json/eds/appactive_app_sehk_c.json",
         "GEM": "https://www1.hkexnews.hk/ncms/json/eds/appactive_app_gem_c.json",
     }
+    PHIP_URLS = {
+        "主板": "https://www1.hkexnews.hk/ncms/json/eds/appactive_appphip_sehk_c.json",
+        "GEM": "https://www1.hkexnews.hk/ncms/json/eds/appactive_appphip_gem_c.json",
+    }
 
     def collect(self) -> list[Filing]:
         out: list[Filing] = []
+        # AP 接口(申请版本)
         for board, url in self.APP_ACTIVE_URLS.items():
+            data = json.loads(self.get(url))
+            for rec in data.get("app", []):
+                out.append(map_app_record(rec, board))
+        # PHIP 接口(聆讯后资料集) —— 2026年港交所拆分后需单独请求
+        for board, url in self.PHIP_URLS.items():
             data = json.loads(self.get(url))
             for rec in data.get("app", []):
                 out.append(map_app_record(rec, board))
