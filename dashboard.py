@@ -53,6 +53,9 @@ def _row(f, new_uids, changed_uids, dossier_map):
         "mk": "/".join(f.markers) if f.markers else "",
         "py": _initials(f.company_name),
         "pys": _initials(f.sponsor or ""),
+        "ind": getattr(f, 'industry', '') or '',
+        "sind": getattr(f, 'sub_industry', '') or '',
+        "i18a": getattr(f, 'is_18a', False) or False,
     }
 
 
@@ -64,6 +67,9 @@ def _finreport_row(r, dossier_map):
         "url": r.announcement_url or "",
         "dossier": dossier_map.get(r.uid, ""),
         "title": r.title or "",
+        "ind": getattr(r, 'industry', '') or '',
+        "sind": getattr(r, 'sub_industry', '') or '',
+        "i18a": getattr(r, 'is_18a', False) or False,
     }
 
 
@@ -94,6 +100,15 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
     fr_rows = [_finreport_row(r, finreport_dossier_map) for r in finreports]
     fr_data_json = json.dumps(fr_rows, ensure_ascii=False).replace("</", "<\\/")
     fr_type_colors_json = json.dumps(FR_TYPE_COLORS, ensure_ascii=False)
+
+    # 医疗健康频道数据
+    med_filings = [r for r in rows if r.get("ind") == "医疗健康"]
+    med_finreports = [r for r in fr_rows if r.get("ind") == "医疗健康"]
+    med_total = len(med_filings) + len(med_finreports)
+    med_18a_count = sum(1 for r in med_filings + med_finreports if r.get("i18a"))
+    med_filings_json = json.dumps(med_filings, ensure_ascii=False).replace("</", "<\\/")
+    med_finreports_json = json.dumps(med_finreports, ensure_ascii=False).replace("</", "<\\/")
+    sub_industries = sorted({r["sind"] for r in med_filings + med_finreports if r.get("sind")})
 
     return r"""<!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -139,6 +154,10 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
  .vt-btn.on { color:var(--blue); border-bottom-color:var(--blue); font-weight:600; }
  .fr-card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:8px; }
  .fr-type { color:#fff; padding:1px 8px; border-radius:20px; font-size:12px; }
+ .med-section-title { font-size:15px; color:var(--ink); margin:20px 0 4px; padding-bottom:6px; border-bottom:1px solid var(--line); }
+ .med-stats { font-size:12px; color:var(--muted); margin-top:6px; }
+ .badge.i18a { background:#e8730c; color:#fff; font-size:10px; padding:1px 6px; border-radius:20px; }
+ .badge.sind { background:#e8f0ff; border:1px solid #bcd3ff; color:#1a5fd0; font-size:10px; padding:1px 6px; border-radius:20px; }
  footer { text-align:center; color:var(--muted); font-size:12px; padding:20px; }
 </style></head><body>
 <header>
@@ -149,6 +168,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
 <div class="view-toggle">
   <button class="vt-btn on" data-view="ipo">IPO监控 (__TOTAL__)</button>
   <button class="vt-btn" data-view="fin">财报披露 (__FRTOTAL__)</button>
+  <button class="vt-btn" data-view="med">医疗健康 (__MEDTOTAL__)</button>
 </div>
 <main>
   <div id="ipo-view">
@@ -178,6 +198,20 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       </div>
     </div>
     <div id="fr-list"></div>
+  </div>
+  <div id="med-view" style="display:none">
+    <div class="controls">
+      <div class="chips">
+        <span class="chip on" data-med-sind="">全部</span>__MEDCHIPS__
+        <span class="chip" data-med-18a="1">只看 18A</span>
+        <span class="count" id="med-count"></span>
+      </div>
+      <div class="med-stats" id="med-stats"></div>
+    </div>
+    <h3 class="med-section-title">IPO 动态 <span id="med-ipo-count" class="count"></span></h3>
+    <div id="med-ipo-list"></div>
+    <h3 class="med-section-title">财报拆解 <span id="med-fin-count" class="count"></span></h3>
+    <div id="med-fin-list"></div>
   </div>
 </main>
 <footer>★可选题 = 过会/PHIP及以后 · 档案为机器生成底稿 · 三棱镜成稿由作者本人撰写</footer>
@@ -325,6 +359,69 @@ document.querySelectorAll('.chip[data-fr-type]').forEach(c=>{
     c.classList.add('on'); frFilter = c.dataset.frType; renderFR();
   });
 });
+// —— 医疗健康频道 ——
+const MED_FILINGS = __MEDFILINGS__;
+const MED_FINREPORTS = __MEDFINREPORTS__;
+const FR_COLORS_MED = __FRCOLORS__;
+const STAGE_COLORS_MED = __COLORS__;
+let medSind = '', med18a = false;
+function renderMed(){
+  let ipoRows = MED_FILINGS.slice();
+  let finRows = MED_FINREPORTS.slice();
+  if(medSind){
+    ipoRows = ipoRows.filter(r=>r.sind===medSind);
+    finRows = finRows.filter(r=>r.sind===medSind);
+  }
+  if(med18a){
+    ipoRows = ipoRows.filter(r=>r.i18a);
+    finRows = finRows.filter(r=>r.i18a);
+  }
+  ipoRows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  finRows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+  const total = ipoRows.length + finRows.length;
+  const i18aCnt = ipoRows.filter(r=>r.i18a).length + finRows.filter(r=>r.i18a).length;
+  document.getElementById('med-count').textContent = total + ' 条';
+  document.getElementById('med-stats').innerHTML = 'IPO动态 ' + ipoRows.length + ' · 财报 ' + finRows.length + (i18aCnt>0 ? ' · 18A公司 ' + i18aCnt : '');
+  document.getElementById('med-ipo-count').textContent = ipoRows.length + ' 家';
+  document.getElementById('med-fin-count').textContent = finRows.length + ' 条';
+  // IPO 动态
+  document.getElementById('med-ipo-list').innerHTML = ipoRows.map(r=>{
+    const badges = (r.trig?'<span class="badge star">★</span>':'') + (r.i18a?'<span class="badge i18a">18A</span>':'') + (r.new?'<span class="badge new">新</span>':'');
+    const sindTag = r.sind ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
+    const links = [];
+    if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解档案</a>');
+    if(r.pros) links.push('<a href="'+esc(r.pros)+'" target="_blank">招股书</a>');
+    if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">审核页</a>');
+    return '<div class="card '+(r.trig?'trig':'')+'">'
+      +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+badges+'</div>'
+      +'<div class="l2"><span class="stage" style="background:'+(STAGE_COLORS_MED[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
+      +'<span class="meta">'+esc(r.status)+'</span><span class="board">'+esc(r.ex)+' · '+esc(r.bd)+'</span>'
+      +(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+      +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+  }).join('') || '<div class="card"><span class="meta">暂无医疗健康 IPO 动态</span></div>';
+  // 财报拆解
+  document.getElementById('med-fin-list').innerHTML = finRows.map(r=>{
+    const color = FR_COLORS_MED[r.type] || '#5b7db1';
+    const i18aTag = r.i18a ? '<span class="badge i18a">18A</span>' : '';
+    const sindTag = r.sind ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
+    const links = [];
+    if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
+    if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
+    return '<div class="fr-card">'
+      +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+i18aTag+'<span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
+      +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+      +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+  }).join('') || '<div class="card"><span class="meta">暂无医疗健康财报数据</span></div>';
+}
+document.querySelectorAll('.chip[data-med-sind]').forEach(c=>{
+  c.addEventListener('click', ()=>{
+    document.querySelectorAll('.chip[data-med-sind]').forEach(x=>x.classList.remove('on'));
+    c.classList.add('on'); medSind = c.dataset.medSind; renderMed();
+  });
+});
+document.querySelector('.chip[data-med-18a]').addEventListener('click', function(){
+  this.classList.toggle('on'); med18a = this.classList.contains('on'); renderMed();
+});
 document.querySelectorAll('.vt-btn').forEach(b=>{
   b.addEventListener('click', ()=>{
     document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
@@ -332,9 +429,11 @@ document.querySelectorAll('.vt-btn').forEach(b=>{
     const v = b.dataset.view;
     document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
     document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
+    document.getElementById('med-view').style.display = v==='med' ? '' : 'none';
   });
 });
 renderFR();
+renderMed();
 render();
 </script>
 </body></html>""".replace("__UPDATED__", updated_at) \
@@ -343,4 +442,11 @@ render();
    .replace("__EXTABS__", ex_tabs).replace("__DATA__", data_json) \
    .replace("__COLORS__", stage_colors_json).replace("__ORDER__", stage_order_json) \
    .replace("__FRTOTAL__", str(len(fr_rows))).replace("__FRDATA__", fr_data_json) \
-   .replace("__FRCOLORS__", fr_type_colors_json)
+   .replace("__FRCOLORS__", fr_type_colors_json) \
+   .replace("__MEDTOTAL__", str(med_total)) \
+   .replace("__MEDFILINGS__", med_filings_json) \
+   .replace("__MEDFINREPORTS__", med_finreports_json) \
+   .replace("__MEDCHIPS__", "".join(
+       f'<span class="chip" data-med-sind="{html.escape(si)}">{html.escape(si)}</span>'
+       for si in sub_industries
+   ))
