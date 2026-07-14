@@ -62,6 +62,11 @@ class Filing:
     page_updated: Optional[str] = None        # 源页面标注的更新日期
     source_url: Optional[str] = None          # 抓取自哪个列表页
 
+    # —— 行业标签(由 industry.py 填充) ——
+    industry: str = ""                        # 一级行业: 医疗健康 / ""
+    sub_industry: str = ""                    # 二级行业: 化学制药/生物制品/医疗器械/医疗服务/中药
+    is_18a: bool = False                      # 港交所未盈利生物科技(18A)
+
     # —— 系统字段 ——
     first_seen: Optional[str] = None          # 本系统首次见到的时间(UTC ISO)
     last_seen: Optional[str] = None
@@ -101,6 +106,11 @@ class FinReport:
     announcement_date: str = ""   # YYYY-MM-DD
     announcement_url: str = ""
     source: str = ""              # CNINFO / HKEX
+
+    # —— 行业标签(由 industry.py 填充) ——
+    industry: str = ""
+    sub_industry: str = ""
+    is_18a: bool = False
 
     @property
     def uid(self) -> str:
