@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# 本地密钥/环境
+.env
+*.local
+
+# 临时产物
+data/dossiers/_tmp.pdf
+data/_tmp.pdf
+.DS_Store

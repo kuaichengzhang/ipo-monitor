@@ -6,7 +6,8 @@
         ?sqlId=GP_COMMON_FILE_SEARCH&auditId={审核编号}&isPagination=true&pageHelp...
         头:Referer https://www.sse.com.cn/;JSONP。
         文件在 .result[]:fileTitle / filePath / fileTypeMap(I0011申报稿 I0012上会稿 I0013注册稿)
-        直链 = https://static.sse.com.cn + filePath(运行时 HEAD 自检,失败回退 www.sse.com.cn)
+        直链 = https://static.sse.com.cn/stock + filePath(IPO/科创板/主板文件实际落点含 /stock 段;
+              运行时 HEAD 自检,失败再试 static.sse.com.cn / www.sse.com.cn 等价前缀)
 
 深交所:GET https://www.szse.cn/api/ras/projectrends/details?id={prjid}&r={rand}
         头:X-Requested-With。纯 JSON。
@@ -33,6 +34,16 @@ UA = {"User-Agent": ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.
 
 # 上交所披露类型:申报稿 / 上会稿 / 注册稿(按审核阶段渐进,取版本最新者)
 SSE_PROSPECTUS_TYPES = ("I0011", "I0012", "I0013")
+
+# 招股书静态落点:实测 SSE 的 IPO/科创板/主板文件真实落点在
+# static.sse.com.cn 之下还多一层 /stock(漏掉这层会整组 404)。
+# 按"最可能命中"排序,逐个 HEAD 自检,返回首个 200 的直链。
+SSE_BASES = (
+    "https://static.sse.com.cn/stock",   # IPO 文件实际落点(含 /stock)
+    "https://static.sse.com.cn",
+    "https://www.sse.com.cn/stock",
+    "https://www.sse.com.cn",
+)
 
 
 def _head_ok(url: str, session=None) -> bool:
@@ -89,13 +100,13 @@ def sse_pick(files: list[dict], session=None) -> str | None:
         path = c.get("filePath") or ""
         if not path:
             continue
-        primary = "https://static.sse.com.cn" + path
-        best = primary
-        if session is None or _head_ok(primary, session):
-            return primary
-        fallback = "https://www.sse.com.cn" + path
-        if _head_ok(fallback, session):
-            return fallback
+        # 依次试各静态落点前缀,返回首个 HEAD 200 的直链
+        for base in SSE_BASES:
+            url = base + path
+            if best is None:
+                best = url
+            if session is None or _head_ok(url, session):
+                return url
     # HEAD 自检全不可达:跑批环境可能拒 HEAD / 限网络(误杀有效直链),
     # 退而返回最优候选,交由下载步骤(404 会触发重解析)做最终校验
     if best:
