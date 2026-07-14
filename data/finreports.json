@@ -703,20 +703,5 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "f6605f343e7a3be3"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "PRIME INTEL",
-    "stock_code": "08379",
-    "report_type": "Annual Results",
-    "report_period": "",
-    "title": "Announcements and Notices - [Final Results &#x2f; Resumption]",
-    "announcement_date": "13/07/2026",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/gem/2026/0713/2026071301047.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "1e9982cb23e2a943"
   }
 ]
