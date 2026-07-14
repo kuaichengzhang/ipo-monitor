@@ -106,6 +106,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
     med_finreports = [r for r in fr_rows if r.get("ind") == "医疗健康"]
     med_total = len(med_filings) + len(med_finreports)
     med_18a_count = sum(1 for r in med_filings + med_finreports if r.get("i18a"))
+    med_ipo_count = len(med_filings)
     med_filings_json = json.dumps(med_filings, ensure_ascii=False).replace("</", "<\\/")
     med_finreports_json = json.dumps(med_finreports, ensure_ascii=False).replace("</", "<\\/")
     sub_industries = sorted({r["sind"] for r in med_filings + med_finreports if r.get("sind")})
@@ -159,11 +160,42 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
  .badge.i18a { background:#e8730c; color:#fff; font-size:10px; padding:1px 6px; border-radius:20px; }
  .badge.sind { background:#e8f0ff; border:1px solid #bcd3ff; color:#1a5fd0; font-size:10px; padding:1px 6px; border-radius:20px; }
  footer { text-align:center; color:var(--muted); font-size:12px; padding:20px; }
+ .toolbar { display:flex; gap:6px; align-items:center; margin-top:6px; flex-wrap:wrap; }
+ .sort-sel { border:1px solid var(--line); border-radius:8px; padding:5px 8px; font-size:13px; background:#fff; cursor:pointer; }
+ .btn-export { border:1px solid var(--line); background:#fff; border-radius:8px; padding:5px 12px; font-size:13px; cursor:pointer; color:var(--blue); }
+ .btn-export:hover { background:#e8f0ff; }
+ .kbd-hint { font-size:11px; color:var(--muted); margin-left:auto; }
+ .kbd { border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:11px; background:#fff; }
+ .stats-bar { display:flex; gap:2px; margin-top:8px; height:6px; border-radius:3px; overflow:hidden; }
+ .stats-bar > div { flex:1; }
+ .stats-legend { display:flex; gap:10px; margin-top:4px; font-size:11px; color:var(--muted); flex-wrap:wrap; }
+ .stats-legend span { display:flex; align-items:center; gap:3px; }
+ .stats-legend i { width:8px; height:8px; border-radius:2px; display:inline-block; }
+ .stage-chips { display:flex; gap:4px; margin-top:6px; flex-wrap:wrap; }
+ .stage-chip { border:1px solid var(--line); background:#fff; border-radius:16px; padding:1px 8px; font-size:11px; cursor:pointer; white-space:nowrap; }
+ .stage-chip.on { color:#fff; }
+ .fr-search { width:100%; padding:8px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; margin-bottom:8px; }
+ @media(max-width:640px){
+   header { padding:14px 12px; } header h1 { font-size:17px; } header .sub { font-size:12px; }
+   header .stats { font-size:12px; } header .stats b { font-size:14px; }
+   main { padding:8px 8px 50px; }
+   .card { padding:9px 10px; } .name { font-size:14px; }
+   .l2 { font-size:12px; gap:6px; } .l3 { font-size:12px; gap:8px; }
+   .tab { padding:3px 10px; font-size:12px; }
+   .chip { padding:2px 8px; font-size:11px; }
+   .stage-chip { padding:1px 6px; font-size:10px; }
+   .pager button { padding:5px 8px; font-size:12px; min-width:32px; }
+   .vt-btn { padding:8px 10px; font-size:13px; }
+   .kbd-hint { display:none; }
+   .controls { padding:8px 0; }
+   .sort-sel { font-size:12px; padding:4px 6px; }
+   .btn-export { font-size:12px; padding:4px 8px; }
+ }
 </style></head><body>
 <header>
   <h1>IPO三棱镜 · 每日监控</h1>
   <div class="sub">港交所 / 上交所 / 深交所 / 北交所 · 更新于 __UPDATED__</div>
-  <div class="stats"><b>__TOTAL__</b> 家在管线 · <b>__TRIG__</b> 家 ★可选题 · __NEWLABEL__ · <b>__DOSSIERS__</b> 篇拆解档案</div>
+  <div class="stats"><b>__TOTAL__</b> 家在管线 · <b>__TRIG__</b> 家 ★可选题 · __NEWLABEL__ · <b>__DOSSIERS__</b> 篇拆解 · 医疗 __MEDCOUNT__ 家 (18A __MED18A__)</div>
 </header>
 <div class="view-toggle">
   <button class="vt-btn on" data-view="ipo">IPO监控 (__TOTAL__)</button>
@@ -180,14 +212,30 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       <span class="chip" data-f="new">只看 新增/变化</span>
       <span class="chip" data-f="dossier">有拆解档案</span>
       <span class="chip" data-f="recent">近30天有动态</span>
+      <span class="chip" data-f="med">只看 医疗</span>
       <span class="count" id="count"></span>
     </div>
+    <div class="stage-chips" id="stage-chips"></div>
+    <div class="toolbar">
+      <select class="sort-sel" id="sort">
+        <option value="date">按日期 ↓</option>
+        <option value="date-asc">按日期 ↑</option>
+        <option value="name">按公司名 A-Z</option>
+        <option value="stage">按阶段排序</option>
+        <option value="ex">按交易所</option>
+      </select>
+      <button class="btn-export" id="export-csv">导出 CSV</button>
+      <span class="kbd-hint">按 <span class="kbd">/</span> 搜索</span>
+    </div>
+    <div class="stats-bar" id="stats-bar"></div>
+    <div class="stats-legend" id="stats-legend"></div>
   </div>
   <div id="list"></div>
   <div class="pager" id="pager"></div>
   </div>
   <div id="fin-view" style="display:none">
     <div class="controls">
+      <input class="fr-search" id="fr-q" placeholder="搜公司名 / 代码 / 报告类型…">
       <div class="chips">
         <span class="chip on" data-fr-type="">全部</span>
         <span class="chip" data-fr-type="业绩预告">业绩预告</span>
@@ -224,6 +272,9 @@ function readState(){
   const p = new URLSearchParams(location.hash.slice(1));
   return { q:p.get('q')||'', ex:p.get('ex')||'',
            flags:Object.fromEntries((p.get('f')||'').split(',').filter(Boolean).map(k=>[k,true])),
+           stage:p.get('st')||'',
+           sort:p.get('sort')||'date',
+           view:p.get('v')||'ipo',
            page:Math.max(1, parseInt(p.get('p')||'1')||1),
            size:[20,50,100].includes(parseInt(p.get('s')))?parseInt(p.get('s')):50 };
 }
@@ -234,6 +285,9 @@ function writeState(){
   if(state.ex) p.set('ex', state.ex);
   const f = Object.keys(state.flags).filter(k=>state.flags[k]).join(',');
   if(f) p.set('f', f);
+  if(state.stage) p.set('st', state.stage);
+  if(state.sort!=='date') p.set('sort', state.sort);
+  if(state.view!=='ipo') p.set('v', state.view);
   if(state.page>1) p.set('p', state.page);
   if(state.size!==50) p.set('s', state.size);
   history.replaceState(null,'','#'+p.toString());
@@ -254,10 +308,18 @@ function filtered(){
     if(state.flags.new && !(r.new||r.chg)) return false;
     if(state.flags.dossier && !r.dossier) return false;
     if(state.flags.recent && !(r.date && r.date>=cut)) return false;
+    if(state.flags.med && r.ind!=='医疗健康') return false;
+    if(state.stage && r.stage!==state.stage) return false;
     if(terms.length && !matches(r, terms)) return false;
     return true;
   });
-  rows.sort((a,b)=> (b.date||'').localeCompare(a.date||'') || ORDER.indexOf(a.stage)-ORDER.indexOf(b.stage));
+  // 排序
+  const s = state.sort || 'date';
+  if(s==='date') rows.sort((a,b)=>(b.date||'').localeCompare(a.date||'') || ORDER.indexOf(a.stage)-ORDER.indexOf(b.stage));
+  else if(s==='date-asc') rows.sort((a,b)=>(a.date||'').localeCompare(b.date||'') || ORDER.indexOf(a.stage)-ORDER.indexOf(b.stage));
+  else if(s==='name') rows.sort((a,b)=>(a.name||'').localeCompare(b.name||''));
+  else if(s==='stage') rows.sort((a,b)=>ORDER.indexOf(a.stage)-ORDER.indexOf(b.stage) || (b.date||'').localeCompare(a.date||''));
+  else if(s==='ex') rows.sort((a,b)=>(a.ex||'').localeCompare(b.ex||'') || (b.date||'').localeCompare(a.date||''));
   return rows;
 }
 function esc(s){ return (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
@@ -271,13 +333,15 @@ function hl(s, terms){
 }
 function card(r, terms){
   const badges = (r.trig?'<span class="badge star">★ 可选题</span>':'') + (r.new?'<span class="badge new">新</span>':(r.chg?'<span class="badge chg">状态更新</span>':''));
+  const indTag = (r.ind==='医疗健康' && r.sind) ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
+  const i18aTag = r.i18a ? '<span class="badge i18a">18A</span>' : '';
   const links = [];
   if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解档案</a>');
   if(r.phip) links.push('<a href="'+esc(r.phip)+'" target="_blank">聆讯后资料集</a>');
   if(r.pros && r.pros!==r.phip) links.push('<a href="'+esc(r.pros)+'" target="_blank">招股书</a>');
   if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">'+(r.src.includes('detail')?'详情页·招股书披露':'交易所审核页')+'</a>');
   return '<div class="card '+(r.trig?'trig':'')+'">'
-    +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+hl(r.name,terms)+'</span>'+(r.mk?'<span class="board">'+esc(r.mk)+'</span>':'')+badges+'</div>'
+    +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+hl(r.name,terms)+'</span>'+(r.mk?'<span class="board">'+esc(r.mk)+'</span>':'')+indTag+i18aTag+badges+'</div>'
     +'<div class="l2"><span class="stage" style="background:'+(COLORS[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
     +'<span class="meta">'+esc(r.status)+'</span><span class="board">'+esc(r.bd)+'</span>'
     +(r.spon?'<span class="meta">保荐 '+hl(r.spon,terms)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
@@ -313,7 +377,58 @@ function render(){
   }));
   document.getElementById('psize').addEventListener('change', e=>{ state.size=parseInt(e.target.value); state.page=1; writeState(); render(); });
   document.getElementById('pjump').addEventListener('keydown', e=>{ if(e.key==='Enter'){ const v=parseInt(e.target.value); if(v){ state.page=v; writeState(); render(); window.scrollTo({top:0}); } } });
+  renderStageChips(rows.length);
+  renderStatsBar(rows);
   writeState();
+}
+function renderStageChips(matchCount){
+  const counts = {};
+  DATA.forEach(r=>{ if(!state.ex || r.ex===state.ex) counts[r.stage]=(counts[r.stage]||0)+1; });
+  const html = ORDER.filter(s=>counts[s]).map(s=>{
+    const c = counts[s];
+    const on = state.stage===s;
+    return '<span class="stage-chip'+(on?' on':'')+'" data-st="'+esc(s)+'" style="'+(on?'background:'+(COLORS[s]||'#5b7db1')+';border-color:'+(COLORS[s]||'#5b7db1'):'')+'">'+esc(s)+' '+c+'</span>';
+  }).join('');
+  document.getElementById('stage-chips').innerHTML = html;
+  document.querySelectorAll('.stage-chip[data-st]').forEach(c=>{
+    c.addEventListener('click', ()=>{
+      if(state.stage===c.dataset.st){ state.stage=''; }
+      else { state.stage=c.dataset.st; }
+      state.page=1; writeState(); render();
+    });
+  });
+}
+function renderStatsBar(rows){
+  const exCounts = {};
+  rows.forEach(r=>{ exCounts[r.ex]=(exCounts[r.ex]||0)+1; });
+  const exColors = {'港交所':'#1f6feb','上交所':'#dc3545','深交所':'#28a745','北交所':'#fd7e14'};
+  const total = rows.length;
+  if(total===0){ document.getElementById('stats-bar').innerHTML=''; document.getElementById('stats-legend').innerHTML=''; return; }
+  const bar = Object.entries(exCounts).sort((a,b)=>b[1]-a[1]).map(([ex,n])=>{
+    const pct = (n/total*100).toFixed(0);
+    return '<div style="width:'+pct+'%;background:'+(exColors[ex]||'#999')+'" title="'+esc(ex)+': '+n+'家 ('+pct+'%)"></div>';
+  }).join('');
+  document.getElementById('stats-bar').innerHTML = bar;
+  const legend = Object.entries(exCounts).sort((a,b)=>b[1]-a[1]).map(([ex,n])=>{
+    return '<span><i style="background:'+(exColors[ex]||'#999')+'"></i>'+esc(ex)+' '+n+'</span>';
+  }).join('');
+  document.getElementById('stats-legend').innerHTML = legend;
+}
+function exportCSV(){
+  const rows = filtered();
+  const headers = ['交易所','板块','代码','公司名','阶段','状态','保荐机构','更新日期','行业','子行业','18A','招股书','PHIP','审核页','拆解档案'];
+  const lines = [headers.join(',')];
+  rows.forEach(r=>{
+    const vals = [r.ex,r.bd,r.code,r.name,r.stage,r.status,r.spon,r.date,r.ind||'',r.sind||'',r.i18a?'是':'',r.pros,r.phip,r.src,r.dossier];
+    lines.push(vals.map(v=>{ v=v||''; v=String(v).replace(/"/g,'""'); return v.includes(',')||v.includes('"')||v.includes('\n')?'"'+v+'"':v; }).join(','));
+  });
+  const csv = '\ufeff'+lines.join('\n');
+  const blob = new Blob([csv], {type:'text/csv;charset=utf-8'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'ipo_monitor_'+new Date().toISOString().slice(0,10)+'.csv';
+  a.click();
+  URL.revokeObjectURL(a.href);
 }
 let deb;
 document.getElementById('q').value = state.q;
@@ -333,13 +448,33 @@ document.querySelectorAll('.chip[data-f]').forEach(c=>{
     c.classList.toggle('on'); state.flags[c.dataset.f]=c.classList.contains('on'); state.page=1; render();
   });
 });
+// —— 排序 ——
+document.getElementById('sort').value = state.sort || 'date';
+document.getElementById('sort').addEventListener('change', e=>{ state.sort=e.target.value; state.page=1; writeState(); render(); });
+// —— 导出 CSV ——
+document.getElementById('export-csv').addEventListener('click', exportCSV);
+// —— 键盘快捷键: / 聚焦搜索 ——
+document.addEventListener('keydown', e=>{
+  if(e.key==='/' && document.activeElement.tagName!=='INPUT' && document.activeElement.tagName!=='SELECT'){
+    e.preventDefault();
+    const v = document.querySelector('.vt-btn.on').dataset.view;
+    const target = v==='fin' ? document.getElementById('fr-q') : document.getElementById('q');
+    if(target) target.focus();
+  }
+});
 // —— 财报披露 ——
 const FR_DATA = __FRDATA__;
 const FR_COLORS = __FRCOLORS__;
 let frFilter = '';
+let frQuery = '';
 function renderFR(){
   let rows = FR_DATA.slice();
   if(frFilter) rows = rows.filter(r=>r.type===frFilter);
+  if(frQuery){
+    const q = frQuery.toLowerCase();
+    rows = rows.filter(r => r.name.toLowerCase().includes(q) || r.code.includes(q)
+      || (r.type||'').toLowerCase().includes(q) || (r.title||'').toLowerCase().includes(q));
+  }
   rows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
   document.getElementById('fr-count').textContent = rows.length + ' 条';
   document.getElementById('fr-list').innerHTML = rows.map(r=>{
@@ -358,6 +493,10 @@ document.querySelectorAll('.chip[data-fr-type]').forEach(c=>{
     document.querySelectorAll('.chip[data-fr-type]').forEach(x=>x.classList.remove('on'));
     c.classList.add('on'); frFilter = c.dataset.frType; renderFR();
   });
+});
+let frDeb;
+document.getElementById('fr-q').addEventListener('input', e=>{
+  clearTimeout(frDeb); frDeb = setTimeout(()=>{ frQuery=e.target.value; renderFR(); }, 200);
 });
 // —— 医疗健康频道 ——
 const MED_FILINGS = __MEDFILINGS__;
@@ -423,13 +562,23 @@ document.querySelector('.chip[data-med-18a]').addEventListener('click', function
   this.classList.toggle('on'); med18a = this.classList.contains('on'); renderMed();
 });
 document.querySelectorAll('.vt-btn').forEach(b=>{
-  b.addEventListener('click', ()=>{
+  if(b.dataset.view===state.view) {
     document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
     b.classList.add('on');
     const v = b.dataset.view;
     document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
     document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
     document.getElementById('med-view').style.display = v==='med' ? '' : 'none';
+  }
+  b.addEventListener('click', ()=>{
+    document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
+    b.classList.add('on');
+    const v = b.dataset.view;
+    state.view = v;
+    document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
+    document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
+    document.getElementById('med-view').style.display = v==='med' ? '' : 'none';
+    writeState();
   });
 });
 renderFR();
@@ -444,6 +593,8 @@ render();
    .replace("__FRTOTAL__", str(len(fr_rows))).replace("__FRDATA__", fr_data_json) \
    .replace("__FRCOLORS__", fr_type_colors_json) \
    .replace("__MEDTOTAL__", str(med_total)) \
+   .replace("__MEDCOUNT__", str(med_ipo_count)) \
+   .replace("__MED18A__", str(med_18a_count)) \
    .replace("__MEDFILINGS__", med_filings_json) \
    .replace("__MEDFINREPORTS__", med_finreports_json) \
    .replace("__MEDCHIPS__", "".join(
