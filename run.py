@@ -202,7 +202,7 @@ def main() -> int:
     print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条 "
           f"(申万医疗 {fin_sw_medical}, 申万非医疗 {fin_sw_nonmed}, 关键词兜底 {fin_fallback}; "
           f"申万成分股映射 {'可用' if sw_available else '不可用(已回退关键词)'}, "
-          f"共 {len(sw._map)} 只)")
+          f"共 {sw.total()} 只(静态底表 {len(sw._static)} + 增量 {len(sw._extra)})")
 
     (DATA_DIR / "finreports.json").write_text(
         json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),

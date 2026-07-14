@@ -1,20 +1,20 @@
 """申万行业分类 enrichment —— 按股票代码判定是否属申万医药生物(医疗健康)。
 
-核心思路(相比逐股查 f127 更稳):
-  - 东方财富 push2 的 申万行业板块里, 医药生物(一级 BK1216) 下含 6 个二级板块:
+权威底表方案(规避 GitHub Actions 上东方财富限流):
+  - 仓库内置 collectors/sw_medical_static.json: 申万医药生物 6 个二级板块全部
+    成分股(code -> 申万二级, 共 509 只, 其中 A 股 482 只), 由 gen_sw_static.py 生成并随代码提交。
+  - SWMedicalCache 以该静态底表为权威: 运行时 100% 可靠, 不因网络限流而失效。
+  - data/sw_medical.json 仅作为"增量补充缓存": best-effort 实时拉取发现的新代码会写入这里,
+    叠加在静态底表之上(日常几乎用不到, 仅用于未来新上市医药股的自动补充)。
+
+判定逻辑(run.py 调用):
+  - A 股 6 位代码(沪深, 非北交所)命中底表 -> 医疗健康 + 申万二级子行业
+  - A 股代码未命中(申万权威)        -> 非医疗, 不标记
+  - 北交所 / 港交所 / 代码缺失       -> 公司名关键词兜底(申万不覆盖)
+
+申万医药生物 6 个二级板块 -> 东方财富板块代码(BKxxxx):
         化学制药 BK0465 / 生物制品 BK1044 / 医疗器械 BK1041 /
         医疗服务 BK0727 / 中药Ⅱ BK1040 / 医药商业 BK1042
-  - 一次性拉取这 6 个板块的全部成分股(各 ≤160 只, 共 ~480 只 A 股),
-    构建 code -> 申万二级 映射, 按周缓存到 data/sw_medical.json
-  - 报告判定: A 股 6 位代码命中映射 -> 医疗健康 + 申万二级子行业
-            未命中(板块权威) -> 非医疗, 不标记
-            北交所 / 港交所 / 代码缺失 -> 公司名关键词兜底(申万不覆盖)
-  - 若缓存为空且实时拉取也失败(东方财富限流) -> 整体回退关键词兜底
-
-为什么用板块成分股而非逐股 f127:
-  - 逐股查 f127 在一次运行中要对 ~48 只股票各发一次请求,
-    东方财富会对 GitHub Actions 出口 IP 突发限流, 导致 ~90% 请求返回空, 几乎全回退关键词
-  - 板块成分股只需 6 次请求(按周缓存, 日常 0 次), 既稳又全(覆盖整张申万医药生物名单)
 """
 from __future__ import annotations
 
@@ -55,6 +55,9 @@ SW_HEADERS = {
 }
 REFRESH_DAYS = 7
 
+# 权威静态底表(随代码提交, 始终可用, 不受网络限流影响)
+STATIC_PATH = Path(__file__).parent / "sw_medical_static.json"
+
 
 def _is_ashare(code: str) -> bool:
     """6 位 A 股代码(沪深, 非北交所)。北交所(8/4/92 开头)不属申万 A 股板块。"""
@@ -71,68 +74,94 @@ def normalize_sub(sub: str) -> str:
     return SW_SUB_NORMALIZE.get(sub, sub)
 
 
-class SWMedicalCache:
-    """申万医药生物 code -> 二级行业 映射, 按周缓存到 data/。"""
+def _load_static(path: Path) -> dict[str, str]:
+    """加载权威静态底表: code -> 申万二级。失败返回空(此时 run.py 会回退关键词)。"""
+    try:
+        d = json.loads(Path(path).read_text(encoding="utf-8"))
+        sub = d.get("sub") or {}
+        if isinstance(sub, dict) and sub:
+            return {str(k): str(v) for k, v in sub.items()}
+    except Exception:
+        pass
+    return {}
 
-    def __init__(self, path: Path, timeout: int = 15,
-                 session: requests.Session | None = None, refresh_days: int = REFRESH_DAYS):
+
+class SWMedicalCache:
+    """申万医药生物 code -> 二级行业 映射。
+
+    权威底表 = 内置静态 JSON(始终可用);
+    增量缓存 = data/sw_medical.json(仅 best-effort 实时补充, 日常为空)。
+    """
+
+    def __init__(self, path: Path, static_path: Path | None = None,
+                 timeout: int = 15, session: requests.Session | None = None,
+                 refresh_days: int = REFRESH_DAYS):
         self.path = Path(path)
+        self.static_path = Path(static_path) if static_path else STATIC_PATH
         self.timeout = timeout
         self.refresh_days = refresh_days
         self.session = session or requests.Session()
-        self._map: dict[str, str] = {}   # code -> 申万二级
-        self._fetched = False                  # 本次是否成功从网络拉取
-        self._load()
-        if not self._map:
-            # 缓存缺失/过期/为空 -> 实时拉取一次
-            self._fetch_all()
-            self.save()
 
-    # —— 持久化 ——
-    def _load(self) -> None:
+        # 权威底表(随代码提交, 不受网络影响)
+        self._static: dict[str, str] = _load_static(self.static_path)
+        # 增量缓存(运行时 best-effort 补充)
+        self._extra: dict[str, str] = {}
+        self._load_extra()
+
+        # best-effort 实时补充: 仅当增量缓存缺失/过期时尝试(限流时直接失败, 不阻塞)
+        if not self._extra:
+            try:
+                self._refresh()
+            except Exception:
+                pass
+            self._save_extra()
+
+    # —— 持久化(仅增量缓存) ——
+    def _load_extra(self) -> None:
         try:
             if not self.path.exists():
                 return
             d = json.loads(self.path.read_text(encoding="utf-8"))
-            updated = d.get("updated", "")
-            if updated:
-                age = (date.today() - datetime.strptime(updated, "%Y-%m-%d").date()).days
-                if age > self.refresh_days:
-                    return  # 过期, 触发重拉
             sub = d.get("sub") or {}
-            if isinstance(sub, dict) and sub:
-                self._map = {str(k): str(v) for k, v in sub.items()}
+            if isinstance(sub, dict):
+                self._extra = {str(k): str(v) for k, v in sub.items()}
         except Exception:
-            self._map = {}
+            self._extra = {}
 
-    def save(self) -> None:
+    def _save_extra(self) -> None:
         try:
+            if not self._extra:
+                return  # 没有新增, 不写文件(避免覆盖/刷提交)
             self.path.parent.mkdir(parents=True, exist_ok=True)
-            payload = {"updated": date.today().strftime("%Y-%m-%d"), "sub": self._map}
+            payload = {"updated": date.today().strftime("%Y-%m-%d"),
+                       "note": "增量补充(权威底表见 collectors/sw_medical_static.json)",
+                       "sub": self._extra}
             self.path.write_text(json.dumps(payload, ensure_ascii=False, indent=2),
-                                encoding="utf-8")
+                                 encoding="utf-8")
         except Exception:
             pass
 
-    # —— 网络拉取 ——
-    def _fetch_all(self) -> None:
+    # —— best-effort 实时补充(限流时基本无效, 静默失败) ——
+    def _refresh(self) -> None:
         for sub_name, bk in SW_BOARDS.items():
             codes = self._fetch_board(bk)
+            added = 0
             for c in codes:
-                self._map[c] = sub_name
-            print(f"  [申万] {sub_name}({bk}): {len(codes)} 只")
-        self._fetched = True
+                if c not in self._static and c not in self._extra:
+                    self._extra[c] = sub_name
+                    added += 1
+            print(f"  [申万增量] {sub_name}({bk}): 新发现 {added} 只")
+        self._fetched_extra = True
 
     def _fetch_board(self, bk: str) -> list[str]:
-        """拉取单个板块全部成分股代码(自动翻页 + 多 host 轮询)。"""
         codes: list[str] = []
         for page in range(1, 11):
             batch = self._fetch_page(bk, page)
             if batch is None:
-                break  # 网络全失败
+                break
             codes.extend(batch)
-            if len(batch) < 500:
-                break  # 末页
+            if len(batch) < 100:
+                break
             time.sleep(0.2)
         return codes
 
@@ -141,7 +170,7 @@ class SWMedicalCache:
             try:
                 r = self.session.get(
                     SW_LIST_URL.replace("push2.eastmoney.com", host),
-                    params={"pn": str(page), "pz": "500",
+                    params={"pn": str(page), "pz": "100",
                              "fs": f"b:{bk}", "fields": "f12"},
                     headers=SW_HEADERS,
                     timeout=self.timeout,
@@ -160,11 +189,22 @@ class SWMedicalCache:
 
     # —— 查询接口 ——
     def available(self) -> bool:
-        """映射是否可用(非空)。为空说明缓存缺失且实时拉取也失败。"""
-        return bool(self._map)
+        """映射是否可用(权威底表非空即可用; 若底表缺失才回退关键词)。"""
+        return bool(self._static) or bool(self._extra)
 
     def is_medical(self, code: str) -> bool:
-        return str(code).strip() in self._map
+        c = str(code).strip()
+        return c in self._static or c in self._extra
 
     def get_sub(self, code: str) -> str:
-        return normalize_sub(self._map.get(str(code).strip(), ""))
+        c = str(code).strip()
+        return normalize_sub(self._extra.get(c) or self._static.get(c, ""))
+
+    # —— 对外接口 ——
+    def save(self) -> None:
+        """持久化增量补充缓存(权威静态底表不写此处)。"""
+        self._save_extra()
+
+    def total(self) -> int:
+        """当前可用映射总数(权威底表 + 增量缓存)。"""
+        return len(self._static) + len(self._extra)
