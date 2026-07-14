@@ -14,6 +14,7 @@ import re
 import traceback
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from types import SimpleNamespace
 
 from collectors.resolve import resolve_prospectus
 from extractor import load_pdf, cid_trap_ratio, Page
@@ -49,41 +50,80 @@ def dossier_link_map(out_dir: Path) -> dict:
 
 
 def run_dossiers(filings, out_dir: Path, max_new: int = 3,
-                 changed_uids: set | None = None) -> dict:
+                 changed_uids: set | None = None,
+                 rebuild_all: bool = False) -> dict:
     """为触发公司建档。返回 {公司名: 档案html相对路径}。无 API key 时跳过建档但仍返回已有档案。
 
     changed_uids: 状态变化的公司 uid 集合。这些公司即使已有档案也会重建
     （招股书可能更新了，要看新的）。
+    rebuild_all: 重建所有已有档案(闸门代码更新后用)。跳过 resolve,不限最近7天,
+    只重建已存在的档案(不新建)。
     """
     out_dir.mkdir(parents=True, exist_ok=True)
     if not os.environ.get("DEEPSEEK_API_KEY"):
         print("[档案] 未配置 DEEPSEEK_API_KEY,跳过建档(监控/看板不受影响)")
         return dossier_link_map(out_dir)
-    # A股触发公司先解析招股书直链(港交所自带;解析失败则跳过该公司,不猜)
-    # ★ 只对最近 7 天更新的公司 resolve,不逐一查上千家历史公司
-    import requests as _rq
-    _sess = _rq.Session()
-    resolve_count = 0
-    for f in filings:
-        if is_dossier_eligible(f.stage) and not f.prospectus_url and _is_recent(f.page_updated):
-            url = resolve_prospectus(f, _sess)
-            if url:
-                f.prospectus_url = url
-                resolve_count += 1
-    print(f"[档案] 本次 resolve_prospectus 查询 {resolve_count} 家(7天内的触发公司)")
-    targets = [f for f in filings if is_dossier_eligible(f.stage) and f.prospectus_url and _is_recent(f.page_updated)]
-    print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (本次上限 {max_new} 篇)")
+
+    if rebuild_all:
+        # 重建模式:遍历已有档案文件,从 meta 行提取 PDF URL
+        # 不依赖 is_dossier_eligible(阶段可能已变化)和 filings.json(可能不完整)
+        targets = []
+        for md_path in sorted(out_dir.glob("*.md")):
+            stem = md_path.stem  # 公司名
+            content = md_path.read_text(encoding="utf-8")
+            url_match = re.search(r"https?://\S+\.pdf", content)
+            if not url_match:
+                print(f"[档案] ⚠ {stem} 无法获取招股书URL,跳过")
+                continue
+            pdf_url = url_match.group()
+            is_medical = "【医疗拆解档案】" in content
+            # 尝试从 filings 中找到匹配的公司(获取 exchange/board/stage 等)
+            filing = None
+            for f in filings:
+                if _safe_name(f.company_name) == stem:
+                    filing = f
+                    break
+            if filing:
+                if not filing.prospectus_url:
+                    filing.prospectus_url = pdf_url
+                targets.append(filing)
+            else:
+                # 不在 filings.json 中,用档案文件信息创建临时对象
+                targets.append(SimpleNamespace(
+                    company_name=stem, exchange="", board="", stage="",
+                    prospectus_url=pdf_url, uid=stem,
+                    industry="医疗健康" if is_medical else "",
+                ))
+        changed_uids = {f.uid for f in targets}
+        max_new = len(targets) if targets else 1
+        print(f"[档案] 重建模式:找到 {len(targets)} 个已有档案待重建")
+    else:
+        # 正常模式:resolve + _is_recent 过滤
+        import requests as _rq
+        _sess = _rq.Session()
+        resolve_count = 0
+        for f in filings:
+            if is_dossier_eligible(f.stage) and not f.prospectus_url and _is_recent(f.page_updated):
+                url = resolve_prospectus(f, _sess)
+                if url:
+                    f.prospectus_url = url
+                    resolve_count += 1
+        print(f"[档案] 本次 resolve_prospectus 查询 {resolve_count} 家(7天内的触发公司)")
+        targets = [f for f in filings if is_dossier_eligible(f.stage) and f.prospectus_url and _is_recent(f.page_updated)]
+        print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (本次上限 {max_new} 篇)")
+
     built = 0
     for f in targets:
         if built >= max_new:
-            print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets) - built} 家下次再建")
+            if not rebuild_all:
+                print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets) - built} 家下次再建")
             break
         path = out_dir / f"{_safe_name(f.company_name)}.md"
         is_changed = changed_uids and f.uid in changed_uids
         if path.exists() and not is_changed:
             continue  # 已有档案且无变化,跳过
         if is_changed and path.exists():
-            print(f"[档案] ↻ {f.company_name} 状态变化,重建档案")
+            print(f"[档案] ↻ {f.company_name} 重建档案")
         try:
             import requests as rq
             pdf_path = out_dir / "_tmp.pdf"
