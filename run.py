@@ -22,6 +22,7 @@ from dashboard import generate_dashboard
 from dossier_runner import run_dossiers, dossier_link_map
 from finreport_dossier import run_finreport_dossiers
 from industry import classify_industry
+from models import Filing
 from stages import is_trigger
 from state import StateStore
 
@@ -37,8 +38,39 @@ COLLECTORS = [
 ]
 
 
+# 采集器名前缀 -> 交易所名（兜底逻辑用）
+_EXCHANGE_MAP = {
+    "hkex": "港交所",
+    "sse": "上交所",
+    "szse": "深交所",
+    "bse": "北交所",
+}
+
+
+def _collector_exchange(name: str) -> str:
+    for prefix, ex in _EXCHANGE_MAP.items():
+        if name.startswith(prefix):
+            return ex
+    return ""
+
+
 def main() -> int:
+    # 加载上次 filings.json，按交易所分组（采集失败时兜底用）
+    prev_by_exchange: dict[str, list[dict]] = {}
+    prev_path = DATA_DIR / "filings.json"
+    if prev_path.exists():
+        try:
+            prev_data = json.loads(prev_path.read_text(encoding="utf-8"))
+            for d in prev_data:
+                ex = d.get("exchange", "")
+                if ex:
+                    prev_by_exchange.setdefault(ex, []).append(d)
+        except Exception:
+            pass
+
     all_filings = []
+    failed_exchanges: set[str] = set()
+
     for c in COLLECTORS:
         try:
             got = c.collect()
@@ -49,6 +81,17 @@ def main() -> int:
         except Exception:
             print(f"[{c.name}] 出错:")
             traceback.print_exc()
+            ex = _collector_exchange(c.name)
+            if ex:
+                failed_exchanges.add(ex)
+
+    # 旧数据兜底：采集失败的交易所，用上次缓存数据顶上
+    if failed_exchanges:
+        for ex in sorted(failed_exchanges):
+            prev = prev_by_exchange.get(ex, [])
+            if prev:
+                print(f"[兜底] {ex} 采集失败，使用上次缓存: {len(prev)} 条")
+                all_filings.extend(Filing.from_dict(d) for d in prev)
 
     # ===== 行业标签 enrichment =====
     # 给每家公司打行业标签（医疗健康子行业 + 18A标记）
