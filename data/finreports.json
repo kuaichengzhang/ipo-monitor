@@ -586,6 +586,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "MAANSHAN IRON",
+    "stock_code": "00323",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information &#x2f; Profit Warning &#x2f; Overseas Regulatory Announcement - Trading Update]",
+    "announcement_date": "14/07/2026",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0714/2026071401004.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "d232f463da59ce4c"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "CHINARES PHARMA",
     "stock_code": "03320",
     "report_type": "Profit Warning",
@@ -673,20 +688,5 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "56c26c5d5c82c882"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "CIG",
-    "stock_code": "06166",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning &#x2f; Inside Information]",
-    "announcement_date": "14/07/2026",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0714/2026071400824.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "c87b12883555ebc1"
   }
 ]
