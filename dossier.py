@@ -24,7 +24,7 @@ from extractor import Page, normalize_text
 BANNED = ["涉嫌", "造假", "暴雷", "割韭菜", "警惕", "骗局", "必然", "值得买", "不值得买",
           "建议买入", "建议卖出", "必将", "肯定会"]
 
-CITE_RE = re.compile(r"【招股书[^】]*p\.(\d+)】")
+CITE_RE = re.compile(r"【招股书[^】]*p\.(\d+(?:-\d+)?)】")
 MISSING = "[缺出处·待核]"
 
 SECTIONS = [
@@ -136,6 +136,22 @@ def _num_variants(num: str) -> set[str]:
     return out
 
 
+def _parse_cites(cite_strs: list[str]) -> list[int]:
+    """解析页码引用，支持 '5' 和 '118-119' 格式。"""
+    out = []
+    for s in cite_strs:
+        if '-' in s:
+            parts = s.split('-')
+            try:
+                start, end = int(parts[0]), int(parts[1])
+                out.extend(range(start, end + 1))
+            except ValueError:
+                out.append(int(parts[0]))
+        else:
+            out.append(int(s))
+    return out
+
+
 def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
     """校验闸门:逐行检查,违规行静默移除(不污染正文),末尾汇总待核清单。返回(净化稿, 报告)。"""
     page_text = {p.number: normalize_text(p.text or "").replace(",", ",") for p in pages}
@@ -148,14 +164,18 @@ def gate(md: str, pages: list[Page]) -> tuple[str, GateReport]:
             out_lines.append(line)
             continue
 
+        # 去掉行首列表序号(如 "6. " 或 "- " 再检查数字)
+        check_line = re.sub(r"^\d+\.\s*", "", stripped)
+
         # 1) 定性词
         hit_banned = next((w for w in BANNED if w in line), None)
         if hit_banned:
             report.rejected_banned.append(f"[{hit_banned}] {stripped[:60]}")
             continue  # 静默移除,不污染正文
 
-        nums = _numbers_in(line)
-        cites = [int(m) for m in CITE_RE.findall(line)]
+        nums = _numbers_in(check_line)
+        cite_strs = CITE_RE.findall(line)
+        cites = _parse_cites(cite_strs)
 
         # 2) 有数字必须有出处(允许行内已是待核标记)
         if nums and not cites and MISSING not in line:
@@ -229,10 +249,22 @@ FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未
           "机器不填充、不定性、不给买卖建议。三棱镜成稿(脊/结尾/判断)由作者本人撰写。*\n")
 
 
+def _normalize_citations(text: str) -> str:
+    """归一化引用格式:LLM 有时写 【p.N】 而非 【招股书 p.N】,统一补前缀。
+    也处理 【P.N】(大写) → 【招股书 p.N】。
+    """
+    # 【P.N → 【p.N (大写转小写)
+    text = re.sub(r"【P\.", "【p.", text)
+    # 【p.N → 【招股书 p.N (仅当不含"招股书"前缀时)
+    text = re.sub(r"【(?!招股书)p\.", "【招股书 p.", text)
+    return text
+
+
 def generate_dossier(company: str, meta_line: str, pages: list[Page],
                      llm=call_deepseek, medical: bool = False) -> tuple[str, GateReport]:
-    """全流程:prompt -> LLM -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
+    """全流程:prompt -> LLM -> 引用归一化 -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
     raw = llm(build_prompt(company, pages, medical=medical))
+    raw = _normalize_citations(raw)   # 归一化引用格式后再过闸门
     cleaned, report = gate(raw, pages)
     tag = "【医疗拆解档案】" if medical else "【拆解档案】"
     head = (f"# {tag}{company}\n\n> {meta_line}\n"
