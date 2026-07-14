@@ -40,6 +40,16 @@ def _safe_name(s: str) -> str:
     return re.sub(r"[^\w\u4e00-\u9fff()()·-]", "_", s)[:60]
 
 
+def _extract_dossier_pdf_url(md_path: Path) -> str:
+    """从已有档案 .md 文件中提取招股书 PDF URL。"""
+    try:
+        content = md_path.read_text(encoding="utf-8")
+        m = re.search(r"https?://\S+\.pdf", content)
+        return m.group() if m else ""
+    except Exception:
+        return ""
+
+
 def dossier_link_map(out_dir: Path) -> dict:
     """扫描已生成的档案 html,返回 {公司名: 相对路径}(看板据此挂"拆解档案"按钮)。"""
     m = {}
@@ -123,6 +133,12 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3,
             break
         path = out_dir / f"{_safe_name(f.company_name)}.md"
         is_changed = changed_uids and f.uid in changed_uids
+        # 检测招股书 URL 是否更新（即使 uid 没变，URL 变了也要重建）
+        if path.exists() and not is_changed:
+            old_url = _extract_dossier_pdf_url(path)
+            if old_url and f.prospectus_url and old_url != f.prospectus_url:
+                is_changed = True
+                print(f"[档案] ↻ {f.company_name} 招股书URL已更新,重建档案")
         if path.exists() and not is_changed:
             continue  # 已有档案且无变化,跳过
         if is_changed and path.exists():
