@@ -33,10 +33,12 @@ STAGE_COLORS = {
 }
 
 FR_TYPE_COLORS = {
-    "业绩预告": "#e8730c", "业绩快报": "#1f6feb",
+    "年报": "#1a73e8", "半年报": "#0097a7",
+    "一季报": "#7b1fa2", "三季报": "#388e3c",
+    "业绩预告": "#e8730c", "业绩快报": "#f9a825",
     "Profit Warning": "#dc3545", "Profit Alert": "#28a745",
-    "Annual Results": "#6f42c1", "Interim Results": "#6f42c1",
-    "Quarterly Results": "#6f42c1",
+    "Annual Results": "#6f42c1", "Interim Results": "#ad6ee0",
+    "Quarterly Results": "#5c3dc4",
 }
 
 
@@ -238,8 +240,15 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       <input class="fr-search" id="fr-q" placeholder="搜公司名 / 代码 / 报告类型…">
       <div class="chips">
         <span class="chip on" data-fr-type="">全部</span>
+        <span class="chip" data-fr-type="年报">年报</span>
+        <span class="chip" data-fr-type="半年报">半年报</span>
+        <span class="chip" data-fr-type="一季报">一季报</span>
+        <span class="chip" data-fr-type="三季报">三季报</span>
         <span class="chip" data-fr-type="业绩预告">业绩预告</span>
         <span class="chip" data-fr-type="业绩快报">业绩快报</span>
+        <span class="chip" data-fr-type="Annual Results">Annual Results</span>
+        <span class="chip" data-fr-type="Interim Results">Interim Results</span>
+        <span class="chip" data-fr-type="Quarterly Results">Quarterly Results</span>
         <span class="chip" data-fr-type="Profit Warning">Profit Warning</span>
         <span class="chip" data-fr-type="Profit Alert">Profit Alert</span>
         <span class="count" id="fr-count"></span>
