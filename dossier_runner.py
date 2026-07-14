@@ -86,6 +86,9 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 3,
             if filing:
                 if not filing.prospectus_url:
                     filing.prospectus_url = pdf_url
+                # 保留旧档案的医疗标记(用户可能手动指定了医疗,但 classify_industry 按公司名没识别出来)
+                if is_medical:
+                    filing.industry = "医疗健康"
                 targets.append(filing)
             else:
                 # 不在 filings.json 中,用档案文件信息创建临时对象
