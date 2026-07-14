@@ -87,6 +87,31 @@ class Filing:
         d["uid"] = self.uid
         return d
 
+    @classmethod
+    def from_dict(cls, d: dict) -> "Filing":
+        """从 to_dict 的输出反序列化（用于旧数据兜底）。"""
+        return cls(
+            exchange=d["exchange"],
+            board=d["board"],
+            company_name=d["company_name"],
+            status=d["status"],
+            stage=d.get("stage", ""),
+            stock_code=d.get("stock_code"),
+            sponsor=d.get("sponsor"),
+            prospectus_url=d.get("prospectus_url"),
+            announcement_url=d.get("announcement_url"),
+            allotment_url=d.get("allotment_url"),
+            phip_url=d.get("phip_url"),
+            markers=d.get("markers", []),
+            page_updated=d.get("page_updated"),
+            source_url=d.get("source_url"),
+            industry=d.get("industry", ""),
+            sub_industry=d.get("sub_industry", ""),
+            is_18a=d.get("is_18a", False),
+            first_seen=d.get("first_seen"),
+            last_seen=d.get("last_seen"),
+        )
+
 
 def utc_now_iso() -> str:
     return datetime.now(timezone.utc).replace(microsecond=0).isoformat()
