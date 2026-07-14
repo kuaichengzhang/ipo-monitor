@@ -112,6 +112,11 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
     med_filings_json = json.dumps(med_filings, ensure_ascii=False).replace("</", "<\\/")
     med_finreports_json = json.dumps(med_finreports, ensure_ascii=False).replace("</", "<\\/")
     sub_industries = sorted({r["sind"] for r in med_filings + med_finreports if r.get("sind")})
+    med_exchanges = sorted({r["ex"] for r in med_filings + med_finreports if r.get("ex")})
+    med_ex_tabs = "".join(
+        f'<button class="tab" data-med-ex="{html.escape(e)}">{html.escape(e)}</button>'
+        for e in med_exchanges
+    )
 
     return r"""<!doctype html><html lang="zh"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -258,8 +263,10 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
   </div>
   <div id="med-view" style="display:none">
     <div class="controls">
+      <div class="tabs" id="med-ex-tabs"><button class="tab on" data-med-ex="">全部</button>__MEDEXTABS__</div>
       <div class="chips">
-        <span class="chip on" data-med-sind="">全部</span>__MEDCHIPS__
+        <span class="chip on" data-med-recent="1">近90天有动态</span>
+        <span class="chip" data-med-sind="">全部</span>__MEDCHIPS__
         <span class="chip" data-med-18a="1">只看 18A</span>
         <span class="count" id="med-count"></span>
       </div>
@@ -303,6 +310,7 @@ function writeState(){
 }
 // —— 查询:多关键词 AND;每个词命中 公司名/保荐/代码/板块/阶段 或 拼音首字母 ——
 function recentCut(){ const d=new Date(); d.setDate(d.getDate()-30); return d.toISOString().slice(0,10); }
+function medRecentCut(){ const d=new Date(); d.setDate(d.getDate()-90); return d.toISOString().slice(0,10); }
 function matches(r, terms){
   return terms.every(t => r.name.toLowerCase().includes(t) || r.spon.toLowerCase().includes(t)
     || r.code.includes(t) || r.bd.includes(t) || r.stage.includes(t) || r.status.includes(t)
@@ -512,10 +520,19 @@ const MED_FILINGS = __MEDFILINGS__;
 const MED_FINREPORTS = __MEDFINREPORTS__;
 const FR_COLORS_MED = __FRCOLORS__;
 const STAGE_COLORS_MED = __COLORS__;
-let medSind = '', med18a = false;
+let medSind = '', med18a = false, medEx = '', medRecent = true;
 function renderMed(){
+  const cut = medRecentCut();
   let ipoRows = MED_FILINGS.slice();
   let finRows = MED_FINREPORTS.slice();
+  if(medEx){
+    ipoRows = ipoRows.filter(r=>r.ex===medEx);
+    finRows = finRows.filter(r=>r.ex===medEx);
+  }
+  if(medRecent){
+    ipoRows = ipoRows.filter(r=>r.date && r.date>=cut);
+    finRows = finRows.filter(r=>r.date && r.date>=cut);
+  }
   if(medSind){
     ipoRows = ipoRows.filter(r=>r.sind===medSind);
     finRows = finRows.filter(r=>r.sind===medSind);
@@ -570,6 +587,15 @@ document.querySelectorAll('.chip[data-med-sind]').forEach(c=>{
 document.querySelector('.chip[data-med-18a]').addEventListener('click', function(){
   this.classList.toggle('on'); med18a = this.classList.contains('on'); renderMed();
 });
+document.querySelectorAll('#med-ex-tabs .tab').forEach(t=>{
+  t.addEventListener('click', ()=>{
+    document.querySelectorAll('#med-ex-tabs .tab').forEach(x=>x.classList.remove('on'));
+    t.classList.add('on'); medEx = t.dataset.medEx; renderMed();
+  });
+});
+document.querySelector('.chip[data-med-recent]').addEventListener('click', function(){
+  this.classList.toggle('on'); medRecent = this.classList.contains('on'); renderMed();
+});
 document.querySelectorAll('.vt-btn').forEach(b=>{
   if(b.dataset.view===state.view) {
     document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
@@ -609,4 +635,5 @@ render();
    .replace("__MEDCHIPS__", "".join(
        f'<span class="chip" data-med-sind="{html.escape(si)}">{html.escape(si)}</span>'
        for si in sub_industries
-   ))
+   )) \
+   .replace("__MEDEXTABS__", med_ex_tabs)

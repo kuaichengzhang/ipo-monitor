@@ -143,13 +143,34 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 30,
             continue  # 已有档案且无变化,跳过
         if is_changed and path.exists():
             print(f"[档案] ↻ {f.company_name} 重建档案")
+        # —— 下载招股书 PDF:失败先重解析链接重试一次,仍失败则跳过(不再整批静默崩溃) ——
+        pdf_path = None
+        last_err = None
+        for attempt in (0, 1):
+            try:
+                import requests as rq
+                if attempt == 1:
+                    # 第一次下载失败(死链/过期链接):重解析招股书直链兜底
+                    fresh = resolve_prospectus(f, _sess)
+                    if fresh and fresh != f.prospectus_url:
+                        print(f"[档案] ↻ {f.company_name} 重解析链接: {fresh}")
+                        f.prospectus_url = fresh
+                    else:
+                        print(f"[档案] ! {f.company_name} 重解析无新链接,仍为 {f.prospectus_url}")
+                tmp = out_dir / "_tmp.pdf"
+                r = rq.get(f.prospectus_url, timeout=120,
+                           headers={"User-Agent": "Mozilla/5.0"})
+                r.raise_for_status()
+                tmp.write_bytes(r.content)
+                pdf_path = tmp
+                break
+            except Exception as e:
+                last_err = e
+                print(f"[档案] … {f.company_name} 第{attempt+1}次下载失败: {e}")
+        if pdf_path is None:
+            print(f"[档案] ✗ {f.company_name} 跳过(招股书无法获取: {last_err})")
+            continue
         try:
-            import requests as rq
-            pdf_path = out_dir / "_tmp.pdf"
-            r = rq.get(f.prospectus_url, timeout=120,
-                       headers={"User-Agent": "Mozilla/5.0"})
-            r.raise_for_status()
-            pdf_path.write_bytes(r.content)
             pages = load_pdf(str(pdf_path))
             lang_note = ""
             if cid_trap_ratio(pages) < 0.02:
@@ -165,8 +186,9 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 30,
             print(f"[档案] ✓ {f.company_name}(闸门拦截 "
                   f"{len(report.rejected_no_cite)+len(report.rejected_banned)+len(report.rejected_bad_cite)} 句)")
             built += 1
-            pdf_path.unlink(missing_ok=True)
         except Exception:
-            print(f"[档案] ✗ {f.company_name} 建档失败:")
+            print(f"[档案] ✗ {f.company_name} 拆解生成失败:")
             traceback.print_exc()
+        finally:
+            pdf_path.unlink(missing_ok=True)
     return dossier_link_map(out_dir)

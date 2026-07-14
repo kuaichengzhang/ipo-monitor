@@ -63,7 +63,12 @@ def sse_resolve(stock_audit_num: str, session: requests.Session | None = None) -
 
 
 def sse_pick(files: list[dict], session=None) -> str | None:
-    """从文件列表挑招股说明书:优先注册稿>上会稿>申报稿,同类取 fileUpdTime 最新。"""
+    """从文件列表挑招股说明书:优先注册稿>上会稿>申报稿,同类取 fileUpdTime 最新。
+
+    修复: 不再只取排名第一的直链就返回——交易所常轮转披露文件,
+    排名第一的 filePath 可能已 404。改为逐个候选做 HEAD 自检,返回首个
+    真实可下载(HTTP 200)的直链;全不可达才返回 None(不让死链被存下)。
+    """
     cands = [f for f in files if f.get("fileTypeMap") in SSE_PROSPECTUS_TYPES
              and "招股说明书" in (f.get("fileTitle") or "")]
     if not cands:
@@ -73,14 +78,17 @@ def sse_pick(files: list[dict], session=None) -> str | None:
     rank = {t: i for i, t in enumerate(SSE_PROSPECTUS_TYPES)}
     cands.sort(key=lambda f: (rank.get(f.get("fileTypeMap"), -1),
                               str(f.get("fileUpdTime") or "")), reverse=True)
-    path = cands[0].get("filePath") or ""
-    if not path:
-        return None
-    primary = "https://static.sse.com.cn" + path
-    if session is None or _head_ok(primary, session):
-        return primary
-    fallback = "https://www.sse.com.cn" + path       # 运行时自检兜底
-    return fallback if _head_ok(fallback, session) else primary
+    for c in cands:
+        path = c.get("filePath") or ""
+        if not path:
+            continue
+        primary = "https://static.sse.com.cn" + path
+        if session is None or _head_ok(primary, session):
+            return primary
+        fallback = "https://www.sse.com.cn" + path
+        if _head_ok(fallback, session):
+            return fallback
+    return None
 
 
 # —— 深交所 ——
@@ -152,10 +160,20 @@ def bse_pick(detail_block: dict) -> str | None:
 # —— 统一入口 ——
 
 def resolve_prospectus(filing, session: requests.Session | None = None) -> str | None:
-    """按 Filing 的交易所与编号解析招股说明书直链。失败返回 None(不抛,不猜)。"""
+    """按 Filing 的交易所与编号解析招股说明书直链。失败返回 None(不抛,不猜)。
+
+    上交所:审核编号(auditId)是查文件接口的唯一可靠标识。
+    它来自 source_url 里的 auditId= 参数(采集器即以此构建详情页),
+    不应用 stock_code(科创板 IPO 上市前 stock_code 与审核编号不是一回事,
+    用错会查到错误/失效的披露文件)。优先从 source_url 取,回退 stock_code。
+    """
     try:
-        if filing.exchange == "上交所" and filing.stock_code:
-            return sse_resolve(filing.stock_code, session)
+        if filing.exchange == "上交所":
+            # 审核编号:source_url 里的 auditId= 为准
+            m = re.search(r"auditId=(\d+)", filing.source_url or "")
+            aid = m.group(1) if m else (filing.stock_code or "")
+            if aid:
+                return sse_resolve(aid, session)
         if filing.exchange == "深交所" and filing.stock_code:
             return szse_resolve(filing.stock_code, session)
         if filing.exchange == "北交所":
