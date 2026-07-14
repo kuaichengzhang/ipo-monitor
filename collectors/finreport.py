@@ -25,11 +25,18 @@ from models import FinReport
 
 CST = timezone(timedelta(hours=8))
 
-CNINFO_URL = "http://www.cninfo.com.cn/new/hisAnnouncement/query"
+CNINFO_URL = "https://www.cninfo.com.cn/new/hisAnnouncement/query"
+CNINFO_HOME = "https://www.cninfo.com.cn/"
 CNINFO_HEADERS = {
-    "Referer": "http://www.cninfo.com.cn/new/commonUrl?url=disclosure/list/notice",
+    "Referer": "https://www.cninfo.com.cn/new/commonUrl?url=disclosure/list/notice",
     "Content-Type": "application/x-www-form-urlencoded",
     "X-Requested-With": "XMLHttpRequest",
+    "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+                  "AppleWebKit/537.36 (KHTML, like Gecko) "
+                  "Chrome/120.0.0.0 Safari/537.36",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Origin": "https://www.cninfo.com.cn",
 }
 
 # CNINFO 类别码 (有效的)
@@ -118,9 +125,9 @@ class CNINFOFinReportCollector(BaseCollector):
                  days: int = 7):
         super().__init__(timeout, session)
         self.days = days
-        # 先访问首页拿 cookie
+        # 先访问首页拿 cookie (用 HTTPS)
         try:
-            self.session.get("http://www.cninfo.com.cn/", timeout=10)
+            self.session.get(CNINFO_HOME, timeout=15)
         except Exception:
             pass
 
@@ -131,24 +138,47 @@ class CNINFOFinReportCollector(BaseCollector):
         return f"{frm}~{to}"
 
     def _query(self, data: dict) -> list[dict]:
-        """查询 CNINFO API，返回原始记录列表（自动分页）。"""
+        """查询 CNINFO API，返回原始记录列表（自动分页 + 重试）。"""
+        import time
+
         data.setdefault("tabName", "fulltext")
         data.setdefault("seDate", self._date_range())
         all_records = []
         page = 1
+        max_retries = 3
         while True:
             data["pageNum"] = str(page)
             data["pageSize"] = "50"
-            try:
-                r = self.session.post(CNINFO_URL, data=data, headers=CNINFO_HEADERS, timeout=self.timeout)
-                r.raise_for_status()
-                j = r.json()
-            except Exception:
+            j = None
+            for attempt in range(max_retries):
+                try:
+                    r = self.session.post(CNINFO_URL, data=data,
+                                          headers=CNINFO_HEADERS,
+                                          timeout=self.timeout)
+                    r.raise_for_status()
+                    j = r.json()
+                    break
+                except Exception as e:
+                    if attempt < max_retries - 1:
+                        wait = 3 * (attempt + 1)
+                        print(f"  [cninfo] 第{page}页第{attempt+1}次失败({e}), {wait}s后重试...")
+                        time.sleep(wait)
+                        # 重试前刷新 cookie
+                        if attempt == 0:
+                            try:
+                                self.session.get(CNINFO_HOME, timeout=10)
+                            except Exception:
+                                pass
+                    else:
+                        print(f"  [cninfo] 第{page}页重试{max_retries}次全失败, 跳过后续页")
+            if j is None:
                 break
             records = j.get("announcements") or []
             all_records.extend(records)
             total = j.get("totalAnnouncement", 0)
-            if len(all_records) >= total or not records or page > 20:
+            if not records:
+                break
+            if len(all_records) >= total or page > 20:
                 break
             page += 1
         return all_records
