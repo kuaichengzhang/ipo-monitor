@@ -212,7 +212,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       <span class="chip" data-f="new">只看 新增/变化</span>
       <span class="chip" data-f="dossier">有拆解档案</span>
       <span class="chip" data-f="recent">近30天有动态</span>
-      <span class="chip" data-f="med">只看 医疗</span>
+      <span class="chip" data-f="med">只看 医疗健康</span>
       <span class="count" id="count"></span>
     </div>
     <div class="stage-chips" id="stage-chips"></div>
