@@ -33,6 +33,10 @@ PAGE_SIZE = 200
 SZSE_HEADERS = {
     "Referer": ENTRY_PAGE,
     "X-Requested-With": "XMLHttpRequest",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
 }
 
 
@@ -76,14 +80,38 @@ class SZSECollector(BaseCollector):
     name = "szse_ras_projectrends"
 
     def collect(self) -> list[Filing]:
+        import time
         self.session.headers.update(SZSE_HEADERS)
+
+        # 预热：先访问入口页建立 session（部分中国交易所要求先访问页面再查 API）
+        try:
+            self.session.get(ENTRY_PAGE, timeout=15)
+        except Exception:
+            pass
+
         out: list[Filing] = []
         page = 0
         total = None
+        max_retries = 3
         while True:
             url = (f"{QUERY_URL}?bizType=1&pageIndex={page}"
                    f"&pageSize={PAGE_SIZE}&random={random.random()}")
-            filings, total = parse_query_response(self.get(url))
+
+            # 重试 + 退避（应对偶发的 ConnectionReset）
+            text = None
+            for attempt in range(max_retries):
+                try:
+                    text = self.get(url)
+                    break
+                except Exception:
+                    if attempt < max_retries - 1:
+                        wait = 3 * (attempt + 1)
+                        print(f"  [szse] 第 {attempt+1} 次失败，{wait}s 后重试...")
+                        time.sleep(wait)
+                    else:
+                        raise
+
+            filings, total = parse_query_response(text)
             out.extend(filings)
             if not filings or len(out) >= total or page > 100:
                 break
