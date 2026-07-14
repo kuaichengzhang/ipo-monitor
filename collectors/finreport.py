@@ -138,7 +138,7 @@ class CNINFOFinReportCollector(BaseCollector):
         return f"{frm}~{to}"
 
     def _query(self, data: dict) -> list[dict]:
-        """查询 CNINFO API，返回原始记录列表（自动分页 + 重试）。"""
+        """查询 CNINFO API，返回原始记录列表（自动分页 + 重试 + 延迟）。"""
         import time
 
         data.setdefault("tabName", "fulltext")
@@ -146,6 +146,7 @@ class CNINFOFinReportCollector(BaseCollector):
         all_records = []
         page = 1
         max_retries = 3
+        search_desc = f"searchkey={data.get('searchkey', '')} category={data.get('category', '')}"
         while True:
             data["pageNum"] = str(page)
             data["pageSize"] = "50"
@@ -161,7 +162,7 @@ class CNINFOFinReportCollector(BaseCollector):
                 except Exception as e:
                     if attempt < max_retries - 1:
                         wait = 3 * (attempt + 1)
-                        print(f"  [cninfo] 第{page}页第{attempt+1}次失败({e}), {wait}s后重试...")
+                        print(f"  [cninfo] {search_desc} 第{page}页第{attempt+1}次失败({e}), {wait}s后重试...")
                         time.sleep(wait)
                         # 重试前刷新 cookie
                         if attempt == 0:
@@ -170,16 +171,25 @@ class CNINFOFinReportCollector(BaseCollector):
                             except Exception:
                                 pass
                     else:
-                        print(f"  [cninfo] 第{page}页重试{max_retries}次全失败, 跳过后续页")
+                        print(f"  [cninfo] {search_desc} 第{page}页重试{max_retries}次全失败, 跳过后续页")
             if j is None:
                 break
             records = j.get("announcements") or []
-            all_records.extend(records)
             total = j.get("totalAnnouncement", 0)
+            all_records.extend(records)
+            print(f"  [cninfo] {search_desc} 第{page}页: {len(records)}条 (累计{len(all_records)}/{total})")
             if not records:
+                # 空结果但有更多记录 → 可能被限流，等待后继续尝试
+                if total > len(all_records) and page < 5:
+                    print(f"  [cninfo] {search_desc} 第{page}页空结果但总数{total}>已取{len(all_records)}, 等待2s后继续...")
+                    time.sleep(2)
+                    page += 1
+                    continue
                 break
             if len(all_records) >= total or page > 20:
                 break
+            # 页间延迟，避免触发限流
+            time.sleep(1)
             page += 1
         return all_records
 
