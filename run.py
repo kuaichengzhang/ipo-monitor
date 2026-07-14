@@ -23,7 +23,7 @@ from dossier_runner import run_dossiers, dossier_link_map
 from finreport_dossier import run_finreport_dossiers
 from industry import classify_industry
 from models import Filing
-from stages import is_trigger
+from stages import is_trigger, is_dossier_eligible
 from state import StateStore
 
 DATA_DIR = Path(__file__).parent / "data"
@@ -116,8 +116,8 @@ def main() -> int:
     )
 
     # ★可选题建档(在看板之前,让看板能挂档案链接)
-    # ★ 只对本次新增/变化的触发公司建档,不把全部历史公司传进去逐一查
-    recent_filings = [f for f in diff["new"] + diff["changed"] if is_trigger(f.stage)]
+    # ★ 拆解范围:申报受理~注册生效/招股都拆(比选题触发更宽)
+    recent_filings = [f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)]
     print(f"[建档] 本次新增/变化的触发公司: {len(recent_filings)} 家(全量 {len(all_filings)} 条)")
     dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers")
     # safe_name -> 还原到公司名匹配(看板按公司名查)
