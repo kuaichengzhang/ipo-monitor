@@ -249,6 +249,20 @@ FOOTER = ("\n\n---\n*机器生成底稿 · 所有数字均应带页码出处,未
           "机器不填充、不定性、不给买卖建议。三棱镜成稿(脊/结尾/判断)由作者本人撰写。*\n")
 
 
+def _strip_preamble(text: str) -> str:
+    """剥离 LLM 前言、重复标题、冗余分隔线。
+
+    LLM 输出通常以"好的，收到..."开头，然后自己加一个 # 标题和 *** 分隔线，
+    最后才是正文（第一个 ## 板块标题）。这里只保留从第一个 ## 开始的内容。
+    如果找不到 ## 行，降级为原样返回。
+    """
+    lines = text.splitlines()
+    for i, line in enumerate(lines):
+        if line.strip().startswith("## "):
+            return "\n".join(lines[i:])
+    return text  # 降级:没找到 ## 行,原样返回
+
+
 def _normalize_citations(text: str) -> str:
     """归一化引用格式:LLM 有时写 【p.N】 而非 【招股书 p.N】,统一补前缀。
     也处理 【P.N】(大写) → 【招股书 p.N】。
@@ -262,9 +276,10 @@ def _normalize_citations(text: str) -> str:
 
 def generate_dossier(company: str, meta_line: str, pages: list[Page],
                      llm=call_deepseek, medical: bool = False) -> tuple[str, GateReport]:
-    """全流程:prompt -> LLM -> 引用归一化 -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
+    """全流程:prompt -> LLM -> 剥离前言 -> 引用归一化 -> 校验闸门 -> 档案。llm 可注入(测试用假模型)。"""
     raw = llm(build_prompt(company, pages, medical=medical))
-    raw = _normalize_citations(raw)   # 归一化引用格式后再过闸门
+    raw = _strip_preamble(raw)          # 剥离 LLM 前言/重复标题/冗余分隔线
+    raw = _normalize_citations(raw)     # 归一化引用格式后再过闸门
     cleaned, report = gate(raw, pages)
     tag = "【医疗拆解档案】" if medical else "【拆解档案】"
     head = (f"# {tag}{company}\n\n> {meta_line}\n"
