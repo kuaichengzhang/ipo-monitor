@@ -182,11 +182,15 @@ def map_app_record(rec: dict, board: str) -> Filing:
     phip_url = _doc_url(docs, ["聆訊後資料集", "聆讯后资料集", "Post Hearing"])
     ap_url = _doc_url(docs, ["申請版本", "申请版本", "Application Proof"])
 
+    raw_name = (rec.get("a") or "").strip()
+    name, markers = parse_hkex_markers(raw_name)
+
     now = utc_now_iso()
     return Filing(
         exchange="港交所",
         board=board,
-        company_name=(rec.get("a") or "").strip(),
+        company_name=name,
+        markers=markers,
         status=status,
         stage=normalize_stage("港交所", status),
         stock_code=str(rec.get("id")) if rec.get("id") is not None else None,
