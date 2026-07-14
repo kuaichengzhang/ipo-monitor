@@ -59,7 +59,7 @@ def dossier_link_map(out_dir: Path) -> dict:
     return m
 
 
-def run_dossiers(filings, out_dir: Path, max_new: int = 3,
+def run_dossiers(filings, out_dir: Path, max_new: int = 30,
                  changed_uids: set | None = None,
                  rebuild_all: bool = False) -> dict:
     """为触发公司建档。返回 {公司名: 档案html相对路径}。无 API key 时跳过建档但仍返回已有档案。

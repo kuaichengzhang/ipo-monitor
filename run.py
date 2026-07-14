@@ -127,7 +127,7 @@ def main() -> int:
         print(f"[建档] 重建模式: {len(recent_filings)} 家可拆解公司(全量 {len(all_filings)} 条)")
     else:
         # 正常模式:传入所有可拆解公司(run_dossiers 内部用 _is_recent 过滤,
-        # 只 resolve 最近7天 + 只建 max_new 篇)
+        # 只 resolve 最近7天 + 每次最多建 30 篇)
         recent_filings = [f for f in all_filings if is_dossier_eligible(f.stage)]
         new_changed_count = len([f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)])
         print(f"[建档] 可拆解公司: {len(recent_filings)} 家(本次新增/变化 {new_changed_count} 家,全量 {len(all_filings)} 条)")
@@ -161,16 +161,41 @@ def main() -> int:
             print(f"[{fc.name}] 出错:")
             traceback.print_exc()
 
-    # 财报也打行业标签
+    # 财报行业标签: 优先从 filings.json 继承(IPO 申报时已标记), 再用公司名关键词兜底
+    # 建索引: 公司名 → (industry, sub_industry, is_18a), 只含有行业标签的
+    ipo_industry_map = {}
+    for f in all_filings:
+        if f.industry:
+            ipo_industry_map[f.company_name] = (f.industry, f.sub_industry, f.is_18a)
+
     fin_med_count = 0
+    fin_inherited = 0
     for r in finreports:
-        ind, sind, is18a = classify_industry(r.company_name)
+        # 1. 精确匹配: 财报公司名与 IPO 申报公司名完全一致
+        if r.company_name in ipo_industry_map:
+            ind, sind, is18a = ipo_industry_map[r.company_name]
+            fin_inherited += 1
+        else:
+            # 2. 模糊匹配: 财报公司名是 IPO 公司名的子串或反过来(至少4字,避免误匹配)
+            matched = None
+            rname = r.company_name or ""
+            if len(rname) >= 4:
+                for fname, tags in ipo_industry_map.items():
+                    if rname in fname or fname in rname:
+                        matched = tags
+                        break
+            if matched:
+                ind, sind, is18a = matched
+                fin_inherited += 1
+            else:
+                # 3. 兜底: 公司名关键词匹配
+                ind, sind, is18a = classify_industry(r.company_name)
         r.industry = ind
         r.sub_industry = sind
         r.is_18a = is18a
         if ind:
             fin_med_count += 1
-    print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条")
+    print(f"[行业标签] 医疗健康财报: {fin_med_count} 条 / 共 {len(finreports)} 条 (其中 {fin_inherited} 条从 IPO 标签继承)")
 
     (DATA_DIR / "finreports.json").write_text(
         json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),
