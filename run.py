@@ -193,8 +193,9 @@ def main() -> int:
                 r.industry, r.sub_industry, r.is_18a = ind, sind, is18a
                 fin_fallback += 1
         else:
-            # 港交所(5 位)或代码缺失 -> markers/关键词兜底
-            ind, sind, is18a = classify_industry(r.company_name, r.markers)
+            # 港交所(5 位)或代码缺失 -> 关键词兜底
+            # 注: FinReport 模型无 markers 字段, 即便传入也为 None, 故此处不传
+            ind, sind, is18a = classify_industry(r.company_name)
             r.industry, r.sub_industry, r.is_18a = ind, sind, is18a
             fin_fallback += 1
         if r.industry:
