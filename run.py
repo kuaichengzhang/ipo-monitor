@@ -35,7 +35,7 @@ COLLECTORS = [
     HKEXNewListingInfoCollector(),    # 港交所:招股/发行阶段(已接通)
     HKEXAppProofCollector(),          # 港交所:申请版本/PHIP,过会触发(已接通)
     SSECollector(),                   # 上交所科创板+主板(已接通)
-    SZSECollector(),                  # 深交所创业板+主板:机制就绪,CATALOGID待确认(优雅跳过)
+    SZSECollector(),                  # 深交所创业板+主板(已接通)
     BSECollector(),                   # 北交所:机制就绪,Controller待确认(优雅跳过)
 ]
 
@@ -116,25 +116,31 @@ def main() -> int:
     diff = store.diff_and_update(all_filings)
     store.save()
 
-    (DATA_DIR).mkdir(parents=True, exist_ok=True)
-    (DATA_DIR / "filings.json").write_text(
-        json.dumps([f.to_dict() for f in all_filings], ensure_ascii=False, indent=2),
-        encoding="utf-8",
-    )
-
     # ★可选题建档(在看板之前,让看板能挂档案链接)
     # ★ 拆解范围:申报受理~注册生效/招股都拆(比选题触发更宽)
+    # ★ resolve 阶段:传入所有可拆解公司(不只是 new/changed),
+    #   让之前采集过但 prospectus_url=None 的公司也有机会被 resolve
     changed_uids = {f.uid for f in diff["changed"]}
     if args.rebuild_all:
         # 重建模式:传入所有 filings,重建已有档案
         recent_filings = [f for f in all_filings if is_dossier_eligible(f.stage)]
         print(f"[建档] 重建模式: {len(recent_filings)} 家可拆解公司(全量 {len(all_filings)} 条)")
     else:
-        recent_filings = [f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)]
-        print(f"[建档] 本次新增/变化的触发公司: {len(recent_filings)} 家(全量 {len(all_filings)} 条)")
+        # 正常模式:传入所有可拆解公司(run_dossiers 内部用 _is_recent 过滤,
+        # 只 resolve 最近7天 + 只建 max_new 篇)
+        recent_filings = [f for f in all_filings if is_dossier_eligible(f.stage)]
+        new_changed_count = len([f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)])
+        print(f"[建档] 可拆解公司: {len(recent_filings)} 家(本次新增/变化 {new_changed_count} 家,全量 {len(all_filings)} 条)")
     dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers",
                             changed_uids=changed_uids,
                             rebuild_all=args.rebuild_all)
+
+    # filings.json 在 resolve 之后写盘,确保 prospectus_url 被保存
+    (DATA_DIR).mkdir(parents=True, exist_ok=True)
+    (DATA_DIR / "filings.json").write_text(
+        json.dumps([f.to_dict() for f in all_filings], ensure_ascii=False, indent=2),
+        encoding="utf-8",
+    )
     # safe_name -> 还原到公司名匹配(看板按公司名查)
     from dossier_runner import _safe_name
     dossier_map = {}
@@ -172,7 +178,7 @@ def main() -> int:
     )
     print(f"[财报] 共 {len(finreports)} 条，已保存 finreports.json")
 
-    # 拆解业绩预告 + 业绩快报
+    # 拆解所有类型财报(年报/半年报/季报/业绩预告/业绩快报等)
     # max_new=50: 首跑处理上周积压(~30篇)，日常只处理新增(淡季0-5，旺季20-40)
     # 已有的会自动跳过(按uid去重)，所以50是安全上限而非每轮定额
     finreport_dossier_map = run_finreport_dossiers(finreports, DATA_DIR / "finreport_dossiers", max_new=50)
