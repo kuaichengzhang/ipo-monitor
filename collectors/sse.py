@@ -33,7 +33,13 @@ ENTRY_PAGE = "https://www.sse.com.cn/listing/renewal/ipo/"
 DETAIL_URL = "https://www.sse.com.cn/listing/renewal/ipo/index_listing_detail.shtml?auditId={num}"
 QUERY_URL = "https://query.sse.com.cn/commonSoaQuery.do"
 SQL_ID = "SH_XM_LB"
-SSE_HEADERS = {"Referer": "https://www.sse.com.cn/"}
+SSE_HEADERS = {
+    "Referer": "https://www.sse.com.cn/",
+    "Accept": "application/json, text/javascript, */*; q=0.01",
+    "Accept-Language": "zh-CN,zh;q=0.9,en;q=0.8",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive",
+}
 PAGE_SIZE = 500
 
 # currStatus 数字码 -> 状态文字(经页面状态筛选器实测)
@@ -144,10 +150,33 @@ class SSECollector(BaseCollector):
 
     def collect(self) -> list[Filing]:
         self.session.headers.update(SSE_HEADERS)
+
+        # 预热：先访问入口页建立 session
+        try:
+            self.session.get(ENTRY_PAGE, timeout=15)
+        except Exception:
+            pass
+
         out: list[Filing] = []
         page = 1
+        max_retries = 3
         while True:
-            text = self.get(_build_url(page))
+            url = _build_url(page)
+
+            # 重试 + 退避
+            text = None
+            for attempt in range(max_retries):
+                try:
+                    text = self.get(url)
+                    break
+                except Exception:
+                    if attempt < max_retries - 1:
+                        wait = 3 * (attempt + 1)
+                        print(f"  [sse] 第 {attempt+1} 次失败，{wait}s 后重试...")
+                        time.sleep(wait)
+                    else:
+                        raise
+
             batch = parse_query_response(text)
             out.extend(batch)
             if len(batch) < PAGE_SIZE or page > 20:
