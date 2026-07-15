@@ -48,6 +48,7 @@ def _row(f, new_uids, changed_uids, dossier_map):
         "ex": f.exchange, "bd": f.board, "code": f.stock_code or "",
         "name": f.company_name, "stage": f.stage, "status": f.status,
         "spon": f.sponsor or "", "date": f.page_updated or "",
+        "content": f.content or "",
         "trig": is_trigger(f.stage),
         "new": f.uid in new_uids, "chg": f.uid in changed_uids,
         "pros": f.prospectus_url or "", "phip": f.phip_url or "",
@@ -399,7 +400,7 @@ function card(r, terms){
     +'<button class="btn-watch '+(watched?'on':'')+'" data-uid="'+esc(r.uid)+'" title="关注">'+(watched?'★':'☆')+'</button></div>'
     +'<div class="l2"><span class="stage" style="background:'+(COLORS[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
     +'<span class="meta">'+esc(r.status)+'</span><span class="board">'+esc(r.bd)+'</span>'
-    +(r.spon?'<span class="meta">保荐 '+hl(r.spon,terms)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+    +(r.spon?'<span class="meta">保荐 '+hl(r.spon,terms)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+(r.content?'<span class="meta">更新内容: '+esc(r.content)+'</span>':'')+'</div>'
     +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
 }
 function pagerHtml(total){
@@ -484,7 +485,7 @@ function exportCSV(){
   const headers = ['交易所','板块','代码','公司名','阶段','状态','保荐机构','更新日期','行业','子行业','18A','招股书','PHIP','审核页','拆解档案'];
   const lines = [headers.join(',')];
   rows.forEach(r=>{
-    const vals = [r.ex,r.bd,r.code,r.name,r.stage,r.status,r.spon,r.date,r.ind||'',r.sind||'',r.i18a?'是':'',r.pros,r.phip,r.src,r.dossier];
+    const vals = [r.ex,r.bd,r.code,r.name,r.stage,r.status,r.spon,r.date,r.content,r.ind||'',r.sind||'',r.i18a?'是':'',r.pros,r.phip,r.src,r.dossier];
     lines.push(vals.map(v=>{ v=v||''; v=String(v).replace(/"/g,'""'); return v.includes(',')||v.includes('"')||v.includes('\n')?'"'+v+'"':v; }).join(','));
   });
   const csv = '\ufeff'+lines.join('\n');

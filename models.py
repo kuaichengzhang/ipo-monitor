@@ -52,6 +52,9 @@ class Filing:
     stock_code: Optional[str] = None
     sponsor: Optional[str] = None
 
+    # —— 更新内容(港交所文档名/类型,如"申請版本（第一次呈交）";A股暂未抓取) ——
+    content: Optional[str] = None
+
     # —— 文档链接 ——
     prospectus_url: Optional[str] = None      # 招股书 / 招股章程
     announcement_url: Optional[str] = None    # 上市/申请公告
@@ -98,6 +101,7 @@ class Filing:
             stage=d.get("stage", ""),
             stock_code=d.get("stock_code"),
             sponsor=d.get("sponsor"),
+            content=d.get("content"),
             prospectus_url=d.get("prospectus_url"),
             announcement_url=d.get("announcement_url"),
             allotment_url=d.get("allotment_url"),

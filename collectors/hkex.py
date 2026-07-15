@@ -175,15 +175,17 @@ class HKEXAppProofCollector(BaseCollector):
 HKEX_APP_PREFIX = "https://www1.hkexnews.hk/app/"
 
 
-def _doc_url(entries, keywords: list[str]) -> str | None:
-    """在文档数组里找名称含关键词的条目,返回其绝对 PDF 链接。"""
+def _doc_url(entries, keywords: list[str]) -> tuple[str | None, str | None]:
+    """在文档数组里找名称含关键词的条目,返回 (绝对 PDF 链接, 文档名)。"""
     for e in entries or []:
-        label = (e.get("nF") or "") + (e.get("nS1") or "") + (e.get("nS2") or "")
+        nf = e.get("nF") or ""
+        ns1 = e.get("nS1") or ""
+        ns2 = e.get("nS2") or ""
+        label = nf + ns1 + ns2
         if any(k in label for k in keywords):
             u = e.get("u1")
-            if u:
-                return HKEX_APP_PREFIX + u
-    return None
+            return (HKEX_APP_PREFIX + u if u else None, (nf or ns1 or ns2) or None)
+    return (None, None)
 
 
 def _fmt_hk_date(s: str) -> str | None:
@@ -210,8 +212,9 @@ def map_app_record(rec: dict, board: str) -> Filing:
     status = "聆讯后资料集(PHIP)" if has_phip else "申请版本"
 
     docs = (rec.get("ls") or []) + (rec.get("ps") or [])
-    phip_url = _doc_url(docs, ["聆訊後資料集", "聆讯后资料集", "Post Hearing"])
-    ap_url = _doc_url(docs, ["申請版本", "申请版本", "Application Proof"])
+    phip_url, phip_name = _doc_url(docs, ["聆訊後資料集", "聆讯后资料集", "Post Hearing"])
+    ap_url, ap_name = _doc_url(docs, ["申請版本", "申请版本", "Application Proof"])
+    content = phip_name or ap_name  # 更新内容:最新文档名/类型
 
     raw_name = (rec.get("a") or "").strip()
     name, markers = parse_hkex_markers(raw_name)
@@ -227,6 +230,7 @@ def map_app_record(rec: dict, board: str) -> Filing:
         stock_code=str(rec.get("id")) if rec.get("id") is not None else None,
         prospectus_url=phip_url or ap_url,   # 最新可读披露文档(有PHIP用PHIP,否则用申请版本)
         phip_url=phip_url,
+        content=content,   # 更新内容:港交所文档名/类型(如"申請版本（第一次呈交）")
         page_updated=_fmt_hk_date(rec.get("d")),
         source_url="https://www1.hkexnews.hk/app/appindex.html",
         first_seen=now,
