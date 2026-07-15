@@ -106,6 +106,21 @@
   },
   {
     "exchange": "深交所",
+    "company_name": "博纳影业",
+    "stock_code": "001330",
+    "report_type": "业绩预告",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩预告",
+    "announcement_date": "2026-07-15",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425544.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "feb415ce3caad878"
+  },
+  {
+    "exchange": "深交所",
     "company_name": "乐通股份",
     "stock_code": "002319",
     "report_type": "业绩预告",
@@ -508,21 +523,6 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "d30448bc1906b0f1"
-  },
-  {
-    "exchange": "深交所",
-    "company_name": "蓝丰生化",
-    "stock_code": "002513",
-    "report_type": "业绩预告",
-    "report_period": "2026年半年度",
-    "title": "2026年半年度业绩预告",
-    "announcement_date": "2026-07-15",
-    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425310.PDF",
-    "source": "CNINFO",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "a08524e4475e0377"
   },
   {
     "exchange": "上交所",
