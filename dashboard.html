@@ -73,6 +73,7 @@
  .stage-chip { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:16px; padding:1px 8px; font-size:11px; cursor:pointer; white-space:nowrap; }
  .stage-chip.on { color:#fff; }
  .fr-search { width:100%; padding:8px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; margin-bottom:8px; background:var(--card); color:var(--ink); }
+ .med-expand { color:var(--blue); text-decoration:none; font-size:13px; }
  @media(max-width:640px){
    header { padding:14px 12px; } header h1 { font-size:17px; } header .sub { font-size:12px; }
    header .stats { font-size:12px; } header .stats b { font-size:14px; }
@@ -92,7 +93,7 @@
 </style></head><body>
 <header>
   <h1>IPO三棱镜 · 每日监控</h1>
-  <div class="sub">港交所 / 上交所 / 深交所 / 北交所 · 更新于 2026-07-15 11:56</div>
+  <div class="sub">港交所 / 上交所 / 深交所 / 北交所 · 更新于 2026-07-15 12:13</div>
   <div class="stats"><b>4019</b> 家在管线 · <b>1787</b> 家 ★可选题 · 今日新增 0 · <b>72</b> 篇拆解 · 医疗 515 家 (18A 37)</div>
 </header>
 <div class="view-toggle">
@@ -160,6 +161,9 @@
         <span class="chip on" data-med-recent="1">近90天有动态</span>
         <span class="chip" data-med-sind="">全部</span><span class="chip" data-med-sind="中药">中药</span><span class="chip" data-med-sind="其他医疗">其他医疗</span><span class="chip" data-med-sind="化学制药">化学制药</span><span class="chip" data-med-sind="医疗器械">医疗器械</span><span class="chip" data-med-sind="医疗服务">医疗服务</span><span class="chip" data-med-sind="医药商业">医药商业</span><span class="chip" data-med-sind="生物制品">生物制品</span>
         <span class="chip" data-med-18a="1">只看 18A</span>
+        <span class="chip on" data-med-show="all">全部</span>
+        <span class="chip" data-med-show="ipo">只看 IPO</span>
+        <span class="chip" data-med-show="fin">只看 财报</span>
         <span class="count" id="med-count"></span>
       </div>
       <div class="med-stats" id="med-stats"></div>
@@ -428,7 +432,7 @@ const MED_FILINGS = [{"uid": "4c11b1182cc428a4", "ex": "港交所", "bd": "主�
 const MED_FINREPORTS = [{"ex": "深交所", "code": "000963", "name": "华东医药", "type": "年报", "period": "2025年年度", "date": "2026-07-09", "url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225414770.PDF", "dossier": "data/finreport_dossiers/c632b9597be5a4f9.html", "title": "2025年年度报告（英文版）", "ind": "医疗健康", "sind": "化学制药", "i18a": false}, {"ex": "深交所", "code": "000963", "name": "华东医药", "type": "一季报", "period": "2026年第一季度", "date": "2026-07-09", "url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225414771.PDF", "dossier": "data/finreport_dossiers/09692f3e98d2301a.html", "title": "2026年第一季度报告（英文版）", "ind": "医疗健康", "sind": "化学制药", "i18a": false}, {"ex": "深交所", "code": "002038", "name": "双鹭药业", "type": "业绩预告", "period": "2026年半年度", "date": "2026-07-15", "url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425423.PDF", "dossier": "data/finreport_dossiers/13684a8ad18800d2.html", "title": "北京双鹭药业股份有限公司2026年半年度业绩预告", "ind": "医疗健康", "sind": "化学制药", "i18a": false}, {"ex": "深交所", "code": "000078", "name": "ST海王", "type": "业绩预告", "period": "2026年半年度", "date": "2026-07-15", "url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425389.PDF", "dossier": "data/finreport_dossiers/959c47cc774267cf.html", "title": "2026年半年度业绩预告", "ind": "医疗健康", "sind": "医药商业", "i18a": false}, {"ex": "深交所", "code": "000566", "name": "海南海药", "type": "业绩预告", "period": "2026年半年度", "date": "2026-07-15", "url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425370.PDF", "dossier": "data/finreport_dossiers/205d63036ff1c3fe.html", "title": "海南海药股份有限公司2026年半年度业绩预告", "ind": "医疗健康", "sind": "化学制药", "i18a": false}, {"ex": "深交所", "code": "000999", "name": "华润三九", "type": "业绩快报", "period": "2026年半年度", "date": "2026-07-15", "url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225424829.PDF", "dossier": "data/finreport_dossiers/71a76c8dc13d8763.html", "title": "2026年半年度业绩快报", "ind": "医疗健康", "sind": "中药", "i18a": false}, {"ex": "上交所", "code": "600535", "name": "天士力", "type": "业绩快报", "period": "2026年半年度", "date": "2026-07-15", "url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225424041.PDF", "dossier": "data/finreport_dossiers/5d557fb028a7942c.html", "title": "天士力2026年半年度业绩快报", "ind": "医疗健康", "sind": "中药", "i18a": false}];
 const FR_COLORS_MED = {"年报": "#1a73e8", "半年报": "#0097a7", "一季报": "#7b1fa2", "三季报": "#388e3c", "业绩预告": "#e8730c", "业绩快报": "#f9a825", "Profit Warning": "#dc3545", "Profit Alert": "#28a745", "Annual Results": "#6f42c1", "Interim Results": "#ad6ee0", "Quarterly Results": "#5c3dc4"};
 const STAGE_COLORS_MED = {"申报受理": "#6b8cae", "已问询/回复": "#5b7db1", "上会/聆讯": "#4a6fa5", "过会/通过": "#1f6feb", "提交注册": "#1a5fd0", "注册生效/招股": "#0f4faf", "已上市": "#8a94a6", "中止": "#b08900", "终止/退回/未通过": "#a0522d", "未知": "#999"};
-let medSind = '', med18a = false, medEx = '', medRecent = true;
+let medSind = '', med18a = false, medEx = '', medRecent = true, medShow = 'all';
 function renderMed(){
   const cut = medRecentCut();
   let ipoRows = MED_FILINGS.slice();
@@ -457,34 +461,59 @@ function renderMed(){
   document.getElementById('med-stats').innerHTML = 'IPO动态 ' + ipoRows.length + ' · 财报 ' + finRows.length + (i18aCnt>0 ? ' · 18A公司 ' + i18aCnt : '');
   document.getElementById('med-ipo-count').textContent = ipoRows.length + ' 家';
   document.getElementById('med-fin-count').textContent = finRows.length + ' 条';
-  // IPO 动态
-  document.getElementById('med-ipo-list').innerHTML = ipoRows.map(r=>{
-    const badges = (r.trig?'<span class="badge star">★</span>':'') + (r.i18a?'<span class="badge i18a">18A</span>':'') + (r.new?'<span class="badge new">新</span>':'');
-    const sindTag = r.sind ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
-    const links = [];
-    if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解档案</a>');
-    if(r.pros) links.push('<a href="'+esc(r.pros)+'" target="_blank">招股书</a>');
-    if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">审核页</a>');
-    return '<div class="card '+(r.trig?'trig':'')+'">'
-      +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+badges+'</div>'
-      +'<div class="l2"><span class="stage" style="background:'+(STAGE_COLORS_MED[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
-      +'<span class="meta">'+esc(r.status)+'</span><span class="board">'+esc(r.ex)+' · '+esc(r.bd)+'</span>'
-      +(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
-      +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
-  }).join('') || '<div class="card"><span class="meta">暂无医疗健康 IPO 动态</span></div>';
-  // 财报拆解
-  document.getElementById('med-fin-list').innerHTML = finRows.map(r=>{
-    const color = FR_COLORS_MED[r.type] || '#5b7db1';
-    const i18aTag = r.i18a ? '<span class="badge i18a">18A</span>' : '';
-    const sindTag = r.sind ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
-    const links = [];
-    if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
-    if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
-    return '<div class="fr-card">'
-      +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+i18aTag+'<span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
-      +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
-      +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
-  }).join('') || '<div class="card"><span class="meta">暂无医疗健康财报数据</span></div>';
+  const showIPO = medShow!=='fin';
+  const showFin = medShow!=='ipo';
+  const ipoListEl = document.getElementById('med-ipo-list');
+  const ipoTitleEl = document.querySelector('.med-section-title:nth-of-type(1)');
+  const finListEl = document.getElementById('med-fin-list');
+  const finTitleEl = document.querySelector('.med-section-title:nth-of-type(2)');
+  if(ipoTitleEl) ipoTitleEl.style.display = showIPO ? '' : 'none';
+  if(showIPO){
+    const ipoPageSize = medShow==='all' ? 5 : ipoRows.length;
+    const ipoVisible = ipoRows.slice(0, ipoPageSize);
+    ipoListEl.innerHTML = ipoVisible.map(r=>{
+      const badges = (r.trig?'<span class="badge star">★</span>':'') + (r.i18a?'<span class="badge i18a">18A</span>':'') + (r.new?'<span class="badge new">新</span>':'');
+      const sindTag = r.sind ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
+      const links = [];
+      if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解档案</a>');
+      if(r.pros) links.push('<a href="'+esc(r.pros)+'" target="_blank">招股书</a>');
+      if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">审核页</a>');
+      return '<div class="card '+(r.trig?'trig':'')+'">'
+        +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+badges+'</div>'
+        +'<div class="l2"><span class="stage" style="background:'+(STAGE_COLORS_MED[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
+        +'<span class="meta">'+esc(r.status)+'</span><span class="board">'+esc(r.ex)+' · '+esc(r.bd)+'</span>'
+        +(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+        +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+    }).join('') + (medShow==='all' && ipoRows.length>ipoPageSize ? '<div class="card" style="text-align:center;"><a href="#" class="med-expand" data-expand="ipo">展开全部 '+ipoRows.length+' 家 IPO</a></div>' : '')
+    || '<div class="card"><span class="meta">暂无医疗健康 IPO 动态</span></div>';
+  } else {
+    ipoListEl.innerHTML = '';
+  }
+  if(finTitleEl) finTitleEl.style.display = showFin ? '' : 'none';
+  if(showFin){
+    finListEl.innerHTML = finRows.map(r=>{
+      const color = FR_COLORS_MED[r.type] || '#5b7db1';
+      const i18aTag = r.i18a ? '<span class="badge i18a">18A</span>' : '';
+      const sindTag = r.sind ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
+      const links = [];
+      if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
+      if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
+      return '<div class="fr-card">'
+        +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+i18aTag+'<span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
+        +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+        +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+    }).join('') || '<div class="card"><span class="meta">暂无医疗健康财报数据</span></div>';
+  } else {
+    finListEl.innerHTML = '';
+  }
+  // 展开全部按钮
+  document.querySelectorAll('.med-expand').forEach(a=>{
+    a.addEventListener('click', e=>{
+      e.preventDefault();
+      if(a.dataset.expand==='ipo'){ medShow='ipo'; }
+      renderMed();
+    });
+  });
 }
 document.querySelectorAll('.chip[data-med-sind]').forEach(c=>{
   c.addEventListener('click', ()=>{
@@ -494,6 +523,12 @@ document.querySelectorAll('.chip[data-med-sind]').forEach(c=>{
 });
 document.querySelector('.chip[data-med-18a]').addEventListener('click', function(){
   this.classList.toggle('on'); med18a = this.classList.contains('on'); renderMed();
+});
+document.querySelectorAll('.chip[data-med-show]').forEach(c=>{
+  c.addEventListener('click', ()=>{
+    document.querySelectorAll('.chip[data-med-show]').forEach(x=>x.classList.remove('on'));
+    c.classList.add('on'); medShow = c.dataset.medShow || 'all'; renderMed();
+  });
 });
 document.querySelectorAll('#med-ex-tabs .tab').forEach(t=>{
   t.addEventListener('click', ()=>{
