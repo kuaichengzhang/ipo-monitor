@@ -145,7 +145,9 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 30,
 
     built = 0
     for f in targets:
-        if built >= max_new:
+        # 7天内更新的公司:本次全部建档,不受 DOSSIER_MAX 上限限制(保证"更新即建档")
+        # 7天外的老公司仍受上限约束(rebuild 模式下的旧档案亦如此),避免一次性过量调用
+        if built >= max_new and not _is_recent(f.page_updated):
             if not rebuild_all:
                 print(f"[档案] 已达本次上限 {max_new} 篇,剩余 {len(targets) - built} 家下次再建")
             break
