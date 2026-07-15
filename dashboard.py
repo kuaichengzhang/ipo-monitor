@@ -234,6 +234,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       <span class="chip" data-f="dossier">有拆解档案</span>
       <span class="chip" data-f="recent">近30天有动态</span>
       <span class="chip" data-f="yday">过去1个自然日发生</span>
+      <span class="chip" data-f="today">今日更新</span>
       <span class="chip" data-f="med">只看 医疗健康</span>
       <span class="chip" data-f="watch">只看 关注</span>
       <span class="count" id="count"></span>
@@ -273,6 +274,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
         <span class="chip" data-fr-type="Profit Warning">Profit Warning</span>
         <span class="chip" data-fr-type="Profit Alert">Profit Alert</span>
         <span class="chip" data-fr-yday="1">过去1个自然日发生</span>
+        <span class="chip" data-fr-today="1">今日更新</span>
         <span class="count" id="fr-count"></span>
       </div>
     </div>
@@ -289,6 +291,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
         <span class="chip" data-med-show="ipo">只看 IPO</span>
         <span class="chip" data-med-show="fin">只看 财报</span>
         <span class="chip" data-med-yday="1">过去1个自然日发生</span>
+        <span class="chip" data-med-today="1">今日更新</span>
         <span class="count" id="med-count"></span>
       </div>
       <div class="med-stats" id="med-stats"></div>
@@ -343,6 +346,7 @@ function bjDateStr(offset){
   return `${y}-${m}-${d}`;
 }
 function yday(){ return bjDateStr(-1); }
+function today(){ return bjDateStr(0); }
 function matches(r, terms){
   return terms.every(t => r.name.toLowerCase().includes(t) || r.spon.toLowerCase().includes(t)
     || r.code.includes(t) || r.bd.includes(t) || r.stage.includes(t) || r.status.includes(t)
@@ -363,6 +367,7 @@ function filtered(){
     if(state.flags.med && r.ind!=='医疗健康') return false;
     if(state.flags.watch && !isWatched(r)) return false;
     if(state.flags.yday && !(r.date && r.date.slice(0,10)===yday())) return false;
+    if(state.flags.today && !(r.date && r.date.slice(0,10)===today())) return false;
     if(state.stage && r.stage!==state.stage) return false;
     if(terms.length && !matches(r, terms)) return false;
     return true;
@@ -534,6 +539,7 @@ const FR_COLORS = __FRCOLORS__;
 let frFilter = '';
 let frQuery = '';
 let frYday = false;
+let frToday = false;
 function renderFR(){
   let rows = FR_DATA.slice();
   if(frFilter) rows = rows.filter(r=>r.type===frFilter);
@@ -543,6 +549,7 @@ function renderFR(){
       || (r.type||'').toLowerCase().includes(q) || (r.title||'').toLowerCase().includes(q));
   }
   if(frYday) rows = rows.filter(r=>r.date && r.date.slice(0,10)===yday());
+  if(frToday) rows = rows.filter(r=>r.date && r.date.slice(0,10)===today());
   rows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
   document.getElementById('fr-count').textContent = rows.length + ' 条';
   document.getElementById('fr-list').innerHTML = rows.map(r=>{
@@ -565,6 +572,9 @@ document.querySelectorAll('.chip[data-fr-type]').forEach(c=>{
 document.querySelector('.chip[data-fr-yday]').addEventListener('click', function(){
   this.classList.toggle('on'); frYday = this.classList.contains('on'); renderFR();
 });
+document.querySelector('.chip[data-fr-today]').addEventListener('click', function(){
+  this.classList.toggle('on'); frToday = this.classList.contains('on'); renderFR();
+});
 let frDeb;
 document.getElementById('fr-q').addEventListener('input', e=>{
   clearTimeout(frDeb); frDeb = setTimeout(()=>{ frQuery=e.target.value; renderFR(); }, 200);
@@ -574,7 +584,7 @@ const MED_FILINGS = __MEDFILINGS__;
 const MED_FINREPORTS = __MEDFINREPORTS__;
 const FR_COLORS_MED = __FRCOLORS__;
 const STAGE_COLORS_MED = __COLORS__;
-let medSind = '', med18a = false, medEx = '', medRecent = true, medShow = 'all', medYday = false;
+let medSind = '', med18a = false, medEx = '', medRecent = true, medShow = 'all', medYday = false, medToday = false;
 function renderMed(){
   const cut = medRecentCut();
   let ipoRows = MED_FILINGS.slice();
@@ -598,6 +608,10 @@ function renderMed(){
   if(medYday){
     ipoRows = ipoRows.filter(r=>r.date && r.date.slice(0,10)===yday());
     finRows = finRows.filter(r=>r.date && r.date.slice(0,10)===yday());
+  }
+  if(medToday){
+    ipoRows = ipoRows.filter(r=>r.date && r.date.slice(0,10)===today());
+    finRows = finRows.filter(r=>r.date && r.date.slice(0,10)===today());
   }
   ipoRows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
   finRows.sort((a,b)=>(b.date||'').localeCompare(a.date||''));
@@ -687,6 +701,9 @@ document.querySelector('.chip[data-med-recent]').addEventListener('click', funct
 });
 document.querySelector('.chip[data-med-yday]').addEventListener('click', function(){
   this.classList.toggle('on'); medYday = this.classList.contains('on'); renderMed();
+});
+document.querySelector('.chip[data-med-today]').addEventListener('click', function(){
+  this.classList.toggle('on'); medToday = this.classList.contains('on'); renderMed();
 });
 document.querySelectorAll('.vt-btn').forEach(b=>{
   if(b.dataset.view===state.view) {
