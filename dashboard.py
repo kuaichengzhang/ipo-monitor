@@ -184,6 +184,8 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
  .sort-sel { border:1px solid var(--line); border-radius:8px; padding:5px 8px; font-size:13px; background:var(--card); color:var(--ink); cursor:pointer; }
  .btn-export { border:1px solid var(--line); background:var(--card); border-radius:8px; padding:5px 12px; font-size:13px; cursor:pointer; color:var(--blue); }
  .btn-export:hover { background:var(--soft); }
+ .btn-scan { border:1px solid var(--blue); background:var(--blue); color:#fff; border-radius:8px; padding:5px 12px; font-size:13px; cursor:pointer; text-decoration:none; display:inline-block; margin-left:8px; }
+ .btn-scan:hover { filter:brightness(1.08); }
  .kbd-hint { font-size:11px; color:var(--muted); margin-left:auto; }
  .kbd { border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:11px; background:var(--card); }
  .stats-bar { display:flex; gap:2px; margin-top:8px; height:6px; border-radius:3px; overflow:hidden; }
@@ -238,6 +240,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       <span class="chip" data-f="med">只看 医疗健康</span>
       <span class="chip" data-f="watch">只看 关注</span>
       <span class="count" id="count"></span>
+      <a class="btn-scan" href="https://github.com/kuaichengzhang/ipo-monitor/actions/workflows/daily.yml" target="_blank" rel="noopener" title="在新标签页打开 GitHub Actions，点 Run workflow 手动触发一次扫描（适合周末或非扫描时段补抓最新披露）">↻ 立即扫描</a>
     </div>
     <div class="stage-chips" id="stage-chips"></div>
     <div class="toolbar">
@@ -276,6 +279,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
         <span class="chip" data-fr-yday="1">过去1个自然日发生</span>
         <span class="chip" data-fr-today="1">今日更新</span>
         <span class="count" id="fr-count"></span>
+        <a class="btn-scan" href="https://github.com/kuaichengzhang/ipo-monitor/actions/workflows/daily.yml" target="_blank" rel="noopener" title="在新标签页打开 GitHub Actions，点 Run workflow 手动触发一次扫描（适合周末或非扫描时段补抓最新披露）">↻ 立即扫描</a>
       </div>
     </div>
     <div id="fr-list"></div>
@@ -293,6 +297,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
         <span class="chip" data-med-yday="1">过去1个自然日发生</span>
         <span class="chip" data-med-today="1">今日更新</span>
         <span class="count" id="med-count"></span>
+        <a class="btn-scan" href="https://github.com/kuaichengzhang/ipo-monitor/actions/workflows/daily.yml" target="_blank" rel="noopener" title="在新标签页打开 GitHub Actions，点 Run workflow 手动触发一次扫描（适合周末或非扫描时段补抓最新披露）">↻ 立即扫描</a>
       </div>
       <div class="med-stats" id="med-stats"></div>
     </div>
