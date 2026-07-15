@@ -19,10 +19,25 @@ from types import SimpleNamespace
 from collectors.resolve import resolve_prospectus
 from extractor import load_pdf, cid_trap_ratio, Page
 from dossier import generate_dossier, md_to_html
-from stages import is_dossier_eligible
+from stages import is_dossier_eligible, STAGE_ORDER
 
 CST = timezone(timedelta(hours=8))
 RECENT_DAYS = 7
+
+# 阶段成熟度:index 越大越靠后(过会/注册生效比刚受理更值得优先拆)
+_STAGE_RANK = {s: i for i, s in enumerate(STAGE_ORDER)}
+
+
+def _priority_key(f, changed_uids: set | None):
+    """建档优先级(降序):医疗健康 > 本次新增/变化 > 阶段成熟度 > 最近更新。
+
+    让重点档案(医疗频道、临近上市、有新动态)先建,而非按 filings 原始顺序。
+    """
+    is_med = 1 if getattr(f, "industry", "") == "医疗健康" else 0
+    is_changed = 1 if (changed_uids and getattr(f, "uid", None) in changed_uids) else 0
+    stage_rank = _STAGE_RANK.get(getattr(f, "stage", ""), 0)
+    page_upd = str(getattr(f, "page_updated", "") or "")
+    return (is_med, is_changed, stage_rank, page_upd)
 
 
 def _is_recent(page_updated: str | None, days: int = RECENT_DAYS) -> bool:
@@ -123,7 +138,10 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 30,
                     resolve_count += 1
         print(f"[档案] 本次 resolve_prospectus 查询 {resolve_count} 家(7天内的触发公司)")
         targets = [f for f in filings if is_dossier_eligible(f.stage) and f.prospectus_url and _is_recent(f.page_updated)]
-        print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (本次上限 {max_new} 篇)")
+        # 优先级排序:医疗健康 > 新增/变化 > 阶段成熟度 > 最近更新(受 max_new 限流时优先建重点)
+        targets.sort(key=lambda f: _priority_key(f, changed_uids), reverse=True)
+        med_n = sum(1 for f in targets if getattr(f, "industry", "") == "医疗健康")
+        print(f"[档案] 符合条件的目标公司: {len(targets)} 家 (医疗 {med_n} 家优先, 本次上限 {max_new} 篇)")
 
     built = 0
     for f in targets:
@@ -143,32 +161,41 @@ def run_dossiers(filings, out_dir: Path, max_new: int = 30,
             continue  # 已有档案且无变化,跳过
         if is_changed and path.exists():
             print(f"[档案] ↻ {f.company_name} 重建档案")
-        # —— 下载招股书 PDF:失败先重解析链接重试一次,仍失败则跳过(不再整批静默崩溃) ——
+        # —— 下载招股书 PDF:多次重试 + 指数退避;死链自动重解析链接;仍失败则跳过 ——
+        # (跳过时不清空 prospectus_url,档案文件也未生成 → 下次跑批因文件不存在会自动重排队)
+        import time as _time
         pdf_path = None
         last_err = None
-        for attempt in (0, 1):
+        DL_ATTEMPTS = 3
+        for attempt in range(DL_ATTEMPTS):
             try:
                 import requests as rq
-                if attempt == 1:
-                    # 第一次下载失败(死链/过期链接):重解析招股书直链兜底
+                if attempt >= 1:
+                    # 前一次失败(死链/过期/瞬断):退避后重解析招股书直链兜底
+                    _time.sleep(2 * attempt)  # 2s, 4s 退避
                     fresh = resolve_prospectus(f, _sess)
                     if fresh and fresh != f.prospectus_url:
                         print(f"[档案] ↻ {f.company_name} 重解析链接: {fresh}")
                         f.prospectus_url = fresh
-                    else:
-                        print(f"[档案] ! {f.company_name} 重解析无新链接,仍为 {f.prospectus_url}")
+                # 上交所静态资源需带 Referer,否则可能被拒
+                headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                                         "AppleWebKit/537.36 (KHTML, like Gecko) "
+                                         "Chrome/124.0 Safari/537.36"}
+                if "sse.com.cn" in (f.prospectus_url or ""):
+                    headers["Referer"] = "https://www.sse.com.cn/"
                 tmp = out_dir / "_tmp.pdf"
-                r = rq.get(f.prospectus_url, timeout=120,
-                           headers={"User-Agent": "Mozilla/5.0"})
+                r = rq.get(f.prospectus_url, timeout=120, headers=headers)
                 r.raise_for_status()
+                if not r.content.startswith(b"%PDF"):
+                    raise ValueError(f"非PDF响应(前16字节 {r.content[:16]!r})")
                 tmp.write_bytes(r.content)
                 pdf_path = tmp
                 break
             except Exception as e:
                 last_err = e
-                print(f"[档案] … {f.company_name} 第{attempt+1}次下载失败: {e}")
+                print(f"[档案] … {f.company_name} 第{attempt+1}/{DL_ATTEMPTS}次下载失败: {e}")
         if pdf_path is None:
-            print(f"[档案] ✗ {f.company_name} 跳过(招股书无法获取: {last_err})")
+            print(f"[档案] ✗ {f.company_name} 跳过(招股书无法获取,下次自动重排队: {last_err})")
             continue
         try:
             pages = load_pdf(str(pdf_path))

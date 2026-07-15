@@ -44,6 +44,7 @@ FR_TYPE_COLORS = {
 
 def _row(f, new_uids, changed_uids, dossier_map):
     return {
+        "uid": f.uid,
         "ex": f.exchange, "bd": f.board, "code": f.stock_code or "",
         "name": f.company_name, "stage": f.stage, "status": f.status,
         "spon": f.sponsor or "", "date": f.page_updated or "",
@@ -122,66 +123,77 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>IPO三棱镜 · 每日监控</title>
 <style>
- :root { --blue:#1f6feb; --ink:#1a2233; --muted:#8a94a6; --line:#e6ebf2; --bg:#f6f8fb; }
+ :root { --blue:#1f6feb; --ink:#1a2233; --muted:#8a94a6; --line:#e6ebf2; --bg:#f6f8fb;
+         --card:#fff; --card2:#eef2f8; --soft:#e8f0ff; --softline:#bcd3ff; --softink:#1a5fd0;
+         --mark:#ffe9a8; --markink:#1a2233; --board-ink:#48566e; }
+ @media (prefers-color-scheme: dark) {
+   :root { --blue:#4d9bff; --ink:#e7ecf5; --muted:#8b96ab; --line:#2a3346; --bg:#0f1420;
+           --card:#182031; --card2:#222c40; --soft:#1c2942; --softline:#2f4a7a;
+           --softink:#8fbcff; --mark:#5a4a1a; --markink:#ffe9a8; --board-ink:#aab6cc; }
+   header { background:linear-gradient(135deg,#12386f,#1f5fce) !important; }
+   img, .med-stats { opacity:.95; }
+ }
  * { box-sizing:border-box; } body { margin:0; font-family:-apple-system,'PingFang SC','Microsoft YaHei',sans-serif; background:var(--bg); color:var(--ink); line-height:1.5; }
  header { background:linear-gradient(135deg,#0f4faf,#1f6feb); color:#fff; padding:18px 16px; }
  header h1 { margin:0; font-size:19px; } header .sub { opacity:.9; font-size:13px; margin-top:4px; }
  header .stats { margin-top:8px; font-size:13px; } header .stats b { font-size:16px; }
  main { max-width:860px; margin:0 auto; padding:12px 12px 60px; }
  .controls { position:sticky; top:0; background:var(--bg); padding:10px 0; z-index:5; border-bottom:1px solid var(--line); }
- .search { width:100%; padding:9px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; }
+ .search { width:100%; padding:9px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; background:var(--card); color:var(--ink); }
  .tabs { display:flex; gap:6px; margin-top:8px; flex-wrap:wrap; }
- .tab { border:1px solid var(--line); background:#fff; border-radius:20px; padding:4px 12px; font-size:13px; cursor:pointer; }
+ .tab { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:20px; padding:4px 12px; font-size:13px; cursor:pointer; }
  .tab.on { background:var(--blue); color:#fff; border-color:var(--blue); }
  .chips { display:flex; gap:6px; margin-top:6px; flex-wrap:wrap; align-items:center; }
- .chip { border:1px solid var(--line); background:#fff; border-radius:20px; padding:2px 10px; font-size:12px; cursor:pointer; }
- .chip.on { background:#e8f0ff; border-color:#bcd3ff; color:#1a5fd0; }
+ .chip { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:20px; padding:2px 10px; font-size:12px; cursor:pointer; }
+ .chip.on { background:var(--soft); border-color:var(--softline); color:var(--softink); }
  .count { color:var(--muted); font-size:12px; margin-left:auto; }
- .card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:8px; }
- .card.trig { border-color:#bcd3ff; box-shadow:0 0 0 2px #e8f0ff inset; }
+ .card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:8px; }
+ .card.trig { border-color:var(--softline); box-shadow:0 0 0 2px var(--soft) inset; }
  .l1 { display:flex; align-items:center; gap:8px; flex-wrap:wrap; }
  .name { font-weight:600; font-size:15px; } .code { color:var(--muted); font-size:12px; }
  .l2 { margin-top:6px; display:flex; align-items:center; gap:8px; flex-wrap:wrap; font-size:12.5px; }
  .stage { color:#fff; padding:1px 8px; border-radius:20px; font-size:12px; }
- .board { background:#eef2f8; color:#48566e; padding:1px 7px; border-radius:20px; }
+ .board { background:var(--card2); color:var(--board-ink); padding:1px 7px; border-radius:20px; }
  .meta { color:var(--muted); } .l3 { margin-top:7px; font-size:12.5px; display:flex; gap:12px; flex-wrap:wrap; }
  .l3 a { color:var(--blue); text-decoration:none; } .l3 a:hover { text-decoration:underline; }
  .btn-dossier { background:var(--blue); color:#fff !important; padding:2px 10px; border-radius:6px; }
+ .btn-watch { border:1px solid var(--line); background:transparent; color:var(--muted); border-radius:12px; padding:0 6px; font-size:13px; line-height:1.3; cursor:pointer; margin-left:auto; }
+ .btn-watch.on { background:#fff3cd; border-color:#ffd43b; color:#b08900; }
  .badge { font-size:11px; padding:1px 7px; border-radius:20px; }
  .badge.star { background:#1f6feb; color:#fff; } .badge.new { background:#e8462d; color:#fff; } .badge.chg { background:#b08900; color:#fff; }
  .pager { display:flex; gap:6px; margin-top:16px; justify-content:center; align-items:center; flex-wrap:wrap; }
- .pager button { border:1px solid var(--line); background:#fff; border-radius:8px; padding:6px 12px; font-size:13px; cursor:pointer; min-width:38px; }
+ .pager button { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:8px; padding:6px 12px; font-size:13px; cursor:pointer; min-width:38px; }
  .pager button.cur { background:var(--blue); color:#fff; border-color:var(--blue); }
  .pager button:disabled { opacity:.4; cursor:default; }
  .pager .gap { color:var(--muted); }
- .pager select { border:1px solid var(--line); border-radius:8px; padding:6px 8px; font-size:13px; background:#fff; }
- .pager .jump { width:56px; padding:6px 8px; border:1px solid var(--line); border-radius:8px; font-size:13px; }
- mark { background:#ffe9a8; padding:0 1px; border-radius:2px; }
+ .pager select { border:1px solid var(--line); border-radius:8px; padding:6px 8px; font-size:13px; background:var(--card); color:var(--ink); }
+ .pager .jump { width:56px; padding:6px 8px; border:1px solid var(--line); border-radius:8px; font-size:13px; background:var(--card); color:var(--ink); }
+ mark { background:var(--mark); color:var(--markink); padding:0 1px; border-radius:2px; }
  .view-toggle { display:flex; gap:0; max-width:860px; margin:0 auto; padding:0 12px; }
- .vt-btn { flex:1; border:none; background:#fff; border-bottom:3px solid transparent; padding:10px 16px; font-size:14px; cursor:pointer; color:var(--muted); }
+ .vt-btn { flex:1; border:none; background:var(--card); border-bottom:3px solid transparent; padding:10px 16px; font-size:14px; cursor:pointer; color:var(--muted); }
  .vt-btn.on { color:var(--blue); border-bottom-color:var(--blue); font-weight:600; }
- .fr-card { background:#fff; border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:8px; }
+ .fr-card { background:var(--card); border:1px solid var(--line); border-radius:10px; padding:10px 12px; margin-top:8px; }
  .fr-type { color:#fff; padding:1px 8px; border-radius:20px; font-size:12px; }
  .med-section-title { font-size:15px; color:var(--ink); margin:20px 0 4px; padding-bottom:6px; border-bottom:1px solid var(--line); }
  .med-stats { font-size:12px; color:var(--muted); margin-top:6px; }
  .badge.i18a { background:#e8730c; color:#fff; font-size:10px; padding:1px 6px; border-radius:20px; }
- .badge.sind { background:#e8f0ff; border:1px solid #bcd3ff; color:#1a5fd0; font-size:10px; padding:1px 6px; border-radius:20px; }
+ .badge.sind { background:var(--soft); border:1px solid var(--softline); color:var(--softink); font-size:10px; padding:1px 6px; border-radius:20px; }
  footer { text-align:center; color:var(--muted); font-size:12px; padding:20px; }
  .toolbar { display:flex; gap:6px; align-items:center; margin-top:6px; flex-wrap:wrap; }
- .sort-sel { border:1px solid var(--line); border-radius:8px; padding:5px 8px; font-size:13px; background:#fff; cursor:pointer; }
- .btn-export { border:1px solid var(--line); background:#fff; border-radius:8px; padding:5px 12px; font-size:13px; cursor:pointer; color:var(--blue); }
- .btn-export:hover { background:#e8f0ff; }
+ .sort-sel { border:1px solid var(--line); border-radius:8px; padding:5px 8px; font-size:13px; background:var(--card); color:var(--ink); cursor:pointer; }
+ .btn-export { border:1px solid var(--line); background:var(--card); border-radius:8px; padding:5px 12px; font-size:13px; cursor:pointer; color:var(--blue); }
+ .btn-export:hover { background:var(--soft); }
  .kbd-hint { font-size:11px; color:var(--muted); margin-left:auto; }
- .kbd { border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:11px; background:#fff; }
+ .kbd { border:1px solid var(--line); border-radius:4px; padding:0 4px; font-size:11px; background:var(--card); }
  .stats-bar { display:flex; gap:2px; margin-top:8px; height:6px; border-radius:3px; overflow:hidden; }
  .stats-bar > div { flex:1; }
  .stats-legend { display:flex; gap:10px; margin-top:4px; font-size:11px; color:var(--muted); flex-wrap:wrap; }
  .stats-legend span { display:flex; align-items:center; gap:3px; }
  .stats-legend i { width:8px; height:8px; border-radius:2px; display:inline-block; }
  .stage-chips { display:flex; gap:4px; margin-top:6px; flex-wrap:wrap; }
- .stage-chip { border:1px solid var(--line); background:#fff; border-radius:16px; padding:1px 8px; font-size:11px; cursor:pointer; white-space:nowrap; }
+ .stage-chip { border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:16px; padding:1px 8px; font-size:11px; cursor:pointer; white-space:nowrap; }
  .stage-chip.on { color:#fff; }
- .fr-search { width:100%; padding:8px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; margin-bottom:8px; }
+ .fr-search { width:100%; padding:8px 12px; border:1px solid var(--line); border-radius:8px; font-size:14px; margin-bottom:8px; background:var(--card); color:var(--ink); }
  @media(max-width:640px){
    header { padding:14px 12px; } header h1 { font-size:17px; } header .sub { font-size:12px; }
    header .stats { font-size:12px; } header .stats b { font-size:14px; }
@@ -220,6 +232,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
       <span class="chip" data-f="dossier">有拆解档案</span>
       <span class="chip" data-f="recent">近30天有动态</span>
       <span class="chip" data-f="med">只看 医疗健康</span>
+      <span class="chip" data-f="watch">只看 关注</span>
       <span class="count" id="count"></span>
     </div>
     <div class="stage-chips" id="stage-chips"></div>
@@ -316,6 +329,9 @@ function matches(r, terms){
     || r.code.includes(t) || r.bd.includes(t) || r.stage.includes(t) || r.status.includes(t)
     || (r.py && r.py.includes(t)) || (r.pys && r.pys.includes(t)));
 }
+function getWatchlist(){ try{ return new Set(JSON.parse(localStorage.getItem('ipo-watchlist')||'[]')); }catch(e){ return new Set(); } }
+function setWatchlist(set){ localStorage.setItem('ipo-watchlist', JSON.stringify([...set])); }
+function isWatched(r){ return getWatchlist().has(r.uid); }
 function filtered(){
   const terms = state.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
   const cut = recentCut();
@@ -326,6 +342,7 @@ function filtered(){
     if(state.flags.dossier && !r.dossier) return false;
     if(state.flags.recent && !(r.date && r.date>=cut)) return false;
     if(state.flags.med && r.ind!=='医疗健康') return false;
+    if(state.flags.watch && !isWatched(r)) return false;
     if(state.stage && r.stage!==state.stage) return false;
     if(terms.length && !matches(r, terms)) return false;
     return true;
@@ -349,6 +366,7 @@ function hl(s, terms){
   return out;
 }
 function card(r, terms){
+  const watched = isWatched(r);
   const badges = (r.trig?'<span class="badge star">★ 可选题</span>':'') + (r.new?'<span class="badge new">新</span>':(r.chg?'<span class="badge chg">状态更新</span>':''));
   const indTag = (r.ind==='医疗健康' && r.sind) ? '<span class="badge sind">'+esc(r.sind)+'</span>' : '';
   const i18aTag = r.i18a ? '<span class="badge i18a">18A</span>' : '';
@@ -358,7 +376,8 @@ function card(r, terms){
   if(r.pros && r.pros!==r.phip) links.push('<a href="'+esc(r.pros)+'" target="_blank">招股书</a>');
   if(r.src) links.push('<a href="'+esc(r.src)+'" target="_blank">'+(r.src.includes('detail')?'详情页·招股书披露':'交易所审核页')+'</a>');
   return '<div class="card '+(r.trig?'trig':'')+'">'
-    +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+hl(r.name,terms)+'</span>'+(r.mk?'<span class="board">'+esc(r.mk)+'</span>':'')+indTag+i18aTag+badges+'</div>'
+    +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+hl(r.name,terms)+'</span>'+(r.mk?'<span class="board">'+esc(r.mk)+'</span>':'')+indTag+i18aTag+badges
+    +'<button class="btn-watch '+(watched?'on':'')+'" data-uid="'+esc(r.uid)+'" title="关注">'+(watched?'★':'☆')+'</button></div>'
     +'<div class="l2"><span class="stage" style="background:'+(COLORS[r.stage]||'#5b7db1')+'">'+esc(r.stage)+'</span>'
     +'<span class="meta">'+esc(r.status)+'</span><span class="board">'+esc(r.bd)+'</span>'
     +(r.spon?'<span class="meta">保荐 '+hl(r.spon,terms)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
@@ -394,6 +413,16 @@ function render(){
   }));
   document.getElementById('psize').addEventListener('change', e=>{ state.size=parseInt(e.target.value); state.page=1; writeState(); render(); });
   document.getElementById('pjump').addEventListener('keydown', e=>{ if(e.key==='Enter'){ const v=parseInt(e.target.value); if(v){ state.page=v; writeState(); render(); window.scrollTo({top:0}); } } });
+  // 关注按钮
+  document.querySelectorAll('.btn-watch').forEach(b=>{
+    b.addEventListener('click', ()=>{
+      const set = getWatchlist();
+      const uid = b.dataset.uid;
+      if(set.has(uid)){ set.delete(uid); } else { set.add(uid); }
+      setWatchlist(set);
+      render();
+    });
+  });
   renderStageChips(rows.length);
   renderStatsBar(rows);
   writeState();

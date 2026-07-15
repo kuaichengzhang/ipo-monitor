@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import sys
 import traceback
 from pathlib import Path
@@ -132,7 +133,11 @@ def main() -> int:
         recent_filings = [f for f in all_filings if is_dossier_eligible(f.stage)]
         new_changed_count = len([f for f in diff["new"] + diff["changed"] if is_dossier_eligible(f.stage)])
         print(f"[建档] 可拆解公司: {len(recent_filings)} 家(本次新增/变化 {new_changed_count} 家,全量 {len(all_filings)} 条)")
+    # 单次建档上限:环境变量 DOSSIER_MAX 可调(默认 40),平衡 LLM 成本与补齐速度。
+    # 2549 家资格公司靠每日增量积累,医疗/成熟阶段优先(见 dossier_runner._priority_key)。
+    dossier_max = int(os.environ.get("DOSSIER_MAX", "40"))
     dmap_raw = run_dossiers(recent_filings, DATA_DIR / "dossiers",
+                            max_new=dossier_max,
                             changed_uids=changed_uids,
                             rebuild_all=args.rebuild_all)
 
