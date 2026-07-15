@@ -21,6 +21,7 @@ from datetime import datetime, timedelta, timezone
 import requests
 
 from collectors.base import BaseCollector, DEFAULT_HEADERS
+from collectors.hkex import _fmt_hk_date
 from models import FinReport
 
 CST = timezone(timedelta(hours=8))
@@ -311,7 +312,7 @@ class HKEXFinReportCollector(BaseCollector):
                                 report_type=label,
                                 report_period=_extract_period(title),
                                 title=title,
-                                announcement_date=str(rec.get("DATE_TIME", ""))[:10],
+                                announcement_date=_fmt_hk_date(rec.get("DATE_TIME")),
                                 announcement_url=f"https://www1.hkexnews.hk{rec.get('FILE_LINK', '')}" if rec.get("FILE_LINK") else "",
                                 source="HKEX",
                             )

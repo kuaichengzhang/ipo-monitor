@@ -61,7 +61,7 @@ def parse_new_listing_info(html: str, board: str, source_url: str) -> list[Filin
     updated = None
     m = _UPDATED_RE.search(soup.get_text(" ", strip=True))
     if m:
-        updated = m.group(1)
+        updated = _fmt_hk_updated(m.group(1))
 
     table = _find_listing_table(soup)
     if table is None:
@@ -190,6 +190,19 @@ def _fmt_hk_date(s: str) -> str | None:
     """dd/mm/yyyy -> yyyy-mm-dd。"""
     m = re.match(r"(\d{2})/(\d{2})/(\d{4})", str(s or ""))
     return f"{m.group(3)}-{m.group(2)}-{m.group(1)}" if m else (s or None)
+
+
+_MONTHS = {"jan":1,"feb":2,"mar":3,"apr":4,"may":5,"jun":6,
+           "jul":7,"aug":8,"sep":9,"oct":10,"nov":11,"dec":12}
+def _fmt_hk_updated(s: str) -> str | None:
+    """'14 Jul 2026' / '14 July 2026' -> 'yyyy-mm-dd'。"""
+    m = re.match(r"(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})", str(s or ""), re.I)
+    if not m:
+        return s or None
+    mon = _MONTHS.get(m.group(2)[:3].lower())
+    if not mon:
+        return s or None
+    return f"{m.group(3)}-{mon:02d}-{int(m.group(1)):02d}"
 
 
 def map_app_record(rec: dict, board: str) -> Filing:
