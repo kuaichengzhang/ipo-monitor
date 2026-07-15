@@ -106,6 +106,21 @@
   },
   {
     "exchange": "深交所",
+    "company_name": "杰创智能",
+    "stock_code": "301248",
+    "report_type": "业绩预告",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩预告",
+    "announcement_date": "2026-07-15",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225427026.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "810c40620f3362b0"
+  },
+  {
+    "exchange": "深交所",
     "company_name": "朗特智能",
     "stock_code": "300916",
     "report_type": "业绩预告",
@@ -495,36 +510,6 @@
     "uid": "f49d101d27231f1e"
   },
   {
-    "exchange": "深交所",
-    "company_name": "天融信",
-    "stock_code": "002212",
-    "report_type": "业绩预告",
-    "report_period": "2026年半年度",
-    "title": "2026年半年度业绩预告",
-    "announcement_date": "2026-07-15",
-    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425382.PDF",
-    "source": "CNINFO",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "c7637a6f845bc564"
-  },
-  {
-    "exchange": "深交所",
-    "company_name": "ST同德",
-    "stock_code": "002360",
-    "report_type": "业绩预告",
-    "report_period": "2026年半年度",
-    "title": "山西同德化工股份有限公司2026年半年度业绩预告",
-    "announcement_date": "2026-07-15",
-    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-15/1225425376.PDF",
-    "source": "CNINFO",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "5ab69e211fc44897"
-  },
-  {
     "exchange": "上交所",
     "company_name": "中国中免",
     "stock_code": "601888",
@@ -721,17 +706,17 @@
   },
   {
     "exchange": "港交所",
-    "company_name": "ZHONGTAIFUTURES",
-    "stock_code": "01461",
+    "company_name": "DEKON AGR",
+    "stock_code": "02419",
     "report_type": "Profit Warning",
     "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning &#x2f; Inside Information]",
+    "title": "Announcements and Notices - [Inside Information &#x2f; Profit Warning]",
     "announcement_date": "2026-07-15",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071501057.pdf",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0715/2026071501131.pdf",
     "source": "HKEX",
     "industry": "",
     "sub_industry": "",
     "is_18a": false,
-    "uid": "16fa746c03bc4672"
+    "uid": "2aa856a64ac531fa"
   }
 ]
