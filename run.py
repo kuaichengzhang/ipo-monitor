@@ -158,7 +158,7 @@ def main() -> int:
     # ===== 财报披露 =====
     print("\n===== 财报披露扫描 =====")
     finreports = []
-    for fc in [CNINFOFinReportCollector(days=7), HKEXFinReportCollector(days=7)]:
+    for fc in [CNINFOFinReportCollector(days=7), HKEXFinReportCollector(days=30)]:
         try:
             got = fc.collect()
             print(f"[{fc.name}] 抓到 {len(got)} 条财报")
@@ -209,11 +209,29 @@ def main() -> int:
           f"申万成分股映射 {'可用' if sw_available else '不可用(已回退关键词)'}, "
           f"共 {sw.total()} 只(静态底表 {len(sw._static)} + 增量 {len(sw._extra)})")
 
-    (DATA_DIR / "finreports.json").write_text(
-        json.dumps([r.to_dict() for r in finreports], ensure_ascii=False, indent=2),
+    # 财报累积式: 与 filings.json 一致, 按 uid 去重合并历史, 形成可翻看的档案库(而非每次只留 7 天切片)
+    fin_path = DATA_DIR / "finreports.json"
+    merged: dict[str, dict] = {}
+    if fin_path.exists():
+        try:
+            ex_raw = json.loads(fin_path.read_text(encoding="utf-8"))
+            for d in (ex_raw.values() if isinstance(ex_raw, dict) else ex_raw):
+                if isinstance(d, dict) and d.get("uid"):
+                    merged[d["uid"]] = d
+        except Exception:
+            merged = {}
+    for r in finreports:
+        merged[r.uid] = r.to_dict()
+    merged_list = sorted(
+        merged.values(),
+        key=lambda d: d.get("announcement_date", "") or "",
+        reverse=True,
+    )
+    fin_path.write_text(
+        json.dumps(merged_list, ensure_ascii=False, indent=2),
         encoding="utf-8",
     )
-    print(f"[财报] 共 {len(finreports)} 条，已保存 finreports.json")
+    print(f"[财报] 本次新增 {len(finreports)} 条, 累积档案库共 {len(merged_list)} 条, 已保存 finreports.json")
 
     # 拆解所有类型财报(年报/半年报/季报/业绩预告/业绩快报等)
     # max_new=50: 首跑处理上周积压(~30篇)，日常只处理新增(淡季0-5，旺季20-40)
