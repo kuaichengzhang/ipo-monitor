@@ -20,13 +20,13 @@ from collectors.hkex import HKEXNewListingInfoCollector, HKEXAppProofCollector
 from collectors.sse import SSECollector
 from collectors.szse import SZSECollector
 from collectors.bse import BSECollector
-from collectors.finreport import CNINFOFinReportCollector, HKEXFinReportCollector
+from collectors.finreport import CNINFOFinReportCollector, HKEXFinReportCollector, _clean_title
 from dashboard import generate_dashboard
 from dossier_runner import run_dossiers, dossier_link_map
 from finreport_dossier import run_finreport_dossiers
 from industry import classify_industry
 from collectors.sw_industry import SWMedicalCache, _is_ashare
-from models import Filing
+from models import Filing, FinReport
 from stages import is_trigger, is_dossier_eligible
 from state import StateStore
 
@@ -216,8 +216,19 @@ def main() -> int:
         try:
             ex_raw = json.loads(fin_path.read_text(encoding="utf-8"))
             for d in (ex_raw.values() if isinstance(ex_raw, dict) else ex_raw):
-                if isinstance(d, dict) and d.get("uid"):
-                    merged[d["uid"]] = d
+                if not isinstance(d, dict) or not d.get("exchange"):
+                    continue
+                # 重新清洗历史标题(解开 HTML 实体)并按清洗后标题重算 uid,
+                # 使旧脏标题记录与本轮清洗后的记录归并为同一 uid —— 既清掉实体又去重
+                d = dict(d)
+                d["title"] = _clean_title(d.get("title", ""))
+                try:
+                    fr = FinReport(**{k: v for k, v in d.items() if k != "uid"})
+                    d["uid"] = fr.uid
+                except Exception:
+                    if not d.get("uid"):
+                        continue
+                merged[d["uid"]] = d
         except Exception:
             merged = {}
     for r in finreports:
