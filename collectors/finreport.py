@@ -14,6 +14,7 @@
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 from datetime import datetime, timedelta, timezone
@@ -113,7 +114,8 @@ def _extract_period(title: str) -> str:
 
 
 def _clean_title(title: str) -> str:
-    return re.sub(r"<[^>]+>", "", title).strip()
+    # 先解 HTML 实体(HKEX 标题含 &#x2f; 等), 再去 <...> 标签
+    return re.sub(r"<[^>]+>", "", html.unescape(title)).strip()
 
 
 class CNINFOFinReportCollector(BaseCollector):
