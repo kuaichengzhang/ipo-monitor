@@ -336,5 +336,564 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225427206.PDF",
     "stock_code": "002107",
     "announcement_date": "2026-07-16"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "天键电声股份有限公司2025年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225417868.PDF"
+    },
+    "header": {
+      "company_name": "天键电声股份有限公司",
+      "ticker": "301383",
+      "exchange": "深交所",
+      "sector_tag": [
+        "消费电子",
+        "电声",
+        "助听器"
+      ],
+      "tier": "basic",
+      "report_type": "FY年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.9",
+        "note": "报告期利润总额/净利/扣非孰低为负，但持续经营不确定性标注为否"
+      },
+      "disclosure_date": "2026-07-09",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 18.64,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2025",
+        "yoy": "-16.31%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1863974210.05
+      },
+      "net_profit_attributable": {
+        "value": -0.3272,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2025",
+        "yoy": "-115.45%",
+        "raw": -32717741.12
+      },
+      "net_profit_deducted": {
+        "value": -0.5058,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2025",
+        "yoy": "-130.63%",
+        "raw": -50581988.2
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -1.76,
+        "unit": "%",
+        "page": "p.9·衍生",
+        "period": "2025",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "衍生"
+      },
+      "operating_cash_flow": {
+        "value": 0.1702,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2025",
+        "yoy": "-92.86%",
+        "raw": 17018104.21
+      },
+      "biggest_mover": {
+        "value": "归母净利由盈转亏，2.12亿→-0.33亿，同比-115.45%",
+        "page": "p.9"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.9"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派4元(含税)，共约6515万",
+        "page": "p.15"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.33亿 vs 扣非-0.51亿，扣非更差，非经常性损益为正(政府补助约1495万+金融资产处置约921万)托底，主业亏损更深",
+        "page": "p.9",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-16.31%且经营现金流仅0.17亿(-92.86%)，盈利转亏叠加回款走弱",
+        "page": "p.9",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "本期变化",
+      "roundup_priority": "高",
+      "promote_to_standalone": true,
+      "promote_note": "由盈转亏且扣非比归母更差，建议 Paodekuai 单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3→小型看点合集，每点一段",
+      "headline_number": "归母净利-0.33亿，由盈转亏",
+      "block_text": "◆ 天键股份｜2025年报\n归母净利-0.33亿，由盈转亏\n\n营收18.64亿，同比-16.31%；归母净利由去年2.12亿转为-0.33亿，扣非-0.51亿，主业亏得更深——非经常性损益（政府补助约1495万、金融资产处置约921万）还在托底。\n\n质量面：经营现金流仅0.17亿，同比-92.86%，盈利转亏叠加回款走弱。公司把原因放在海外产能转移的一次性支出与生产效率损失、研发投入增至1.58亿（+22.90%）、以及美元结算的汇率影响上。\n\n审计为标准无保留，持续经营不确定性标注为否。\n\n这不是它一家——以耳机为主的ODM电声厂，正把产线往马来西亚搬、往AR眼镜与助听器探，转型期的利润波动先看产能与汇率两道闸。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225417868.PDF",
+    "stock_code": "301383",
+    "announcement_date": "2026-07-09"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "苏州绿的谐波传动科技股份有限公司2025年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-10/1225418036.PDF"
+    },
+    "header": {
+      "company_name": "苏州绿的谐波传动科技股份有限公司",
+      "ticker": "688017",
+      "exchange": "上交所",
+      "sector_tag": [
+        "机械设备",
+        "机器人",
+        "谐波减速器"
+      ],
+      "tier": "basic",
+      "report_type": "FY年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.6",
+        "note": "年报未另列非标意见，视为标准无保留"
+      },
+      "disclosure_date": "2026-07-10",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 5.71,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2025",
+        "yoy": "+47.31%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 570714025.26
+      },
+      "net_profit_attributable": {
+        "value": 1.24,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2025",
+        "yoy": "+121.42%",
+        "raw": 124366913.57
+      },
+      "net_profit_deducted": {
+        "value": 0.9943,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2025",
+        "yoy": "+115.19%",
+        "raw": 99428462.27
+      },
+      "gross_margin": {
+        "value": 36.91,
+        "unit": "%",
+        "page": "p.9",
+        "period": "2025",
+        "yoy": "-0.63pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "近三年综合毛利率41.14%/37.54%/36.91%，连续下滑"
+      },
+      "net_margin": {
+        "value": 21.79,
+        "unit": "%",
+        "page": "p.6·衍生",
+        "period": "2025",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "衍生"
+      },
+      "operating_cash_flow": {
+        "value": 1.52,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2025",
+        "yoy": "+443.23%",
+        "raw": 152003651.27
+      },
+      "biggest_mover": {
+        "value": "经营现金流+443.23%，净利+121.42%",
+        "page": "p.6"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.6"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派2.10元(含税)",
+        "page": "p.9"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1.24亿 vs 扣非0.99亿，非经常性损益约2494万(含公允价值变动2738万)，差距可控",
+        "page": "p.6",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+47.31%且经营现金流+443.23%至1.52亿，回款与利润同步走强，无背离",
+        "page": "p.6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "综合毛利率36.91%为近三年最低(41.14%→37.54%→36.91%)，营收涨但毛利率连降，价跌或结构变化",
+        "page": "p.9",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "高",
+      "promote_to_standalone": false
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2→极简2-3段，核心看点讲透",
+      "headline_number": "营收5.71亿，同比+47.31%",
+      "block_text": "◆ 绿的谐波｜2025年报\n营收5.71亿，同比+47.31%\n\n归母净利1.24亿，同比+121.42%，扣非0.99亿；经营现金流1.52亿，同比+443.23%，利润与回款同步走强。公司把增长放在工业机器人份额提升与具身智能机器人业务规模放量上。\n\n张力在毛利：综合毛利率36.91%，为近三年最低（41.14%→37.54%→36.91%），营收在涨、毛利率连降，价或结构在变。研发投入占比9.45%，较上年12.80%回落3.35个百分点。\n\n这不是它一家——人形机器人量产前夜，谐波减速器产能与份额的卡位战，先看到收入弹性，毛利率的底线另说。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-10/1225418036.PDF",
+    "stock_code": "688017",
+    "announcement_date": "2026-07-10"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "优彩环保资源科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225427071.PDF"
+    },
+    "header": {
+      "company_name": "优彩环保资源科技股份有限公司",
+      "ticker": "002998",
+      "exchange": "深交所",
+      "sector_tag": [
+        "化纤",
+        "再生涤纶"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.9",
+        "note": "半年报未审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-16",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 13.3,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+7.87%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1330056244.06
+      },
+      "net_profit_attributable": {
+        "value": 0.8259,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+103.87%",
+        "raw": 82586276.03
+      },
+      "net_profit_deducted": {
+        "value": 0.759,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+96.76%",
+        "raw": 75896297.84
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 6.21,
+        "unit": "%",
+        "page": "p.9·衍生",
+        "period": "2026H1",
+        "yoy": "约+2.93pct",
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "去年同期约3.28%"
+      },
+      "operating_cash_flow": {
+        "value": 0.4173,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+145.74%",
+        "raw": 41726327.79
+      },
+      "biggest_mover": {
+        "value": "归母净利+103.87%，0.41亿→0.83亿",
+        "page": "p.9"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.9"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派2元(含税)，现金分红约7096万",
+        "page": "p.15"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.83亿 vs 扣非0.76亿，非经常性损益约690万(政府补助429万+公允价值变动341万)，差距小，利润主要靠主业",
+        "page": "p.9",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+7.87%，经营现金流转正至0.42亿(去年-0.91亿)，回款改善，背离缓解",
+        "page": "p.9",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1→极简2-3段，一个核心看点收",
+      "headline_number": "归母净利0.83亿，同比+103.87%",
+      "block_text": "◆ 优彩资源｜2026H1\n归母净利0.83亿，同比+103.87%\n\n半年营收13.30亿，同比+7.87%；归母净利由去年同期0.41亿增至0.83亿，扣非0.76亿（+96.76%），非经常性损益约690万，利润主要靠主业。经营现金流转正至0.42亿，去年同期为-0.91亿，回款改善明显。\n\n变化来自产能项目推进（西藏基地、22万吨再生复合功能型纤维项目）带来的规模与效率提升，并非一次性收益。\n\n这不是它一家——再生涤纶与低熔点纤维处在绿色化改造的产能投放期，能把投放节奏走顺的，先看到利润弹性。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225427071.PDF",
+    "stock_code": "002998",
+    "announcement_date": "2026-07-16"
   }
 ]
