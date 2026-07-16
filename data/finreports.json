@@ -390,6 +390,36 @@
     "uid": "953e300244368dac"
   },
   {
+    "exchange": "港交所",
+    "company_name": "PUBLIC FIN HOLD",
+    "stock_code": "00626",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Dividend or Distribution]",
+    "announcement_date": "2026-07-16",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0716/2026071601409.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "91c8cdfc4902cdf6"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "SMC ELECTRIC",
+    "stock_code": "02381",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning]",
+    "announcement_date": "2026-07-16",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0716/2026071601277.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "fa7178308b485d32"
+  },
+  {
     "exchange": "深交所",
     "company_name": "匠心家居",
     "stock_code": "301061",
