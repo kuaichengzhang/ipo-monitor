@@ -1,0 +1,340 @@
+[
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "山东沃华医药科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225427206.PDF"
+    },
+    "header": {
+      "company_name": "山东沃华医药科技股份有限公司",
+      "ticker": "002107",
+      "exchange": "深交所",
+      "sector_tag": [
+        "医疗健康",
+        "中药"
+      ],
+      "tier": "healthcare_article",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.58",
+        "note": "半年报未审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-16",
+      "existing_listing_note": "已上市→不写主稿；中药板块拆到成稿级，产出 roundup_block 供合辑"
+    },
+    "movements": {
+      "revenue": {
+        "value": 3.93,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-7.53%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 393349512.77
+      },
+      "net_profit_attributable": {
+        "value": 0.6757,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+51.23%",
+        "raw": 67566295.15
+      },
+      "net_profit_deducted": {
+        "value": 0.6596,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+54.34%",
+        "note": "扣非归母",
+        "raw": 65959000.12
+      },
+      "gross_margin": {
+        "value": 77.8,
+        "unit": "%",
+        "page": "p.62-63·衍生",
+        "period": "2026H1",
+        "yoy": "+3.5 pct",
+        "note": "1-营业成本/营收；上年74.3%",
+        "is_derived": true
+      },
+      "net_margin": {
+        "value": 18.06,
+        "unit": "%",
+        "page": "p.62-63·衍生",
+        "period": "2026H1",
+        "yoy": "+8.4 pct",
+        "note": "净利润/营收；上年9.68%",
+        "is_derived": true
+      },
+      "operating_cash_flow": {
+        "value": 0.8137,
+        "unit": "亿元",
+        "page": "p.7/p.66",
+        "period": "2026H1",
+        "yoy": "+8.07%",
+        "raw": 81367502.48
+      },
+      "biggest_mover": {
+        "value": "销售费用1.73亿元、同比-19.2%（-4113万元），是利润弹性的主因",
+        "page": "p.63",
+        "note": "费用控制驱动减收增利"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "半年报未经审计（p.58），属正常，非非标意见",
+          "page": "p.58"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": "无需追溯调整或重述以前年度会计数据（p.7）",
+          "page": "p.7"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": 0.3251,
+          "unit": "亿元",
+          "page": "p.59-60",
+          "note": "商誉3250.87万元期末与期初一致，未减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "公司无实际控制人，董事会独立履职（p.19）；未见质押/减持/增持/冻结披露",
+          "page": "p.19"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[未见披露·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7",
+          "note": "半年报未要求业绩预告"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "本期分配股利支付现金8780万元、约为归母净利的130%（p.67）；利润分配预案已经董事会审议通过（p.2）",
+        "page": "p.67",
+        "hit": true
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "扣非增速(+54.34%)略快于归母(+51.23%)，非经常性损益仅1607万元、占比约2.4%，利润质量扎实，无背离",
+        "page": "p.7-8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-7.53%但经营现金流+8.07%，净现比1.20（8137万/6757万），现金质量优于利润，无靠应收撑收入迹象",
+        "page": "p.7/p.66",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率(+3.5pct)与净利率(+8.4pct)同向上行，费用收缩放大利润弹性，无反向",
+        "page": "p.62-63·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款降23%（p.58，回款改善），但存货升17%、合同负债降57%（p.58-59），后者或预示下半年收入承压",
+        "page": "p.58-59",
+        "hit": true
+      }
+    },
+    "healthcare_plugin": {
+      "cash_runway": {
+        "cash_reserve": {
+          "value": 3.86,
+          "unit": "亿元",
+          "page": "p.58",
+          "period": "2026H1末",
+          "raw": 386423587.05
+        },
+        "annual_cash_burn": {
+          "value": -0.8137,
+          "unit": "亿元",
+          "page": "p.66",
+          "period": "2026H1",
+          "note": "经营现金净流入，无消耗"
+        },
+        "runway_years": {
+          "value": null,
+          "unit": "年",
+          "page": "p.58·衍生",
+          "is_derived": true,
+          "derivation": "公司经营现金净流入+零有息负债，跑道不适用"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "pipeline": {
+        "core_assets": [
+          {
+            "name": "沃华®心可舒片",
+            "stage": "已获批",
+            "indication": "冠心病/心绞痛/高血压等心血管疾病",
+            "period_change": "2026集采接续中选、标准品价格不变；再次入选2026版国家基药目录",
+            "page": "p.10/p.14/p.20"
+          },
+          {
+            "name": "骨疏康胶囊/颗粒",
+            "stage": "已获批",
+            "indication": "骨质疏松",
+            "period_change": "无变化",
+            "page": "p.14"
+          },
+          {
+            "name": "荷丹片/胶囊",
+            "stage": "已获批",
+            "indication": "调脂/减肥新赛道",
+            "period_change": "新纳入2026版国家基本药物目录（7月9日）；进军体重管理赛道",
+            "page": "p.15/p.21"
+          },
+          {
+            "name": "脑血疏口服液",
+            "stage": "已获批",
+            "indication": "脑出血急性期及恢复早期",
+            "period_change": "无变化",
+            "page": "p.15"
+          }
+        ],
+        "single_asset_dependence": {
+          "value": "四大支柱仍为收入利润主源，公司正推进向品种集群转型以降低单一品种依赖",
+          "page": "p.19/p.22",
+          "note": "161个批文、15个独家产品，但收入集中度高"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "license_in_out": {
+        "license_in_share": {
+          "value": null,
+          "unit": "%",
+          "page": "p.17",
+          "note": "骨疏康/荷丹系收购辽宁沃华康辰、江西沃华济顺获得，属并购非license-in"
+        },
+        "milestone_obligations": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[未见披露·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "vbp_reimbursement": {
+        "products_affected": {
+          "value": "心可舒片2023首中集采、2024执行、2026接续中选价格不变；第四批中成药联盟集采2026.6.17公布'反内卷'规则",
+          "page": "p.20",
+          "note": "集采价格体系稳定"
+        },
+        "price_cut": {
+          "value": 0,
+          "unit": "%",
+          "page": "p.20",
+          "note": "集采接续标准品价格保持不变"
+        },
+        "revenue_impact": {
+          "value": "已适应集采，核心产品市场企稳，院内份额受保障；营收-7.53%部分受集采价格体系影响但已趋稳",
+          "page": "p.19-20"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "已企稳非新增冲击，不触发"
+      },
+      "selling_expense": {
+        "selling_expense_ratio": {
+          "value": 44.11,
+          "unit": "%",
+          "page": "p.63·衍生",
+          "period": "2026H1",
+          "yoy": "-6.35 pct",
+          "note": "上年50.46%；销售费用1.73亿元、同比-19.2%"
+        },
+        "vs_peer": {
+          "value": "中药企业销售费用率中位数约30%-40%，公司仍偏高但显著改善",
+          "page": "[缺同业数据·待核]",
+          "note": "学术推广模式致费用率偏高"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "下降趋势，非异常高企"
+      },
+      "rnd": {
+        "rnd_expense": {
+          "value": 0.1665,
+          "unit": "亿元",
+          "page": "p.63",
+          "period": "2026H1",
+          "yoy": "-18.08%",
+          "raw": 16645328.79
+        },
+        "capitalization_ratio": {
+          "value": 0,
+          "unit": "%",
+          "page": "p.59",
+          "note": "开发支出为空，研发全部费用化"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "研发投入同比下降，但绝对额占营收4.2%，需关注是否影响长期管线"
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现",
+        "销售费用率",
+        "管线进展",
+        "集采医保"
+      ],
+      "triggered_count": 7,
+      "spine": "减收增利靠费用控制，集采企稳+基药扩容双轮",
+      "roundup_priority": "高",
+      "promote_to_standalone": false,
+      "promote_note": "看点密集但无极端风险叠加，合辑级即可"
+    },
+    "roundup_block": {
+      "headline_number": "归母净利+51.23%（营收-7.53%）",
+      "block_text": "**归母净利润6756.63万元、同比+51.23%，营业收入3.93亿元、同比-7.53%**（p.7）。收入下滑而利润大增，驱动来自成本费用端：营业总成本3.15亿元、同比-17.9%，其中销售费用1.73亿元、同比-19.2%、少花4113万元（p.63），是利润弹性的主因。毛利率从74.3%升至77.8%（p.62-63·衍生），叠加费用收缩，净利率从9.68%升至18.06%。\n\n利润质量扎实：扣非归母净利+54.34%、略快于归母，非经常性损益仅1607万元、占比约2.4%（p.7-8）；经营现金流净额8137万元、同比+8.07%，净现比1.20（p.7/66）。货币资金3.86亿元、零有息负债（p.58），财务面极稳。\n\n两处张力值得跟踪：合同负债从528万元降至227万元、降57%，存货升17%（p.58-59），后者若延续或预示下半年收入承压；本期分配股利支付现金8780万元、约为归母净利的130%（p.67），大额分红在利润大增背景下显眼。\n\n政策端有实质利好：荷丹片/胶囊新纳入2026版国家基本药物目录（7月9日），心可舒片再次入选，公司成为少数拥有两个及以上独家基药品种的药企（p.10/15）；心可舒片集采接续中选、标准品价格不变，第四批中成药联盟集采明确“反内卷”（p.20）。中药行业从“拼价格”转向“拼价值”，利于独家循证品种巩固地位。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225427206.PDF",
+    "stock_code": "002107",
+    "announcement_date": "2026-07-16"
+  }
+]
