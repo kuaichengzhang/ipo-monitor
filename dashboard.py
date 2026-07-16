@@ -224,6 +224,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
   <button class="vt-btn on" data-view="ipo">IPO监控 (__TOTAL__)</button>
   <button class="vt-btn" data-view="fin">财报披露 (__FRTOTAL__)</button>
   <button class="vt-btn" data-view="med">医疗健康 (__MEDTOTAL__)</button>
+  <button class="vt-btn" data-view="td">财报拆解</button>
 </div>
 <main>
   <div id="ipo-view">
@@ -306,6 +307,31 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
     <h3 class="med-section-title">财报拆解 <span id="med-fin-count" class="count"></span></h3>
     <div id="med-fin-list"></div>
   </div>
+  <style>
+   .td-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;margin-top:10px;}
+   .td-h .name{font-weight:600;font-size:15px;} .td-tag{background:var(--soft);color:var(--softink);border:1px solid var(--softline);border-radius:20px;padding:1px 8px;font-size:11.5px;margin-left:4px;}
+   .td-tag.trig{background:#e6fcf0;color:#0c8599;border-color:#99e9d2;}
+   .td-badge{background:var(--card2);color:var(--board-ink);border-radius:20px;padding:1px 8px;font-size:11.5px;margin-left:4px;}
+   .td-article-head{font-weight:600;margin-top:10px;font-size:14px;} .td-article{margin-top:6px;font-size:13px;line-height:1.7;}
+   .td-metrics{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;} .td-metric{background:var(--card2);border-radius:8px;padding:6px 10px;min-width:120px;}
+   .td-ml{font-size:11.5px;color:var(--muted);} .td-mv{font-size:14px;font-weight:600;} .td-mu{font-size:11px;color:var(--muted);font-weight:400;margin-left:2px;}
+   .td-pg{font-size:11px;color:var(--muted);margin-left:6px;} .td-note{font-size:11.5px;color:var(--muted);margin-top:2px;}
+   .td-score{margin-top:10px;font-size:12.5px;} .td-spine{margin-top:4px;font-size:12.5px;} .td-warn{display:inline-block;margin-top:6px;color:#b08900;background:#fff3cd;border:1px solid #ffd43b;border-radius:6px;padding:2px 8px;font-size:12px;}
+   .td-sec{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;} .td-sect{font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:4px;}
+   .td-line{font-size:12.5px;margin:3px 0;} .td-line.td-hit{color:#c92a2a;} .td-assets{margin:0;padding-left:18px;font-size:12.5px;} .td-assets li{margin:3px 0;}
+   .td-links{margin-top:10px;display:flex;gap:10px;} .td-back,.td-backall{color:var(--blue);text-decoration:none;font-size:12.5px;} .td-backbar{margin-bottom:6px;}
+   .td-link{background:#0c8599;color:#fff !important;padding:2px 10px;border-radius:6px;text-decoration:none;}
+  </style>
+  <div id="td-view" style="display:none">
+    <div class="controls">
+      <input class="search" id="td-q" placeholder="搜公司名 / 代码 / 报告类型…">
+      <div class="chips">
+        <span class="count" id="td-count"></span>
+        <a class="btn-scan" href="https://github.com/kuaichengzhang/ipo-monitor/actions/workflows/daily.yml" target="_blank" rel="noopener" title="手动触发一次扫描">↻ 立即扫描</a>
+      </div>
+    </div>
+    <div id="td-list"></div>
+  </div>
 </main>
 <footer>★可选题 = 过会/PHIP及以后 · 档案为机器生成底稿 · 三棱镜成稿由作者本人撰写</footer>
 <script>
@@ -321,7 +347,8 @@ function readState(){
            sort:p.get('sort')||'date',
            view:p.get('v')||'ipo',
            page:Math.max(1, parseInt(p.get('p')||'1')||1),
-           size:[20,50,100].includes(parseInt(p.get('s')))?parseInt(p.get('s')):50 };
+           size:[20,50,100].includes(parseInt(p.get('s')))?parseInt(p.get('s')):50,
+           tdCode:p.get('tc')||'', tdDate:p.get('td')||'' };
 }
 let state = readState();
 function writeState(){
@@ -335,6 +362,8 @@ function writeState(){
   if(state.view!=='ipo') p.set('v', state.view);
   if(state.page>1) p.set('p', state.page);
   if(state.size!==50) p.set('s', state.size);
+  if(state.tdCode) p.set('tc', state.tdCode);
+  if(state.tdDate) p.set('td', state.tdDate);
   history.replaceState(null,'','#'+p.toString());
 }
 // —— 查询:多关键词 AND;每个词命中 公司名/保荐/代码/板块/阶段 或 拼音首字母 ——
@@ -562,6 +591,7 @@ function renderFR(){
     const links = [];
     if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
     if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
+    if(tdYes(r.code, r.date)) links.push('<a class="td-link" href="#" data-td-code="'+esc(r.code)+'" data-td-date="'+esc(r.date)+'">📊 拆解</a>');
     return '<div class="fr-card">'
       +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span><span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
       +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
@@ -663,6 +693,7 @@ function renderMed(){
       const links = [];
       if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
       if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
+    if(tdYes(r.code, r.date)) links.push('<a class="td-link" href="#" data-td-code="'+esc(r.code)+'" data-td-date="'+esc(r.date)+'">📊 拆解</a>');
       return '<div class="fr-card">'
         +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+i18aTag+'<span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
         +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
@@ -710,29 +741,189 @@ document.querySelector('.chip[data-med-yday]').addEventListener('click', functio
 document.querySelector('.chip[data-med-today]').addEventListener('click', function(){
   this.classList.toggle('on'); medToday = this.classList.contains('on'); renderMed();
 });
+// —— 财报拆解(teardown):运行时拉取 data/teardowns.json ——
+let TD_CACHE = null;
+let TD_MAP = {};
+let tdQuery = '';
+function tdYes(code, date){ return !!(code && date && TD_MAP[code+'|'+date]); }
+function yoyColor(y){
+  if(!y) return '';
+  const s = String(y).trim();
+  if(s[0]==='-') return '#2f9e44';
+  if(s[0]==='+') return '#e03131';
+  return '';
+}
+function fmtArticle(t){
+  if(!t) return '';
+  return esc(t).replace(/\n\n/g,'<br><br>').replace(/\n/g,'<br>').replace(/\*\*(.+?)\*\*/g,'<b>$1</b>');
+}
+function metricCell(m, label){
+  if(!m) return '';
+  const v = (m.value!==undefined && m.value!==null) ? m.value : '';
+  const unit = m.unit||'';
+  const yoy = m.yoy||'';
+  const col = yoyColor(yoy);
+  const yoyHtml = yoy ? ' <span style="color:'+col+'">'+esc(yoy)+'</span>' : '';
+  const pg = m.page ? '<div class="td-pg">'+esc(m.page)+'</div>' : '';
+  const note = m.note ? '<div class="td-note">'+esc(m.note)+'</div>' : '';
+  return '<div class="td-metric"><div class="td-ml">'+esc(label)+'</div>'
+    +'<div class="td-mv">'+esc(v)+'<span class="td-mu">'+esc(unit)+'</span>'+yoyHtml+'</div>'+pg+note+'</div>';
+}
+function renderTDCard(c){
+  const h = c.header||{};
+  const m = c.movements||{};
+  const sc = c.scorecard||{};
+  const src = c.source_url || (c._meta && c._meta.source_url) || (h.announcement_url) || "";
+  const tags = (h.sector_tag||[]).map(function(t){return "<span class='td-tag'>"+esc(t)+"</span>";}).join("");
+  const audit = h.audit_status ? "<span class='td-badge'>审计: "+esc(h.audit_status.value)+"</span>" : "";
+  const rb = c.roundup_block||{};
+  const ba = c.tier_basic_article||{};
+  const articleText = rb.block_text || ba.article_text || ba.full_text || "";
+  const articleHead = rb.headline_number || ba.headline_number || "";
+  const metrics = [
+    metricCell(m.revenue,"营收"),
+    metricCell(m.net_profit_attributable,"归母净利润"),
+    metricCell(m.net_profit_deducted,"扣非归母"),
+    metricCell(m.gross_margin,"毛利率"),
+    metricCell(m.net_margin,"净利率"),
+    metricCell(m.operating_cash_flow,"经营现金流")
+  ].join("");
+  const trig = (sc.triggered||[]).map(function(t){return "<span class='td-tag trig'>"+esc(t)+"</span>";}).join("");
+  const spine = sc.spine ? "<div class='td-spine'>主线："+esc(sc.spine)+"</div>" : "";
+  const promote = sc.promote_to_standalone ? "<div class='td-warn'>建议独立深写："+(sc.promote_note||"")+"</div>" : "";
+  const qd = c.quality_divergence||{};
+  const qdHtml = Object.entries(qd).map(function(kv){
+    const k=kv[0], v=kv[1];
+    const val=(v&&(v.value||v.detail))||"";
+    const pg=(v&&v.page)?" <span class='td-pg'>"+esc(v.page)+"</span>":"";
+    const cls=(v&&v.hit)?"td-hit":"";
+    return "<div class='td-line "+cls+"'><b>"+esc(k)+"</b>："+esc(val)+pg+"</div>";
+  }).join("");
+  const sg = c.signals||{};
+  const sgHtml = Object.entries(sg).map(function(kv){
+    const k=kv[0], v=kv[1];
+    const hit=v&&v.hit;
+    const val=(v&&(v.value||(v.detail&&v.detail.value)))||"";
+    const pg=(v&&v.page)?" <span class='td-pg'>"+esc(v.page)+"</span>":"";
+    const cls=hit?"td-hit":"";
+    return "<div class='td-line "+cls+"'><b>"+esc(k)+"</b>："+(esc(val)||"(无)")+pg+"</div>";
+  }).join("");
+  let hc = "";
+  if(c.healthcare_plugin){
+    const hp=c.healthcare_plugin;
+    const assets=(hp.pipeline&&hp.pipeline.core_assets||[]).map(function(a){
+      return "<li><b>"+esc(a.name)+"</b> · "+(a.stage||"")+" · "+(a.indication||"")+" <span class='td-pg'>"+esc(a.page||"")+"</span>"+(a.period_change?"<div class='td-note'>"+esc(a.period_change)+"</div>":"");
+    }).join("");
+    const se=hp.selling_expense||{};
+    const seHtml=se.selling_expense_ratio!==undefined?"<div class='td-line'>销售费用率：<b>"+esc(se.selling_expense_ratio)+(se.unit||"%")+"</b>"+(se.yoy?" <span style='color:"+yoyColor(se.yoy)+"'>"+esc(se.yoy)+"</span>":"")+(se.page?" <span class='td-pg'>"+esc(se.page)+"</span>":"")+"</div>":"";
+    const vbp=(hp.vbp_reimbursement&&hp.vbp_reimbursement.revenue_impact)?"<div class='td-line'>集采医保："+esc(hp.vbp_reimbursement.revenue_impact)+(hp.vbp_reimbursement.price_cut!==undefined?"（降价"+esc(hp.vbp_reimbursement.price_cut)+"%）":"")+"</div>":"";
+    const rnd=(hp.rnd&&hp.rnd.rnd_expense!==undefined)?"<div class='td-line'>研发：<b>"+esc(hp.rnd.rnd_expense)+(hp.rnd.unit||"亿元")+"</b>"+(hp.rnd.yoy?" <span style='color:"+yoyColor(hp.rnd.yoy)+"'>"+esc(hp.rnd.yoy)+"</span>":"")+(hp.rnd.page?" <span class='td-pg'>"+esc(hp.rnd.page)+"</span>":"")+"</div>":"";
+    const cr=(hp.cash_runway&&hp.cash_runway.cash_reserve!==undefined)?"<div class='td-line'>现金储备：<b>"+esc(hp.cash_runway.cash_reserve)+(hp.cash_runway.unit||"亿元")+"</b></div>":"";
+    hc="<div class='td-sec'><div class='td-sect'>医疗插件</div>"+(assets?"<ul class='td-assets'>"+assets+"</ul>":"")+seHtml+vbp+rnd+cr+"</div>";
+  }
+  const links=[];
+  if(src) links.push("<a class='btn-dossier' href='"+esc(src)+"' target='_blank' rel='noopener'>查看原公告(PDF)</a>");
+  links.push("<a href='#fin' class='td-back'>← 回财报披露</a>");
+  return "<div class='td-card'>"
+    +"<div class='td-h'><div class='l1'><span class='code'>"+esc(h.stock_code||h.ticker||"")+"</span><span class='name'>"+esc(h.company_name||"")+"</span>"+tags+audit+"</div>"
+    +"<div class='l2'><span class='board'>"+esc(h.exchange||"")+"</span><span class='meta'>"+esc((h.report_type||"")+" "+(h.period||""))+"</span><span class='meta'>"+esc(h.disclosure_date||h.announcement_date||"")+"</span></div></div>"
+    +(articleHead?"<div class='td-article-head'>"+esc(articleHead)+"</div>":"")
+    +(articleText?"<div class='td-article'>"+fmtArticle(articleText)+"</div>":"")
+    +(metrics?"<div class='td-metrics'>"+metrics+"</div>":"")
+    +(sc.triggered_count!==undefined?"<div class='td-score'>触发看点 "+esc(sc.triggered_count)+" 个 "+trig+"</div>"+spine+promote:"")
+    +(qdHtml?"<div class='td-sec'><div class='td-sect'>质量背离</div>"+qdHtml+"</div>":"")
+    +(sgHtml?"<div class='td-sec'><div class='td-sect'>意外信号</div>"+sgHtml+"</div>":"")
+    +hc
+    +"<div class='td-links'>"+links.join(" ")+"</div>"
+    +"</div>";
+}
+function showView(v){
+  document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
+  document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
+  document.getElementById('med-view').style.display = v==='med' ? '' : 'none';
+  document.getElementById('td-view').style.display = v==='td' ? '' : 'none';
+}
+async function loadTD(){
+  if(TD_CACHE) return TD_CACHE;
+  try{
+    const r = await fetch('data/teardowns.json', {cache:'no-cache'});
+    if(!r.ok) throw new Error('HTTP '+r.status);
+    const arr = await r.json();
+    TD_CACHE = Array.isArray(arr) ? arr : [];
+  }catch(e){ TD_CACHE = TD_CACHE || []; console.warn('teardowns.json 加载失败', e); }
+  TD_MAP = {};
+  for(const c of TD_CACHE){
+    const code = (c.header && (c.header.stock_code||c.header.ticker)) || '';
+    const date = (c.header && (c.header.announcement_date||c.header.disclosure_date)) || '';
+    if(code && date) TD_MAP[code+'|'+date] = c;
+  }
+  const tb = document.querySelector('.vt-btn[data-view="td"]');
+  if(tb) tb.textContent = '财报拆解 ('+TD_CACHE.length+')';
+  if(typeof renderFR==='function') renderFR();
+  if(typeof renderMed==='function') renderMed();
+  return TD_CACHE;
+}
+function openTeardown(code, date){
+  document.querySelectorAll('.vt-btn').forEach(x=>x.classList.toggle('on', x.dataset.view==='td'));
+  showView('td');
+  state.view='td'; state.tdCode=code; state.tdDate=date; writeState();
+  renderTD(); window.scrollTo({top:0});
+}
+async function renderTD(){
+  const cards = await loadTD();
+  let list = cards.slice();
+  if(state.tdCode && state.tdDate){
+    list = list.filter(c=>{
+      const code=(c.header&&(c.header.stock_code||c.header.ticker))||'';
+      const date=(c.header&&(c.header.announcement_date||c.header.disclosure_date))||'';
+      return code===state.tdCode && date===state.tdDate;
+    });
+  } else if(tdQuery){
+    const q=tdQuery.toLowerCase();
+    list = list.filter(c=>{
+      const h=c.header||{};
+      return (h.company_name||'').toLowerCase().includes(q) || (h.stock_code||h.ticker||'').toLowerCase().includes(q)
+        || (h.report_type||'').toLowerCase().includes(q) || (h.period||'').toLowerCase().includes(q);
+    });
+  }
+  list.sort((a,b)=>((b.header&&b.header.disclosure_date)||'').localeCompare((a.header&&a.header.disclosure_date)||''));
+  const el = document.getElementById('td-list');
+  if(!list.length){
+    el.innerHTML = '<div class="card"><span class="meta">暂无拆解卡片'+(state.tdCode?'（该公司/报告暂无）':'')+'</span></div>';
+    return;
+  }
+  const back = (state.tdCode)?'<div class="td-backbar"><a href="#" class="td-backall">← 返回全部拆解</a></div>':'';
+  el.innerHTML = back + list.map(renderTDCard).join('');
+  const ba = el.querySelector('.td-backall');
+  if(ba) ba.addEventListener('click', e=>{ e.preventDefault(); state.tdCode=''; state.tdDate=''; writeState(); renderTD(); });
+}
+let tdDeb;
+const tdQEl = document.getElementById('td-q');
+if(tdQEl) tdQEl.addEventListener('input', e=>{ clearTimeout(tdDeb); tdDeb=setTimeout(()=>{ tdQuery=e.target.value; renderTD(); }, 200); });
+document.addEventListener('click', e=>{
+  const a = e.target.closest('.td-link');
+  if(a){ e.preventDefault(); openTeardown(a.dataset.tdCode, a.dataset.tdDate); }
+});
 document.querySelectorAll('.vt-btn').forEach(b=>{
   if(b.dataset.view===state.view) {
     document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
     b.classList.add('on');
-    const v = b.dataset.view;
-    document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
-    document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
-    document.getElementById('med-view').style.display = v==='med' ? '' : 'none';
+    showView(state.view);
   }
   b.addEventListener('click', ()=>{
     document.querySelectorAll('.vt-btn').forEach(x=>x.classList.remove('on'));
     b.classList.add('on');
     const v = b.dataset.view;
-    state.view = v;
-    document.getElementById('ipo-view').style.display = v==='ipo' ? '' : 'none';
-    document.getElementById('fin-view').style.display = v==='fin' ? '' : 'none';
-    document.getElementById('med-view').style.display = v==='med' ? '' : 'none';
+    state.view = v; state.tdCode=''; state.tdDate='';
+    showView(v);
     writeState();
+    if(v==='td') renderTD();
   });
 });
 renderFR();
 renderMed();
 render();
+renderTD();
 </script>
 </body></html>""".replace("__UPDATED__", updated_at) \
    .replace("__TOTAL__", str(len(rows))).replace("__TRIG__", str(trigger_total)) \
