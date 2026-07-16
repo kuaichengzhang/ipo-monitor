@@ -196,143 +196,66 @@ class CNINFOFinReportCollector(BaseCollector):
     def collect(self) -> list[FinReport]:
         results: list[FinReport] = []
         seen_uids: set[str] = set()
-
-        # 1. 按类别查 (年报/半年报/季报)
-        for cat_name, cat_code in CNINFO_CATEGORIES.items():
-            records = self._query({"category": cat_code})
-            for rec in records:
-                fr = self._map_record(rec, cat_name)
-                if fr and fr.uid not in seen_uids:
-                    seen_uids.add(fr.uid)
-                    results.append(fr)
-
-        # 2. 按关键词搜 (业绩预告/业绩快报)
-        for kw in CNINFO_SEARCH_KEYS:
-            records = self._query({"searchkey": kw})
-            for rec in records:
-                title = _clean_title(rec.get("announcementTitle", ""))
-                # 确认标题确实包含关键词
-                if kw not in title:
-                    continue
-                fr = self._map_record(rec, kw)
-                if fr and fr.uid not in seen_uids:
-                    seen_uids.add(fr.uid)
-                    results.append(fr)
-
-        return results
-
-    def _build_cninfo_url(self, adjunct_url: str) -> str:
-        """构建 CNINFO PDF 直链。PDF 在 static.cninfo.com.cn 上。"""
-        if not adjunct_url:
-            return ""
-        if not adjunct_url.startswith("/"):
-            adjunct_url = "/" + adjunct_url
-        return f"https://static.cninfo.com.cn{adjunct_url}"
-
-    def _map_record(self, rec: dict, report_type: str) -> FinReport | None:
-        code = str(rec.get("secCode", "")).strip()
-        exchange = _exchange_by_code(code)
-        if not exchange or exchange == "港交所":
-            return None  # 港交由 HKEX 采集器处理
-        title = _clean_title(rec.get("announcementTitle", ""))
-        return FinReport(
-            exchange=exchange,
-            company_name=str(rec.get("secName", "")).strip(),
-            stock_code=code,
-            report_type=report_type,
-            report_period=_extract_period(title),
-            title=title,
-            announcement_date=_fmt_timestamp(rec.get("announcementTime")),
-            announcement_url=self._build_cninfo_url(rec.get("adjunctUrl", "")),
-            source="CNINFO",
-        )
-
-
-class HKEXFinReportCollector(BaseCollector):
-    """港交所财报公告采集器 —— 标题搜索。"""
-
-    name = "hkex_finreport"
-
-    def __init__(self, timeout: int = 30, session: requests.Session | None = None,
-                 days: int = 7):
-        super().__init__(timeout, session)
-        self.days = days
-
-    def collect(self) -> list[FinReport]:
-        results: list[FinReport] = []
-        seen_uids: set[str] = set()
         now = datetime.now(CST)
-        from_d = (now - timedelta(days=self.days)).strftime("%Y%m%d")
-        to_d = now.strftime("%Y%m%d")
-
-        # 关键词均为英文, 仅扫 EN 即可(省一半请求); ZH 标题为英文的同义翻译
-        for lang in ("EN",):
-            page = 1
-            while True:
-                params = {
-                    "sortDir": "0", "sortBy": "DateTime", "category": "0",
-                    "market": "SEHK", "stockId": "",
-                    "fromDate": from_d, "toDate": to_d,
-                    "title": "", "lang": lang,
-                    "pageSize": "100", "pageNum": str(page),
-                }
-                _hdr = {
-                    "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-                    "Referer": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
-                    "Accept": "application/json, text/plain, */*; q=0.01",
-                    "X-Requested-With": "XMLHttpRequest",
-                }
+        _hdr = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "Referer": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
+            "Accept": "application/json, text/plain, */*; q=0.01",
+            "X-Requested-With": "XMLHttpRequest",
+        }
+        # HKEX titleSearchServlet.do 不支持分页(pageNum 被忽略, 永远只返最近100条),
+        # 故按天切片: 每天单独查一次(该日最近100条, 含当日财报), 再按关键词过滤
+        for d in range(self.days):
+            day = (now - timedelta(days=d)).strftime("%Y%m%d")
+            params = {
+                "sortDir": "0", "sortBy": "DateTime", "category": "0",
+                "market": "SEHK", "stockId": "",
+                "fromDate": day, "toDate": day,
+                "title": "", "lang": "EN",
+                "pageSize": "100", "pageNum": "1",
+            }
+            try:
+                r = self.session.get(HKEX_SEARCH_URL, params=params,
+                                      timeout=self.timeout, headers=_hdr)
+                r.raise_for_status()
+                data = r.json()
+            except Exception as e:
+                print(f"  [hkex_finreport] {day} 请求/解析失败: {type(e).__name__}: {e}")
+                continue
+            result_raw = data.get("result", "")
+            if isinstance(result_raw, str):
                 try:
-                    r = self.session.get(HKEX_SEARCH_URL, params=params, timeout=self.timeout, headers=_hdr)
-                    r.raise_for_status()
-                    data = r.json()
-                except Exception as e:
-                    print(f"  [hkex_finreport] page {page} ({lang}) request/parse failed: {type(e).__name__}: {e}")
-                    break
-
-                result_raw = data.get("result", "")
-                rlen = len(result_raw) if isinstance(result_raw, str) else "n/a"
-                print(f"  [hkex_finreport] page {page} ({lang}): HTTP {r.status_code}, result_type={type(result_raw).__name__}, len={rlen}, recordCnt={data.get('recordCnt')}")
-                if isinstance(result_raw, str):
-                    try:
-                        records = json.loads(result_raw)
-                    except json.JSONDecodeError:
+                    records = json.loads(result_raw)
+                except json.JSONDecodeError:
+                    print(f"  [hkex_finreport] {day} result 非 JSON, 前200字: {result_raw[:200]}")
+                    continue
+            else:
+                records = result_raw
+            if not isinstance(records, list) or not records:
+                continue
+            for rec in records:
+                if not isinstance(rec, dict):
+                    continue
+                title = _clean_title(rec.get("SHORT_TEXT", rec.get("LONG_TEXT", "")))
+                if not title:
+                    continue
+                title_upper = title.upper()
+                for kws, label in HKEX_FIN_KEYWORDS:
+                    if any(kw in title_upper for kw in kws):
+                        code = str(rec.get("STOCK_CODE", "")).strip()
+                        fr = FinReport(
+                            exchange="港交所",
+                            company_name=str(rec.get("STOCK_NAME", "")).strip(),
+                            stock_code=code,
+                            report_type=label,
+                            report_period=_extract_period(title),
+                            title=title,
+                            announcement_date=_fmt_hk_date(rec.get("DATE_TIME")),
+                            announcement_url=f"https://www1.hkexnews.hk{rec.get('FILE_LINK', '')}" if rec.get("FILE_LINK") else "",
+                            source="HKEX",
+                        )
+                        if fr.uid not in seen_uids:
+                            seen_uids.add(fr.uid)
+                            results.append(fr)
                         break
-                else:
-                    records = result_raw
-
-                if not isinstance(records, list) or not records:
-                    break
-
-                for rec in records:
-                    if not isinstance(rec, dict):
-                        continue
-                    title = _clean_title(rec.get("SHORT_TEXT", rec.get("LONG_TEXT", "")))
-                    if not title:
-                        continue
-                    title_upper = title.upper()
-                    for kws, label in HKEX_FIN_KEYWORDS:
-                        if any(kw in title_upper for kw in kws):
-                            code = str(rec.get("STOCK_CODE", "")).strip()
-                            fr = FinReport(
-                                exchange="港交所",
-                                company_name=str(rec.get("STOCK_NAME", "")).strip(),
-                                stock_code=code,
-                                report_type=label,
-                                report_period=_extract_period(title),
-                                title=title,
-                                announcement_date=_fmt_hk_date(rec.get("DATE_TIME")),
-                                announcement_url=f"https://www1.hkexnews.hk{rec.get('FILE_LINK', '')}" if rec.get("FILE_LINK") else "",
-                                source="HKEX",
-                            )
-                            if fr.uid not in seen_uids:
-                                seen_uids.add(fr.uid)
-                                results.append(fr)
-                            break
-
-                # 自然翻页: 本页不足一页即到底; 80 页为安全上限(30天窗口 EN 约 70 页)
-                if len(records) < 100 or page > 80:
-                    break
-                page += 1
-
         return results
