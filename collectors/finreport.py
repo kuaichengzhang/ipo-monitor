@@ -196,15 +196,84 @@ class CNINFOFinReportCollector(BaseCollector):
     def collect(self) -> list[FinReport]:
         results: list[FinReport] = []
         seen_uids: set[str] = set()
+
+        # 1. 按类别查 (年报/半年报/季报)
+        for cat_name, cat_code in CNINFO_CATEGORIES.items():
+            records = self._query({"category": cat_code})
+            for rec in records:
+                fr = self._map_record(rec, cat_name)
+                if fr and fr.uid not in seen_uids:
+                    seen_uids.add(fr.uid)
+                    results.append(fr)
+
+        # 2. 按关键词搜 (业绩预告/业绩快报)
+        for kw in CNINFO_SEARCH_KEYS:
+            records = self._query({"searchkey": kw})
+            for rec in records:
+                title = _clean_title(rec.get("announcementTitle", ""))
+                # 确认标题确实包含关键词
+                if kw not in title:
+                    continue
+                fr = self._map_record(rec, kw)
+                if fr and fr.uid not in seen_uids:
+                    seen_uids.add(fr.uid)
+                    results.append(fr)
+
+        return results
+
+    def _build_cninfo_url(self, adjunct_url: str) -> str:
+        """构建 CNINFO PDF 直链。PDF 在 static.cninfo.com.cn 上。"""
+        if not adjunct_url:
+            return ""
+        if not adjunct_url.startswith("/"):
+            adjunct_url = "/" + adjunct_url
+        return f"https://static.cninfo.com.cn{adjunct_url}"
+
+    def _map_record(self, rec: dict, report_type: str) -> FinReport | None:
+        code = str(rec.get("secCode", "")).strip()
+        exchange = _exchange_by_code(code)
+        if not exchange or exchange == "港交所":
+            return None  # 港交由 HKEX 采集器处理
+        title = _clean_title(rec.get("announcementTitle", ""))
+        return FinReport(
+            exchange=exchange,
+            company_name=str(rec.get("secName", "")).strip(),
+            stock_code=code,
+            report_type=report_type,
+            report_period=_extract_period(title),
+            title=title,
+            announcement_date=_fmt_timestamp(rec.get("announcementTime")),
+            announcement_url=self._build_cninfo_url(rec.get("adjunctUrl", "")),
+            source="CNINFO",
+        )
+
+
+class HKEXFinReportCollector(BaseCollector):
+    """港交所财报公告采集器 —— 标题搜索。"""
+
+    name = "hkex_finreport"
+
+    def __init__(self, timeout: int = 30, session: requests.Session | None = None,
+                 days: int = 7):
+        super().__init__(timeout, session)
+        self.days = days
+
+    def collect(self) -> list[FinReport]:
+        results: list[FinReport] = []
+        seen_uids: set[str] = set()
         now = datetime.now(CST)
         _hdr = {
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+                          "AppleWebKit/537.36 (KHTML, like Gecko) "
+                          "Chrome/120.0.0.0 Safari/537.36",
             "Referer": "https://www1.hkexnews.hk/search/titlesearch.xhtml",
             "Accept": "application/json, text/plain, */*; q=0.01",
             "X-Requested-With": "XMLHttpRequest",
         }
-        # HKEX titleSearchServlet.do 不支持分页(pageNum 被忽略, 永远只返最近100条),
-        # 故按天切片: 每天单独查一次(该日最近100条, 含当日财报), 再按关键词过滤
+        # HKEX titleSearchServlet.do 不支持分页(pageNum 被完全忽略,
+        # 任意请求只返该窗口内"最近100条"按 DateTime 倒序), page/start/offset 均无效。
+        # 故改为"按天切片": 每天单独查一次(该日最近100条, 含当日财报), 再按关键词过滤。
+        # 关键词均为英文, 仅扫 EN 即可(省一半请求)。
         for d in range(self.days):
             day = (now - timedelta(days=d)).strftime("%Y%m%d")
             params = {
@@ -222,6 +291,7 @@ class CNINFOFinReportCollector(BaseCollector):
             except Exception as e:
                 print(f"  [hkex_finreport] {day} 请求/解析失败: {type(e).__name__}: {e}")
                 continue
+
             result_raw = data.get("result", "")
             if isinstance(result_raw, str):
                 try:
@@ -231,8 +301,10 @@ class CNINFOFinReportCollector(BaseCollector):
                     continue
             else:
                 records = result_raw
+
             if not isinstance(records, list) or not records:
                 continue
+
             for rec in records:
                 if not isinstance(rec, dict):
                     continue
@@ -258,4 +330,5 @@ class CNINFOFinReportCollector(BaseCollector):
                             seen_uids.add(fr.uid)
                             results.append(fr)
                         break
+
         return results
