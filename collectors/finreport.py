@@ -54,11 +54,10 @@ CNINFO_SEARCH_KEYS = ["业绩预告", "业绩快报"]
 HKEX_SEARCH_URL = "https://www1.hkexnews.hk/search/titleSearchServlet.do"
 
 HKEX_FIN_KEYWORDS = [
-    (["FINAL RESULTS", "ANNUAL RESULTS"], "Annual Results"),
+    (["FINAL RESULTS", "ANNUAL RESULTS", "PRELIMINARY RESULTS"], "Annual Results"),
     (["INTERIM RESULTS", "HALF-YEAR RESULTS", "HALF YEAR RESULTS"], "Interim Results"),
-    (["QUARTERLY RESULTS", "FIRST QUARTER", "THIRD QUARTER"], "Quarterly Results"),
-    (["PROFIT WARNING"], "Profit Warning"),
-    (["PROFIT ALERT", "POSITIVE PROFIT"], "Profit Alert"),
+    (["QUARTERLY RESULTS", "FIRST QUARTER RESULTS", "THIRD QUARTER RESULTS", "QUARTERLY"], "Quarterly Results"),
+    (["PROFIT WARNING", "PROFIT ALERT", "POSITIVE PROFIT", "NEGATIVE PROFIT"], "Profit Warning"),
 ]
 
 
@@ -266,7 +265,8 @@ class HKEXFinReportCollector(BaseCollector):
         from_d = (now - timedelta(days=self.days)).strftime("%Y%m%d")
         to_d = now.strftime("%Y%m%d")
 
-        for lang in ("EN", "ZH"):
+        # 关键词均为英文, 仅扫 EN 即可(省一半请求); ZH 标题为英文的同义翻译
+        for lang in ("EN",):
             page = 1
             while True:
                 params = {
@@ -321,7 +321,8 @@ class HKEXFinReportCollector(BaseCollector):
                                 results.append(fr)
                             break
 
-                if len(records) < 100 or page > 10:
+                # 自然翻页: 本页不足一页即到底; 80 页为安全上限(30天窗口 EN 约 70 页)
+                if len(records) < 100 or page > 80:
                     break
                 page += 1
 
