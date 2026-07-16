@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "schema_version": "1.0",
+    "product": "IPO三棱镜 · 财报拆解卡(双档)",
+    "scope_note": "对象为已上市公司的年报与半年报(不含季报)。年报审计过→全量拆;半年报→只做对上年同期/上年末的增量。已上市公司不写主稿,但医疗健康板块拆到成稿级、产出可拼合辑的成稿块。",
+    "tier_note": "三种对象最后都是拆解稿,区别只在看点轴深度与由命中数决定的长度。财报按 sector_tag 分两档:basic(非医疗,轻量拆解稿,财报四类看点轴,不挂医疗插件,长度动态) / healthcare_article(医疗健康,拆解稿复杂版,叠医疗插件,产合辑块)。均成稿,无信号层不成稿这回事。",
+    "example_note": "本文件 example 值为【虚构示例·某创新药企】,数字全为占位,仅示格式与深度,不对应任何真实公司或真实财报。真实抽取时替换,并遵守出处纪律:每数字带页码,缺出处填 [缺出处·待核],文中无则 null,严禁编造。",
+    "value_object_convention": "带数字字段用 {value,unit,page,period,yoy,accounting_standard,note};yoy 为同比(如 +18% / -12%),不适用填 null。财务数字必标 accounting_standard(PRC GAAP/IFRS)与 period。"
+  },
+
+  "routing": {
+    "rule": "先读 sector_tag 分流",
+    "healthcare_tags": ["医疗健康", "创新药", "生物医药", "生物科技", "医疗器械", "CXO", "IVD", "医疗服务", "中药", "疫苗"],
+    "basic_tier_fills": ["header", "movements", "signals", "quality_divergence", "scorecard", "tier_basic_article"],
+    "article_tier_fills": ["header", "movements", "signals", "quality_divergence", "healthcare_plugin", "scorecard", "roundup_block"]
+  },
+
+  "header": {
+    "company_name": "示例·某创新药企股份有限公司",
+    "ticker": "[代码]",
+    "exchange": "港交所/上交所/深交所",
+    "sector_tag": ["医疗健康", "创新药"],
+    "tier": "healthcare_article",
+    "report_type": "FY2025年报",
+    "report_type_enum": ["FY年报", "H1半年报"],
+    "period": "2025",
+    "audit_status": {"value": "标准无保留", "page": "p.xx", "note": "枚举:标准无保留/保留/无法表示/否定;非标即高看点"},
+    "disclosure_date": "2026-03-xx",
+    "existing_listing_note": "已上市→默认不写主稿;医疗板块拆到成稿级仅供合辑,非深度单篇"
+  },
+
+  "movements": {
+    "revenue": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025", "yoy": "+X%", "accounting_standard": "PRC GAAP"},
+    "net_profit_attributable": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X%"},
+    "net_profit_deducted": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X%", "note": "扣非归母"},
+    "gross_margin": {"value": null, "unit": "%", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X pct"},
+    "net_margin": {"value": null, "unit": "%", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X pct"},
+    "operating_cash_flow": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X%"},
+    "biggest_mover": {"value": "[本期同比/环比变动最大的科目一句]", "page": "p.xx", "note": "供 basic 档与 article 档共用"}
+  },
+
+  "signals": {
+    "note": "意外信号,两档都填;任一命中即高看点。二元事件用 true/false + 说明。",
+    "non_standard_audit": {"hit": false, "detail": {"value": null, "page": "[缺出处·待核]"}},
+    "accounting_policy_change": {"hit": false, "detail": {"value": null, "page": "[缺出处·待核]"}},
+    "financial_restatement": {"hit": false, "detail": {"value": null, "page": "[缺出处·待核]"}},
+    "goodwill_impairment": {"hit": false, "detail": {"value": null, "unit": "亿元", "page": "[缺出处·待核]"}},
+    "major_shareholder_action": {"hit": false, "detail": {"value": null, "page": "[缺出处·待核]", "note": "质押/减持/增持/冻结"}},
+    "irregular_guarantee_or_fund_occupation": {"hit": false, "detail": {"value": null, "page": "[缺出处·待核]"}},
+    "forecast_vs_actual_gap": {"hit": false, "detail": {"value": null, "page": "[缺出处·待核]", "note": "业绩预告与正式财报是否打架、差多少"}},
+    "dividend_or_buyback": {"value": null, "page": "[缺出处·待核]"}
+  },
+
+  "tier_basic_article": {
+    "note": "非医疗档产出:轻量拆解稿,动态长度。看点轴用财报四类(变化/质量背离/意外信号/兑现),不挂医疗插件。均成稿。",
+    "length_by_score": "命中≥3看点→展开成小型看点合集(每点一段);命中1-2→极简2-3段、一个核心看点收;命中0→只写本期变化最大的一条+行业句,仍成段。",
+    "headline_number": "[本期最硬的一个数字]",
+    "block_text": "[动态长度成稿块:数字领衔→情况→张力→行业句;house style 与硬约束同医疗档]"
+  },
+
+  "quality_divergence": {
+    "note": "两档都填。财报独有的张力:数字自不自洽。",
+    "net_vs_deducted": {"value": "[净利与扣非是否背离,靠非经常性损益?]", "page": "p.xx", "hit": false},
+    "revenue_vs_ocf": {"value": "[营收涨但经营现金流转负?靠应收撑?]", "page": "p.xx", "hit": false},
+    "margin_direction": {"value": "[毛利率与净利率是否反向走]", "page": "p.xx", "hit": false},
+    "receivable_inventory": {"value": "[应收/存货异动]", "page": "p.xx", "hit": false}
+  },
+
+  "healthcare_plugin": {
+    "note": "仅医疗健康 sector_tag 挂载。pre-revenue/亏损 biotech 的通用毛利/客户口径多失效,以本插件为看点主源。",
+    "cash_runway": {
+      "cash_reserve": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025末"},
+      "annual_cash_burn": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025", "note": "年度经营现金净流出"},
+      "runway_years": {"value": null, "unit": "年", "page": "p.xx·衍生", "is_derived": true, "derivation": "现金储备 ÷ 年经营现金消耗"},
+      "trigger": false,
+      "trigger_rule_hit": null
+    },
+    "pipeline": {
+      "core_assets": [
+        {"name": "[核心品种]", "stage": "[临床I/II/III/NDA/已获批]", "indication": "[适应症]", "period_change": "[本期推进/获批/被拒/终止/无变化]", "page": "p.xx"}
+      ],
+      "single_asset_dependence": {"value": null, "page": "[缺出处·待核]", "note": "收入/估值是否高度依赖单一品种"},
+      "trigger": false,
+      "trigger_rule_hit": null
+    },
+    "license_in_out": {
+      "license_in_share": {"value": null, "unit": "%", "page": "[缺出处·待核]", "note": "收入或核心管线中授权引进占比"},
+      "milestone_obligations": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "note": "待付里程碑款义务"},
+      "trigger": false,
+      "trigger_rule_hit": null
+    },
+    "vbp_reimbursement": {
+      "note": "集采/医保暴露",
+      "products_affected": {"value": null, "page": "[缺出处·待核]", "note": "主力品种是否进带量采购/医保谈判"},
+      "price_cut": {"value": null, "unit": "%", "page": "[缺出处·待核]", "note": "中标降价幅度"},
+      "revenue_impact": {"value": null, "page": "p.xx", "note": "对收入的影响,照招股书/财报口径,不替公司定利空/利好"},
+      "trigger": false,
+      "trigger_rule_hit": null
+    },
+    "selling_expense": {
+      "selling_expense_ratio": {"value": null, "unit": "%", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X pct"},
+      "vs_peer": {"value": null, "page": "p.xx", "note": "与同业中位数比较"},
+      "trigger": false,
+      "trigger_rule_hit": null
+    },
+    "rnd": {
+      "rnd_expense": {"value": null, "unit": "亿元", "page": "[缺出处·待核]", "period": "2025", "yoy": "±X%"},
+      "capitalization_ratio": {"value": null, "unit": "%", "page": "[缺出处·待核]"},
+      "trigger": false,
+      "trigger_rule_hit": null
+    }
+  },
+
+  "scorecard": {
+    "note": "计数制,两档共用,决定长度与排序。basic 档看点轴 = 财报四类(变化/质量背离/意外信号/业绩兑现);healthcare_article 档 = 财报四类 + 医疗插件五项。triggered_count 同时驱动 length_by_score。",
+    "scoreable_dimensions_basic": ["本期变化", "质量背离", "意外信号", "业绩兑现"],
+    "scoreable_dimensions": ["意外信号", "质量背离", "现金跑道", "管线进展", "license依赖", "集采医保", "销售费用率", "研发", "业绩兑现", "本期变化"],
+    "na_dimensions": [],
+    "triggered": [],
+    "triggered_count": 0,
+    "spine": null,
+    "roundup_priority": "高/中/低(决定在合辑里的排序与篇幅)",
+    "promote_to_standalone": false,
+    "promote_note": "看点极强(如非标+管线失败+现金跑道<1年叠加)时 true,提示 Paodekuai 单独深写"
+  },
+
+  "roundup_block": {
+    "note": "仅 article 档产出。一家公司=合辑里的一个看点合集条目,成稿级、可直接拼进多家合发的稿子。渲染规则见《财报拆解_GLM抽取提示词.md》第8节。",
+    "headline_number": "[本家最硬的一个数字]",
+    "block_text": "[2-4 个短段的成稿块:数字领衔→情况→一句质量/插件张力→收在行业句;三棱镜house style:克制、不定性、禁读者管理句、禁比喻戏剧词]"
+  }
+}
