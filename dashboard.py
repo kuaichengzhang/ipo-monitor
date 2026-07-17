@@ -319,7 +319,7 @@ def generate_dashboard(filings, new_uids=None, changed_uids=None,
    .td-score{margin-top:10px;font-size:12.5px;} .td-spine{margin-top:4px;font-size:12.5px;} .td-warn{display:inline-block;margin-top:6px;color:#b08900;background:#fff3cd;border:1px solid #ffd43b;border-radius:6px;padding:2px 8px;font-size:12px;}
    .td-sec{margin-top:10px;border-top:1px dashed var(--line);padding-top:8px;} .td-sect{font-size:12.5px;font-weight:600;color:var(--muted);margin-bottom:4px;}
    .td-line{font-size:12.5px;margin:3px 0;} .td-line.td-hit{color:#c92a2a;} .td-assets{margin:0;padding-left:18px;font-size:12.5px;} .td-assets li{margin:3px 0;}
-   .td-links{margin-top:10px;display:flex;gap:10px;} .td-back,.td-backall{color:var(--blue);text-decoration:none;font-size:12.5px;} .td-backbar{margin-bottom:6px;}
+   .td-links{margin-top:10px;display:flex;gap:10px;} .td-back,.td-backall{color:var(--blue);text-decoration:none;font-size:12.5px;} .td-backbar{margin-bottom:6px;} .td-embed{margin-top:8px;} .med-fin-row,.fr-row{margin-bottom:14px;}
    .td-link{background:#0c8599;color:#fff !important;padding:2px 10px;border-radius:6px;text-decoration:none;}
   </style>
   <div id="td-view" style="display:none">
@@ -591,11 +591,15 @@ function renderFR(){
     const links = [];
     if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
     if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
-    if(tdYes(r.code, r.date)) links.push('<a class="td-link" href="#" data-td-code="'+esc(r.code)+'" data-td-date="'+esc(r.date)+'">📊 拆解</a>');
-    return '<div class="fr-card">'
-      +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span><span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
-      +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
-      +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+    const tdCard = tdYes(r.code, r.date) ? renderTDCard(TD_MAP[r.code+'|'+r.date], {embedded:true, code:r.code, date:r.date}) : '';
+    return '<div class="fr-row">'
+      +'<div class="fr-card">'
+        +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span><span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
+        +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+        +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div>'
+      +'</div>'
+      + tdCard
+      +'</div>';
   }).join('') || '<div class="card"><span class="meta">暂无财报数据</span></div>';
 }
 document.querySelectorAll('.chip[data-fr-type]').forEach(c=>{
@@ -693,11 +697,15 @@ function renderMed(){
       const links = [];
       if(r.dossier) links.push('<a class="btn-dossier" href="'+esc(r.dossier)+'">拆解</a>');
       if(r.url) links.push('<a href="'+esc(r.url)+'" target="_blank">公告原文</a>');
-    if(tdYes(r.code, r.date)) links.push('<a class="td-link" href="#" data-td-code="'+esc(r.code)+'" data-td-date="'+esc(r.date)+'">📊 拆解</a>');
-      return '<div class="fr-card">'
-        +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+i18aTag+'<span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
-        +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
-        +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div></div>';
+      const tdCard = tdYes(r.code, r.date) ? renderTDCard(TD_MAP[r.code+'|'+r.date], {embedded:true, code:r.code, date:r.date}) : '';
+      return '<div class="med-fin-row">'
+        +'<div class="fr-card">'
+          +'<div class="l1"><span class="code">'+esc(r.code)+'</span><span class="name">'+esc(r.name)+'</span>'+sindTag+i18aTag+'<span class="fr-type" style="background:'+color+'">'+esc(r.type)+'</span></div>'
+          +'<div class="l2"><span class="board">'+esc(r.ex)+'</span>'+(r.period?'<span class="meta">'+esc(r.period)+'</span>':'')+(r.date?'<span class="meta">'+esc(r.date)+'</span>':'')+'</div>'
+          +'<div class="l3">'+(links.join(' · ')||'<span class="meta">—</span>')+'</div>'
+        +'</div>'
+        + tdCard
+        +'</div>';
     }).join('') || '<div class="card"><span class="meta">暂无医疗健康财报数据</span></div>';
   } else {
     finListEl.innerHTML = '';
@@ -769,7 +777,7 @@ function metricCell(m, label){
   return '<div class="td-metric"><div class="td-ml">'+esc(label)+'</div>'
     +'<div class="td-mv">'+esc(v)+'<span class="td-mu">'+esc(unit)+'</span>'+yoyHtml+'</div>'+pg+note+'</div>';
 }
-function renderTDCard(c){
+function renderTDCard(c, opts){
   const h = c.header||{};
   const m = c.movements||{};
   const sc = c.scorecard||{};
@@ -821,10 +829,15 @@ function renderTDCard(c){
     const cr=(hp.cash_runway&&hp.cash_runway.cash_reserve!==undefined)?"<div class='td-line'>现金储备：<b>"+esc(hp.cash_runway.cash_reserve)+(hp.cash_runway.unit||"亿元")+"</b></div>":"";
     hc="<div class='td-sec'><div class='td-sect'>医疗插件</div>"+(assets?"<ul class='td-assets'>"+assets+"</ul>":"")+seHtml+vbp+rnd+cr+"</div>";
   }
+  opts = opts || {};
   const links=[];
   if(src) links.push("<a class='btn-dossier' href='"+esc(src)+"' target='_blank' rel='noopener'>查看原公告(PDF)</a>");
-  links.push("<a href='#fin' class='td-back'>← 回财报披露</a>");
-  return "<div class='td-card'>"
+  if(opts.embedded){
+    if(opts.code && opts.date) links.push("<a href='#' class='td-link' data-td-code='"+esc(opts.code)+"' data-td-date='"+esc(opts.date)+"'>📊 在财报拆解中打开</a>");
+  } else {
+    links.push("<a href='#fin' class='td-back'>← 回财报披露</a>");
+  }
+  return "<div class='td-card"+(opts.embedded?" td-embed":"")+"'>"
     +"<div class='td-h'><div class='l1'><span class='code'>"+esc(h.stock_code||h.ticker||"")+"</span><span class='name'>"+esc(h.company_name||"")+"</span>"+tags+audit+"</div>"
     +"<div class='l2'><span class='board'>"+esc(h.exchange||"")+"</span><span class='meta'>"+esc((h.report_type||"")+" "+(h.period||""))+"</span><span class='meta'>"+esc(h.disclosure_date||h.announcement_date||"")+"</span></div></div>"
     +(articleHead?"<div class='td-article-head'>"+esc(articleHead)+"</div>":"")
