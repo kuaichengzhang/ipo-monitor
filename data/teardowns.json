@@ -895,5 +895,905 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225427071.PDF",
     "stock_code": "002998",
     "announcement_date": "2026-07-16"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "梦百合家居科技股份有限公司2025年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225428889.PDF"
+    },
+    "header": {
+      "company_name": "梦百合家居科技股份有限公司",
+      "ticker": "603313",
+      "exchange": "上交所",
+      "sector_tag": [
+        "家居",
+        "记忆绵制品"
+      ],
+      "tier": "basic",
+      "report_type": "FY2025年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2025",
+      "audit_status": {
+        "value": "保留意见",
+        "page": "[缺出处·待核]",
+        "note": "非标准审计意见(保留)，具体保留事项见审计报告原文"
+      },
+      "disclosure_date": "2026-07-17",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 89.12,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2025",
+        "yoy": "+5.48%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 8912075395.97
+      },
+      "net_profit_attributable": {
+        "value": 1.066,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2025",
+        "yoy": "+93.51%",
+        "raw": 106600585.5,
+        "note": "上年为-982万，本期扭亏为盈"
+      },
+      "net_profit_deducted": {
+        "value": 1.01,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2025",
+        "yoy": "+85.94%",
+        "raw": 101035276.19
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 1.2,
+        "unit": "%",
+        "page": "p.8·衍生",
+        "period": "2025",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "上年约-0.12%，由负转正"
+      },
+      "operating_cash_flow": {
+        "value": 9.166,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2025",
+        "yoy": "-8.39%",
+        "raw": 916624603.19
+      },
+      "biggest_mover": {
+        "value": "归母净利由亏转盈至1.07亿(+93.51%)，上年为-982万",
+        "page": "p.8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": true,
+        "detail": {
+          "value": "保留意见",
+          "page": "[缺出处·待核]",
+          "note": "审计机构出具保留意见(非标准审计意见)，具体保留事项见审计报告"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1.07亿 vs 扣非1.01亿，非经常性损益约2949万(政府补助2109万+公允价值变动244万等)，差距小，利润主要靠主业",
+        "page": "p.9",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+5.48%，经营现金流-8.39%至9.17亿，利润转增而现金流回落，二者走向不一致",
+        "page": "p.8",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "意外信号",
+      "roundup_priority": "高",
+      "promote_to_standalone": false,
+      "promote_note": "保留意见构成高看点，但其余维度未见多重叠加，暂不单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3→小型看点合集，每点一段",
+      "headline_number": "归母净利1.07亿，同比+93.51%(扭亏)",
+      "block_text": "◆ 梦百合｜2025年报\n归母净利1.07亿，同比+93.51%，上年为-982万，扭亏为盈。\n\n全年营收89.12亿，同比+5.48%；扣非净利1.01亿(+85.94%)，非经常性损益约2949万，利润主要靠主业。但经营现金流9.17亿，同比-8.39%，利润转增而现金流回落，回款节奏与利润走向不一致。\n\n审计机构出具保留意见(非标准审计意见)，属高看点——具体保留事项见审计报告原文，这里不替公司下结论。\n\n记忆绵家居处在出海与渠道调整期，能把收入增长稳稳落到经营现金流上的公司，才真正走出低谷。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-16/1225428889.PDF",
+    "stock_code": "603313",
+    "announcement_date": "2026-07-16"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "天键电声股份有限公司2023年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225417867.PDF"
+    },
+    "header": {
+      "company_name": "天键电声股份有限公司",
+      "ticker": "301383",
+      "exchange": "深交所",
+      "sector_tag": [
+        "消费电子",
+        "智能可穿戴"
+      ],
+      "tier": "basic",
+      "report_type": "FY2023年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2023",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.11",
+        "note": "标准无保留意见"
+      },
+      "disclosure_date": "2026-07-09",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 17.559,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "+55.98%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1755918637.49
+      },
+      "net_profit_attributable": {
+        "value": 1.361,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "+103.58%",
+        "raw": 136096684.25
+      },
+      "net_profit_deducted": {
+        "value": 1.259,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "+76.86%",
+        "raw": 125907705.23
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2023",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 7.75,
+        "unit": "%",
+        "page": "p.8·衍生",
+        "period": "2023",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "上年约5.94%"
+      },
+      "operating_cash_flow": {
+        "value": 0.0614,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "-86.78%",
+        "raw": 6139200.12
+      },
+      "biggest_mover": {
+        "value": "归母净利1.36亿，同比+103.58%",
+        "page": "p.8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.11"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派3.60元(含税)并转增4股",
+        "page": "p.11"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1.36亿 vs 扣非1.26亿，非经常性损益约1019万(政府补助1113万为主)，差距小",
+        "page": "p.8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+55.98%，经营现金流仅614万(-86.78%)，收入高增但现金回款大幅走弱，背离明显",
+        "page": "p.8",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2→极简2-3段，一个核心看点收",
+      "headline_number": "归母净利1.36亿，同比+103.58%",
+      "block_text": "◆ 天键股份｜2023年报\n归母净利1.36亿，同比+103.58%；营收17.56亿，同比+55.98%，消费声学业务放量。\n\n但经营现金流仅614万，同比-86.78%——收入高增的同时，现金回款大幅走弱，利润与现金流走向不一致，值得留意。\n\n公司每10股派3.60元并转增4股，延续分红。\n\n这不是它一家——智能耳机等可穿戴处在客户拉货与备货周期里，收入确认节奏和现金回流往往不同步，看增长也要看回款。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225417867.PDF",
+    "stock_code": "301383",
+    "announcement_date": "2026-07-09"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "天键电声股份有限公司2024年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225417866.PDF"
+    },
+    "header": {
+      "company_name": "天键电声股份有限公司",
+      "ticker": "301383",
+      "exchange": "深交所",
+      "sector_tag": [
+        "消费电子",
+        "智能可穿戴"
+      ],
+      "tier": "basic",
+      "report_type": "FY2024年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2024",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.11",
+        "note": "标准无保留意见"
+      },
+      "disclosure_date": "2026-07-09",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 22.273,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "+26.85%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 2227346071.01
+      },
+      "net_profit_attributable": {
+        "value": 2.118,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "+55.59%",
+        "raw": 211750174.63
+      },
+      "net_profit_deducted": {
+        "value": 1.651,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "+31.17%",
+        "raw": 165149664.8
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2024",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 9.51,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2024",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "上年约7.75%"
+      },
+      "operating_cash_flow": {
+        "value": 2.384,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "+3782.58%",
+        "raw": 238359288.41
+      },
+      "biggest_mover": {
+        "value": "经营现金流转强至2.38亿(+3782.58%)，上年仅614万",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.11"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派4.00元(含税)，不送红股不转增",
+        "page": "p.10"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母2.12亿 vs 扣非1.65亿，非经常性损益约4660万(政府补助3682万、金融资产损益1097万为主)，占归母约22%，表观利润含一块非主业",
+        "page": "p.9",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+26.85%，经营现金流+3782.58%至2.38亿，现金回流大幅改善，背离缓解",
+        "page": "p.7",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2→极简2-3段，一个核心看点收",
+      "headline_number": "归母净利2.12亿，同比+55.59%",
+      "block_text": "◆ 天键股份｜2024年报\n归母净利2.12亿，同比+55.59%；营收22.27亿，同比+26.85%，增长延续。\n\n但扣非净利1.65亿(+31.17%)，非经常性损益约4660万(政府补助3682万、金融资产损益1097万为主)，占归母约22%——表观利润里有一块来自非主业。经营现金流2.38亿，同比+3782.58%，回款较上年的614万明显改善。\n\n公司每10股派4.00元。\n\n可穿戴代工的需求与回款修复，是这类公司利润质量的关键变量；补贴与金融资产损益能托一时，难托一直。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225417866.PDF",
+    "stock_code": "301383",
+    "announcement_date": "2026-07-09"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "华东医药股份有限公司2025年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225414770.PDF"
+    },
+    "header": {
+      "company_name": "华东医药股份有限公司",
+      "ticker": "000963",
+      "exchange": "深交所",
+      "sector_tag": [
+        "医疗健康",
+        "化学制药"
+      ],
+      "tier": "healthcare_article",
+      "report_type": "FY2025年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.225",
+        "note": "标准无保留意见"
+      },
+      "disclosure_date": "2026-07-09",
+      "existing_listing_note": "已上市→不写主稿；医疗档拆到成稿级，仅供合辑"
+    },
+    "movements": {
+      "revenue": {
+        "value": 436.12,
+        "unit": "亿元",
+        "page": "p.29",
+        "period": "2025",
+        "yoy": "+4.07%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 34.14,
+        "unit": "亿元",
+        "page": "p.29",
+        "period": "2025",
+        "yoy": "-2.78%"
+      },
+      "net_profit_deducted": {
+        "value": 33.11,
+        "unit": "亿元",
+        "page": "p.30",
+        "period": "2025",
+        "yoy": "-1.20%"
+      },
+      "gross_margin": {
+        "value": 32.36,
+        "unit": "%",
+        "page": "p.30",
+        "period": "2025",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 7.83,
+        "unit": "%",
+        "page": "p.29·衍生",
+        "period": "2025",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利÷营收"
+      },
+      "operating_cash_flow": {
+        "value": 42.46,
+        "unit": "亿元",
+        "page": "p.30",
+        "period": "2025",
+        "yoy": "+13.25%"
+      },
+      "biggest_mover": {
+        "value": "营收436.12亿(+4.07%)稳增，但归母净利34.14亿同比-2.78%，利润端小幅回落",
+        "page": "p.29"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.225"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": true,
+        "detail": {
+          "value": 0.7811,
+          "unit": "亿元",
+          "page": "p.30",
+          "note": "英国子公司Sinclair的EBD(能量源设备)业务计提商誉减值7811万"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "持续高分红，上市以来累计分红88.73亿(为IPO募资35.49倍)",
+        "page": "p.29"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母34.14亿 vs 扣非33.11亿，非经常性损益约1.03亿(占归母3%)，差距小，利润主要靠主业",
+        "page": "p.29",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+4.07%，经营现金流+13.25%至42.46亿，现金流增速快于利润，背离未现",
+        "page": "p.30",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率32.36%，净利率约7.83%，均正同向",
+        "page": "p.30",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "healthcare_plugin": {
+      "cash_runway": {
+        "cash_reserve": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "period": "2025末"
+        },
+        "annual_cash_burn": {
+          "value": null,
+          "unit": "亿元",
+          "page": "p.30",
+          "period": "2025",
+          "note": "经营现金流净额为+42.46亿(净流入)，无年度现金净流出"
+        },
+        "runway_years": {
+          "value": null,
+          "unit": "年",
+          "page": "p.30·衍生",
+          "is_derived": true,
+          "derivation": "现金储备÷年经营现金净流出(本期为净流入，不适用)"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "pipeline": {
+        "core_assets": [
+          {
+            "name": "zevor-cel(Zevorcabtagene Autoleucel, CAR-T)",
+            "stage": "已获批/商业化",
+            "indication": "血液肿瘤(多发性骨髓瘤等)",
+            "period_change": "已上市并放量，覆盖20余省，2025年218个有效订单，进入商业健康保险创新药目录",
+            "page": "p.33"
+          },
+          {
+            "name": "Elahere®(Mirvetuximab Soravtansine, ADC)",
+            "stage": "已获批/商业化",
+            "indication": "FRα阳性铂耐药卵巢癌",
+            "period_change": "2025年11月中国上市，2025年销售额约0.68亿，进入多个惠民保",
+            "page": "p.34"
+          },
+          {
+            "name": "Senaparib(Paishuning®, PARP抑制剂)",
+            "stage": "已获批",
+            "indication": "卵巢癌等",
+            "period_change": "2025年1月获批，2025年12月纳入国家医保目录(NRDL)",
+            "page": "p.34"
+          },
+          {
+            "name": "HDM1002/HDM1005/DR10624(内分泌/代谢GLP-1等)",
+            "stage": "临床",
+            "indication": "内分泌/代谢",
+            "period_change": "产生positive临床数据，推进中",
+            "page": "p.3"
+          }
+        ],
+        "single_asset_dependence": {
+          "value": null,
+          "page": "p.31",
+          "note": "产品组合覆盖肿瘤/自身免疫/内分泌/消化，多元，无单一品种依赖迹象"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "license_in_out": {
+        "license_in_share": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "note": "文中提部分创新药为授权引进(如CAR-T zevor-cel来自CARsgen)，未给占比"
+        },
+        "milestone_obligations": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "vbp_reimbursement": {
+        "products_affected": {
+          "value": "创新药多进入医保谈判(NRDL)：Senaparib纳入2025国家医保目录，zevor-cel进入商业健康保险创新药目录及百余款惠民保，Elahere进入多个惠民保",
+          "page": "p.33",
+          "note": "主力品种以医保谈判/商保准入为主，文中未提具体集采降价幅度"
+        },
+        "price_cut": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]"
+        },
+        "revenue_impact": {
+          "value": "创新药(含CSO)销售收入及代理服务收入23.4亿，同比+64.2%，占医药工业板块(含CSO)营收15.81%",
+          "page": "p.31",
+          "note": "创新药收入占比提升，照财报口径，不替公司定利好利空"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "selling_expense": {
+        "selling_expense_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "period": "2025",
+          "yoy": null
+        },
+        "vs_peer": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "rnd": {
+        "rnd_expense": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "period": "2025",
+          "yoy": null
+        },
+        "capitalization_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [
+        "销售费用率",
+        "研发",
+        "license依赖"
+      ],
+      "triggered": [
+        "本期变化",
+        "意外信号"
+      ],
+      "triggered_count": 2,
+      "spine": "意外信号",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "利润小幅回落+Sinclair商誉减值，未见多重高看点叠加，暂不单独深写"
+    },
+    "roundup_block": {
+      "headline_number": "归母净利34.14亿，同比-2.78%",
+      "block_text": "◆ 华东医药｜2025年报\n归母净利34.14亿，同比-2.78%；营收436.12亿，同比+4.07%，收入稳增而利润端小幅回落。\n\n扣非净利33.11亿(-1.20%)，非经常性损益约1.03亿，占比小。英国子公司Sinclair的能量源设备业务计提商誉减值7811万，海外联营企业按权益法拖累合并净利约1.40亿——回落主要来自海外板块。经营现金流42.46亿，同比+13.25%，现金回流快于利润。\n\n创新药进入兑现期：CAR-T产品zevor-cel已商业化覆盖20余省，ADC产品Elahere®2025年11月国内上市，PARP抑制剂Senaparib纳入2025国家医保目录。\n\n这不是它一家——大型药企的利润节奏，与海外资产处置、医保谈判定价高度相关，华东医药的这部分回落，更多来自海外板块的减值与权益法亏损。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-09/1225414770.PDF",
+    "stock_code": "000963",
+    "announcement_date": "2026-07-09"
   }
 ]
