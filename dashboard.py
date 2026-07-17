@@ -415,7 +415,7 @@ function filtered(){
   else if(s==='ex') rows.sort((a,b)=>(a.ex||'').localeCompare(b.ex||'') || (b.date||'').localeCompare(a.date||''));
   return rows;
 }
-function esc(s){ return (s||'').replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function esc(s){ s = (s===null||s===undefined)?'':s; return String(s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
 function hl(s, terms){
   let out = esc(s);
   for(const t of terms){ if(!t) continue;
