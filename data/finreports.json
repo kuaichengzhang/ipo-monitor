@@ -300,6 +300,36 @@
     "uid": "bef641bdf2913539"
   },
   {
+    "exchange": "深交所",
+    "company_name": "中一科技",
+    "stock_code": "301150",
+    "report_type": "业绩预告",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩预告",
+    "announcement_date": "2026-07-21",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-21/1225434733.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "825e2e485f7b07aa"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "BILLION IND",
+    "stock_code": "02299",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-21",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0721/2026072100482.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "12ce0878b131427f"
+  },
+  {
     "exchange": "上交所",
     "company_name": "璞泰来",
     "stock_code": "603659",
