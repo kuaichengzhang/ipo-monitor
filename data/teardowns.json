@@ -2529,5 +2529,372 @@
       "headline_number": "半年营收19.04亿元(+83.13%),但经营现金流-2.41亿元由正转负",
       "block_text": "◆ 中船特气｜2026H1半年报\n半年营收19.04亿元,同比+83.13%\n\n归母净利润3.48亿元(+95.63%),扣非3.26亿元(+117.08%),增长由AI与先进芯片、显示面板需求带动的电子特气放量驱动。\n\n经营现金流净额-2.41亿元,同比-172.19%(上年同期+3.33亿元);公司在财报中说明,系备货叠加六氟化钨原料涨价致采购付现增大,账期内应收账款增加(p.47)——即收入高增,现金尚未回笼。\n\n这不是个案——半导体材料国产替代放量期,厂家常以囤货与赊销换份额,现金流滞后于利润是这一阶段的共性,关键看后续回款节奏。"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-21/1225432101.PDF",
+    "stock_code": "300503",
+    "announcement_date": "2026-07-21",
+    "header": {
+      "company_name": "广州市昊志机电股份有限公司",
+      "ticker": "300503",
+      "exchange": "深交所（创业板）",
+      "sector_tag": [
+        "工业机械",
+        "数控机床核心部件"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未审计",
+        "page": "p.8",
+        "note": "半年报未经审计"
+      },
+      "disclosure_date": "2026-07-21",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 11.66,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+65.86%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 2.32,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+266.57%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 2.17,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+390.85%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": 42.45,
+        "unit": "%",
+        "page": "p.33",
+        "period": "2026H1",
+        "yoy": "+6.61 pct",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 19.9,
+        "unit": "%",
+        "page": "p.8·衍生",
+        "period": "2026H1",
+        "yoy": "+10.9 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利2.32亿÷营收11.66亿；上年0.63亿÷7.03亿≈9.0%"
+      },
+      "operating_cash_flow": {
+        "value": 0.52,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+115.02%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润同比+390.85%（2.17亿元），为本期变动最大的科目",
+        "page": "p.8",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.8"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.8"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "prep 未抽取股东质押/减持信息，待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2025年度每10股派1.00元（含税），登记日2026-05-26；另报告期内已完成每10股派0.53元权益分派",
+        "page": "p.37,p.50"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母2.32亿 vs 扣非2.17亿，非经常性损益0.15亿(占6.6%)，扣非增速更高，无背离",
+        "page": "p.8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+65.86%，经营现金流+115.02%，现金流增速快于营收，无背离",
+        "page": "p.8",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率42.45%(+6.61pct)、净利率约19.9%(+10.9pct)，同向上升，无反向",
+        "page": "p.33,p.8·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "prep 未抽取应收/存货明细，待核",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "仅本期变化一维触发（营收+65.86%、归母净利+266.57%），未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1→极简2-3段，一个核心看点讲透（以本期变化为主轴）",
+      "headline_number": "归母净利 2.32亿元，同比+266.57%",
+      "block_text": "◆ 昊志机电｜2026H1半年报\n归母净利 2.32亿元，同比+266.57%\n\n上半年营业收入11.66亿元，同比增长65.86%；归属于上市公司股东的净利润2.32亿元，同比增长266.57%；扣非净利润2.17亿元，同比增长390.85%（扣非：扣除政府补助、资产处置等非经常性损益后的主业利润）。经营现金流净额0.52亿元，同比增长115.02%；综合毛利率42.45%，较上年提升6.61个百分点。\n\n利润增长主要由主业拉动：非经常性损益仅0.15亿元，占归母净利约6.6%，扣非增速还高于归母，增长并非靠补贴或一次性收益堆高；经营现金流增速也快于营收，回款同步改善。\n\n数控机床、机器人、新能源汽车、商业航天等高端装备扩产，带动主轴、转台等核心功能部件需求，是这类部件厂商业绩向上的大背景。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-21/1225431702.PDF",
+    "stock_code": "603162",
+    "announcement_date": "2026-07-21",
+    "header": {
+      "company_name": "福建海通发展股份有限公司",
+      "ticker": "603162",
+      "exchange": "上交所",
+      "sector_tag": [
+        "航运",
+        "干散货运输"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未审计",
+        "page": "p.2",
+        "note": "半年报摘要，未经审计"
+      },
+      "disclosure_date": "2026-07-21",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 34.71,
+        "unit": "亿元",
+        "page": "p.2",
+        "period": "2026H1",
+        "yoy": "+92.78%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 5.23,
+        "unit": "亿元",
+        "page": "p.2",
+        "period": "2026H1",
+        "yoy": "+502.60%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 5.21,
+        "unit": "亿元",
+        "page": "p.3",
+        "period": "2026H1",
+        "yoy": "+507.25%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 15.1,
+        "unit": "%",
+        "page": "p.2·衍生",
+        "period": "2026H1",
+        "yoy": "+10.3 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利5.23亿÷营收34.71亿；上年0.87亿÷18.00亿≈4.8%"
+      },
+      "operating_cash_flow": {
+        "value": 7.22,
+        "unit": "亿元",
+        "page": "p.2",
+        "period": "2026H1",
+        "yoy": "+84.39%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润同比+507.25%（5.21亿元），为本期变动最大的科目",
+        "page": "p.3",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "前十大股东质押/冻结列均为'无'(prep L50-58)，未现质押减持"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "note": "摘要未披露分红方案"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母5.23亿 vs 扣非5.21亿，差0.02亿(0.4%)，无背离",
+        "page": "p.2,p.3",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+92.78%，经营现金流+84.39%(7.22亿>净利)，现金流充裕无背离",
+        "page": "p.2",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率约15.1%(+10.3pct)；毛利率摘要未披露，无法比对",
+        "page": "p.2·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "摘要未抽取应收/存货明细，待核",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "仅本期变化一维触发（营收+92.78%、归母净利+502.60%），未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1→极简2-3段，一个核心看点讲透（以本期变化为主轴）",
+      "headline_number": "归母净利 5.23亿元，同比+502.60%",
+      "block_text": "◆ 海通发展｜2026H1半年报\n归母净利 5.23亿元，同比+502.60%\n\n上半年营业收入34.71亿元，同比增长92.78%；归属于上市公司股东的净利润5.23亿元，同比增长502.60%；扣非净利润5.21亿元，同比增长507.25%。经营现金流净额7.22亿元，同比增长84.39%，高于同期净利，回款未现背离。\n\n利润增速远高于营收，净利率由约4.8%升至约15.1%（归母净利÷营收，衍生），盈利弹性释放；扣非与归母几乎一致（差0.02亿元），增长由主业贡献。\n\n干散货航运是周期行业，运价回暖时船东盈利随运力利用率同步放大——这轮高增长底色是行业景气修复。"
+    }
   }
 ]
