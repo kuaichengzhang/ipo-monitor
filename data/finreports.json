@@ -330,6 +330,36 @@
     "uid": "12ce0878b131427f"
   },
   {
+    "exchange": "港交所",
+    "company_name": "HEARTCARE-B",
+    "stock_code": "06609",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-21",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0721/2026072101073.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "0badedf849d67971"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "TOWNRAY HLDGS",
+    "stock_code": "01692",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-21",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0721/2026072101013.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "98b3947ddde254c3"
+  },
+  {
     "exchange": "上交所",
     "company_name": "璞泰来",
     "stock_code": "603659",
