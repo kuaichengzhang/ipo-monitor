@@ -2896,5 +2896,499 @@
       "headline_number": "归母净利 5.23亿元，同比+502.60%",
       "block_text": "◆ 海通发展｜2026H1半年报\n归母净利 5.23亿元，同比+502.60%\n\n上半年营业收入34.71亿元，同比增长92.78%；归属于上市公司股东的净利润5.23亿元，同比增长502.60%；扣非净利润5.21亿元，同比增长507.25%。经营现金流净额7.22亿元，同比增长84.39%，高于同期净利，回款未现背离。\n\n利润增速远高于营收，净利率由约4.8%升至约15.1%（归母净利÷营收，衍生），盈利弹性释放；扣非与归母几乎一致（差0.02亿元），增长由主业贡献。\n\n干散货航运是周期行业，运价回暖时船东盈利随运力利用率同步放大——这轮高增长底色是行业景气修复。"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-22/1225435955.PDF",
+    "stock_code": "688613",
+    "announcement_date": "2026-07-22",
+    "header": {
+      "company_name": "奥精医疗科技股份有限公司",
+      "ticker": "688613",
+      "exchange": "上交所（科创板）",
+      "sector_tag": [
+        "医疗健康",
+        "医疗器械"
+      ],
+      "tier": "healthcare_article",
+      "report_type": "2025年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留意见",
+        "page": "p.190",
+        "note": "prep 标注标准无保留意见"
+      },
+      "disclosure_date": "2026-07-22",
+      "existing_listing_note": "已上市→默认不写主稿；医疗板块拆到成稿级仅供合辑"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2.24,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "+8.59%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.14,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "+209.30%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.0096,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "+96.62%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母 -95.86万元"
+      },
+      "gross_margin": {
+        "value": 69.5,
+        "unit": "%",
+        "page": "p.30",
+        "period": "2025",
+        "yoy": "-2.3 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "2024毛利率≈(200,430,853-56,490,000)/200,430,853≈71.8%（2024成本=66,620,684÷1.1793）；2025=69.50%（报告表述'毛利率有所降低' p.31）"
+      },
+      "net_margin": {
+        "value": 6.2,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2025",
+        "yoy": "+12.3 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利0.14亿÷营收2.24亿；2024为-6.1%（归母-0.13亿÷营收2.06亿）"
+      },
+      "operating_cash_flow": {
+        "value": 0.39,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "+301.46%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营活动现金流净额+301.46%（由-0.20亿转+0.39亿），为本期变动最大的科目",
+        "page": "p.7",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.190"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": 0.25,
+          "unit": "亿元",
+          "page": "p.35",
+          "note": "商誉0.25亿，与上年持平，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "prep 未抽取股东质押/减持信息，待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2025年度每10股派0.30303元（含税）",
+        "page": "p.55"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1383.92万 vs 扣非-95.86万，非经常性损益约1480万(超出净利)，主业近乎盈亏平衡，净利靠金融资产公允价值变动及政府补助撑正",
+        "page": "p.7,p.9",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+8.59%，经营现金流+301.46%(由-0.20亿转+0.39亿)，现金回正无背离",
+        "page": "p.7",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率69.50%(-2.3pct)降，净利率约6.2%(由-6.1%转正)升，反向——非经常性收益及费用率下降拉动",
+        "page": "p.30,p.7·衍生",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": "报告期应收账款陆续收回、信用减值损失大幅减少(p.8)，未抽取应收/存货具体余额",
+        "page": "p.8",
+        "hit": false
+      }
+    },
+    "healthcare_plugin": {
+      "cash_runway": {
+        "cash_reserve": {
+          "value": 1.69,
+          "unit": "亿元",
+          "page": "p.35",
+          "period": "2025末"
+        },
+        "annual_cash_burn": {
+          "value": -0.39,
+          "unit": "亿元",
+          "page": "p.29",
+          "period": "2025",
+          "note": "经营现金流净流入0.39亿，非消耗"
+        },
+        "runway_years": {
+          "value": null,
+          "unit": "年",
+          "page": "p.29·衍生",
+          "is_derived": true,
+          "derivation": "经营现金净流入，跑道不适用"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "pipeline": {
+        "core_assets": [
+          {
+            "name": "矿化胶原/聚酯人工骨修复材料",
+            "stage": "获批+生产许可（2025年9月获国家药监局注册批准，2025年11月获医疗器械生产许可证）",
+            "indication": "复杂骨缺损修复",
+            "period_change": "2025年获批并获生产许可，推进至可量产",
+            "page": "p.198"
+          }
+        ],
+        "single_asset_dependence": {
+          "value": "营收高度集中于人工骨修复材料（骨科+神经外科），单一品种依赖度高",
+          "page": "p.8,p.18",
+          "note": "主营产品人工骨修复材料占总营收绝大部分"
+        },
+        "trigger": true,
+        "trigger_rule_hit": "人工骨修复材料为绝对主力品种"
+      },
+      "license_in_out": {
+        "license_in_share": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "note": "报告未披露授权引进占比"
+        },
+        "milestone_obligations": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "vbp_reimbursement": {
+        "note": "集采/医保暴露",
+        "products_affected": {
+          "value": "骨科人工骨修复材料纳入全国集中带量采购（2024年起陆续、2025年全国正式实施）",
+          "page": "p.8,p.18,p.21",
+          "note": "主力品种进集采"
+        },
+        "price_cut": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "note": "未披露具体降价幅度；公司称集采促临床使用上量"
+        },
+        "revenue_impact": {
+          "value": "集采推动主营品种临床使用上量，2025年营收+8.59%（公司口径）",
+          "page": "p.8",
+          "note": "照财报口径，集采为销量驱动，未替公司定利空/利好"
+        },
+        "trigger": true,
+        "trigger_rule_hit": "骨科人工骨全国集采"
+      },
+      "selling_expense": {
+        "selling_expense_ratio": {
+          "value": 24.9,
+          "unit": "%",
+          "page": "p.29",
+          "period": "2025",
+          "yoy": "+1.6 pct",
+          "is_derived": true,
+          "derivation": "销售费用5574万÷营收2.24亿；2024为23.3%（4800万÷2.06亿）"
+        },
+        "vs_peer": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "无同业中位数可比"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "rnd": {
+        "rnd_expense": {
+          "value": 0.39,
+          "unit": "亿元",
+          "page": "p.29",
+          "period": "2025",
+          "yoy": "+1.24%"
+        },
+        "capitalization_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "管线进展",
+        "集采医保"
+      ],
+      "triggered_count": 4,
+      "spine": "质量背离（扣非-95.86万，归母净利靠约1480万非经常性损益撑正，主业近盈亏线）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "多维度看点（质量背离+集采+管线获批+由亏转盈），但无高红警叠加（无审计非标、现金净流入、管线正向获批），未达单独深写阈值"
+    },
+    "roundup_block": {
+      "headline_number": "归母净利1383.92万元同比转正，但扣非-95.86万元，主业贴近盈亏线",
+      "block_text": "◆ 奥精医疗｜2025年报\n归母净利1383.92万元同比转正，但扣非-95.86万元，主业贴近盈亏线\n\n2025年营业收入2.24亿元，同比增长8.59%；归母净利润1383.92万元（2024年为亏损1266万元），同比转正；但扣除非经常性损益后净利润为-95.86万元——非经常性损益约1480万元（含金融资产公允价值变动损益1792万元、政府补助341万元）撑起了表观盈利，主业本身近乎盈亏平衡（扣非：剔除非经常性损益后的主业利润）。经营现金流净额3949万元，同比+301.46%（由负转正），应收账款回款改善。\n\n公司主力品种骨科人工骨修复材料已纳入全国集中带量采购（2024年起陆续、2025年全国实施），财报将营收增长归因于集采带动临床使用上量；综合毛利率69.50%，较上年降低约2.3个百分点（成本增速17.65%快于营收）。矿化胶原/聚酯人工骨修复材料项目2025年9月获国家药监局注册批准、11月获生产许可证，推进至可量产。\n\n集采常态化下，人工骨修复材料靠“以价换量”上量，企业盈利弹性取决于成本管控与非经常性损益波动——对这类单品依赖度高、盈利薄的公司，集采既是放量契机，也是价格闸门。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-22/1225434550.PDF",
+    "stock_code": "000876",
+    "announcement_date": "2026-07-22",
+    "header": {
+      "company_name": "新希望六和股份有限公司",
+      "ticker": "000876",
+      "exchange": "深交所",
+      "sector_tag": [
+        "农林牧渔",
+        "饲料/养殖"
+      ],
+      "tier": "basic",
+      "report_type": "2025年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留意见",
+        "page": "p.185",
+        "note": "标准无保留意见（ auditors' report p.185）"
+      },
+      "disclosure_date": "2026-07-22",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 1068.56,
+        "unit": "亿元",
+        "page": "p.18",
+        "period": "2025",
+        "yoy": "+3.68%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -17.84,
+        "unit": "亿元",
+        "page": "p.18",
+        "period": "2025",
+        "yoy": "-476.76%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -14.74,
+        "unit": "亿元",
+        "page": "p.18",
+        "period": "2025",
+        "yoy": "-339.84%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "note": "抽取层未披露合并毛利率精确值"
+      },
+      "net_margin": {
+        "value": -1.67,
+        "unit": "%",
+        "page": "p.18·衍生",
+        "period": "2025",
+        "yoy": "-2.1 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利-17.84亿÷营收1068.56亿；2024为+0.46%（4.74亿÷1030.63亿）"
+      },
+      "operating_cash_flow": {
+        "value": 93.78,
+        "unit": "亿元",
+        "page": "p.19",
+        "period": "2025",
+        "yoy": "+2.75%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润同比-476.76%，由盈（+4.74亿）转亏（-17.84亿）",
+        "page": "p.18",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.185"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.18"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "note": "未抽取商誉减值数据，待核"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "prep 未抽取股东质押/减持信息，待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2025年度不分红、不送红股、不转增",
+        "page": "p.383"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-17.84亿 vs 扣非-14.74亿，非经常性损益约-3.10亿（进一步拖累），扣非亏损小于归母，主业本身在亏",
+        "page": "p.18",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+3.68%，经营现金流+2.75%(93.78亿，远高于净利)，无背离（经营现金流为正，与净利亏损不矛盾——折旧及营运资本变动）",
+        "page": "p.18,p.19",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率约-1.67%(衍生)；毛利率未抽取，无法比对方向",
+        "page": "p.18·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "prep/抽取未提供应收/存货明细，待核",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化（由盈转亏）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "由盈转亏+扣非亏损收窄(非经常性损益-3.10亿拖累)，无审计非标/现金消耗等叠加红警，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段，一个核心看点讲透（以由盈转亏为主轴）",
+      "headline_number": "归母净利 -17.84亿元，同比由盈转亏（-476.76%）",
+      "block_text": "◆ 新希望｜2025年报\n归母净利 -17.84亿元，同比由盈转亏（-476.76%）\n\n2025年营业收入1068.56亿元，同比增长3.68%；归属于上市公司股东的净利润-17.84亿元（2024年为盈利4.74亿元），同比由盈转亏；扣非净利润-14.74亿元（2024年盈利6.14亿元）。经营现金流净额93.78亿元，同比增长2.75%，仍保持净流入。\n\n亏损主要来自主业：扣非净利-14.74亿元，非经常性损益约-3.10亿元（进一步拖累），说明亏损并非由一次性收益掩盖，而是饲料与养殖等业务经营压力的体现（扣非：剔除非经常性损益后的主业利润，这里主业本身就在亏）。公司2025年度不分红。\n\n猪周期下行阶段，饲料与养殖屠宰一体化的企业盈利随猪价波动放大，是这类公司的共性。"
+    }
   }
 ]
