@@ -300,6 +300,36 @@
     "uid": "81d295d9ee51f81c"
   },
   {
+    "exchange": "深交所",
+    "company_name": "惠云钛业",
+    "stock_code": "300891",
+    "report_type": "业绩预告",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩预告",
+    "announcement_date": "2026-07-23",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-23/1225438420.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "747ee44789962e9e"
+  },
+  {
+    "exchange": "深交所",
+    "company_name": "慧谷新材",
+    "stock_code": "301683",
+    "report_type": "业绩快报",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩快报",
+    "announcement_date": "2026-07-23",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-23/1225438166.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "3fdb34c32c46cbc1"
+  },
+  {
     "exchange": "上交所",
     "company_name": "奥精医疗",
     "stock_code": "688613",
