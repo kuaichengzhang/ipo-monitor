@@ -225,6 +225,36 @@
     "uid": "d9873fa9dda372f0"
   },
   {
+    "exchange": "港交所",
+    "company_name": "PLANETREE INT'L",
+    "stock_code": "00613",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-24",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0724/2026072400722.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "f33059a80dd7ad74"
+  },
+  {
+    "exchange": "深交所",
+    "company_name": "富乐德",
+    "stock_code": "301297",
+    "report_type": "业绩预告",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩预告",
+    "announcement_date": "2026-07-24",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-24/1225440078.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "b398fce5dd52169d"
+  },
+  {
     "exchange": "深交所",
     "company_name": "*ST步森",
     "stock_code": "002569",
@@ -2488,21 +2518,6 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "b60caaaebe2d7970"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "PLANETREE INT'L",
-    "stock_code": "00613",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
-    "announcement_date": "2026-07-17",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0717/2026071701171.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "f33059a80dd7ad74"
   },
   {
     "exchange": "港交所",
