@@ -3610,7 +3610,7 @@
       "report_type_enum": [
         "H1半年报"
       ],
-      "period": "2026",
+      "period": "2026H1",
       "audit_status": {
         "value": "不适用（半年报未经审计）",
         "page": "[缺出处·待核]",
@@ -3813,7 +3813,7 @@
       "report_type_enum": [
         "H1半年报"
       ],
-      "period": "2026",
+      "period": "2026H1",
       "audit_status": {
         "value": "不适用（半年报未经审计）",
         "page": "[缺出处·待核]",
@@ -4012,7 +4012,7 @@
       "report_type_enum": [
         "H1半年报"
       ],
-      "period": "2026",
+      "period": "2026H1",
       "audit_status": {
         "value": "不适用（半年报未经审计）",
         "page": "[缺出处·待核]",
@@ -4192,6 +4192,195 @@
       "length_by_score": "命中1-2→极简2-3段",
       "headline_number": "归母净利 −1488 万，由盈转亏（上年同期 +482 万）",
       "block_text": "◆ 龙软科技｜2026H1半年报\n归母净利 −1488 万，由盈转亏\n\n营收 8754 万（+1.82%，基本持平），归母净利 −1488 万，上年同期为 +482 万，由盈转亏；扣非 −1400 万。财报称受智能矿山初中级项目竞争加剧、研发投入高位影响，利润承压；但季度亏损从一季度的 −793 万收窄到二季度的 −695 万。\n\n质量背离：经营现金流由 +904 万转为 −1377 万（−252.24%）；财报说明应收账款累计回款 1.21 亿，但现汇回款金额及比例下降，收入增长没变成现金。\n\n工业软件+矿山智能化处在「AI+」政策顺风里，但项目制交付的回款节奏与研发投入刚性，让这类公司的利润对订单节奏很敏感。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-24/1225439432.PDF",
+    "stock_code": "300416",
+    "announcement_date": "2026-07-24",
+    "header": {
+      "company_name": "苏州苏试试验集团股份有限公司",
+      "ticker": "300416",
+      "exchange": "深交所",
+      "sector_tag": [
+        "环境试验设备",
+        "检测服务"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "不适用（半年报未经审计）",
+        "page": "[缺出处·待核]",
+        "note": "半年报不审计，无审计意见"
+      },
+      "disclosure_date": "2026-07-24",
+      "existing_listing_note": "已上市→默认不写主稿；轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 10.79,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+8.93%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 1.29,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+10.37%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 1.27,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+11.06%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "note": "合并口径毛利率未在抽取文本中定位；分行业毛利率见 p.16（电子电器 38.81%/-1.95pct、航空航天 52.85%/+5.10pct、科研及检测 41.77%/-1.50pct）"
+      },
+      "net_margin": {
+        "value": 11.99,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "+0.16pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利÷营业收入（1.2944亿÷10.7937亿）；上年同期 11.83%（1.1728亿÷9.9085亿）"
+      },
+      "operating_cash_flow": {
+        "value": 0.72,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-27.59%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营活动产生的现金流量净额同比 -27.59%（由 0.99 亿降至 0.72 亿），为本期变动幅度最大的科目",
+        "page": "p.7",
+        "note": "营收与利润均为正增长，唯经营现金流降幅最大"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "不适用（半年报未经审计）",
+          "page": "[缺出处·待核]",
+          "note": "半年报不审计，无审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": 0,
+          "unit": "亿元",
+          "page": "p.106",
+          "note": "商誉原值 58,983,203.29 元（p.39）；商誉减值准备期末余额 2,025,073.88 元与期初持平（p.106），本期未新增计提"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.33",
+          "note": "第一大股东苏州试验仪器总厂（持股 30.00%）股份状态“不适用”、质押/冻结数量 0（p.33）"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报无业绩预告对照"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026年半年度不派发现金红利，不送红股，不以公积金转增股本",
+        "page": "p.2/p.24"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母净利 1.29 亿、扣非 1.27 亿，非经常性损益仅 256 万（占归母约 2%），利润基本由主业贡献，未靠非经常性损益撑高",
+        "page": "p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收同比 +8.93% 但经营现金流同比 -27.59%（0.99 亿→0.72 亿），营收增长未同步转化为现金回款",
+        "page": "p.7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "合并口径毛利率未在抽取文本中定位（分行业毛利率见 p.16），净利率约 12.0%（+0.16pct），毛利率方向无法判定",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款 15.41 亿（较上年末 13.88 亿 +11.0%，占资产 30.19%/+2.98pct）；存货 4.11 亿（+11.5%）；二者增速均快于营收 +8.93%",
+        "page": "p.17",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "质量背离",
+        "本期变化"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "质量背离为中等看点（经营现金流降、应收升），未达独立深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中 2 看点（质量背离+本期变化）→极简 2-3 段，一个核心张力讲透",
+      "headline_number": "经营现金流 0.72 亿，同比 -27.59%",
+      "block_text": "苏试试验上半年营收 10.79 亿，同比 +8.93%；归母净利润 1.29 亿，同比 +10.37%，延续个位数平稳增长。扣非归母净利润 1.27 亿（+11.06%），非经常性损益仅 256 万，利润基本由主业贡献——试验设备与集成电路验证服务是主要拉动（集成电路验证与分析服务收入 1.71 亿，+10.61%，p.10）。\n\n张力在回款：经营活动现金流 0.72 亿，同比 -27.59%；同期应收账款 15.41 亿，较上年末 13.88 亿升约 11%，增速快于营收。营收计在账上，现金回款节奏放缓（p.7、p.17）。\n\n环境可靠性试验是高端制造与商业航天的配套环节，下游资本开支与回款节奏直接影响企业现金流。回款放缓并非苏试一家面对的情况。"
     }
   }
 ]
