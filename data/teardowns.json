@@ -4382,5 +4382,198 @@
       "headline_number": "经营现金流 0.72 亿，同比 -27.59%",
       "block_text": "苏试试验上半年营收 10.79 亿，同比 +8.93%；归母净利润 1.29 亿，同比 +10.37%，延续个位数平稳增长。扣非归母净利润 1.27 亿（+11.06%），非经常性损益仅 256 万，利润基本由主业贡献——试验设备与集成电路验证服务是主要拉动（集成电路验证与分析服务收入 1.71 亿，+10.61%，p.10）。\n\n张力在回款：经营活动现金流 0.72 亿，同比 -27.59%；同期应收账款 15.41 亿，较上年末 13.88 亿升约 11%，增速快于营收。营收计在账上，现金回款节奏放缓（p.7、p.17）。\n\n环境可靠性试验是高端制造与商业航天的配套环节，下游资本开支与回款节奏直接影响企业现金流。回款放缓并非苏试一家面对的情况。"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-23/1225436680.PDF",
+    "stock_code": "002458",
+    "announcement_date": "2026-07-23",
+    "header": {
+      "company_name": "山东益生种畜禽股份有限公司",
+      "ticker": "002458",
+      "exchange": "深交所",
+      "sector_tag": [
+        "农林牧渔",
+        "白羽肉鸡养殖"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.41",
+        "note": "半年度报告未经审计（p.41 公司治理章节、p.54 财务报告章节均载明'半年度财务报告未经审计'）"
+      },
+      "disclosure_date": "2026-07-23",
+      "existing_listing_note": "已上市→默认不写主稿；basic档轻量拆解稿，仅供看板展示"
+    },
+    "movements": {
+      "revenue": {
+        "value": 16.97,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+28.44%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 3.08,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+4897.29%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 3.07,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+9002.55%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母净利润"
+      },
+      "gross_margin": {
+        "value": 28.04,
+        "unit": "%",
+        "page": "p.59",
+        "period": "2026H1",
+        "yoy": "+15.91 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "（营业收入1,696,762,876.75－营业成本1,220,911,820.59）÷营业收入；上年同期12.14%"
+      },
+      "net_margin": {
+        "value": 18.13,
+        "unit": "%",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+17.66 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利307,586,693.93÷营收1,696,762,876.75；上年同期0.47%"
+      },
+      "operating_cash_flow": {
+        "value": 4.61,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+222.89%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润同比+9002.55%（由上年同期的336.74万元增至3.07亿元），为各科目同比增幅之最；营收同比+28.44%为体量基础",
+        "page": "p.8",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.41",
+          "note": "半年报未经审计，无审计意见类型"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.8",
+          "note": "主要会计数据无需追溯调整或重述（p.8 勾选'否'）"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": 0,
+          "unit": "亿元",
+          "page": "p.115",
+          "note": "期末商誉1,837.09万元，期初期末持平，本期未计提减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东曹积生持有587,078,757股中有261,059,000股处于质押状态（占其持股44.47%、占总股本18.24%）",
+          "page": "p.50",
+          "note": "质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.41",
+          "note": "控股股东及其他关联方非经营性占用资金：不适用（p.41）；违规对外担保：无（p.41）"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度利润分配预案：每10股派现金1.50元（含税），合计211,107,080.85元",
+        "page": "p.36",
+        "note": "分红"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母净利3.08亿与扣非归母3.07亿几乎重合，非经常性损益仅106.54万元（占归母0.35%），利润来自主业而非一次性损益",
+        "page": "p.8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+28.44%伴随经营现金流+222.89%（4.61亿），现金回流快于收入增长，无背离",
+        "page": "p.8",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率28.04%（+15.91pct）与净利率18.13%（+17.66pct）同向上行，无反向",
+        "page": "p.59/p.8",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款7,427万（较上年末+5.6%，占总资产1.04%）、存货3.91亿（较上年末+5.8%，占5.47%），均随业务温和上升、未见异常堆积",
+        "page": "p.54",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "意外信号"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "看点2项（本期变化+意外信号），未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点（本期变化+意外信号）→ 极简2-3段：核心盈利爆发讲透，收在行业句",
+      "headline_number": "归母净利3.08亿元，同比+4897.29%",
+      "block_text": "◆ 益生股份｜2026H1\n归母净利3.08亿元，同比+4897.29%\n\n上半年营收16.97亿元（+28.44%），归母净利3.08亿元，较上年同期的615万元大幅抬升；扣非归母（剔除非经常性损益后）3.07亿元（+9002.55%），非经常性损益仅106.54万元，利润基本由父母代、商品代鸡苗的量价齐升贡献。经营现金流4.61亿元（+222.89%），现金回流快于收入；毛利率由12.14%升至28.04%，主业盈利能力较去年同期提升约16个百分点。\n\n张力：控股股东曹积生持有5.87亿股中有2.61亿股处于质押状态（占其持股44.47%），为大股东层面的资金安排信号（p.50）。\n\n行业句：白羽肉鸡种源进口受海外禽流感扰动、供给偏紧推升父母代鸡苗价格，益生作为引种龙头直接受益；这种由上游种源缺口带来的景气度，随引种渠道恢复存在回落的可能。"
+    }
   }
 ]
