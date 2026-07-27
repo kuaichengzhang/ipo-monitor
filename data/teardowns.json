@@ -4575,5 +4575,595 @@
       "headline_number": "归母净利3.08亿元，同比+4897.29%",
       "block_text": "◆ 益生股份｜2026H1\n归母净利3.08亿元，同比+4897.29%\n\n上半年营收16.97亿元（+28.44%），归母净利3.08亿元，较上年同期的615万元大幅抬升；扣非归母（剔除非经常性损益后）3.07亿元（+9002.55%），非经常性损益仅106.54万元，利润基本由父母代、商品代鸡苗的量价齐升贡献。经营现金流4.61亿元（+222.89%），现金回流快于收入；毛利率由12.14%升至28.04%，主业盈利能力较去年同期提升约16个百分点。\n\n张力：控股股东曹积生持有5.87亿股中有2.61亿股处于质押状态（占其持股44.47%），为大股东层面的资金安排信号（p.50）。\n\n行业句：白羽肉鸡种源进口受海外禽流感扰动、供给偏紧推升父母代鸡苗价格，益生作为引种龙头直接受益；这种由上游种源缺口带来的景气度，随引种渠道恢复存在回落的可能。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "深圳市澄天伟业科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441729.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441729.PDF",
+    "stock_code": "300689",
+    "announcement_date": "2026-07-25",
+    "header": {
+      "company_name": "深圳市澄天伟业科技股份有限公司",
+      "ticker": "300689",
+      "exchange": "深交所",
+      "sector_tag": [
+        "智能卡",
+        "半导体",
+        "液冷散热"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.33",
+        "note": "半年报未审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-25",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2.55,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+21.76%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 255163262.74
+      },
+      "net_profit_attributable": {
+        "value": 0.0273,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "-74.89%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 2730809.45,
+        "note": "约273万元"
+      },
+      "net_profit_deducted": {
+        "value": -0.0213,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "-132.29%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -2130412.06,
+        "note": "约-213万元"
+      },
+      "gross_margin": {
+        "value": 14.53,
+        "unit": "%",
+        "page": "p.16·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "按产品毛利汇总倒算：四产品线(智能卡/半导体/液冷散热/其他)营收合计=总营收255,163,262.74元，四类营业成本合计218,081,412.03元",
+        "note": "财报未单列综合毛利率；分产品毛利率:智能卡18.61%(-2.94pct)、半导体6.87%、液冷散热13.59%、其他7.63%(-8.14pct)"
+      },
+      "net_margin": {
+        "value": 1.07,
+        "unit": "%",
+        "page": "p.8·衍生",
+        "period": "2026H1",
+        "yoy": "约-4.12pct",
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "去年同期约5.19%"
+      },
+      "operating_cash_flow": {
+        "value": -0.1817,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "-181.68%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -18170260.8,
+        "note": "约-1817万元，由正转负"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-181.68%(由正转负，约-1817万)，归母净利-74.89%",
+        "page": "p.8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.33"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.45",
+          "note": "合并报表商誉科目未单列余额(无重大商誉)"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "股东景在军(持股5.46%)质押1,430,000股",
+          "page": "p.40",
+          "note": "质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本(2025年年度权益分派每10股派0.45元已于期内实施)",
+        "page": "p.29"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母273万 vs 扣非-213万，扣非为负，归母靠约486万非经常性损益(政府补助、理财收益等)撑正，主业实际亏损",
+        "page": "p.8",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+21.76%但经营现金流-1817万(去年同期+2225万)，由正转负；应收账款1.08亿(较期初+40.4%)、存货6099万(较期初+58.7%)占用上升",
+        "page": "p.8/p.21",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率约14.5%、净利率约1.07%，毛利尚正但费用与信用减值(应收款项坏账-138万)将净利压缩至微利",
+        "page": "p.16·衍生/p.8·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款1.08亿(较期初+40.4%，主要系销售增加)、存货6099万(较期初+58.7%，主要系原材料备货)，双双上升",
+        "page": "p.21",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "主业亏损+现金流转负+股东质押，集中度中等，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3看点→展开成小型看点合集(每点一段)",
+      "headline_number": "归母净利273万，同比-74.89%；扣非-213万",
+      "block_text": "◆ 澄天伟业｜2026H1\n归母净利273万，同比-74.89%；扣非归母-213万，由盈转亏。\n\n营收2.55亿，同比+21.76%，表面仍在增长。但利润主要靠约486万非经常性损益(政府补助、理财收益)撑正，主业实际亏损。经营现金流-1817万，去年同期为+2225万，由正转负；应收账款1.08亿、存货6099万，较期初分别+40.4%、+58.7%，回款与备货占用上升。\n\n股东景在军(持股5.46%)质押143万股，是前十大股东中唯一出现质押的股东。\n\n智能卡业务仍是收入与利润主源，半导体已具规模、液冷散热仍处客户导入期。在智能卡产业竞争充分、毛利率承压之下，向半导体与液冷散热延伸的中小制造厂，都面对新业务投入何时兑现的问题。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "宁德时代新能源科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441586.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441586.PDF",
+    "stock_code": "300750",
+    "announcement_date": "2026-07-25",
+    "header": {
+      "company_name": "宁德时代新能源科技股份有限公司",
+      "ticker": "300750",
+      "exchange": "深交所",
+      "sector_tag": [
+        "动力电池",
+        "储能电池",
+        "锂电池"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.37",
+        "note": "半年报未审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-25",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2769.17,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+54.80%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 276916580000
+      },
+      "net_profit_attributable": {
+        "value": 432.84,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+41.98%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 43284002000
+      },
+      "net_profit_deducted": {
+        "value": 390.13,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+43.44%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 39013300000
+      },
+      "gross_margin": {
+        "value": 23.93,
+        "unit": "%",
+        "page": "p.16",
+        "period": "2026H1",
+        "yoy": "-1.09 pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "分业务(电气机械及器材制造业)综合毛利率"
+      },
+      "net_margin": {
+        "value": 15.63,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "约+1.54pct",
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "去年同期约14.09%"
+      },
+      "operating_cash_flow": {
+        "value": 602.17,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+2.61%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 60216851000
+      },
+      "biggest_mover": {
+        "value": "营收+54.80%(2769亿)，为各项中同比增幅最大",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.37"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.73",
+          "note": "合并报表商誉约8.27亿(上期8.37亿)，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "股东李平(持股4.27%)质押20,420,000股",
+          "page": "p.65",
+          "note": "质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026年中期分红预案:每10股派14.11元(含税)，预计分红64.93亿元；不转增、不送红股",
+        "page": "p.2/p.31"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母432.84亿 vs 扣非390.13亿，非经常性损益约42.71亿(其他收益等)，占归母约9.9%，主业贡献为主",
+        "page": "p.7/p.8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+54.80%但经营现金流仅+2.61%(602亿)，增速显著背离；应收账款88.42亿(较期初+15.7%)、存货130.82亿(较期初+38.4%)上升",
+        "page": "p.7/p.17",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率23.93%(-1.09pct)、净利率15.63%(+1.54pct)，毛利率小幅下滑、净利率因费用管控略升，方向未明显背离",
+        "page": "p.16/p.7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款88.42亿(+15.7%)、存货130.82亿(+38.4%)，随营收扩张上升但未显著异常",
+        "page": "p.17",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "强增长+现金流增速背离，属龙头常态观察，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3看点→展开成小型看点合集(每点一段)",
+      "headline_number": "营收2769亿，同比+54.80%",
+      "block_text": "◆ 宁德时代｜2026H1\n营收2769亿，同比+54.80%；归母净利433亿，同比+41.98%；扣非390亿，同比+43.44%。\n\n增长由主业拉动，非经常性损益约42.71亿(占归母约9.9%)，并非靠一次性收益堆高。但经营现金流602亿，仅同比+2.61%，与营收54.8%的增速明显背离；应收账款88.42亿、存货130.82亿，较期初分别+15.7%、+38.4%，随规模扩张占用上升。\n\n股东李平(持股4.27%)质押2042万股。\n\n综合毛利率23.93%(-1.09pct)、净利率15.63%(+1.54pct)，同向下滑后净利率靠费用管控回正。动力电池全球市占率40.2%(同比+2.2pct)、储能出货量位列全球第一。在储能电芯出货量上半年同比+93%、价格竞争延续之下，龙头也难完全避开毛利率的缓慢摊薄。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "广东道氏技术股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441398.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-25/1225441398.PDF",
+    "stock_code": "300409",
+    "announcement_date": "2026-07-25",
+    "header": {
+      "company_name": "广东道氏技术股份有限公司",
+      "ticker": "300409",
+      "exchange": "深交所",
+      "sector_tag": [
+        "锂电材料",
+        "新材料",
+        "固态电池材料"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.45",
+        "note": "半年报未审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-25",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 47.94,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+31.21%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 4794043237.54
+      },
+      "net_profit_attributable": {
+        "value": 2.9,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+25.92%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 290113730.85
+      },
+      "net_profit_deducted": {
+        "value": 2.83,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+34.33%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 283051697.73
+      },
+      "gross_margin": {
+        "value": 23.15,
+        "unit": "%",
+        "page": "p.26",
+        "period": "2026H1",
+        "yoy": "+2.65 pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "分业务(制造业)综合毛利率"
+      },
+      "net_margin": {
+        "value": 6.05,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "约-0.26pct",
+        "is_derived": true,
+        "derivation": "归母净利÷营收",
+        "note": "去年同期约6.31%"
+      },
+      "operating_cash_flow": {
+        "value": -5.84,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-187.59%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -583808870.95,
+        "note": "约-5.84亿，由正转负"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-187.59%(-5.84亿)，由正转负",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.45"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.62",
+          "note": "商誉约4.07亿，期初持平(4.07亿)，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.55",
+          "note": "前十大股东均无质押/冻结标记(荣继华等股份状态不适用)"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.42"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母2.90亿 vs 扣非2.83亿，非经常性损益约706万(占归母约2.4%)，利润主要靠主业",
+        "page": "p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+31.21%但经营现金流-5.84亿(去年同期+6.67亿)，由正转负；应收账款9.54亿(较期初+9.9%)、存货35.50亿(较期初+29.0%)上升",
+        "page": "p.7/p.27",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率23.15%(+2.65pct)、净利率6.05%(约-0.26pct)，毛利改善但净利率基本持平",
+        "page": "p.26/p.7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货35.50亿(较期初+29.0%，主要系销售备货)、应收账款9.54亿(较期初+9.9%)，存货升幅高于营收，占用上升",
+        "page": "p.27",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "现金流转负为扩张期占款所致，主业盈利为正，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段，一个核心看点讲透，收在行业句",
+      "headline_number": "经营现金流-5.84亿，同比-187.59%",
+      "block_text": "◆ 道氏技术｜2026H1\n营收47.94亿，同比+31.21%；归母净利2.90亿，同比+25.92%；扣非2.83亿，同比+34.33%。\n\n增长由主业拉动，非经常性损益仅约706万(占归母约2.4%)。但经营现金流-5.84亿，去年同期为+6.67亿，由正转负；存货35.50亿(较期初+29.0%)、应收账款9.54亿(较期初+9.9%)，备货与回款占用上升，是现金流转负的主因。综合毛利率23.15%(+2.65pct)、净利率6.05%，毛利改善但净利率基本持平；商誉约4.07亿，期初持平、无减值。\n\n公司业务从陶瓷材料延伸至锂电材料、战略资源(铜钴)及固态电池材料。在上游资源价格波动、锂电材料产能持续投放之下，材料厂普遍要在规模扩张与现金流回正之间找平衡。"
+    }
   }
 ]
