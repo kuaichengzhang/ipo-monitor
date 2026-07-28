@@ -5165,5 +5165,611 @@
       "headline_number": "经营现金流-5.84亿，同比-187.59%",
       "block_text": "◆ 道氏技术｜2026H1\n营收47.94亿，同比+31.21%；归母净利2.90亿，同比+25.92%；扣非2.83亿，同比+34.33%。\n\n增长由主业拉动，非经常性损益仅约706万(占归母约2.4%)。但经营现金流-5.84亿，去年同期为+6.67亿，由正转负；存货35.50亿(较期初+29.0%)、应收账款9.54亿(较期初+9.9%)，备货与回款占用上升，是现金流转负的主因。综合毛利率23.15%(+2.65pct)、净利率6.05%，毛利改善但净利率基本持平；商誉约4.07亿，期初持平、无减值。\n\n公司业务从陶瓷材料延伸至锂电材料、战略资源(铜钴)及固态电池材料。在上游资源价格波动、锂电材料产能持续投放之下，材料厂普遍要在规模扩张与现金流回正之间找平衡。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "中兰环保科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-28/1225443788.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-28/1225443788.PDF",
+    "stock_code": "300854",
+    "announcement_date": "2026-07-28",
+    "header": {
+      "company_name": "中兰环保科技股份有限公司",
+      "ticker": "300854",
+      "exchange": "深交所",
+      "sector_tag": [
+        "环保",
+        "固废治理",
+        "生态修复"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.48",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-28",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2.42,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-16.94%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 241720202.97
+      },
+      "net_profit_attributable": {
+        "value": 733,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+30.22%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 7329006.24
+      },
+      "net_profit_deducted": {
+        "value": 198,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-31.19%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1978220.79
+      },
+      "gross_margin": {
+        "value": 22.76,
+        "unit": "%",
+        "page": "p.13·衍生",
+        "period": "2026H1",
+        "yoy": "-1.52 pct",
+        "is_derived": true,
+        "derivation": "毛利率=(营业收入-营业成本)/营业收入，营业成本取自p.13",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 3.03,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "约+1.10pct",
+        "is_derived": true,
+        "derivation": "归母净利÷营业收入",
+        "note": "去年同期约1.93%"
+      },
+      "operating_cash_flow": {
+        "value": 7443,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+5495.46%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 74434709.2,
+        "note": "由-138万转为+7443万"
+      },
+      "biggest_mover": {
+        "value": "经营现金流+5495.46%(7443万)，由-138万转为+7443万",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.48"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.48",
+          "note": "合并资产负债表未见商誉余额，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.43",
+          "note": "前十大股东股份状态均为不适用，无质押/冻结标记"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.36/p.38",
+          "note": "无违规对外担保、不存在重大担保、无资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2025年度资本公积每10股转增4股(2026-05-29实施；非现金分红/回购)",
+        "page": "p.42"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母净利733万(+30.22%) vs 扣非归母198万(-31.19%)，非经常性损益535万(占归母约73%)，利润增长靠非经常性损益(持有盐湖股份股票的投资收益与公允价值变动损益约457万)",
+        "page": "p.7/p.13",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-16.94%但经营现金流+5495.46%(由-138万转为+7443万)，现金流改善主要靠销售回款增加与采购付款减少，方向不同但为正向",
+        "page": "p.7/p.13",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "综合毛利率22.76%(-1.52pct)、净利率3.03%(约+1.10pct)，毛利率略降但净利率升(靠非经常性损益)",
+        "page": "p.13·衍生/p.7·衍生",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": "存货2386万(较期初+58.56%)但绝对额小；应收2.28亿(较期初-7.4%)，占营收约94%但同比回落，无显著异动",
+        "page": "p.48",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "归母增长靠非经常性损益(占73%)、扣非实际下滑，主业承压但现金回款改善；未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段，一个核心看点讲透，收在行业句",
+      "headline_number": "归母净利+30.22%，但扣非-31.19%（非经常性损益占归母约73%）",
+      "block_text": "◆ 中兰环保｜2026H1\n营收2.42亿，同比-16.94%；归母净利733万，同比+30.22%；扣非归母198万，同比-31.19%。\n\n利润增长主要靠非经常性损益：非经常性损益合计535万，占归母净利约73%，其中持有盐湖股份股票带来的投资收益与公允价值变动损益约457万（大白话：公司手里的股票涨价和卖出赚的钱）。扣非后，主业利润实际下滑三成。经营现金流7443万，同比+5495.46%（由-138万转为+7443万），销售回款改善。综合毛利率22.76%（-1.52pct），营收降但毛利率基本稳。\n\n中兰环保做的是固废污染隔离与生态修复，业务跟着填埋场生命周期走。在环保工程回款普遍偏慢、项目结算周期长的大环境下，这类公司半年度利润常被非主业项（如持有的金融资产公允价值）扰动，看利润不能只看归母一个数。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "富春科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-28/1225443563.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-28/1225443563.PDF",
+    "stock_code": "300299",
+    "announcement_date": "2026-07-28",
+    "header": {
+      "company_name": "富春科技股份有限公司",
+      "ticker": "300299",
+      "exchange": "深交所",
+      "sector_tag": [
+        "数字文化",
+        "游戏",
+        "通信信息",
+        "互联网服务"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.33",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-28",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2.16,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+19.02%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 216063218.03
+      },
+      "net_profit_attributable": {
+        "value": 3336,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+443.75%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 33361834.69,
+        "note": "由上年同期亏损970万转为盈利"
+      },
+      "net_profit_deducted": {
+        "value": 3191,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+387.59%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 31908864.37,
+        "note": "由上年同期亏损1109万转为盈利"
+      },
+      "gross_margin": {
+        "value": 53.01,
+        "unit": "%",
+        "page": "p.14·衍生",
+        "period": "2026H1",
+        "yoy": "+4.91 pct",
+        "is_derived": true,
+        "derivation": "毛利率=(营业收入-营业成本)/营业收入，营业成本取自p.14",
+        "accounting_standard": "PRC GAAP",
+        "note": "分业务：游戏业务毛利率74.41%(+8.30pct)、信息技术10.77%(-3.92pct)"
+      },
+      "net_margin": {
+        "value": 15.44,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "由-5.35%转为+15.44%",
+        "is_derived": true,
+        "derivation": "归母净利÷营业收入",
+        "note": "去年同期约-5.35%"
+      },
+      "operating_cash_flow": {
+        "value": -861,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-137.78%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -8609941.14,
+        "note": "由+2279万转为-861万"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-137.78%(-861万)，由+2279万转为-861万",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.33"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.16",
+          "note": "商誉2.01亿(201,194,861.82元)，期初期末持平，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "福建富春投资(持股14.90%)质押3960万股、实控人缪品章(7.66%)质押1000万股、平潭奥德投资(5.00%)质押1700万股",
+          "page": "p.29"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.23/p.26",
+          "note": "无违规对外担保、不存在重大担保"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.2/p.21"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母净利3336万 vs 扣非归母3191万，非经常性损益145万(占归母约4.4%)，利润主要由主业(游戏)贡献",
+        "page": "p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+19.02%但经营现金流-861万(上年同期+2279万)，由正转负；公司称系通信新接项目投入与游戏投放费用支付增加",
+        "page": "p.7/p.14",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率53.01%(+4.91pct)、净利率15.44%(由负转正)，同向改善",
+        "page": "p.14·衍生/p.7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收1.88亿(同比持平0.00%，占营收约87%)规模偏高；存货7701万(较期初+10.5%)，变动平稳",
+        "page": "p.15",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收增但现金流转负+三大股东质押，看点3项但无高看点叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3→小型看点合集：每个看点一段(数字领衔→情况→张力)，末段行业句收",
+      "headline_number": "归母净利由亏转盈+443.75%，但经营现金流由+2279万转为-861万",
+      "block_text": "◆ 富春股份｜2026H1\n营收2.16亿，同比+19.02%；归母净利3336万，由上年同期亏损970万转为盈利；扣非归母3191万。游戏业务(营收占比约66%)扭亏是利润转正的主因。\n\n但经营现金流-861万，上年同期为+2279万，由正转负；公司称系通信新接项目投入增加与游戏业务投放费用支付增加。应收1.88亿(占营收约87%)规模偏高但同比持平。\n\n三大股东质押股份：福建富春投资(持股14.90%)质押3960万股、实控人缪品章(7.66%)质押1000万股、平潭奥德投资(5.00%)质押1700万股。\n\n富春股份是“数字文化(游戏)+通信信息”双主业，游戏出海与5G数字赋能是两条主线；在游戏买量成本上行、回款周期偏长的行业里，利润与现金流的节奏不同步，是这类公司常见的财务现象。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "山东瑞丰高分子材料股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-28/1225443335.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-28/1225443335.PDF",
+    "stock_code": "300243",
+    "announcement_date": "2026-07-28",
+    "header": {
+      "company_name": "山东瑞丰高分子材料股份有限公司",
+      "ticker": "300243",
+      "exchange": "深交所",
+      "sector_tag": [
+        "化工",
+        "塑料助剂",
+        "新材料"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.44",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-28",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 10.97,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+9.04%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1096926572.59
+      },
+      "net_profit_attributable": {
+        "value": 5894,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+348.43%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 58935886.48
+      },
+      "net_profit_deducted": {
+        "value": 5826,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+318.89%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 58255721.28
+      },
+      "gross_margin": {
+        "value": 18.86,
+        "unit": "%",
+        "page": "p.15·衍生",
+        "period": "2026H1",
+        "yoy": "+4.81 pct",
+        "is_derived": true,
+        "derivation": "毛利率=(营业收入-营业成本)/营业收入，营业成本取自p.15",
+        "accounting_standard": "PRC GAAP",
+        "note": "分产品：工程塑料助剂毛利率25.03%(+0.08pct)、ACR助剂21.70%(+6.35pct)"
+      },
+      "net_margin": {
+        "value": 5.37,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "由1.31%升至5.37%",
+        "is_derived": true,
+        "derivation": "归母净利÷营业收入",
+        "note": "去年同期约1.31%"
+      },
+      "operating_cash_flow": {
+        "value": 623,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-81.96%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 6229472.83,
+        "note": "由+3454万降为+623万"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-81.96%(623万)，由+3454万降为+623万",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.44"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": true,
+        "detail": {
+          "value": "因发行可转换债券的递延所得税会计处理，按监管指引(会计类第5号)追溯调整上年同期数据",
+          "page": "p.7"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7",
+          "note": "系会计政策变更追溯调整，非会计差错更正(财务重述)"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.44",
+          "note": "合并资产负债表未见商誉余额，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "实控人周仕斌(持股24.11%)质押2176万股(占其持股约32%)",
+          "page": "p.37"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.29",
+          "note": "无违规对外担保、不存在重大担保"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.2/p.24"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母净利5894万 vs 扣非归母5826万，非经常性损益68万(占归母约1.2%)，利润主要靠主业",
+        "page": "p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+9.04%但经营现金流623万(上年同期3454万)，-81.96%；报告称系应收款项和存货增加导致现金减少",
+        "page": "p.7/p.15",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率18.86%(+4.81pct)、净利率5.37%(由1.31%升至5.37%)，同向改善",
+        "page": "p.15·衍生/p.7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收5.27亿(较期初+19.4%)、存货3.05亿(较期初+12.0%)，均上升并占用经营现金(报告明确列示)",
+        "page": "p.15/p.44",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "利润高增但现金流降82%+会计政策变更追溯调整+实控人质押，3项看点但无高看点(非标/严重)叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3→小型看点合集：每个看点一段(数字领衔→情况→张力)，末段行业句收",
+      "headline_number": "归母净利+348.43%，但经营现金流-81.96%",
+      "block_text": "◆ 瑞丰高材｜2026H1\n营收10.97亿，同比+9.04%；归母净利5894万，同比+348.43%；扣非归母5826万，同比+318.89%。利润增长主要靠产品毛利率提升(综合毛利率18.86%，+4.81pct)与销量增长。归母净资产15.50亿，同比+35.57%，变动较大。\n\n但经营现金流仅623万，上年同期为3454万，同比-81.96%；公司称系应收款项和存货增加所致。应收5.27亿(较期初+19.4%)、存货3.05亿(较期初+12.0%)上升，占用经营现金。\n\n本报告期存在会计政策变更——按监管指引(会计类第5号)对发行可转债的递延所得税进行追溯调整，影响上年同期数；实控人周仕斌(持股24.11%)质押2176万股。\n\n瑞丰高材是PVC助剂龙头，正拓展工程塑料助剂(对标进口高端牌号)。在化工原料价格与下游需求波动之下，助剂企业的利润弹性与回款节奏，往往不同步——赚到的利润有多少真正变成现金，是这类制造公司的常看项。"
+    }
   }
 ]
