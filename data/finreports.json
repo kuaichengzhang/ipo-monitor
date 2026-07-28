@@ -285,6 +285,36 @@
     "uid": "79434cf1b881496b"
   },
   {
+    "exchange": "港交所",
+    "company_name": "FUTIAN HOLDINGS",
+    "stock_code": "08196",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results]",
+    "announcement_date": "2026-07-28",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/gem/2026/0728/2026072800598.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "f267c65038380f69"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "MEDIWELCOME",
+    "stock_code": "02159",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-28",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0728/2026072800569.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "0fd49440a618c5aa"
+  },
+  {
     "exchange": "上交所",
     "company_name": "新点软件",
     "stock_code": "688232",
