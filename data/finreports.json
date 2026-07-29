@@ -241,6 +241,21 @@
   },
   {
     "exchange": "深交所",
+    "company_name": "中科环保",
+    "stock_code": "301175",
+    "report_type": "业绩快报",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度业绩快报",
+    "announcement_date": "2026-07-29",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225446185.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "dc073c5df1db48c8"
+  },
+  {
+    "exchange": "深交所",
     "company_name": "中兰环保",
     "stock_code": "300854",
     "report_type": "半年报",
