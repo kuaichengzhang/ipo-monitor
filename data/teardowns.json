@@ -5771,5 +5771,606 @@
       "headline_number": "归母净利+348.43%，但经营现金流-81.96%",
       "block_text": "◆ 瑞丰高材｜2026H1\n营收10.97亿，同比+9.04%；归母净利5894万，同比+348.43%；扣非归母5826万，同比+318.89%。利润增长主要靠产品毛利率提升(综合毛利率18.86%，+4.81pct)与销量增长。归母净资产15.50亿，同比+35.57%，变动较大。\n\n但经营现金流仅623万，上年同期为3454万，同比-81.96%；公司称系应收款项和存货增加所致。应收5.27亿(较期初+19.4%)、存货3.05亿(较期初+12.0%)上升，占用经营现金。\n\n本报告期存在会计政策变更——按监管指引(会计类第5号)对发行可转债的递延所得税进行追溯调整，影响上年同期数；实控人周仕斌(持股24.11%)质押2176万股。\n\n瑞丰高材是PVC助剂龙头，正拓展工程塑料助剂(对标进口高端牌号)。在化工原料价格与下游需求波动之下，助剂企业的利润弹性与回款节奏，往往不同步——赚到的利润有多少真正变成现金，是这类制造公司的常看项。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "苏州禾盛新型材料股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444899.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444899.PDF",
+    "stock_code": "002290",
+    "announcement_date": "2026-07-29",
+    "header": {
+      "company_name": "苏州禾盛新型材料股份有限公司",
+      "ticker": "002290",
+      "exchange": "深交所",
+      "sector_tag": [
+        "家电复合材料",
+        "PCM/VCM",
+        "新材料"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.20",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-29",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 12.45,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+2.74%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1244743312.28
+      },
+      "net_profit_attributable": {
+        "value": 13621,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+40.42%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 136212561.61
+      },
+      "net_profit_deducted": {
+        "value": 8829,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-9.07%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 88293297.95
+      },
+      "gross_margin": {
+        "value": 14.91,
+        "unit": "%",
+        "page": "p.12",
+        "period": "2026H1",
+        "yoy": "-0.12 pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "分行业家电复合材料毛利率14.91%(-0.12pct)，为主业口径"
+      },
+      "net_margin": {
+        "value": 10.94,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "由8.01%升至10.94%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约8.01%"
+      },
+      "operating_cash_flow": {
+        "value": 1734,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-74.52%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 17340106.34,
+        "note": "由+6805万降为+1734万"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-74.52%(1734万)，由+6805万降为+1734万",
+        "page": "p.7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.20"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7",
+          "note": "公司明确追溯调整或重述以前年度会计数据=否"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.38",
+          "note": "合并资产负债表商誉科目无余额，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "2026年2月控股股东变更为上海摩尔智芯信息科技合伙企业(有限合伙)(持股18.00%)、实控人变更为谢海闻；前两大股东上海摩尔智芯(持44,660,220股)与卢大光(持31,580,646股)均处质押状态",
+          "page": "p.31-32"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.20",
+          "note": "报告期无违规对外担保情况"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.2/p.17"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1.36亿(+40.42%) vs 扣非8829万(-9.07%)，非经常性损益约4792万(主要为资产处置收益约4780万)占归母约35%，归母增长主要靠一次性资产处置撑高、主业扣非反而下滑",
+        "page": "p.7/p.11",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+2.74%但经营现金流1734万(上年同期6805万)，-74.52%；现金大幅减少，与利润走势背离",
+        "page": "p.7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率14.91%(-0.12pct)、净利率10.94%(由8.01%升至10.94%)，毛利率持平、净利率因处置收益抬升，未反向",
+        "page": "p.12/p.7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收4.94亿(较期初-12.35%)、存货3.96亿(较期初+13.84%)，应收下降、存货温和上升，无重大异动",
+        "page": "p.12/p.37",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "归母靠资产处置撑高、扣非下滑、经营现金流大降、控股股东变更+前两大股东质押，3看点但无高看点(非标/严重)叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3→小型看点合集：每个看点一段(数字领衔→情况→张力)，末段行业句收",
+      "headline_number": "归母+40.42%，但扣非-9.07%、经营现金流-74.52%",
+      "block_text": "◆ 禾盛新材｜2026H1\n营收12.45亿，同比+2.74%；归母净利润1.36亿，同比+40.42%；扣非归母净利润8829万，同比-9.07%。表面归母高增，但非经常性损益约4792万(主要为资产处置收益约4780万)占归母约35%，主业扣非反而下滑。\n\n经营现金流净额1734万，上年同期为6805万，同比-74.52%；现金大幅缩水，与利润走势背离。综合毛利率14.91%(-0.12pct)，基本持平。\n\n2026年2月公司控股股东变更为上海摩尔智芯信息科技合伙企业(有限合伙)(持股18.00%)、实际控制人变更为谢海闻；前两大股东上海摩尔智芯(持有4466万股)与卢大光(持有3158万股)目前均处于质押状态。\n\n禾盛新材做的是家电用外观复合材料(PCM/VCM)——冰箱门板、洗衣机箱体这些家电外壳的装饰层。家电以旧换新与出口回暖带动需求，但复合材料的利润空间薄、回款节奏与股东层面变动，是这类制造公司半年报里更该盯的两处。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "四方科技集团股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444625.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444625.PDF",
+    "stock_code": "603339",
+    "announcement_date": "2026-07-29",
+    "header": {
+      "company_name": "四方科技集团股份有限公司",
+      "ticker": "603339",
+      "exchange": "上交所",
+      "sector_tag": [
+        "冷链装备",
+        "制冷设备",
+        "换热器"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.2",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-29",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 9.65,
+        "unit": "亿元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "+12.05%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 965232260.48
+      },
+      "net_profit_attributable": {
+        "value": 8629,
+        "unit": "万元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "+24.48%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 86291554.71
+      },
+      "net_profit_deducted": {
+        "value": 8135,
+        "unit": "万元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "+25.98%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 81348024.92
+      },
+      "gross_margin": {
+        "value": 20.73,
+        "unit": "%",
+        "page": "p.17·衍生",
+        "period": "2026H1",
+        "yoy": "+0.57 pct",
+        "is_derived": true,
+        "derivation": "毛利率=(营业收入-营业成本)/营业收入，营业收入与营业成本取自p.17",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 8.94,
+        "unit": "%",
+        "page": "p.5·衍生",
+        "period": "2026H1",
+        "yoy": "由8.05%升至8.94%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约8.05%"
+      },
+      "operating_cash_flow": {
+        "value": -2997,
+        "unit": "万元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "-113.70%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -29965863.3,
+        "note": "由+2.19亿转为-0.30亿"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-113.70%(-2997万)，由+2.19亿转为-0.30亿",
+        "page": "p.5"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.5",
+          "note": "主要会计数据和财务指标的说明=不适用，无会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.5"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.106",
+          "note": "商誉科目不适用(无商誉)，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "实控人黄杰(持股40.27%、1.25亿股)无质押；前十大股东均未质押/标记/冻结",
+          "page": "p.30"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不分配、不转增(每10股派息0元)",
+        "page": "p.2/p.22"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母8629万(+24.48%) vs 扣非8135万(+25.98%)，非经常性损益494万(占归母约5.7%)，利润主要靠主业",
+        "page": "p.5",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+12.05%但经营现金流-2997万(上年同期+2.19亿)，-113.70%，由正转负；报告称系存货与经营性应收增加",
+        "page": "p.5/p.34",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率约20.73%(+0.57pct)、净利率约8.94%(由8.05%升至8.94%)，同向微改善",
+        "page": "p.17·衍生/p.5·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收7229万(较期初+56.92%)、存货10.75亿(较期初+10.31%)；存货占资产约28%，应收基数小(占资产1.9%)，无重大异动",
+        "page": "p.34",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收利润双增但经营现金流由正转负(-113.70%)，2看点无高看点叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "经营现金流-113.70%，由+2.19亿转-0.30亿",
+      "block_text": "◆ 四方科技｜2026H1\n营收9.65亿，同比+12.05%；归母净利润8629万，同比+24.48%；扣非归母净利润8135万，同比+25.98%。利润增长主要靠主业，非经常性损益仅494万(占归母约5.7%)，综合毛利率约20.73%(+0.57pct)，主业质量不差。\n\n但经营现金流净额-2997万，上年同期为+2.19亿，同比-113.70%，由正转负；报告称系存货与经营性应收增加所致。存货10.75亿(较期初+10.31%)，占资产约28%。\n\n公司冷链业务营收4.56亿(+32.88%)、罐箱业务5.19亿(-2.34%)，两大板块一升一降。四方科技做的是冷链装备——速冻设备、制冷压缩机组、换热器这些冷链物流的制冷核心。在预制菜、生鲜电商拉动冷链需求、以及“双碳”推动换热器国产化的背景下，装备企业的订单与回款节奏，往往比单季利润更说明问题。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "河南省力量钻石股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444454.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-29/1225444454.PDF",
+    "stock_code": "301071",
+    "announcement_date": "2026-07-29",
+    "header": {
+      "company_name": "河南省力量钻石股份有限公司",
+      "ticker": "301071",
+      "exchange": "深交所",
+      "sector_tag": [
+        "超硬材料",
+        "培育钻石",
+        "金刚石"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.35",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-29",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 4.38,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+80.94%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 437713020.3
+      },
+      "net_profit_attributable": {
+        "value": 9008,
+        "unit": "万元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+247.61%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 90081556.09
+      },
+      "net_profit_deducted": {
+        "value": 6341,
+        "unit": "万元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+1,249.33%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 63412480.16
+      },
+      "gross_margin": {
+        "value": 34.87,
+        "unit": "%",
+        "page": "p.18",
+        "period": "2026H1",
+        "yoy": "+22.26 pct",
+        "is_derived": true,
+        "derivation": "前期毛利率由营收/营业成本增速反推(大颗粒金刚石上年毛利率约12.61%)，pct-point为推算",
+        "accounting_standard": "PRC GAAP",
+        "note": "主导产品大颗粒金刚石毛利率34.87%(报告口径同比+176.75%相对增幅)；综合毛利率未单列"
+      },
+      "net_margin": {
+        "value": 20.58,
+        "unit": "%",
+        "page": "p.8·衍生",
+        "period": "2026H1",
+        "yoy": "由10.71%升至20.58%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约10.71%"
+      },
+      "operating_cash_flow": {
+        "value": 20682,
+        "unit": "万元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+2.40%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 206818803.83,
+        "note": "经营现金流2.07亿，仍为正"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润+1,249.33%(低基数，上年扣非仅470万)",
+        "page": "p.8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.35"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.8",
+          "note": "公司明确追溯调整或重述以前年度会计数据=否"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.8"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未列示商誉科目(无并购商誉)，无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "实控人邵增明(持股34.41%、8755万股)质押状态为不适用(无质押)；前十大股东均未质押/标记/冻结",
+          "page": "p.41"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.2/p.31"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母9008万(+247.61%) vs 扣非6341万(+1,249.33%)，非经常性损益2667万(主要为金融资产公允价值变动损益约3393万)占归母约29.6%；扣非基数低(上年仅470万)放大百分比，但主业确在恢复、两者均正增，未靠非经常性损益撑正",
+        "page": "p.8/p.17",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+80.94%但经营现金流2.07亿(+2.40%)，现金流增速远落后于营收；经营现金净流入仍为正，但占营收比由上年同期约83%降至约47%，现金转化效率下降",
+        "page": "p.8",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "主导产品毛利率34.87%(+22.26pct)、净利率20.58%(由10.71%升至20.58%)，同向大幅改善(培育钻石价格回暖)",
+        "page": "p.18/p.8·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收3376万(较期初+39.4%)、存货4.04亿(较期初-3.49%)，存货微降、应收基数小，无重大异动；本期计提存货跌价损失约2063万",
+        "page": "p.19/p.18",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收+80.94%/归母+247.61%强复苏但经营现金转化效率下降(占营收比由83%降至47%)，2看点无高看点(非标/意外信号)叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "营收+80.94%、归母+247.61%，培育钻石价格回暖",
+      "block_text": "◆ 力量钻石｜2026H1\n营收4.38亿，同比+80.94%；归母净利润9008万，同比+247.61%；扣非归母净利润6341万，同比+1,249.33%(上年同期扣非仅470万，低基数放大百分比)。主导产品大颗粒金刚石毛利率34.87%，较上年同期回升约22个百分点——培育钻石价格回暖是这轮修复的主线。\n\n经营现金流净额2.07亿，同比+2.40%，仍为正；但占营收比由上年同期约83%降至约47%，现金转化效率有所下降。非经常性损益2667万(主要为金融资产公允价值变动损益约3393万)占归母约三成。\n\n公司地处河南这一全球超硬材料产业核心区，产品覆盖培育钻石、工业金刚石与金刚石微粉。在培育钻石经历一轮价格探底之后，产能出清与需求回暖如何传导到利润表，是这类材料公司的核心观察点。"
+    }
   }
 ]
