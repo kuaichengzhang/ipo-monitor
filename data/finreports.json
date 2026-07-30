@@ -285,6 +285,36 @@
     "uid": "871b251ebea26a2c"
   },
   {
+    "exchange": "港交所",
+    "company_name": "UNIVERSE ENT",
+    "stock_code": "01046",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-30",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0730/2026073000828.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "c068d9dd37a2b19f"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "MICROTECH MED-B",
+    "stock_code": "02235",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-30",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0730/2026073000798.pdf",
+    "source": "HKEX",
+    "industry": "医疗健康",
+    "sub_industry": "医疗服务",
+    "is_18a": false,
+    "uid": "0877bcef2c627a30"
+  },
+  {
     "exchange": "深交所",
     "company_name": "禾盛新材",
     "stock_code": "002290",
