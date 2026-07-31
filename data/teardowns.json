@@ -6372,5 +6372,607 @@
       "headline_number": "营收+80.94%、归母+247.61%，培育钻石价格回暖",
       "block_text": "◆ 力量钻石｜2026H1\n营收4.38亿，同比+80.94%；归母净利润9008万，同比+247.61%；扣非归母净利润6341万，同比+1,249.33%(上年同期扣非仅470万，低基数放大百分比)。主导产品大颗粒金刚石毛利率34.87%，较上年同期回升约22个百分点——培育钻石价格回暖是这轮修复的主线。\n\n经营现金流净额2.07亿，同比+2.40%，仍为正；但占营收比由上年同期约83%降至约47%，现金转化效率有所下降。非经常性损益2667万(主要为金融资产公允价值变动损益约3393万)占归母约三成。\n\n公司地处河南这一全球超硬材料产业核心区，产品覆盖培育钻石、工业金刚石与金刚石微粉。在培育钻石经历一轮价格探底之后，产能出清与需求回暖如何传导到利润表，是这类材料公司的核心观察点。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "福建漳州发展股份有限公司2024年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449573.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449573.PDF",
+    "stock_code": "000753",
+    "announcement_date": "2026-07-31",
+    "header": {
+      "company_name": "福建漳州发展股份有限公司",
+      "ticker": "000753",
+      "exchange": "深交所",
+      "sector_tag": [
+        "水务",
+        "新能源",
+        "工程施工",
+        "汽车销售"
+      ],
+      "tier": "basic",
+      "report_type": "FY年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2024",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.91/p.94",
+        "note": "年报经审计，审计机构容诚会计师事务所(特殊普通合伙)，审计报告签署日2025-04-17"
+      },
+      "disclosure_date": "2026-07-31",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 33.02,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "-9.51%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 3302206173.67
+      },
+      "net_profit_attributable": {
+        "value": 5341,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "-31.91%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 53413056.23
+      },
+      "net_profit_deducted": {
+        "value": 2125,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "+668.96%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 21251907.37,
+        "note": "扣非归母；2023年同期为-373.5万元，本期扭亏"
+      },
+      "gross_margin": {
+        "value": 15.6,
+        "unit": "%",
+        "page": "p.100·衍生",
+        "period": "2024",
+        "yoy": "-1.09 pct",
+        "is_derived": true,
+        "derivation": "由合并利润表营业收入33.02亿与营业成本27.87亿派生：(33.02-27.87)/33.02；2023年综合毛利率16.69%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 1.62,
+        "unit": "%",
+        "page": "p.100·衍生",
+        "period": "2024",
+        "yoy": "由2.15%降至1.62%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约2.15%"
+      },
+      "operating_cash_flow": {
+        "value": -24985,
+        "unit": "万元",
+        "page": "p.7/p.103",
+        "period": "2024",
+        "yoy": "-1.37%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -249847389.66,
+        "note": "经营现金流-2.50亿，连续两年为负"
+      },
+      "biggest_mover": {
+        "value": "营收同比-9.51%为收入端最大降幅；扣非归母净利润由2023年-373万元扭亏至2024年+2126万元(+668.96%)",
+        "page": "p.7/p.8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.91/p.94",
+          "note": "标准无保留审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7",
+          "note": "追溯调整或重述以前年度会计数据=否"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.96",
+          "note": "商誉1673万(期初190万，本期因收购信产集团等新增)，未见减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "控股股东福建漳龙集团(持股28.82%、285,750,394股)及前十大股东质押、标记或冻结状态均为空白(无质押/冻结)",
+          "page": "p.83/p.84"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派发现金红利0.15元(含税)，现金分红14,872,216.07元",
+        "page": "p.49/p.132"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母5341万(-31.91%) vs 扣非2125万(+668.96%)，非经常性损益约3216万(主要为资产处置损益3172万，系金峰自来水旧厂征迁确认)占归母约60.2%，利润靠非经常性损益撑高",
+        "page": "p.7/p.8/p.55",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收33.02亿(-9.51%)但经营现金流-2.50亿(连续两年为负，同比-1.37%)；报告称本期工程施工回款放缓、收到现金减少",
+        "page": "p.7/p.103",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率15.60%(-1.09pct)、归母净利率1.62%(由2.15%降至1.62%)，同向小幅下降(收入与利润双降)",
+        "page": "p.100·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款18.61亿(期初9.32亿，+99.8%)，主因工程施工应收增加、信产集团纳入合并及污水处理应收上升；存货2.59亿(期初2.42亿，+7.2%)基本持平",
+        "page": "p.23/p.96",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收-9.51%/归母-31.91%但扣非靠约3216万非经常性损益(资产处置)撑高至2125万、经营现金流连续两年为负、应收账款接近翻倍至18.61亿，质量背离明显；无意外信号(非标/质押/减值)叠加，2看点未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "归母-31.91%，扣非靠3216万资产处置损益撑正；经营现金流-2.50亿",
+      "block_text": "◆ 漳州发展｜2024年报\n营收33.02亿，同比-9.51%；归母净利润5341万，同比-31.91%；扣非归母净利润2125万，同比+668.96%(上年同期为-373万)。利润表看似修复，但非经常性损益约3216万(主要为金峰自来水旧厂征迁确认资产处置损益3172万)占归母约六成，主业贡献有限。\n\n经营现金流净额-2.50亿，连续两年为负(同比-1.37%)，公司称系工程施工回款放缓、收到现金减少。应收账款18.61亿，较期初9.32亿接近翻倍，主因工程施工应收增加、信产集团纳入合并及污水处理应收上升；存货2.59亿基本持平。综合毛利率15.60%，较上年16.69%微降。\n\n漳州发展是漳州国资旗下控股平台，业务横跨水务、新能源、工程施工与汽车销售。在城投与工程施工回款普遍承压的背景之下，这类公司利润表的修复，往往要先看现金流与应收——账面利润与实际回款是否同步，是观察此类国企的关键。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "金杯电工股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449721.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449721.PDF",
+    "stock_code": "002533",
+    "announcement_date": "2026-07-31",
+    "header": {
+      "company_name": "金杯电工股份有限公司",
+      "ticker": "002533",
+      "exchange": "深交所",
+      "sector_tag": [
+        "电线电缆",
+        "扁电磁线",
+        "电气设备"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.28/p.41",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-31",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 118.61,
+        "unit": "亿元",
+        "page": "p.7/p.17",
+        "period": "2026H1",
+        "yoy": "+27.07%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 11861499567.92
+      },
+      "net_profit_attributable": {
+        "value": 31691,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+6.96%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 316907241.48
+      },
+      "net_profit_deducted": {
+        "value": 27298,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "+0.77%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 272977366.29
+      },
+      "gross_margin": {
+        "value": 9.71,
+        "unit": "%",
+        "page": "p.46·衍生",
+        "period": "2026H1",
+        "yoy": "-0.61 pct",
+        "is_derived": true,
+        "derivation": "由合并利润表营业收入118.61亿与营业成本107.10亿派生：(118.61-107.10)/118.61；2025H1综合毛利率10.32%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 2.67,
+        "unit": "%",
+        "page": "p.46·衍生",
+        "period": "2026H1",
+        "yoy": "由3.17%降至2.67%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约3.17%"
+      },
+      "operating_cash_flow": {
+        "value": -166975,
+        "unit": "万元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-41.09%",
+        "accounting_standard": "PRC GAAP",
+        "raw": -1669753375.5,
+        "note": "经营现金流-16.70亿，由上年同期-11.83亿进一步转负"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额-16.70亿(同比-41.09%)；应收账款+34.91%、存货+47.96%同步上升占款",
+        "page": "p.7/p.17"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.28/p.41"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7",
+          "note": "追溯调整或重述以前年度会计数据=否"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.42",
+          "note": "合并资产负债表商誉栏为空，无商誉、无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东(能翔投资、吴学愚、闽能投资等一致行动人)质押、标记或冻结状态均为不适用(无质押)",
+          "page": "p.37"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.2/p.25"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母3.17亿(+6.96%) vs 扣非2.73亿(+0.77%)，非经常性损益约4393万(主要为金融资产公允价值变动损益约4369万)占归母约13.9%，利润主要靠主业",
+        "page": "p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+27.07%但经营现金流-16.70亿(同比-41.09%，由-11.83亿进一步转负)；报告称受应收与存货占款影响",
+        "page": "p.7/p.17",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率9.71%(-0.61pct)、净利率2.67%(由3.17%降至2.67%)，同向小幅下降",
+        "page": "p.46·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款46.66亿(较上年末+34.91%)、存货24.98亿(较上年末+47.96%)同步上升，公司称主因铜价上涨、销售规模扩大、账期延长及成品与在制品库存增加",
+        "page": "p.17/p.42",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收+27.07%但经营现金流-16.70亿(同比-41.09%)、应收账款+34.91%存货+47.96%占款，质量背离明显；无意外信号(非标/质押/减值/会计变更)叠加，2看点未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "营收+27.07%，但经营现金流-16.70亿、应收存货双升",
+      "block_text": "◆ 金杯电工｜2026H1\n营收118.61亿，同比+27.07%；归母净利润3.17亿，同比+6.96%；扣非归母净利润2.73亿，同比+0.77%。收入延续增长，但利润增速明显落后于营收，非经常性损益约4393万(主要为金融资产公允价值变动损益约4369万)占归母约13.9%。\n\n经营现金流净额-16.70亿，同比-41.09%，由上年同期-11.83亿进一步转负。应收账款46.66亿(较上年末+34.91%)、存货24.98亿(较上年末+47.96%)同步上升，公司称主因铜价上涨、销售规模扩大、账期延长及成品与在制品库存增加。综合毛利率9.71%，较上年同期10.32%微降0.61个百分点。\n\n金杯电工是国内扁电磁线与线缆头部企业，产品应用于特高压、新能源与AI数据中心等领域。在铜价高位与直销占比提升之下，营收做大的同时，回款与库存占款对经营现金流的影响，是这类制造企业的常看项。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "湖北平安电工科技股份公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449661.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449661.PDF",
+    "stock_code": "001359",
+    "announcement_date": "2026-07-31",
+    "header": {
+      "company_name": "湖北平安电工科技股份公司",
+      "ticker": "001359",
+      "exchange": "深交所",
+      "sector_tag": [
+        "云母耐温绝缘材料",
+        "新能源热失控防护",
+        "电子布",
+        "新材料"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.24/p.36",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-31",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 6.86,
+        "unit": "亿元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "+20.27%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 686042802.81
+      },
+      "net_profit_attributable": {
+        "value": 12452,
+        "unit": "万元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "-7.81%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 124518738.07
+      },
+      "net_profit_deducted": {
+        "value": 12086,
+        "unit": "万元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "-6.35%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 120861245.47
+      },
+      "gross_margin": {
+        "value": 35.19,
+        "unit": "%",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "-1.97 pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "分产品：云母耐温绝缘材料毛利率-4.07pct、特种纤维及电子布+4.20pct"
+      },
+      "net_margin": {
+        "value": 18.15,
+        "unit": "%",
+        "page": "p.11·衍生",
+        "period": "2026H1",
+        "yoy": "由23.68%降至18.15%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约23.68%"
+      },
+      "operating_cash_flow": {
+        "value": 12889,
+        "unit": "万元",
+        "page": "p.11/p.36",
+        "period": "2026H1",
+        "yoy": "+38.39%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 128887518.01,
+        "note": "经营现金流1.29亿，为正且增长"
+      },
+      "biggest_mover": {
+        "value": "归母净利润同比-7.81%(营收+20.27%但利润下降)；综合毛利率35.19%(-1.97pct)",
+        "page": "p.11"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.24/p.36"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7",
+          "note": "追溯调整或重述以前年度会计数据=否"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.39",
+          "note": "合并及母公司资产负债表商誉栏为空，无商誉、无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "控股股东湖北众晖实业(持股39.89%、9620万股)及实控人潘渡江等前十大股东质押、标记或冻结状态均为不适用(无质押)",
+          "page": "p.31"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派发现金红利1.60元(含税)，现金分红38,584,658.24元",
+        "page": "p.24/p.36"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1.25亿(-7.81%) vs 扣非1.21亿(-6.35%)，非经常性损益约366万(占归母约2.9%)，利润基本来自主业，无背离",
+        "page": "p.11",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+20.27%且经营现金流1.29亿(+38.39%)，现金流为正且增速高于营收，无背离",
+        "page": "p.11/p.36",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "综合毛利率35.19%(-1.97pct)、净利率18.15%(由23.68%降至18.15%)，同向下降；毛利率降幅主要由云母材料业务(能源化工涨价、汇率及出口退税率变化)拖累",
+        "page": "p.11/p.11·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款3.27亿(较期初+23.5%)、存货3.73亿(较期初+14.6%)温和上升，无重大异动",
+        "page": "p.13/p.36",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "低",
+      "promote_to_standalone": false,
+      "promote_note": "营收+20.27%但归母-7.81%、毛利率-1.97pct，仅本期变化1看点；质量背离/意外信号均未命中，无高看点叠加"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "营收+20.27%，但归母净利润-7.81%、毛利率-1.97pct",
+      "block_text": "◆ 平安电工｜2026H1\n营收6.86亿，同比+20.27%；归母净利润1.25亿，同比-7.81%；扣非归母净利润1.21亿，同比-6.35%。营收增长但利润下滑，非经常性损益约366万(占归母约2.9%)，利润基本来自主业。综合毛利率35.19%，同比下降1.97个百分点——其中云母耐温绝缘材料毛利率下降4.07%(能源与化工材料价格上涨、汇率及出口退税率变化)，特种纤维及电子布毛利率上升4.20%(高频高速PCB与服务器基板需求带动)。\n\n经营现金流净额1.29亿，同比+38.39%，为正且增长；应收账款3.27亿(较期初+23.5%)、存货3.73亿(较期初+14.6%)温和上升。公司计划每10股派发现金红利1.60元。\n\n平安电工主营云母耐温绝缘材料、新能源热失控防护件与特种纤维电子布，下游覆盖新能源汽车与PCB。在新能源与AI算力带动电子布需求的同时，原材料价格与出口政策的变化，直接影响这类材料企业的毛利空间。"
+    }
   }
 ]
