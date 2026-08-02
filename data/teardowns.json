@@ -7571,5 +7571,602 @@
       "headline_number": "营收+19.53%，但经营现金流-45.18%",
       "block_text": "◆ 信达证券｜2026H1\n营收24.35亿，同比+19.53%；归母净利润10.97亿，同比+7.15%；扣非归母净利润10.91亿，同比+6.97%。上半年A股成交额同比大增、IPO募资回暖，行业经纪与投行业务受益，公司营收增速领先于利润增速。\n\n但经营现金流净额6.39亿，同比-45.18%(上年同期11.65亿)，与营收增长背离。券商经营现金流受金融资产配置及客户资金变动影响较大，照财报口径列示，不代表经营质量恶化。\n\n信达证券背靠中国信达，是AMC系券商。在“十五五”开局、资本市场活跃度回升的背景下，券商的经纪、自营与投行业务弹性，与自营仓位和市场波动带来的现金流摆动，往往同步放大——这是这类公司的固有特征。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "东兴证券股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449485.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449485.PDF",
+    "stock_code": "601198",
+    "announcement_date": "2026-07-31",
+    "header": {
+      "company_name": "东兴证券股份有限公司",
+      "ticker": "601198",
+      "exchange": "上交所",
+      "sector_tag": [
+        "证券",
+        "金融服务",
+        "券商"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.2",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-31",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 25.06,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+11.40%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 2505602174.61
+      },
+      "net_profit_attributable": {
+        "value": 10.25,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+25.13%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1024731981.8
+      },
+      "net_profit_deducted": {
+        "value": 10.25,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "+25.41%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1025042898.8
+      },
+      "gross_margin": {
+        "value": 54.9,
+        "unit": "%",
+        "page": "p.21",
+        "period": "2026H1",
+        "yoy": "增加10.38个百分点",
+        "accounting_standard": "PRC GAAP",
+        "note": "主营业务收入成本分析表「合计」列示毛利率54.90%(营收25.06亿、成本11.30亿)；券商无传统毛利口径，此处照财报分行业表合计行列示"
+      },
+      "net_margin": {
+        "value": 40.9,
+        "unit": "%",
+        "page": "p.9·衍生",
+        "period": "2026H1",
+        "yoy": "由36.41%升至40.90%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约36.41%"
+      },
+      "operating_cash_flow": {
+        "value": 103.6,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "-13.33%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 10359812193.29,
+        "note": "经营现金流103.60亿，同比-13.33%，由119.53亿降至103.60亿"
+      },
+      "biggest_mover": {
+        "value": "利润总额同比+37.23%(13.75亿)，高于营收增速，利润弹性来自投资类损益波动",
+        "page": "p.9"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.9",
+          "note": "主要会计数据和财务指标的说明=不适用，无会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.9"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": "商誉减值准备2000万元(期初=期末，本期无新增计提)",
+          "page": "p.119"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东持股均标记「无」质押或冻结(控股股东中国东方资产45.00%)",
+          "page": "p.43"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不分配、不转增(每10股派息0元，不涉及)",
+        "page": "p.32"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母10.25亿(+25.13%) vs 扣非10.25亿(+25.41%)，非经常性损益-31.09万元(投资收益等界定为经常性损益)，基本一致",
+        "page": "p.9/p.10",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+11.40%但经营现金流净额-13.33%(由119.53亿降至103.60亿)，现金流与营收背离；券商经营现金流受交易性金融资产处置及回购业务现金净流入变动影响较大，照财报口径列示",
+        "page": "p.9",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "券商无传统毛利率口径；净利率约40.90%(由36.41%升至40.90%，+4.49pct)，收入结构(自营/经纪)变动所致",
+        "page": "p.9·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "券商资产以金融资产为主，应收/存货不适用；应收款项2.07亿(较上年末+76.76%)绝对额占资产比重低，买入返售金融资产3.46亿、卖出回购金融资产款29.74亿",
+        "page": "p.11/p.24",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收+11.40%/归母+25.13%稳增长，但经营现金流-13.33%(由119.53亿降至103.60亿)与营收背离；2看点无高看点叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "归母净利润10.25亿元，同比+25.13%",
+      "block_text": "◆ 东兴证券｜2026H1\n营业收入25.06亿，同比+11.40%；归母净利润10.25亿，同比+25.13%；扣非归母净利润10.25亿，同比+25.41%。上半年市场回暖带动经纪、自营与投行业务，公司利润增速快于营收增速，归母与扣非基本一致，非经常性损益仅-31.09万元。\n\n但经营现金流净额103.60亿，同比-13.33%(上年同期119.53亿)，与营收增长背离。券商经营现金流受交易性金融资产处置及回购业务现金净流入变动影响较大，照财报口径列示，不代表经营质量恶化。\n\n东兴证券背靠中国东方资产，是AMC系券商。在资本市场活跃度回升的背景下，券商的经纪、自营与投行业务弹性，与自营仓位和市场波动带来的现金流摆动，往往同步放大——这是这类公司的固有特征。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "广东联泰环保股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449331.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449331.PDF",
+    "stock_code": "603797",
+    "announcement_date": "2026-07-31",
+    "header": {
+      "company_name": "广东联泰环保股份有限公司",
+      "ticker": "603797",
+      "exchange": "上交所",
+      "sector_tag": [
+        "环保",
+        "公用事业",
+        "污水处理"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.2",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-31",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 5.21,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+0.85%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 521284191.19
+      },
+      "net_profit_attributable": {
+        "value": 0.82,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-2.89%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 82038011.49
+      },
+      "net_profit_deducted": {
+        "value": 0.82,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-5.57%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 82155861.84
+      },
+      "gross_margin": {
+        "value": 60.06,
+        "unit": "%",
+        "page": "p.129",
+        "period": "2026H1",
+        "yoy": "由60.91%降至60.06%",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入；本期主营业务营收5.21亿、成本2.08亿",
+        "note": "报告未单列合并毛利率，按主营业务营收成本派生"
+      },
+      "net_margin": {
+        "value": 15.74,
+        "unit": "%",
+        "page": "p.6·衍生",
+        "period": "2026H1",
+        "yoy": "由16.34%降至15.74%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约16.34%"
+      },
+      "operating_cash_flow": {
+        "value": 1.47,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+25.05%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 146720722.81,
+        "note": "经营现金流1.47亿，同比+25.05%，由1.17亿升至1.47亿"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额+25.05%(回款改善)，而营收仅+0.85%、归母-2.89%",
+        "page": "p.6"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.6",
+          "note": "主要会计数据和财务指标的说明=√适用，为科目变动解释，非会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.6"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": "无商誉(商誉账面原值□适用，商誉减值准备□适用)",
+          "page": "p.111"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东广东省联泰集团有限公司质押1.61亿股(占其持股约61.75%)、深圳市联泰投资集团有限公司质押5400万股(占其持股约75.55%)",
+          "page": "p.33",
+          "note": "质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1半年度不分配、不转增(每10股派息0元)",
+        "page": "p.23"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.82亿(-2.89%) vs 扣非0.82亿(-5.57%)，非经常性损益-11.79万元，主业贡献利润",
+        "page": "p.6/p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+0.85%但经营现金流+25.05%(由1.17亿升至1.47亿)，回款改善(污水处理服务费回款增加)，现金流增速高于营收",
+        "page": "p.6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率约60.06%(由60.91%降至60.06%，-0.85pct)、净利率约15.74%(由16.34%降至15.74%)，同向小幅下行",
+        "page": "p.129/p.6",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款19.84亿(较上年末+12.11%，约为年营收3.8倍)、存货930万元(+7.65%)；应收账款规模大、账期偏长，MD&A提及应收账款持续增加致信用减值损失增加",
+        "page": "p.36/p.7",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "意外信号",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "控股股东及一致行动人合计质押约2.15亿股(联泰集团1.61亿+联泰投资5400万，占各自持股62%-76%)+应收账款19.84亿(约为年营收3.8倍)质量特征；3看点无高看点叠加，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3→展开成小型看点合集(每点一段)",
+      "headline_number": "控股股东及一致行动人合计质押约2.15亿股",
+      "block_text": "◆ 联泰环保｜2026H1\n营业收入5.21亿，同比+0.85%；归母净利润0.82亿，同比-2.89%；扣非归母净利润0.82亿，同比-5.57%。上半年污水处理量略增带动营收微升，但期间费用与信用减值损失拖累，利润小幅下滑，归母与扣非基本一致。\n\n经营现金流净额1.47亿，同比+25.05%(由1.17亿升至1.47亿)，受益于污水处理服务费回款增加，现金流表现优于利润表。\n\n但控股股东广东省联泰集团质押1.61亿股(占其持股约61.75%)、深圳市联泰投资质押5400万股(占其持股约75.55%)，合计约2.15亿股。同时应收账款19.84亿，约为年营收的3.8倍，MD&A提及应收账款持续增加导致信用减值损失增加。污水处理属特许经营、回款依赖地方财政，应收账款规模与股东质押是这类公司的共性特征。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "广西桂冠电力股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449300.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-07-31/1225449300.PDF",
+    "stock_code": "600236",
+    "announcement_date": "2026-07-31",
+    "header": {
+      "company_name": "广西桂冠电力股份有限公司",
+      "ticker": "600236",
+      "exchange": "上交所",
+      "sector_tag": [
+        "电力",
+        "公用事业",
+        "水电"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.2",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-07-31",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 57.16,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+37.59%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 5716383159.57
+      },
+      "net_profit_attributable": {
+        "value": 17.59,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+48.09%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1758973019.31
+      },
+      "net_profit_deducted": {
+        "value": 17.81,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+49.70%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 1780740941.87
+      },
+      "gross_margin": {
+        "value": 56.13,
+        "unit": "%",
+        "page": "p.159",
+        "period": "2026H1",
+        "yoy": "由49.43%升至56.13%",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入；本期营收57.16亿、成本25.08亿",
+        "note": "报告未单列合并毛利率，按合计营收成本派生"
+      },
+      "net_margin": {
+        "value": 30.77,
+        "unit": "%",
+        "page": "p.6·衍生",
+        "period": "2026H1",
+        "yoy": "由28.59%升至30.77%",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入",
+        "note": "去年同期约28.59%"
+      },
+      "operating_cash_flow": {
+        "value": 38.03,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+30.81%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 3802916896.4,
+        "note": "经营现金流38.03亿，同比+30.81%"
+      },
+      "biggest_mover": {
+        "value": "归母净利润+48.09%(17.59亿)，主因红水河流域来水偏丰、水电发电量同比+57.72%",
+        "page": "p.6/p.9"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.6",
+          "note": "主要会计数据和财务指标的说明=√适用，为科目变动解释，非会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.6"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": "商誉原值3.31亿，减值准备按前期余额列示(大唐桂冠招远等)，本期未新增计提(商誉减值损失科目为空)",
+          "page": "p.139/p.163"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东持股均标记「无」质押或冻结(控股股东中国大唐集团51.55%，央企背景)",
+          "page": "p.26/p.27"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保/资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派现金红利1.2元(含税)，分红总额9.46亿元",
+        "page": "p.2"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母17.59亿(+48.09%) vs 扣非17.81亿(+49.70%)，非经常性损益-2176.79万元(主要为营业外收支净额-4248.95万元)，扣非略高于归母",
+        "page": "p.6/p.8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+37.59%、经营现金流+30.81%，同步增长，现金流转化良好",
+        "page": "p.6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率约56.13%(由49.43%升至56.13%，+6.70pct)、净利率约30.77%(由28.59%升至30.77%)，同向上行",
+        "page": "p.159/p.6",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款25.60亿(较上年末+15.90%，部分电费收费权质押)、存货1.45亿(较上年末-23.37%)；应收账款规模约为年营收0.45倍，属电力销售正常账期",
+        "page": "p.46",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收+37.59%/归母+48.09%强增长(来水偏丰、水电发电量+57.72%)，无质量背离与意外信号；1看点，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "归母净利润17.59亿元，同比+48.09%",
+      "block_text": "◆ 桂冠电力｜2026H1\n营业收入57.16亿，同比+37.59%；归母净利润17.59亿，同比+48.09%；扣非归母净利润17.81亿，同比+49.70%。上半年红水河流域来水偏丰(同比偏多约5成)，水电发电量213.27亿千瓦时、同比+57.72%，拉动业绩高增，毛利率由49.43%升至56.13%。\n\n经营现金流净额38.03亿，同比+30.81%，与营收同步增长，现金流转化良好；半年度拟每10股派1.2元，分红总额9.46亿元。\n\n桂冠电力是以水电为主的清洁能源运营商，在役水电装机占67%、居广西统调水电约三分之二。在水风光火多能互补与区域电力市场化背景下，来水丰枯仍是这类公司利润弹性的核心变量。"
+    }
   }
 ]
