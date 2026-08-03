@@ -8168,5 +8168,617 @@
       "headline_number": "归母净利润17.59亿元，同比+48.09%",
       "block_text": "◆ 桂冠电力｜2026H1\n营业收入57.16亿，同比+37.59%；归母净利润17.59亿，同比+48.09%；扣非归母净利润17.81亿，同比+49.70%。上半年红水河流域来水偏丰(同比偏多约5成)，水电发电量213.27亿千瓦时、同比+57.72%，拉动业绩高增，毛利率由49.43%升至56.13%。\n\n经营现金流净额38.03亿，同比+30.81%，与营收同步增长，现金流转化良好；半年度拟每10股派1.2元，分红总额9.46亿元。\n\n桂冠电力是以水电为主的清洁能源运营商，在役水电装机占67%、居广西统调水电约三分之二。在水风光火多能互补与区域电力市场化背景下，来水丰枯仍是这类公司利润弹性的核心变量。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "苏州华之杰电讯股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225452763.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225452763.PDF",
+    "stock_code": "603400",
+    "announcement_date": "2026-08-03",
+    "header": {
+      "company_name": "苏州华之杰电讯股份有限公司",
+      "ticker": "603400",
+      "exchange": "上交所",
+      "sector_tag": [
+        "智能控制",
+        "电动工具零部件",
+        "汽车电子"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.2",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-08-03",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 6.74,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-3.60%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 674360780.28
+      },
+      "net_profit_attributable": {
+        "value": 0.44,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-46.78%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 44252752.13
+      },
+      "net_profit_deducted": {
+        "value": 0.44,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-47.38%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 43604641.43,
+        "note": "扣非归母；非经常性损益合计64.81万元"
+      },
+      "gross_margin": {
+        "value": 21.95,
+        "unit": "%",
+        "page": "p.17·衍生",
+        "period": "2026H1",
+        "yoy": "由25.00%降至21.95%，-3.05 pct",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入；本期营收674,360,780.28元、营业成本526,322,703.94元",
+        "note": "报告未单列合并毛利率，按财务报表科目变动分析表派生"
+      },
+      "net_margin": {
+        "value": 6.56,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "由11.89%降至6.56%，-5.33 pct",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入"
+      },
+      "operating_cash_flow": {
+        "value": 0.68,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-28.86%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 67667046.26
+      },
+      "biggest_mover": {
+        "value": "财务费用1671.26万元，上年同期为-483.59万元，变动+445.60%，公司说明为汇率变动影响；同期营业成本几乎持平(+0.32%)而营收-3.60%，公司将利润下滑归因于汇率波动及材料成本上涨",
+        "page": "p.17/p.8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "本半年度报告未经审计",
+          "page": "p.2"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": "重要会计政策变更、重要会计估计变更均为「不适用」",
+          "page": "p.87"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.67",
+          "note": "所有者权益变动表中前期差错更正行为空"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": "商誉期末账面价值1763.03万元，报告期未见减值计提",
+          "unit": "亿元",
+          "page": "p.58"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十名股东质押、标记或冻结情况均列示「无」，数量为0；第一大股东颖策商务咨询管理(上海)有限公司持股29.45%",
+          "page": "p.52/p.53",
+          "note": "质押/减持/增持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.2",
+          "note": "报告未见违反规定决策程序对外提供担保的披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未披露半年度业绩预告对比"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利、不送红股、不以公积金转增股本；每10股送红股0股、派息0元、转增0股。另2026年5月已实施上年度权益分派方案，每10股转增3股、合计转增29,830,075股，转增后总股本129,830,075股",
+        "page": "p.23"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.44亿(-46.78%) vs 扣非0.44亿(-47.38%)，非经常性损益合计64.81万元、占归母约1.46%，两者基本一致，利润变动来自主业",
+        "page": "p.7/p.9",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-3.60%，经营活动现金流量净额0.68亿、-28.86%，现金流降幅大于营收降幅；同期归母-46.78%，现金流降幅小于利润降幅",
+        "page": "p.7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率由25.00%降至21.95%(-3.05pct)、净利率由11.89%降至6.56%(-5.33pct)，同向下行，净利率降幅更大",
+        "page": "p.17/p.7",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货4.74亿元，较上年末+49.21%，占总资产比例由16.59%升至23.37%，公司说明为「原材料价格波动，适当备货导致存货增加」；应收账款4.18亿元，较上年末-0.75%基本持平",
+        "page": "p.18/p.57",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收微降3.60%而归母-46.78%，公司口径归因汇率波动与材料成本上涨；叠加存货较上年末+49.21%。2个看点维度，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "归母净利润0.44亿元，同比-46.78%",
+      "block_text": "◆ 华之杰｜2026H1\n营业收入6.74亿，同比-3.60%；归母净利润0.44亿，同比-46.78%；扣非归母0.44亿，同比-47.38%。收入端只降3.60%，利润端降近一半。营业成本5.26亿，同比+0.32%，几乎与上年持平，毛利率由25.00%降至21.95%。公司在报告中把利润总额、归母净利润与扣非净利润的下滑，都归因于汇率波动及材料成本上涨。\n\n对应到科目上，财务费用本期1671万元，上年同期为-484万元，变动+445.60%，公司说明为汇率变动影响。公司境外资产9.44亿元、占总资产46.54%，海外收入与资产的汇兑变动会直接落在这一科目。同期存货4.74亿元，较上年末+49.21%，占总资产比重由16.59%升至23.37%，公司说明为原材料价格波动、适当备货；应收账款4.18亿元，较上年末基本持平。经营活动现金流量净额0.68亿，同比-28.86%。半年度不分配、不转增；前十名股东质押与冻结均列示为无。\n\n华之杰主营智能开关、智能控制器、无刷电机等电动工具与消费电子零部件，客户以百得、TTI、博世、牧田等国际整机厂商为主。在外销占比高、以美元结算为主的零部件环节，汇率与原材料价格是同时落在成本与财务费用两处的变量。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "广东朝阳电子科技股份有限公司2026年半年度报告全文",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225450976.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225450976.PDF",
+    "stock_code": "002981",
+    "announcement_date": "2026-08-03",
+    "header": {
+      "company_name": "广东朝阳电子科技股份有限公司",
+      "ticker": "002981",
+      "exchange": "深交所",
+      "sector_tag": [
+        "电声",
+        "消费电子",
+        "计算机通信和其他电子设备制造业"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.21/p.31",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-08-03",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 8.04,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-8.03%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 803639195.32
+      },
+      "net_profit_attributable": {
+        "value": 0.07,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-85.87%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 7410686.38,
+        "note": "741.07万元"
+      },
+      "net_profit_deducted": {
+        "value": 0.07,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-86.58%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 6510837.01,
+        "note": "扣非归母651.08万元；非经常性损益合计89.98万元"
+      },
+      "gross_margin": {
+        "value": 17.59,
+        "unit": "%",
+        "page": "p.13",
+        "period": "2026H1",
+        "yoy": "-4.76 pct",
+        "note": "报告分行业「电子行业」列示毛利率17.59%；分产品耳机成品17.50%(-4.22pct)、音响类17.73%(-4.99pct)、精密零组件及其他17.14%(-4.24pct)"
+      },
+      "net_margin": {
+        "value": 0.92,
+        "unit": "%",
+        "page": "p.7·衍生",
+        "period": "2026H1",
+        "yoy": "由6.00%降至0.92%，-5.08 pct",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入"
+      },
+      "operating_cash_flow": {
+        "value": 0.19,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2026H1",
+        "yoy": "-25.05%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 19335640.97,
+        "note": "1933.56万元"
+      },
+      "biggest_mover": {
+        "value": "归母净利润741.07万元、同比-85.87%，为本期变动最大的科目；同期资产减值-1490.99万元、占利润总额-252.65%，公司说明主要系报告期计提存货跌价准备所致",
+        "page": "p.7/p.13"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "公司半年度报告未经审计",
+          "page": "p.21/p.31"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": "公司是否需追溯调整或重述以前年度会计数据=否",
+          "page": "p.7"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.7"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": "商誉期末4846.86万元、期初4846.86万元，报告期持平，未见减值计提；公司在风险提示中列示「并购资产商誉减值风险」，为前瞻性风险披露，非本期已发生减值",
+          "unit": "亿元",
+          "page": "p.32/p.17"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前10名股东质押、标记或冻结情况均列示「不适用」，数量为0；控股股东广东健溢投资持股50.91%。另公司层面：向民生银行东莞分行申请并购借款，以持有的飞达音响75.4091%股份作质押担保、自有房产作抵押担保，涉及股权账面价值2.50亿元、固定资产2390.17万元，属公司资产权利受限，非股东层面质押",
+          "page": "p.28/p.15",
+          "note": "质押/减持/增持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未见违规担保或资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未披露半年度业绩预告对比"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利、不送红股、不以公积金转增股本。另2026年7月2日完成2025年限制性股票激励计划92.74万股的回购注销手续",
+        "page": "p.19"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母741.07万(-85.87%) vs 扣非651.08万(-86.58%)，非经常性损益合计89.98万元、占归母约12.14%，两者降幅接近，利润下滑来自主业",
+        "page": "p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-8.03%，经营活动现金流量净额1933.56万元、-25.05%，现金流降幅大于营收降幅；但现金流规模仍为归母净利润的约2.6倍",
+        "page": "p.7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率17.59%(-4.76pct)、净利率由6.00%降至0.92%(-5.08pct)，同向下行",
+        "page": "p.13/p.7",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "营收-8.03%，同期应收账款4.24亿元、较上年末+28.55%(占总资产比由20.23%升至24.70%)，存货3.22亿元、较上年末+25.32%(占比由15.79%升至18.79%)；收入下行而应收与存货同时上升。报告期计提存货跌价准备，资产减值-1490.99万元",
+        "page": "p.14/p.31/p.13",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收-8.03%而归母-85.87%，毛利率-4.76pct；应收+28.55%、存货+25.32%与收入方向相反，并计提存货跌价准备1490.99万元。2个看点维度，未达单独深写阈值",
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "本期变化",
+        "业绩兑现"
+      ]
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "归母净利润741万元，同比-85.87%",
+      "block_text": "◆ 朝阳科技｜2026H1\n营业收入8.04亿，同比-8.03%；归母净利润741万，同比-85.87%；扣非归母651万，同比-86.58%。收入降8%，利润降近86%。毛利率17.59%，比上年同期降4.76个百分点，分产品看，耳机成品17.50%、音响类17.73%、精密零组件及其他17.14%，三条线的毛利率都降了4个百分点以上。公司在风险提示中列出两项原因口径：汇率波动带来汇兑损失并通过外币收入影响毛利率，核心原材料采购价格同比涨幅较为显著且供应偏紧、而产品调价存在滞后。\n\n收入下行，应收与存货却在上行。应收账款4.24亿元，较上年末+28.55%，占总资产比重由20.23%升至24.70%；存货3.22亿元，较上年末+25.32%，占比由15.79%升至18.79%。报告期计提存货跌价准备，资产减值1490.99万元，占利润总额的-252.65%——这一项的绝对额已经超过本期归母净利润。经营活动现金流量净额1933.56万元，同比-25.05%。商誉4846.86万元与期初持平，未计提减值；前10名股东质押与冻结均列示为不适用。\n\n朝阳科技以耳机、音响 ODM 为主，境外收入占74.17%，越南与香港子公司合计资产超6.5亿元。在以外销 ODM 为主的电声环节，汇率、原材料价格与调价节奏之间的时间差，是同时压在毛利率与存货两头的变量。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "深圳市一博科技股份有限公司2026年半年度报告全文",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225450272.PDF"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-03/1225450272.PDF",
+    "stock_code": "301366",
+    "announcement_date": "2026-08-03",
+    "header": {
+      "company_name": "深圳市一博科技股份有限公司",
+      "ticker": "301366",
+      "exchange": "深交所",
+      "sector_tag": [
+        "PCB设计服务",
+        "PCBA制造",
+        "电子制造服务"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p.31/p.42",
+        "note": "半年报未经审计属正常，非非标"
+      },
+      "disclosure_date": "2026-08-03",
+      "existing_listing_note": "已上市→不写主稿；basic档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 7.09,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+41.63%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 708792806.39
+      },
+      "net_profit_attributable": {
+        "value": 0.64,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+1561.55%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 63829325.44,
+        "note": "上年同期384.16万元"
+      },
+      "net_profit_deducted": {
+        "value": 0.6,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2026H1",
+        "yoy": "+3005.41%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 60050005.66,
+        "note": "扣非归母；上年同期为-206.68万元，本期由负转正。非经常性损益合计377.93万元"
+      },
+      "gross_margin": {
+        "value": 31.44,
+        "unit": "%",
+        "page": "p.25",
+        "period": "2026H1",
+        "yoy": "+4.34 pct",
+        "note": "报告在风险提示中列示综合毛利率31.44%、同比上升4.34个百分点；分业务PCB设计服务46.31%(+4.62pct)、PCBA制造服务28.47%(+4.61pct)，见p.15"
+      },
+      "net_margin": {
+        "value": 9.01,
+        "unit": "%",
+        "page": "p.8·衍生",
+        "period": "2026H1",
+        "yoy": "由0.77%升至9.01%，+8.24 pct",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入"
+      },
+      "operating_cash_flow": {
+        "value": 0.53,
+        "unit": "亿元",
+        "page": "p.8/p.15",
+        "period": "2026H1",
+        "yoy": "+401.57%",
+        "accounting_standard": "PRC GAAP",
+        "raw": 52761046.1,
+        "note": "公司说明主要系本期客户回款同比增加，同时珠海一博电子收到增值税留抵税退税所致"
+      },
+      "biggest_mover": {
+        "value": "PCB制板收入13,788.46万元、同比+246.87%；公司说明珠海一博电子PCB板厂、珠海IPO募投项目、天津PCBA工厂经历前期爬坡后均已度过月度盈亏平衡点，逐步开始贡献利润",
+        "page": "p.10"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "公司半年度报告未经审计",
+          "page": "p.31/p.42"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": "公司是否需追溯调整或重述以前年度会计数据=否",
+          "page": "p.8"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.8"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": "商誉期末136.80万元、期初136.80万元，报告期持平，未见减值计提",
+          "unit": "亿元",
+          "page": "p.43"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前10名股东质押、标记或冻结情况均列示「不适用」，数量为0；汤昌茂等七人为一致行动人、合计持股58.89%",
+          "page": "p.38/p.39",
+          "note": "质押/减持/增持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.19/p.21",
+          "note": "报告披露闲置募集资金现金管理未到期赎回金额38,900.00万元，不存在任何质押担保；未见违规担保或资金占用披露"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "报告未披露半年度业绩预告对比"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利、不送红股、不以公积金转增股本",
+        "page": "p.2/p.28"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.64亿(+1561.55%) vs 扣非0.60亿(+3005.41%)，非经常性损益合计377.93万元、占归母约5.92%，其中公允价值变动及处置损益405.31万元；利润增长以主业为主，扣非由上年-206.68万元转正",
+        "page": "p.8/p.9",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+41.63%，经营活动现金流量净额0.53亿、+401.57%，现金流增速快于营收；公司说明为客户回款增加与增值税留抵退税",
+        "page": "p.8/p.15",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率31.44%(+4.34pct)、净利率由0.77%升至9.01%(+8.24pct)，同向上行",
+        "page": "p.25/p.8",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款3.10亿元、较上年末+37.81%，存货3.63亿元、较上年末+23.51%，两者增速均低于营收增速41.63%，占总资产比重分别为10.14%与11.88%；报告期计提存货跌价准备，资产减值-361.27万元、占利润总额-5.49%",
+        "page": "p.16/p.42/p.15",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收+41.63%、扣非由亏转盈至0.60亿，毛利率+4.34pct、经营现金流+401.57%，四项质量背离均未触发，意外信号为空；1个看点维度，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简2-3段：一个核心看点讲透，收在行业句",
+      "headline_number": "扣非归母净利润0.60亿元，上年同期为-207万元",
+      "block_text": "◆ 一博科技｜2026H1\n营业收入7.09亿，同比+41.63%；归母净利润0.64亿，同比+1561.55%；扣非归母0.60亿，上年同期为-206.68万元，本期由负转正。综合毛利率31.44%，同比上升4.34个百分点。拆到业务线，PCB制板收入13,788.46万元、同比+246.87%，PCBA制造服务收入58,544.56万元(含制板收入)、同比+44.38%，PCB设计服务收入12,032.81万元、同比+29.89%。公司说明，珠海一博电子PCB板厂、珠海IPO募投项目、天津一博电子PCBA工厂经历前期爬坡后，均已度过月度盈亏平衡点，逐步开始贡献利润。\n\n利润增长基本由主业带动。非经常性损益377.93万元，占归母约5.92%；经营活动现金流量净额0.53亿，同比+401.57%，公司说明为客户回款增加与珠海一博电子收到增值税留抵退税。应收账款3.10亿、存货3.63亿，较上年末分别+37.81%与+23.51%，增速均低于营收增速。研发投入6907.66万元，同比+13.57%。半年度不分配、不转增；商誉136.80万元与期初持平；前10名股东质押与冻结均列示为不适用。\n\n一博科技以PCB设计服务起家，近年把服务链条延伸到PCB制板与PCBA制造。对这一批从设计端向制造端延伸的公司，新增产能从投产到跨过月度盈亏平衡点之间的这段爬坡期，是财务报表上先承压、后释放的共同节奏。"
+    }
   }
 ]
