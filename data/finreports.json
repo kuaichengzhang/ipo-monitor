@@ -121,18 +121,33 @@
   },
   {
     "exchange": "港交所",
-    "company_name": "GAUSH MEDITECH",
-    "stock_code": "02407",
+    "company_name": "SF INTRA-CITY",
+    "stock_code": "09699",
     "report_type": "Profit Warning",
     "report_period": "",
     "title": "Announcements and Notices - [Profit Warning / Inside Information]",
     "announcement_date": "2026-08-03",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0803/2026080303357.pdf",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0803/2026080303817.pdf",
     "source": "HKEX",
     "industry": "",
     "sub_industry": "",
     "is_18a": false,
-    "uid": "79c4800a04fbdbea"
+    "uid": "6259233a262fdeef"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "ACESO LIFE SCI",
+    "stock_code": "00474",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information / Profit Warning]",
+    "announcement_date": "2026-08-03",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0803/2026080303799.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "21f26875758f602d"
   },
   {
     "exchange": "港交所",
@@ -3538,6 +3553,21 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "829625cd4fa01705"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "GAUSH MEDITECH",
+    "stock_code": "02407",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-07-23",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0723/2026072301406.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "79c4800a04fbdbea"
   },
   {
     "exchange": "深交所",
