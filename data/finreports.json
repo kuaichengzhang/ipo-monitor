@@ -121,6 +121,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "GAUSH MEDITECH",
+    "stock_code": "02407",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-08-03",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0803/2026080303357.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "79c4800a04fbdbea"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "INSPUR DIGI ENT",
     "stock_code": "00596",
     "report_type": "Profit Warning",
@@ -3988,21 +4003,6 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "c9ec43bac7becba1"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "GAUSH MEDITECH",
-    "stock_code": "02407",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
-    "announcement_date": "2026-07-23",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0723/2026072301406.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "79c4800a04fbdbea"
   },
   {
     "exchange": "上交所",
