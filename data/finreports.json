@@ -405,6 +405,21 @@
     "uid": "19ff5d3f20f4ac21"
   },
   {
+    "exchange": "港交所",
+    "company_name": "FE HORIZON<br/>FE HORI N2704<br/>FE HORI N2803<br/>FE HORI N2810<br/>FE HORI N2810B<br/>FE HORI N2711<br/>FE HORI N2901<br/>FE HORI N2610<br/>FE HORI N2802-R",
+    "stock_code": "03360<br/>04571<br/>05185<br/>05491<br/>05998<br/>40006<br/>40036<br/>40887<br/>85008",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-08-05",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0805/2026080500279.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "97db1ceea774e6ae"
+  },
+  {
     "exchange": "深交所",
     "company_name": "雷柏科技",
     "stock_code": "002577",
