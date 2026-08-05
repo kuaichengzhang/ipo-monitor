@@ -420,6 +420,36 @@
     "uid": "97db1ceea774e6ae"
   },
   {
+    "exchange": "港交所",
+    "company_name": "REALWAY CAPITAL",
+    "stock_code": "01835",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information / Announcement by Offeree Company under the Takeovers Code]",
+    "announcement_date": "2026-08-05",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0805/2026080501248.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "a9e3efe92edcfe94"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "BE FRIENDS HLDG",
+    "stock_code": "01450",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-08-05",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0805/2026080501226.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "9d6608d4eb61d3e4"
+  },
+  {
     "exchange": "深交所",
     "company_name": "雷柏科技",
     "stock_code": "002577",
