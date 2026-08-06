@@ -10040,5 +10040,578 @@
       "headline_number": "营收16.58亿元、增11.34%，归母净利4.79亿元、增23.08%",
       "block_text": "◆ 百润股份｜2026H1\n营收16.58亿元、增11.34%，归母净利4.79亿元、增23.08%\n\n上半年营收16.58亿元，增11.34%；归母净利4.79亿元，增23.08%；扣非4.53亿元，增27.29%。扣非增速高于归母，非经常性损益2,557万元，占归母5.34%，主体是政府补助2,847万元。主营业务毛利率合计70.68%，同比升0.17个百分点，净利率由26.13%升至28.89%。分产品，酒类收入14.30亿元、增10.23%，毛利率70.54%；食用香精1.95亿元、增15.68%，毛利率71.74%。分渠道，线下14.40亿元、增9.81%；数字零售1.85亿元、增19.66%，毛利率降2.67个百分点。销售费用3.56亿元，增18.19%，快于收入增速；管理费用1.12亿元，减2.54%。\n\n利润上行的同期，经营现金流下行。经营活动现金流量净额4.41亿元，减10.12%；经营现金流与归母净利之比由1.26降至0.92。资产端存货15.57亿元，较上年末增13.15%，占总资产17.79%；应收账款7,957万元，较上年末减12.29%，只相当于半年营收的4.80%，回款结构未见压力。公司披露崃州蒸馏厂的威士忌产能和桶陈数量在国内领先（p.10），报告未单列存货结构说明。\n\n股东端有一条：第二大股东刘建国持股6.05%、6,300万股，全部处于质押状态；第三大股东柳海彬持股5.97%，质押834万股。控股股东刘晓东持股34.81%，质押栏为“不适用”，报告期内持股数量未变动。公司无商誉，半年度不分配、不转增。\n\n预调酒与威士忌这一环，前者按销售季与渠道铺货周转，后者的桶陈要按年计，酒液在库的时间本身就是工艺的一部分，存货余额与当期收入之间隔着一段陈化期。"
     }
+  },
+  {
+    "_meta": {
+      "source_report": "2023年年度",
+      "generator": "automation-brain"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-06/1225460225.PDF",
+    "stock_code": "000637",
+    "announcement_date": "2026-08-06",
+    "header": {
+      "company_name": "茂化实华",
+      "ticker": "000637",
+      "exchange": "深交所",
+      "sector_tag": [
+        "化工"
+      ],
+      "tier": "basic",
+      "report_type": "FY2023年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2023",
+      "audit_status": {
+        "value": "保留意见",
+        "page": "p.127",
+        "note": "中兴财光华出具；形成保留意见的基础为诉讼相关退款与划扣事项（华兴银行要求退款4250万元、广发银行划扣1799万元）"
+      },
+      "disclosure_date": "2024-04-25",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块拆解稿仅供合辑，非深度单篇"
+    },
+    "movements": {
+      "revenue": {
+        "value": 45.48,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "-24.95%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -1.28,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "+1.38%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -1.31,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "+1.29%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 4.85,
+        "unit": "%",
+        "page": "p.138·衍生",
+        "period": "2023",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入，取自利润表"
+      },
+      "net_margin": {
+        "value": -2.81,
+        "unit": "%",
+        "page": "p.8/p.138·衍生",
+        "period": "2023",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入"
+      },
+      "operating_cash_flow": {
+        "value": 2.47,
+        "unit": "亿元",
+        "page": "p.8",
+        "period": "2023",
+        "yoy": "-43.33%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流同比-43.33%（仍为正，2.47亿元）",
+        "page": "p.8",
+        "note": "营收降幅大于现金流降幅，现金回款表现优于收入"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": true,
+        "detail": {
+          "value": "保留意见",
+          "page": "p.127"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": true,
+        "detail": {
+          "value": "因《企业会计准则解释第16号》追溯调整（租赁负债/使用权资产递延所得税）",
+          "page": "p.8"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东北京泰跃所持151,538,145股（占其持股100%）全部质押；2024年1月司法拍卖致控制权变更",
+          "page": "p.120"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不派发现金红利",
+        "page": "p.66"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-1.28亿与扣非-1.31亿基本一致，非经常性损益仅约366万元，主业亏损未靠非经常性损益修饰",
+        "page": "p.10",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收同比-24.95%，经营现金流2.47亿元仍为正（同比-43.33%），未见营收与现金明显背离",
+        "page": "p.8",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率约4.85%（利润表派生），净利率约-2.81%，方向未做跨期反转判定（缺2022年毛利率）",
+        "page": "p.138",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "期末应收0.74亿、存货2.21亿，占营收比重低（约1.6%/4.9%），未见显著占款异动",
+        "page": "p.134",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "意外信号"
+      ],
+      "triggered_count": 2,
+      "spine": "意外信号",
+      "roundup_priority": "高",
+      "promote_to_standalone": true,
+      "promote_note": "非标审计意见+连续三年亏损+控股股东100%质押及控制权变更，看点叠加，建议单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点（本期变化+意外信号）→极简2-3段，核心看点（非标+控制权变更）讲透，收在行业句",
+      "headline_number": "连续三年亏损，2023年再收保留意见",
+      "block_text": "茂化实华2023年营收45.48亿元，同比降24.95%；归母净利润-1.28亿元、扣非-1.31亿元，主业亏损未靠非经常性损益修饰（非经常性损益仅约366万元）。经营现金流2.47亿元，仍为正但同比降43.33%。\n审计机构中兴财光华出具保留意见（p.127），形成保留意见的基础是诉讼相关的退款与划扣事项——华兴银行要求公司退款4250万元、广发银行划扣1799万元。\n控股股东北京泰跃所持1.52亿股（占其持股100%）全部质押，且因司法拍卖，公司控制权已变更（p.120）。这是一家连续三年亏损、审计非标、控制权易主的化工企业。\n2023年石化行业利润总额同比降8.8%，基础化学品、合成材料等子行业利润普遍下行——茂化实华的承压不是孤例。"
+    }
+  },
+  {
+    "_meta": {
+      "source_report": "2024年年度",
+      "generator": "automation-brain"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-06/1225460241.PDF",
+    "stock_code": "000637",
+    "announcement_date": "2026-08-06",
+    "header": {
+      "company_name": "茂化实华",
+      "ticker": "000637",
+      "exchange": "深交所",
+      "sector_tag": [
+        "化工"
+      ],
+      "tier": "basic",
+      "report_type": "FY2024年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2024",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.110",
+        "note": "中兴财光华出具（财报审计意见类型为标准的无保留意见）"
+      },
+      "disclosure_date": "2025-04-27",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块拆解稿仅供合辑，非深度单篇"
+    },
+    "movements": {
+      "revenue": {
+        "value": 37.55,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "-17.43%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -0.83,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "+34.77%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -1.87,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "-42.59%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 3.85,
+        "unit": "%",
+        "page": "p.120·衍生",
+        "period": "2024",
+        "yoy": "-1.00pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入，取自利润表"
+      },
+      "net_margin": {
+        "value": -2.22,
+        "unit": "%",
+        "page": "p.7/p.120·衍生",
+        "period": "2024",
+        "yoy": "+0.59pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入"
+      },
+      "operating_cash_flow": {
+        "value": -1.85,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2024",
+        "yoy": "-175.00%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流由+2.47亿转-1.85亿（同比-175.00%）",
+        "page": "p.7",
+        "note": "盈利未转化为现金，现金流转负"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "标准无保留",
+          "page": "p.110"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东由北京泰跃变更为茂名港集团（司法拍卖过户，国资），新控股股东股份状态不适用（无质押）",
+          "page": "p.104"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不派发现金红利",
+        "page": "p.68"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.83亿、扣非-1.87亿，差异约1.04亿元（非经常性损益，其中金融资产处置收益约0.94亿元），主业亏损高于表观净利",
+        "page": "p.8",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收37.55亿（同比-17.43%），经营现金流-1.85亿（上年+2.47亿，由正转负），盈利未转化为现金",
+        "page": "p.7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率3.85%（同比-1.00pct）下行，净利率-2.22%（同比+0.59pct）上行，两率反向",
+        "page": "p.120/p.138",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": "期末应收0.59亿、存货1.67亿，均较上年末下降，未见占款上升",
+        "page": "p.116",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "高",
+      "promote_to_standalone": false,
+      "promote_note": ""
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3看点（本期变化+质量背离+意外信号）→小型看点合集，每点一段，末段行业句收",
+      "headline_number": "营收三连降，2024年现金流转负",
+      "block_text": "茂化实华2024年营收37.55亿元，同比再降17.43%；归母净利润-0.83亿元（亏损收窄），但扣非-1.87亿元（亏损扩大），差异约1.04亿元来自非经常性损益——其中金融资产处置收益约0.94亿元，主业亏损高于表观净利。\n经营现金流-1.85亿元，由上年+2.47亿元转正转负（同比-175.00%），盈利未转化为现金。\n毛利率3.85%（同比-1.00pct）下行，净利率-2.22%（同比+0.59pct）上行，两率反向；期末应收0.59亿、存货1.67亿均较上年末下降，未见占款上升。\n控股股东于年内由北京泰跃变更为茂名港集团（司法拍卖过户，国资），新控股股东无质押。在炼化深加工价格随周期下行的背景下，这类以薄毛利产品为主的企业，收入与现金的匹配是持续被检视的环节。"
+    }
+  },
+  {
+    "_meta": {
+      "source_report": "2025年年度",
+      "generator": "automation-brain"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-06/1225460240.PDF",
+    "stock_code": "000637",
+    "announcement_date": "2026-08-06",
+    "header": {
+      "company_name": "茂化实华",
+      "ticker": "000637",
+      "exchange": "深交所",
+      "sector_tag": [
+        "化工"
+      ],
+      "tier": "basic",
+      "report_type": "FY2025年报",
+      "report_type_enum": [
+        "FY年报"
+      ],
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p.88",
+        "note": "鹏盛会计师事务所出具（财报审计意见类型为标准的无保留意见）"
+      },
+      "disclosure_date": "2026-04-27",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块拆解稿仅供合辑，非深度单篇"
+    },
+    "movements": {
+      "revenue": {
+        "value": 31.08,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "-17.23%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -1.42,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "-69.92%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -1.6,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "+14.63%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 1.63,
+        "unit": "%",
+        "page": "p.97·衍生",
+        "period": "2025",
+        "yoy": "-2.22pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入，取自利润表"
+      },
+      "net_margin": {
+        "value": -4.56,
+        "unit": "%",
+        "page": "p.7/p.97·衍生",
+        "period": "2025",
+        "yoy": "-2.34pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入"
+      },
+      "operating_cash_flow": {
+        "value": -0.8,
+        "unit": "亿元",
+        "page": "p.7",
+        "period": "2025",
+        "yoy": "+57.01%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润同比-69.92%（亏损扩大至-1.42亿元）",
+        "page": "p.7",
+        "note": "连续三年亏损且2025年亏损幅度扩大"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "标准无保留",
+          "page": "p.88"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "控股股东茂名港集团（国有法人）股份状态不适用（无质押），本年无控制权变更或冻结",
+          "page": "p.81"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不派发现金红利",
+        "page": "p.53"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-1.42亿、扣非-1.60亿，差异约0.18亿元（非经常性损益1838万），主业亏损略高于表观",
+        "page": "p.8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收31.08亿（同比-17.23%），经营现金流-0.80亿（仍为负，同比改善+57.01%），持续现金流出但未较营收进一步背离",
+        "page": "p.7",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率1.63%（同比-2.22pct）、净利率-4.56%（同比-2.34pct）同向下行",
+        "page": "p.97",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "期末应收0.44亿、存货1.26亿，均较上年末下降",
+        "page": "p.93",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "低",
+      "promote_to_standalone": false,
+      "promote_note": ""
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1看点（本期变化）→只写本期变动最大的一条+行业句，2段成稿",
+      "headline_number": "营收三连降至31亿，2025年亏损扩大",
+      "block_text": "茂化实华2025年营收31.08亿元，同比再降17.23%，已是连续第三年下滑；归母净利润-1.42亿元，亏损较上年扩大69.92%，扣非-1.60亿元。毛利率降至1.63%（同比-2.22pct），是报告期内经营亏损的核心外部因素——主营聚丙烯、特种白油等产品价格随周期下行、装置负荷受限。\n经营现金流-0.80亿元，仍为净流出，但较上年-1.85亿元改善57.01%。在炼化深加工价格随周期下行的行业里，薄毛利产品的收入与现金匹配，是这类企业共同面对的题。"
+    }
   }
 ]
