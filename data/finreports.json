@@ -570,6 +570,21 @@
     "uid": "dfcbb93c735effdb"
   },
   {
+    "exchange": "港交所",
+    "company_name": "CHINASHENGMU-PF",
+    "stock_code": "01432",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-08-06",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0806/2026080601357.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "2f06c89fbc2a9c39"
+  },
+  {
     "exchange": "深交所",
     "company_name": "厚普股份",
     "stock_code": "300471",
