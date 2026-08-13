@@ -11869,5 +11869,567 @@
       "headline_number": "归母净利润2.25亿元、同比+111.09%；扣非+141.73%",
       "block_text": "◆ 北化股份｜2026H1\n归母净利润2.25亿元、同比+111.09%，扣非归母净利润1.99亿元、同比+141.73%\n\n上半年营业收入13.37亿元，同比增长18.16%，毛利率由上年同期的29.01%升至37.27%，提升8.26个百分点（p.7/p.14）。公司形成以硝化棉为核心的纤维素新材料、以活性炭为基础的防化环保、以渣浆泵为核心的特种工业泵「多主业」结构，硝化棉产销规模自2004年起保持全球领先（p.8）。\n\n经营活动现金流量净额2.43亿元，同比增长130.43%，与营收、利润同步走强（p.7）。公司半年度报告未经审计（p.32），本期不分配、不转增（p.2）；控股股东承诺所持股权无质押、冻结等限制性情形（p.28）。\n\n在地缘格局多变、全球硝化棉需求维持高位的背景下，以纤维素新材料为主业的化工企业，正处在一轮由供需偏紧带来的盈利修复区间。"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-13/1225470819.PDF",
+    "stock_code": "002556",
+    "announcement_date": "2026-08-13",
+    "header": {
+      "company_name": "安徽辉隆农资集团股份有限公司",
+      "ticker": "002556",
+      "exchange": "深交所",
+      "sector_tag": [
+        "农资流通"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p47",
+        "note": "半年报常规未经审计"
+      },
+      "disclosure_date": "2026-08-13",
+      "existing_listing_note": "已上市→默认不写主稿; 拆解稿仅供看板展示"
+    },
+    "movements": {
+      "revenue": {
+        "value": 85.47,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+3.26%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 1.13,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+1.51%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.6,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+73.40%",
+        "note": "扣非归母",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 6.18,
+        "unit": "%",
+        "page": "p19·衍生",
+        "period": "2026H1",
+        "yoy": "+0.41pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "(营业收入8,547,193,971.98−营业成本8,018,783,712.53)÷营业收入, 营业成本见p19"
+      },
+      "net_margin": {
+        "value": 1.32,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": "-0.02pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入"
+      },
+      "operating_cash_flow": {
+        "value": -4.17,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-283.00%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营活动现金流净额-4.17亿元, 同比-283.00%, 净流出由-1.09亿元扩大至-4.17亿元",
+        "page": "p7"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p47",
+          "note": "半年报常规未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p48",
+          "note": "商誉账面74,161,921.49元, 期末=期初持平, 无新增减值计提"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东股份状态均'不适用', 无质押/冻结",
+          "page": "p42",
+          "note": "控股股东安徽辉隆投资集团(37.74%)无质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": "无违规对外担保",
+          "page": "p35"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报无业绩预告对比"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利, 不送红股, 不以公积金转增股本",
+        "page": "p31"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母+1.51% vs 扣非+73.40%; 非经常性损益由上年约0.76亿元降至0.52亿元, 核心主业增速被非经常性损益回落掩盖",
+        "page": "p7",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+3.26%但经营现金流由-1.09亿元转-4.17亿元(-283.00%), 净流出扩大",
+        "page": "p7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率约6.18%(+0.41pct)微升, 净利率约1.32%(-0.02pct)基本持平, 未明显反向",
+        "page": "p19·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款5.78亿元→13.61亿元(+135.6%), 存货30.45亿元→33.46亿元(+9.9%)",
+        "page": "p21",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "仅质量背离+本期变化, 无高看点叠加"
+    },
+    "tier_basic_article": {
+      "headline_number": "经营现金流净额-4.17亿元, 同比-283.00%",
+      "block_text": "◆ 辉隆股份｜2026H1\n半年报经营现金流净额-4.17亿元，同比-283.00%，净流出较上年同期(-1.09亿元)进一步扩大。\n\n营收85.47亿元(+3.26%)、归母净利1.13亿元(+1.51%)，增速平缓；扣非净利0.60亿元(+73.40%)，但这一高增部分源于上年非经常性损益(约0.76亿元)较高、本期降至0.52亿元，核心主业改善被非经常性损益回落所掩盖(p7)。\n\n张力在现金流与应收：经营现金流转负且扩大，应收账款由期初5.78亿元增至13.61亿元(+135.6%)、存货由30.45亿元增至33.46亿元(+9.9%)，上半年经营性应收项目净增加10.69亿元(p21/p151)。农资流通本就低毛利(综合毛利率约6.18%，p19·衍生)，收入稳而现金回款走弱。\n\n行业句：这不是辉隆一家——农资流通企业普遍在保供稳价下以规模换份额，应收账款随渠道铺货走高，现金流与利润表的背离是这类企业的共性约束。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-13/1225470505.PDF",
+    "stock_code": "300047",
+    "announcement_date": "2026-08-13",
+    "header": {
+      "company_name": "深圳天源迪科信息技术股份有限公司",
+      "ticker": "300047",
+      "exchange": "深交所",
+      "sector_tag": [
+        "软件和信息技术服务"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p44",
+        "note": "半年报常规未经审计"
+      },
+      "disclosure_date": "2026-08-13",
+      "existing_listing_note": "已上市→默认不写主稿; 拆解稿仅供看板展示"
+    },
+    "movements": {
+      "revenue": {
+        "value": 46.75,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "+12.71%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.33,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-5.68%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.26,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-20.14%",
+        "note": "扣非归母",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 7.03,
+        "unit": "%",
+        "page": "p22·衍生",
+        "period": "2026H1",
+        "yoy": "-1.55pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "(营业收入4,674,744,754.93−营业成本4,346,011,163.85)÷营业收入, 营业成本见p22"
+      },
+      "net_margin": {
+        "value": 0.7,
+        "unit": "%",
+        "page": "p8·衍生",
+        "period": "2026H1",
+        "yoy": "-0.14pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入"
+      },
+      "operating_cash_flow": {
+        "value": 2.63,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-61.15%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营活动现金流净额+2.63亿元, 同比-61.15%, 由+6.77亿元回落",
+        "page": "p8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p44",
+          "note": "半年报常规未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p45",
+          "note": "商誉485,174,177.95元, 期末=期初持平, 无新增减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "陈友原质押12,736,943股已于2026-06-16解除质押, 期末累计质押0股",
+          "page": "p37",
+          "note": "前十大股东股份状态均'不适用', 无在质股份"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": "无违规对外担保",
+          "page": "p32"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报无业绩预告对比"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利, 不送红股, 不以公积金转增股本",
+        "page": "p30"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-5.68% vs 扣非-20.14%; 非经常性损益约673万元(政府补助等)使归母降幅小于扣非, 核心业务下滑被部分对冲",
+        "page": "p8",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+12.71%但经营现金流由+6.77亿元降至+2.63亿元(-61.15%), 回款节奏走弱",
+        "page": "p8",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率约7.03%(-1.55pct)与净利率约0.70%(-0.14pct)同向回落, 未反向",
+        "page": "p22·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款19.30亿元(+9.9%)、存货20.67亿元(-2.8%), 未见显著异动",
+        "page": "p25",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "仅质量背离+本期变化, 无高看点叠加"
+    },
+    "tier_basic_article": {
+      "headline_number": "归母净利0.33亿元, 同比-5.68%",
+      "block_text": "◆ 天源迪科｜2026H1\n半年报归母净利0.33亿元，同比-5.68%；扣非净利0.26亿元，同比-20.14%，主业盈利进一步走弱(p8)。\n\n营收46.75亿元(+12.71%)，增长主要来自ICT产品销售及增值服务(+16.27%)，但该板块低毛利，拖累综合毛利率由8.58%降至约7.03%(p22·衍生)。经营现金流净额+2.63亿元，同比-61.15%，由上年+6.77亿元回落，回款节奏走弱(p8)。\n\n张力在利润结构：归母降幅(-5.68%)小于扣非(-20.14%)，约673万元非经常性损益(政府补助等)部分对冲了核心业务下滑(p8)。应收账款19.30亿元(+9.9%)、存货20.67亿元(-2.8%)，未见显著异动(p25)。\n\n行业句：这不是天源迪科一家——在运营商投资调整、软件信创预算收紧的周期里，以ICT分销加行业软件为主业的集成商，普遍面临收入增、利润与现金弱的增长结构。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-13/1225470473.PDF",
+    "stock_code": "603530",
+    "announcement_date": "2026-08-13",
+    "header": {
+      "company_name": "江苏神马电力股份有限公司",
+      "ticker": "603530",
+      "exchange": "上交所",
+      "sector_tag": [
+        "电气机械和器材制造"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年报常规未经审计"
+      },
+      "disclosure_date": "2026-08-13",
+      "existing_listing_note": "已上市→默认不写主稿; 拆解稿仅供看板展示"
+    },
+    "movements": {
+      "revenue": {
+        "value": 8.95,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+26.98%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 2.15,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+34.01%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 2.09,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+32.24%",
+        "note": "扣非归母",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 47.36,
+        "unit": "%",
+        "page": "p16·衍生",
+        "period": "2026H1",
+        "yoy": "+2.96pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "(营业收入894,520,395.15−营业成本470,951,843.59)÷营业收入, 营业成本见p16"
+      },
+      "net_margin": {
+        "value": 24.01,
+        "unit": "%",
+        "page": "p6·衍生",
+        "period": "2026H1",
+        "yoy": "+1.26pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利润÷营业收入"
+      },
+      "operating_cash_flow": {
+        "value": 2.53,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期为-50,579,668.86元, 本期由负转正(+599.31%)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营活动现金流净额+2.53亿元, 同比由-0.51亿元转正(+599.31%)",
+        "page": "p6"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年报常规未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p114",
+          "note": "公司无商誉(商誉账面原值□适用)"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东上海神马电力控股有限公司质押57,500,000股(占其持股270,000,000股的21.30%)",
+          "page": "p40",
+          "note": "质押/标记或冻结情况: 质押57,500,000股"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": "无违规对外担保",
+          "page": "p31"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报无业绩预告对比"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不分配或转增(每10股派息0元)",
+        "page": "p24"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母+34.01% vs 扣非+32.24%, 非经常性损益仅544万元(占归母约2.5%), 二者基本同步, 无背离",
+        "page": "p6",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+26.98%且经营现金流由-0.51亿元转+2.53亿元(大幅改善), 现金与收入同向走强, 无背离",
+        "page": "p6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率约47.36%(+2.96pct)与净利率约24.01%(+1.26pct)同向上升, 未反向",
+        "page": "p16·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款8.61亿元(+5.4%)温和上升, 存货小幅增加(净增约816万元, p139), 未见显著异动",
+        "page": "p44",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "意外信号"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "强增长+控股股东质押信号, 无高看点(非标/现金跑道等)叠加"
+    },
+    "tier_basic_article": {
+      "headline_number": "归母净利2.15亿元, 同比+34.01%",
+      "block_text": "◆ 神马电力｜2026H1\n半年报归母净利2.15亿元，同比+34.01%；营收8.95亿元(+26.98%)，电网新材料绝缘产品延续存量替代逻辑(p6)。\n\n综合毛利率约47.36%(+2.96pct，由营业成本派生，p16)，扣非净利2.09亿元(+32.24%)，非经常性损益仅544万元，利润基本由主业贡献。经营现金流净额+2.53亿元，同比由-0.51亿元转正(+599.31%)，回款改善(p6)。\n\n需注意：控股股东上海神马电力控股有限公司质押5,750万股(占其持股21.30%)，p40。应收账款8.61亿元(+5.4%)温和上升，存货小幅增加，未见显著异动。\n\n行业句：这不是神马电力一家——在电网高可靠、低碳化升级周期里，以新材料绝缘件实现存量替代的配套企业，普遍享受结构性增量，但控股股东股权质押比例值得关注。"
+    }
   }
 ]
