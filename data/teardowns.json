@@ -12431,5 +12431,708 @@
       "headline_number": "归母净利2.15亿元, 同比+34.01%",
       "block_text": "◆ 神马电力｜2026H1\n半年报归母净利2.15亿元，同比+34.01%；营收8.95亿元(+26.98%)，电网新材料绝缘产品延续存量替代逻辑(p6)。\n\n综合毛利率约47.36%(+2.96pct，由营业成本派生，p16)，扣非净利2.09亿元(+32.24%)，非经常性损益仅544万元，利润基本由主业贡献。经营现金流净额+2.53亿元，同比由-0.51亿元转正(+599.31%)，回款改善(p6)。\n\n需注意：控股股东上海神马电力控股有限公司质押5,750万股(占其持股21.30%)，p40。应收账款8.61亿元(+5.4%)温和上升，存货小幅增加，未见显著异动。\n\n行业句：这不是神马电力一家——在电网高可靠、低碳化升级周期里，以新材料绝缘件实现存量替代的配套企业，普遍享受结构性增量，但控股股东股权质押比例值得关注。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "盈康生命科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472934.PDF"
+    },
+    "header": {
+      "company_name": "盈康生命科技股份有限公司",
+      "ticker": "300143",
+      "exchange": "深交所",
+      "sector_tag": [
+        "医疗健康",
+        "医疗服务"
+      ],
+      "tier": "healthcare_article",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p50",
+        "note": "半年度报告未经审计(董事会确认,p50/p68);condense误报'保留意见'系业绩承诺专项审核报告上下文误匹配,已据审计报告章节核实"
+      },
+      "disclosure_date": "2026-08-14",
+      "existing_listing_note": "已上市→不写主稿;医疗板块拆到成稿级,产出 roundup_block 供合辑"
+    },
+    "movements": {
+      "revenue": {
+        "value": 10.16,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+20.56%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.67,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+9.01%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.64,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+5.22%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 28.35,
+        "unit": "%",
+        "page": "p31·衍生",
+        "period": "2026H1",
+        "yoy": "+1.53 pct",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入;营业成本728,099,866.09元见p31,营业收入见p7",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 6.63,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": "-0.71 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 2.86,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+92.21%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额同比+92.21%(由1.49亿升至2.86亿)",
+        "page": "p7",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p50",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p7",
+          "note": "报告勾选追溯调整/重述(资本公积转增致股本变动,追溯重述上年同期每股收益0.09→0.07),属常规每股数调整,非差错更正"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": 10.12,
+          "unit": "亿元",
+          "page": "p32",
+          "note": "商誉10.12亿,期初持平,无重大变化,未提示减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p63",
+          "note": "前10名股东质押/标记或冻结均为'不适用';控股股东青岛盈康医疗投资(49.68%)无质押冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p50",
+          "note": "报告期无违规对外担保情况(p50)"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "p45",
+        "note": "半年度不派发现金红利、不送红股、不以公积金转增股本(p45);2025年度每10股派0.25元+转增3股已于2026-06-03实施完毕"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.67亿(+9.01%)与扣非0.64亿(+5.22%)接近,非经常性损益364万元占归母约5.4%,未显著撑高利润",
+        "page": "p7/p75",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+20.56%、经营现金流+92.21%(均增),现金转化改善,无背离",
+        "page": "p7",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率+1.53pct(衍生)但净利率-0.71pct(衍生),反向;主因管理费用+36.68%(并购长沙珂信)、财务费用由33万升至1174万",
+        "page": "p31/p7·衍生",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": "应收账款2.39亿(-19.84%)、存货0.82亿(-6.33%),均较期初下降,无异常",
+        "page": "p32",
+        "hit": false
+      }
+    },
+    "healthcare_plugin": {
+      "cash_runway": {
+        "cash_reserve": {
+          "value": 6.52,
+          "unit": "亿元",
+          "page": "p32",
+          "period": "2026H1末",
+          "note": "货币资金6.52亿(期初10.67亿,因收购少数股权及购买理财下降)"
+        },
+        "annual_cash_burn": {
+          "value": -2.86,
+          "unit": "亿元",
+          "page": "p7",
+          "period": "2026H1",
+          "note": "经营现金流净额+2.86亿(为正,非消耗)"
+        },
+        "runway_years": {
+          "value": null,
+          "unit": "年",
+          "page": "p32·衍生",
+          "is_derived": true,
+          "derivation": "经营现金流为正,无需跑道计算"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "pipeline": {
+        "core_assets": [
+          {
+            "name": "医疗服务(肿瘤专科医院)+医疗器械",
+            "stage": "已商业化",
+            "indication": "肿瘤综合治疗/大输注设备",
+            "period_change": "无变化",
+            "page": "p15"
+          }
+        ],
+        "single_asset_dependence": {
+          "value": null,
+          "page": "p15",
+          "note": "医疗服务+医疗器械双板块运营,无单一品种依赖"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "license_in_out": {
+        "license_in_share": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        },
+        "milestone_obligations": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "vbp_reimbursement": {
+        "products_affected": {
+          "value": "医疗器械板块部分产品面临集采",
+          "page": "p15/p16",
+          "note": "报告提及集采价格下降压力,器械业务营收同比+2.34%"
+        },
+        "price_cut": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未量化具体降价幅度"
+        },
+        "revenue_impact": {
+          "value": null,
+          "page": "p15",
+          "note": "器械业务营收同比+2.34%,集采压力已通过高端新品与供应链能力提升应对"
+        },
+        "trigger": true,
+        "trigger_rule_hit": "医疗器械板块面临集采价格下降压力(未量化降幅)"
+      },
+      "selling_expense": {
+        "selling_expense_ratio": {
+          "value": 2.59,
+          "unit": "%",
+          "page": "p31",
+          "period": "2026H1",
+          "yoy": "+0.0 pct",
+          "note": "销售费用2635万/营收10.16亿≈2.59%,同比+0.57%基本持平"
+        },
+        "vs_peer": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "医疗服务类公司,销售费用率偏低"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "rnd": {
+        "rnd_expense": {
+          "value": 0.28,
+          "unit": "亿元",
+          "page": "p73",
+          "period": "2026H1",
+          "yoy": "+29.42%",
+          "note": "研发费用2754万元,同比+29.42%"
+        },
+        "capitalization_ratio": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "质量背离",
+        "集采医保",
+        "本期变化"
+      ],
+      "triggered_count": 3,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "盈利增长+现金流改善,但毛利率低、集采压力,看点中等,未达单独深写阈值"
+    },
+    "roundup_block": {
+      "headline_number": "经营现金流净额2.86亿,同比+92.21%",
+      "block_text": "盈康生命2026年上半年营收10.16亿元、同比+20.56%,归母净利润0.67亿元、同比+9.01%,医疗服务板块规模扩大是主要拉动(p7)。经营现金流净额2.86亿元、同比+92.21%,由收入增长与收回长沙珂信原股东款项共同带动(p7)。\n\n利润结构有一点张力:毛利率28.35%(派生,较上年+1.53个百分点)走升,但净利率6.63%(派生)微降至7.34%以下,管理费用+36.68%(并购长沙珂信)、财务费用由33万元升至1174万元是主因(p31)。非经常性损益364万元、仅占归母净利润约5.4%,利润质量未受明显扰动(p7/p75)。\n\n医疗器械板块面临集采价格下降压力,报告称通过高端新品与供应链能力提升实现器械业务收入同比+2.34%,未量化具体降价幅度(p15/p16)。医疗健康行业在集采常态化之下,设备+数据+服务的场景化方案成为对冲价格下行的主要路径。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472934.PDF",
+    "stock_code": "300143",
+    "announcement_date": "2026-08-14"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "中铝国际工程股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472857.PDF"
+    },
+    "header": {
+      "company_name": "中铝国际工程股份有限公司",
+      "ticker": "601068",
+      "exchange": "上交所",
+      "sector_tag": [
+        "工程承包",
+        "建筑设计"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p4",
+        "note": "半年度报告未经审计(p4)"
+      },
+      "disclosure_date": "2026-08-14",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 90.48,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-6.71%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 10.71,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "+4.38%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 7.94,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "+41.93%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 14.56,
+        "unit": "%",
+        "page": "p14·衍生",
+        "period": "2026H1",
+        "yoy": "+3.72 pct",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入;营业成本77.3亿元见p14,营业收入见p8",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 1.18,
+        "unit": "%",
+        "page": "p8·衍生",
+        "period": "2026H1",
+        "yoy": "+0.12 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 2.88,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期为-1.99亿,本期转正,'不适用'列示",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润同比+41.93%(由5.59亿升至7.94亿)",
+        "page": "p8",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p4",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p8",
+          "note": "主要财务数据直接列示,未勾选追溯调整/重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "商誉余额未在抽取页定位(可能极小或为零),未提示减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p63",
+          "note": "控股股东中国铝业集团(72.85%)无质押,前10名股东质押/冻结均为'无/不适用'"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p61",
+          "note": "存在对子公司及高杠杆对象的常规担保,未见违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "p4",
+        "note": "董事会决议本期利润分配预案为无(半年度不派发现金红利、不送红股、不转增,p4)"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母10.71亿(+4.38%)与扣非7.94亿(+41.93%)背离(扣非更快),非经常性损益由4.67亿降至2.77亿、占归母约25.9%,扣非为利润主体且同比更快,未靠非经常性损益撑高",
+        "page": "p8",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-6.71%但经营现金流由-1.99亿转正至+2.88亿,现金转化改善,无背离",
+        "page": "p8",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率+3.72pct(衍生)且净利率+0.12pct(衍生),同向走升,无反向",
+        "page": "p14/p8·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款168.00亿、存货22.0亿(占资产偏高,p31),报告未提示重大变动",
+        "page": "p31",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收下滑但归母/扣非增长、经营现金流转正,盈利结构改善为单一看点,未达深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1维度(本期变化),极简2-3段,核心看点收在行业句",
+      "headline_number": "扣非归母净利润7.94亿,同比+41.93%",
+      "block_text": "中铝国际2026年上半年营收90.48亿元、同比-6.71%,主要受施工与装备制造板块收入阶段性下降拖累(p8/p14)。归母净利润10.71亿元、同比+4.38%,扣非归母净利润7.94亿元、同比+41.93%,非经常性损益由4.67亿元缩至2.77亿元,盈利质量反而改善(p8)。\n\n经营现金流净额2.88亿元,上年同期为-1.99亿元、由负转正;新签合同181.87亿元、同比+10.89%,其中工业类项目占比98.85%,订单结构向工业端集中(p10)。综合毛利率14.56%(派生,较上年+3.72个百分点),成本随收入下降而收窄(p14)。\n\n工程承包行业在有色景气波动之下,以技术为龙头的总承包模式与工业类订单占比提升,是这类设计院型工程公司稳住利润的主要抓手。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472857.PDF",
+    "stock_code": "601068",
+    "announcement_date": "2026-08-14"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "上海华测导航技术股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472842.PDF"
+    },
+    "header": {
+      "company_name": "上海华测导航技术股份有限公司",
+      "ticker": "300627",
+      "exchange": "深交所",
+      "sector_tag": [
+        "通信设备",
+        "卫星导航"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p45",
+        "note": "半年度报告未经审计(p45/p59)"
+      },
+      "disclosure_date": "2026-08-14",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 19.29,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+5.20%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 3.33,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+2.05%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 2.72,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-9.07%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 60.62,
+        "unit": "%",
+        "page": "p20·衍生",
+        "period": "2026H1",
+        "yoy": "+2.49 pct",
+        "is_derived": true,
+        "derivation": "(营业收入-营业成本)/营业收入;营业成本759,604,856.84元见p20,营业收入见p7",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 17.27,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": "-0.54 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 0.52,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-61.19%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额同比-61.19%(由1.34亿降至0.52亿)",
+        "page": "p7",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p45",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p7",
+          "note": "报告勾选追溯调整/重述(股本变动致每股收益可比数重述),属常规每股数调整,非差错更正"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": 0.37,
+          "unit": "亿元",
+          "page": "p60",
+          "note": "商誉3683万元,期初持平,无减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "实际控制人赵延平质押2308.40万股(占其持股约14.88%);太禾行质押379.40万股、宁波上裕质押934.00万股",
+          "page": "p54",
+          "note": "前10名股东中多家存在质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p39",
+          "note": "承诺不占用资金,未见违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "p32",
+        "note": "半年度不派发现金红利、不送红股、不转增(p32);2025年度每10股派4.5元已于2026-05-19实施完毕"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母3.33亿(+2.05%)与扣非2.72亿(-9.07%)背离,非经常性损益0.61亿(政府补助0.50亿+理财收益0.20亿)占归母约18.4%,是表观利润维持正增长的主要支撑",
+        "page": "p7/p84",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+5.20%但经营现金流-61.19%(由1.34亿降至0.52亿),现金转化回落",
+        "page": "p7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率+2.49pct(衍生)但净利率-0.54pct(衍生),反向;管理费用+53.67%因股份支付费用增加、财务费用由-0.36亿转+0.50亿汇兑损益",
+        "page": "p20·衍生",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": "应收账款13.70亿(+22.0%)、存货6.30亿(+14.9%),占款致现金流回落",
+        "page": "p22",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "质量背离4项全中+实控人质押,但营收稳增无亏损,看点中等,未达深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3维度(本期变化+质量背离+意外信号),极简2-3段,核心看点收在行业句",
+      "headline_number": "经营现金流净额0.52亿,同比-61.19%",
+      "block_text": "华测导航2026年上半年营收19.29亿元、同比+5.20%,归母净利润3.33亿元、同比+2.05%,但扣非归母净利润2.72亿元、同比-9.07%(p7)。非经常性损益0.61亿元(政府补助0.50亿元+理财收益0.20亿元)占归母净利润约18.4%,是表观利润维持正增长的主要支撑(p84)。\n\n经营现金流净额0.52亿元、同比-61.19%,应收账款13.70亿元、同比+22.0%,存货6.30亿元、同比+14.9%,应收与存货占款是现金回落的主因(p7/p22)。毛利率60.62%(派生,较上年+2.49个百分点)走升,但净利率17.27%(派生)微降,管理费用+53.67%因股份支付费用增加、财务费用由-0.36亿元转为+0.50亿元汇兑损益(p20)。\n\n实际控制人赵延平质押2308.40万股(占其持股约14.88%),太禾行、宁波上裕两家股东亦分别质押379.40万、934.00万股(p54)。高精度定位行业在全球市场拓展期,收入稳增但回款与费用端承压,是这一赛道公司的共同功课。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472842.PDF",
+    "stock_code": "300627",
+    "announcement_date": "2026-08-14"
   }
 ]
