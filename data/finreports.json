@@ -600,6 +600,36 @@
     "uid": "6e4d2e6dc44d7670"
   },
   {
+    "exchange": "上交所",
+    "company_name": "东阳光",
+    "stock_code": "600673",
+    "report_type": "半年报",
+    "report_period": "2026年半年度",
+    "title": "东阳光2026年半年度报告摘要",
+    "announcement_date": "2026-08-18",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478557.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "8d815de3f8ee11d0"
+  },
+  {
+    "exchange": "上交所",
+    "company_name": "东阳光",
+    "stock_code": "600673",
+    "report_type": "半年报",
+    "report_period": "2026年半年度",
+    "title": "东阳光2026年半年度报告",
+    "announcement_date": "2026-08-18",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-08-18/1225478556.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "eec3186cadb4f08a"
+  },
+  {
     "exchange": "深交所",
     "company_name": "天力锂能",
     "stock_code": "301152",
