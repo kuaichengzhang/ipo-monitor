@@ -510,6 +510,36 @@
     "uid": "e96e50e8ceacd6da"
   },
   {
+    "exchange": "港交所",
+    "company_name": "TAI HING GROUP",
+    "stock_code": "06811",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-08-21",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100189.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "713eac890f91f0ed"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "GENFLEET-B",
+    "stock_code": "02595",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results]",
+    "announcement_date": "2026-08-21",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0821/2026082100175.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "00febe8f5afbeb80"
+  },
+  {
     "exchange": "深交所",
     "company_name": "联创电子",
     "stock_code": "002036",
