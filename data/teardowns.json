@@ -13134,5 +13134,791 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-14/1225472842.PDF",
     "stock_code": "300627",
     "announcement_date": "2026-08-14"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "中国石油化工股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493867.PDF"
+    },
+    "header": {
+      "company_name": "中国石油化工股份有限公司",
+      "ticker": "600028",
+      "exchange": "上交所",
+      "sector_tag": [
+        "石油石化",
+        "化工"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p1",
+        "note": "半年度报告中的财务报告未经审计(p1)"
+      },
+      "disclosure_date": "2026-08-24",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 14365.61,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+2.0%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 256.27,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+19.3%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 252.73,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+19.1%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 9.9,
+        "unit": "%",
+        "page": "p27",
+        "period": "2026H1",
+        "yoy": "+3.3 pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "公司定义毛利率=(营业收入-营业成本-税金及附加)/营业收入,见p27分行业合计行"
+      },
+      "net_margin": {
+        "value": 1.78,
+        "unit": "%",
+        "page": "p5·衍生",
+        "period": "2026H1",
+        "yoy": "+0.26 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 624.99,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+2.4%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润256.27亿、同比+19.3%(由21,483百万元升至25,627百万元)",
+        "page": "p5",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p1",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": true,
+        "detail": {
+          "value": "化工装置折旧12→16年、天然气管线30→40年,2026/1/1生效,减少折旧及摊销约6.00亿元",
+          "page": "p89",
+          "note": "会计估计变更,对利润影响约6亿"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p5",
+          "note": "主要财务数据直接列示,未勾选追溯调整/重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p64",
+          "note": "商誉5,457百万元(约545.7亿),较上年5,476基本持平,未提示减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "国信证券质押109,603,100股(占总股本0.14%);控股股东中国石化集团持股68.79%无质押",
+          "page": "p56",
+          "note": "股东国信证券质押约1.10亿股"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p64",
+          "note": "未见违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每股派息0.105元(含税),半年度现金分红",
+        "page": "p29",
+        "note": "董事会提议半年度每股派发0.105元(含税),p29"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母256.27亿(+19.3%)与扣非252.73亿(+19.1%)基本持平,非经常性损益仅3.54亿(占归母约1.4%),利润以主业为主",
+        "page": "p5",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+2.0%、经营现金流+2.4%同步,经营现金流624.99亿约为归母净利润2.4倍,现金含量充足",
+        "page": "p5",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "综合毛利率9.9%(+3.3pct)与净利率1.78%(+0.26pct·衍生)同向走升,未反向",
+        "page": "p27/p5·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款73,809百万元(较2025年末51,172 +44.2%,主因原油涨价致应收款项融资增加,p64);存货223,319百万元(较年末230,811 -3.2%),整体与油价波动及季节性相符",
+        "page": "p64",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "意外信号"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "稳定大型油企,利润+19.3%且现金充足;会计估计变更与小额股东质押构成次要信号,未达深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2维度(本期变化+意外信号),极简2-3段,核心看点收在行业句",
+      "headline_number": "归母净利润256.27亿元,同比+19.3%",
+      "block_text": "中国石化2026年上半年营业收入14,365.61亿元、同比+2.0%,归母净利润256.27亿元、同比+19.3%,扣非归母净利润252.73亿元、同比+19.1%,利润增速明显快于收入(p5)。综合毛利率9.9%,较上年同期+3.3个百分点,主要受炼油与化工板块毛利改善带动(p27)。\n\n利润增长部分来自会计估计变更:自2026年1月1日起,化工装置折旧年限由12年调整为16年、天然气管线由30年调整为40年,使上半年折旧及摊销减少约6.00亿元(p89);同期股东国信证券质押109,603,100股、占总股本0.14%(p56)。经营现金流净额624.99亿元、同比+2.4%,约为归母净利润的2.4倍,现金含量充足(p5);半年度每股派息0.105元(含税)(p29)。\n\n在低油价周期与化工景气偏弱之下,以一体化优化和会计端调整共同托住利润,是大型油企平滑周期波动的惯用做法。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493867.PDF",
+    "stock_code": "600028",
+    "announcement_date": "2026-08-24"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "北京市博汇科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493862.PDF"
+    },
+    "header": {
+      "company_name": "北京市博汇科技股份有限公司",
+      "ticker": "688004",
+      "exchange": "上交所",
+      "sector_tag": [
+        "信息技术",
+        "软件",
+        "视听大数据"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计(p2)"
+      },
+      "disclosure_date": "2026-08-24",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 4012.9,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-21.63%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -2073.88,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期亦为亏损(-1,690.22万),亏损扩大,无同比%"
+      },
+      "net_profit_deducted": {
+        "value": -2382.12,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-1,941.57万,扣非亏损更深"
+      },
+      "gross_margin": {
+        "value": 52.83,
+        "unit": "%",
+        "page": "p32·衍生",
+        "period": "2026H1",
+        "yoy": "-4.01 pct",
+        "is_derived": true,
+        "derivation": "(营业收入40,128,953.73-营业成本18,929,341.38)/营业收入,利润表p32",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -51.68,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -4896.89,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-3,783.84万,净流出扩大"
+      },
+      "biggest_mover": {
+        "value": "营业收入4,012.90万、同比-21.63%,由客户验收进度延后拖累",
+        "page": "p7",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p7/p32",
+          "note": "未提示会计政策/估计变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p7",
+          "note": "主要财务数据直接列示,未勾选追溯调整"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p57",
+          "note": "商誉232,677.85元(约23万),极小且未提示减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p51-52",
+          "note": "前十大股东(孙传明17.61%等)质押/标记/冻结均为'无',无控股股东减持质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p56",
+          "note": "未见违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "p40",
+        "note": "半年度不分配(每10股派0,不转增,p40)"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-2,073.88万、扣非-2,382.12万,非经常性损益308.25万(政府补助83.5万+公允价值变动289.1万+减值转回96.6万等)使表观亏损小于主业亏损,扣非亏损更深",
+        "page": "p7/p8",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-21.63%、经营现金流-4,896.89万(亦为负,上年-3,783.84万),营收下行与现金净流出同向,非'营收涨现金流转负'型背离",
+        "page": "p7",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率52.83%(派生,-4.01pct)与净利率-51.68%(派生)同向下行,未反向",
+        "page": "p32/p7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货71,017,026.54元(+25.8%,由56,442,824.37元升至71,017,026.54元)、应收账款38,550,851.01元(+1.7%),在营收-21.63%下存货逆势上升,占款与跌价风险累积",
+        "page": "p56",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收下滑、亏损扩大且存货逆势堆高,质量端两处张力,但未达深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2维度(本期变化+质量背离),极简2-3段,核心看点收在行业句",
+      "headline_number": "营业收入4,012.90万元,同比-21.63%",
+      "block_text": "博汇科技2026年上半年营业收入4,012.90万元、同比-21.63%,归母净利润-2,073.88万元、亏损较上年同期的-1,690.22万元进一步扩大(p7)。公司称受下游传媒、教育及政企客户预算节奏与项目验收延后影响,部分项目未达收入确认条件。\n\n质量端有两点张力:一是扣非归母净利润-2,382.12万元、比表观亏损更深,308.25万元非经常性损益(政府补助、公允价值变动等)把亏损'填'浅了一截(p7/p8);二是存货71,017,026.54元、同比+25.8%,在营收下滑两成的情况下逆势堆高,占款与跌价压力上升(p56)。综合毛利率约52.83%(派生,较上年-4.01个百分点)(p32)。\n\n在视听大数据这条受财政预算与客户采购节奏高度牵动的赛道里,验收周期一旦拉长,小体量公司的收入与存货会同步承压,博汇这一期正是这种节律的缩影。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493862.PDF",
+    "stock_code": "688004",
+    "announcement_date": "2026-08-24"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "长裕控股集团股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493864.PDF"
+    },
+    "header": {
+      "company_name": "长裕控股集团股份有限公司",
+      "ticker": "603407",
+      "exchange": "上交所",
+      "sector_tag": [
+        "化工",
+        "新材料",
+        "锆材"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计(p2)"
+      },
+      "disclosure_date": "2026-08-24",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 86249.0,
+        "unit": "万元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "-3.77%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 13762.96,
+        "unit": "万元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+22.12%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 13442.72,
+        "unit": "万元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+21.10%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 29.91,
+        "unit": "%",
+        "page": "p12·衍生",
+        "period": "2026H1",
+        "yoy": "+6.32 pct",
+        "is_derived": true,
+        "derivation": "(营业收入862,490,006.40-营业成本604,575,289.46)/营业收入,利润表/科目变动表p12",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 15.96,
+        "unit": "%",
+        "page": "p5·衍生",
+        "period": "2026H1",
+        "yoy": "+3.39 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 4243.69,
+        "unit": "万元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "-40.42%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额4,243.69万、同比-40.42%(由7,123.00万降至4,243.69万)",
+        "page": "p5",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p63-64",
+          "note": "会计政策变更不适用(权益变动表'加:会计政策变更'无金额,p63/p64)"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p5",
+          "note": "主要财务数据直接列示,未勾选追溯调整"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p48/p50",
+          "note": "商誉不适用(无商誉,p48)"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p43",
+          "note": "控股股东刘其永34.99%等前十大股东均为首发限售、质押/冻结为'无',无减持质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p47",
+          "note": "未见违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "p17",
+        "note": "半年度不分配(利润分配预案为无,p17)"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母13,762.96万(+22.12%)与扣非13,442.72万(+21.10%)基本同步,非经常性损益320.23万(占归母约2.3%),主业贡献为主",
+        "page": "p5",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-3.77%但经营现金流4,243.69万(-40.42%,由7,123.00万降至4,243.69万),净利+22.12%而现金流转弱,利润与现金背离",
+        "page": "p5",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率29.91%(派生,+6.32pct)与净利率15.96%(派生,+3.39pct)同向走升,未反向",
+        "page": "p12/p5·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货337,000,173.03元(+40.23%,由240,315,426.43元升至337,000,173.03元)、应收账款266,845,084.26元(+0.73%),营收-3.77%下存货逆势大增",
+        "page": "p13/p47",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "利润逆势增长但经营现金流与存货露出张力,典型爬坡形态,未达深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2维度(本期变化+质量背离),极简2-3段,核心看点收在行业句",
+      "headline_number": "归母净利润13,762.96万元,同比+22.12%",
+      "block_text": "长裕集团2026年上半年营业收入86,249.00万元、同比-3.77%,归母净利润13,762.96万元、同比+22.12%,扣非13,442.72万元、同比+21.10%,利润逆势增长(p5)。综合毛利率约29.91%(派生,较上年+6.32个百分点),成本端随营收下行而收窄更明显(p12)。公司于本期首发上市,货币资金增至1,201,012,670.81元、净资产较年初+41.53%,账面因募资显著增厚(p13)。\n\n但现金与存货露出两处张力:经营现金流净额4,243.69万元、同比-40.42%,在净利增长两成的同时现金回笼走弱(p5);存货337,000,173.03元、同比+40.23%,在营收下滑近4%的背景下逆势堆高,占款与跌价压力上升(p13/p47)。\n\n锆材与特种尼龙这类新材料公司,在国产替代放量阶段往往需要以存货与账期换订单,长裕这一期呈现的正是'利润上、现金下、库存涨'的典型爬坡形态。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493864.PDF",
+    "stock_code": "603407",
+    "announcement_date": "2026-08-24"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "苏州丰倍生物科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493821.PDF"
+    },
+    "header": {
+      "company_name": "苏州丰倍生物科技股份有限公司",
+      "ticker": "603334",
+      "exchange": "上交所",
+      "sector_tag": [
+        "化工",
+        "生物能源",
+        "废弃油脂"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计(p2)"
+      },
+      "disclosure_date": "2026-08-24",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 234673.86,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+58.76%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 8142.51,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-4.28%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 8119.14,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-4.15%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 6.49,
+        "unit": "%",
+        "page": "p16·衍生",
+        "period": "2026H1",
+        "yoy": "-3.00 pct",
+        "is_derived": true,
+        "derivation": "(营业收入2,346,738,610.60-营业成本2,194,328,754.32)/营业收入,利润表p16",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 3.47,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": "-2.28 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -10271.59,
+        "unit": "万元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "由-747.91万进一步转负至-10,271.59万"
+      },
+      "biggest_mover": {
+        "value": "应收账款378,900,781.21元、同比+119.54%",
+        "page": "p17/p50",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计;非非标"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": "适用财政部解释19/20号,影响0不重大",
+          "page": "p66",
+          "note": "会计政策变更适用但影响不重大,不列为信号"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p7",
+          "note": "主要财务数据直接列示,未勾选追溯调整"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p51",
+          "note": "商誉17,176.80元(约1.7万),极小且未提示减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p46",
+          "note": "控股股东平原44.82%等前十大股东质押/冻结均为'无',无减持质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p50",
+          "note": "未见违规担保或资金占用提示(资产池质押为票据融资常规受限,非违规占用)"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "p25",
+        "note": "半年度不分配(每10股派0,不转增,p25)"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母8,142.51万(-4.28%)与扣非8,119.14万(-4.15%)基本同步,非经常性损益约23.4万(占归母0.3%),主业贡献为主",
+        "page": "p7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+58.76%但经营现金流-10,271.59万(由-747.91万进一步转负),销售放量伴随现金大幅净流出,收入与现金背离",
+        "page": "p7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率6.49%(派生,-3.00pct)与净利率3.47%(派生,-2.28pct)同向下行,未反向;营收涨而毛利降,主因营业成本+64.03%快于营收+58.76%",
+        "page": "p16/p7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款378,900,781.21元(+119.54%,由172,585,957.63元升至378,900,781.21元)、存货472,714,671.94元(-9.55%),营收+58.76%下应收增速远超收入,占款累积",
+        "page": "p17/p50",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "增收不增利、现金大幅净流出、应收激增,强周期占款特征明显,未达深写阈值"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2维度(本期变化+质量背离),极简2-3段,核心看点收在行业句",
+      "headline_number": "营业收入234,673.86万元,同比+58.76%",
+      "block_text": "丰倍生物2026年上半年营业收入234,673.86万元、同比+58.76%,但归母净利润8,142.51万元、同比-4.28%,增收不增利(p7)。综合毛利率约6.49%(派生,较上年-3.00个百分点),营业成本2,194,328,754.32元、同比+64.03%,快于营收增速,废弃油脂原料与生物柴油价差收窄(p16)。\n\n现金与应收露出张力:经营现金流净额-10,271.59万元,由上年同期的-747.91万元进一步转负;应收账款378,900,781.21元、同比+119.54%,增速远超营收,渠道占款快速累积(p17/p50)。公司主营废弃油脂资源化制生物柴油,原料端受国际油价与地沟油回收格局影响大。\n\n在生物柴油这条强周期、重占款的赛道里,收入冲量阶段最容易看到的,就是毛利被成本吃掉、现金被应收吞掉——丰倍这一期把这道题摆得很直白。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-24/1225493821.PDF",
+    "stock_code": "603334",
+    "announcement_date": "2026-08-24"
   }
 ]
