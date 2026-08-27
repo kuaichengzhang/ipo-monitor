@@ -14715,5 +14715,600 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-25/1225500441.PDF",
     "stock_code": "600238",
     "announcement_date": "2026-08-25"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "上海振华重工（集团）股份有限公司2025年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225507930.PDF"
+    },
+    "header": {
+      "company_name": "上海振华重工（集团）股份有限公司",
+      "ticker": "600320",
+      "exchange": "上交所",
+      "sector_tag": [
+        "港口机械",
+        "重型装备",
+        "海工装备"
+      ],
+      "tier": "basic",
+      "report_type": "FY2025年报",
+      "report_type_enum": "FY年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p68",
+        "note": "安永华明(ERNST & YOUNG HUA MING)出具标准无保留意见;非标审计事项说明不适用(p44)"
+      },
+      "disclosure_date": "2026-08-27",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块，出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 362.6,
+        "unit": "亿元",
+        "page": "p6/p77",
+        "period": "2025",
+        "yoy": "+5.24%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 7.32,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2025",
+        "yoy": "+37.17%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 4.99,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2025",
+        "yoy": "+136.35%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 13.73,
+        "unit": "%",
+        "page": "p77·衍生",
+        "period": "2025",
+        "yoy": "+0.99 pct",
+        "is_derived": true,
+        "derivation": "1-(营业成本31,278,160,080/营业收入36,260,458,326)自合并利润表p77",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 2.02,
+        "unit": "%",
+        "page": "p6·衍生",
+        "period": "2025",
+        "yoy": "+0.47 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2024年为1.55%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 62.49,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2025",
+        "yoy": "+18.45%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润4.99亿,同比+136.35%(增速远超归母+37.17%)",
+        "page": "p6",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "标准无保留",
+          "page": "p68",
+          "note": "安永华明出具标准无保留意见;董事会对非标审计意见的说明不适用(p44)"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "本报告期未披露重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p6",
+          "note": "主要财务数据直接列示,未勾选追溯调整重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p73",
+          "note": "商誉2.69亿(269,293,046元),较上年2.72亿微降,无新增减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p56",
+          "note": "前十大股东(中国交建集团及其一致行动人)持股状态均为'0 无',无质押或冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未检获违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2025年度拟每10股派0.75元(含税),合计派现423,354,583.15元,占归母净利57.85%",
+        "page": "p36-p37",
+        "note": "利润分配预案:现金分红;2026年1月已完成2025年半年度利润分配"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母7.32亿、扣非4.99亿,非经常性损益约2.33亿(占归母约31.8%)计入当期;扣非同比+136.35%增速更高",
+        "page": "p6",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+5.24%、经营现金流+18.45%(62.49亿),现金流增速快于营收,未背离",
+        "page": "p6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率13.73%(+0.99pct)、净利率2.02%(+0.47pct)均上行,未反向",
+        "page": "p77·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款83.49亿(+15.2%)增速约为营收(+5.24%)的3倍;存货238.65亿(-2.81%)同期下降",
+        "page": "p73",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "利润恢复(归母+37%、扣非+136%)但含约2.33亿非经常性损益、应收增速为营收3倍,无审计非标/质押等极端信号,维持合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "扣非归母4.99亿,同比+136.35%",
+      "block_text": "振华重工2025年营收362.60亿元(+5.24%),归母净利润7.32亿元(+37.17%),扣非归母净利润4.99亿元(+136.35%);经营现金流62.49亿元(+18.45%)。港口机械与海工装备主业延续恢复(p6)。\n\n一份张力:非经常性损益约2.33亿元(占归母约31.8%)计入当期,剔除后扣非仍实现+136.35%的高增;应收账款83.49亿元(+15.2%),增速约为营收的3倍,回款节奏值得留意(p6/p73)。\n\n全球贸易与港口投资节奏波动下,重装备制造的订单与回款周期,仍是观察这类央企周期性的窗口。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-27/1225507930.PDF",
+    "stock_code": "600320",
+    "announcement_date": "2026-08-27"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "中电科数字技术股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507727.PDF"
+    },
+    "header": {
+      "company_name": "中电科数字技术股份有限公司",
+      "ticker": "600850",
+      "exchange": "上交所",
+      "sector_tag": [
+        "软件与信息技术服务",
+        "数字化",
+        "信创"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计;上年(2025)年度报告被出具带强调事项段的无保留意见(立信,p37)"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块，出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 52.06,
+        "unit": "亿元",
+        "page": "p6/p20",
+        "period": "2026H1",
+        "yoy": "+7.23%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 6829.6,
+        "unit": "万元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "-36.54%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 7017.04,
+        "unit": "万元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "-33.02%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 16.1,
+        "unit": "%",
+        "page": "p20·衍生",
+        "period": "2026H1",
+        "yoy": "-1.10 pct",
+        "is_derived": true,
+        "derivation": "1-(营业成本4,367,338,857/营业收入5,205,719,279)自合并利润表p20",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 1.31,
+        "unit": "%",
+        "page": "p6·衍生",
+        "period": "2026H1",
+        "yoy": "-0.91 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2024H1为2.22%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -10.93,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "较上年同期-11.99亿基本持平(仍深度为负)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润6829.60万,同比-36.54%(毛利率下行+费用上升)",
+        "page": "p6",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "本报告期未披露重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p6",
+          "note": "主要财务数据直接列示,未勾选追溯调整重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p49",
+          "note": "商誉2012.90万元(20,128,956.16元),较上年2460.53万元微降,无新增减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p44",
+          "note": "前十大股东持股状态均为'无 0',无质押或冻结(控股股东为华东计算技术研究所)"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未检获违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配(半年度不派息、不送红股、不转增)",
+        "page": "p2/p26",
+        "note": "利润分配或资本公积金转增预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母6829.60万、扣非7017.04万,非经常性损益-187万(微负),扣非略高于归母,未靠非经常性损益撑高",
+        "page": "p6",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+7.23%至52.06亿,经营现金流-10.93亿(较上年-11.99亿基本持平,仍深度为负),利润未转化为现金",
+        "page": "p6",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率16.10%(-1.10pct)、净利率1.31%(-0.91pct)均下行,未反向",
+        "page": "p20·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款28.36亿(+18.47%)、存货40.76亿(+17.46%),均显著快于营收(+7.23%)",
+        "page": "p48",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收微增但净利-36.54%、经营现金流转负、应收存货双升,无大股东质押/非标,维持合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "归母6829.60万,同比-36.54%",
+      "block_text": "电科数字2026年上半年营收52.06亿元(+7.23%),但归母净利润6829.60万元(-36.54%),扣非7017.04万元(-33.02%);综合毛利率16.10%(-1.10pct),业务毛利率承压(p6/p20)。\n\n一份张力:经营现金流-10.93亿元,较上年同期-11.99亿元基本持平、仍深度为负,利润未转化为现金;应收账款28.36亿元(+18.47%)、存货40.76亿元(+17.46%),均明显快于营收增速(p6/p48)。\n\n在信创与行业数字化需求波动下,软件集成商的订单质量与回款,比收入增速更值得看。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507727.PDF",
+    "stock_code": "600850",
+    "announcement_date": "2026-08-26"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "曙光信息产业股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507613.PDF"
+    },
+    "header": {
+      "company_name": "曙光信息产业股份有限公司",
+      "ticker": "603019",
+      "exchange": "上交所",
+      "sector_tag": [
+        "高端计算机",
+        "算力基础设施",
+        "信创"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计;上年年度报告非标审计意见事项说明不适用(p25)"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块，出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 74.66,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+27.62%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 9.71,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+33.31%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 8.44,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+48.45%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 27.23,
+        "unit": "%",
+        "page": "p12",
+        "period": "2026H1",
+        "yoy": "+0.58 pct",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 13.01,
+        "unit": "%",
+        "page": "p5·衍生",
+        "period": "2026H1",
+        "yoy": "+0.56 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2024H1为12.45%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -1.87,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "较上年同期-13.81亿大幅改善(仍为负)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母净利润8.44亿,同比+48.45%(增速超归母+33.31%)",
+        "page": "p5",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "本报告期未披露重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p5",
+          "note": "主要财务数据直接列示,未勾选追溯调整重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p15",
+          "note": "商誉3905.12万元(39,051,159.02元),较上年3619.57万元+7.89%,无减值迹象披露"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "第二大股东天津海泰控股集团有限公司质押17,493,000股(持股29,718,500股,占比约58.9%)",
+          "page": "p30",
+          "note": "天津海泰为国有法人、第二大股东;其余前十大股东无质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未检获违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配(半年度不派息、不送红股、不转增)",
+        "page": "p2/p25",
+        "note": "利润分配或资本公积金转增预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母9.71亿、扣非8.44亿,非经常性损益约1.27亿(占归母约13.1%),占比有限未显著背离",
+        "page": "p5",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+27.62%至74.66亿,经营现金流-1.87亿(较上年-13.81亿大幅改善,仍为负),利润未完全转化为现金",
+        "page": "p5",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率27.23%(+0.58pct)、净利率13.01%(+0.56pct)均上行,未反向",
+        "page": "p12/p5·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货67.92亿(较期初35.33亿+92.2%)增速远超营收(+27.62%);应收账款21.06亿(较期初27.55亿-23.6%)下降",
+        "page": "p15",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "本期变化",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "AI算力驱动营收+27.6%/净利+33.3%,但存货+92%、经营现金流仍为负、二股东质押,无审计非标,维持合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3看点→小型看点合集,每点一段+行业句",
+      "headline_number": "归母9.71亿,同比+33.31%",
+      "block_text": "中科曙光2026年上半年营收74.66亿元(+27.62%),归母净利润9.71亿元(+33.31%),扣非8.44亿元(+48.45%);高端计算机与算力基础设施需求拉动增长(p5)。\n\n一份张力:经营现金流-1.87亿元,较上年同期-13.81亿元大幅改善但仍为负,利润尚未完全转化为现金;存货67.92亿元(较期初+92.2%),增速远超营收(+27.62%),备货节奏值得留意(p5/p15)。\n\n另一份张力:第二大股东天津海泰控股集团有限公司质押17,493,000股(约占其持股58.9%),其余前十大股东无质押(p30)。\n\nAI算力建设进入放量期,服务器与存储的需求斜率,正转化为这类基础设施厂商的规模与库存同步抬升。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507613.PDF",
+    "stock_code": "603019",
+    "announcement_date": "2026-08-26"
   }
 ]
