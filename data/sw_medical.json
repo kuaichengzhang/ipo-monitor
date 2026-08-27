@@ -1,0 +1,7 @@
+{
+  "updated": "2026-08-27",
+  "note": "增量补充(权威底表见 collectors/sw_medical_static.json)",
+  "sub": {
+    "688837": "化学制药"
+  }
+}
