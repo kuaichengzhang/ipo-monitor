@@ -15310,5 +15310,598 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507613.PDF",
     "stock_code": "603019",
     "announcement_date": "2026-08-26"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "南京晶升装备股份有限公司2025年年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522393.PDF"
+    },
+    "header": {
+      "company_name": "南京晶升装备股份有限公司",
+      "ticker": "688478",
+      "exchange": "上交所",
+      "sector_tag": [
+        "半导体设备",
+        "晶体生长设备"
+      ],
+      "tier": "basic",
+      "report_type": "FY2025年报",
+      "report_type_enum": "FY年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留",
+        "page": "p2/p131",
+        "note": "容诚会计师事务所出具标准无保留意见审计报告(容诚审字[2026]210Z0016号);内部控制审计亦为标准无保留意见(p77)"
+      },
+      "disclosure_date": "2026-08-28",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块，出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 1.16,
+        "unit": "亿元",
+        "page": "p10",
+        "period": "2025",
+        "yoy": "-72.82%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -0.38,
+        "unit": "亿元",
+        "page": "p10",
+        "period": "2025",
+        "yoy": "-171.32%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.57,
+        "unit": "亿元",
+        "page": "p10",
+        "period": "2025",
+        "yoy": "-289.58%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 14.6,
+        "unit": "%",
+        "page": "p47",
+        "period": "2025",
+        "yoy": "-11.47 pct",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -33.18,
+        "unit": "%",
+        "page": "p10/p46·衍生",
+        "period": "2025",
+        "yoy": "-45.83 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2024年为+12.65%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -0.51,
+        "unit": "亿元",
+        "page": "p10",
+        "period": "2025",
+        "yoy": "-1705.99%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "营收1.16亿,同比-72.82%,归母净利润-0.38亿、扣非-0.57亿,由盈转亏",
+        "page": "p10",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "标准无保留",
+          "page": "p2/p131",
+          "note": "容诚出具标准无保留意见审计报告;非标说明不适用"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "本报告期未披露重大会计政策变更;季度数据与已披露定期报告差异属审计谨慎性处理,非政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": true,
+        "detail": {
+          "value": "季度数据与已披露定期报告数据差异说明为适用;部分收入确认时点在2025年报审计中调整至2026年上半年确认",
+          "page": "p10/p90",
+          "note": "审计师基于谨慎性对部分收入确认时点调整,导致已披露的2025年季度数据与本年报存在差异,相关收入预计于2026H1确认;属审计调整,非前期差错追溯重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p216",
+          "note": "商誉账面原值不适用(无商誉);27、商誉(1)商誉账面原值□适用√不适用"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p125",
+          "note": "前十大股东持股均无质押/冻结/标记(状态'无',股份数量0)"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未检获违规担保或资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2025年度不进行现金分红(可分配利润为负数,不满足现金分红条件)",
+        "page": "p2/p74",
+        "note": "2024年度每10股派2.50元已于2025年6月实施完毕;2025年度因亏损不分配"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.38亿、扣非-0.57亿,非经常性损益+0.19亿(主系委托理财收益0.22亿)使归母亏损小于扣非,主业亏损更深",
+        "page": "p10/p154",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-72.82%至1.16亿,经营现金流-0.51亿(由上年+0.03亿转负,-1705.99%),现金回款随销售大降且客户回款减少",
+        "page": "p10",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率14.60%(-11.47pct)、净利率-33.18%(-45.83pct)均下行,未反向",
+        "page": "p47/p10·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货2.60亿(较期初2.19亿+18.9%)逆势上升,而营收同比-72.82%;应收账款0.68亿(较期初1.08亿-37.0%)随销售下降",
+        "page": "p51/p135",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收-72.82%由盈转亏,经营现金转负、存货逆势增、部分收入确认时点被审调整至2026H1;无审计非标、无商誉、无大股东质押,维持合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3看点→小型看点合集,每点一段+行业句",
+      "headline_number": "营收1.16亿,同比-72.82%",
+      "block_text": "晶升股份(688478)2025年营收1.16亿元,同比下滑72.82%,归母净利润-0.38亿元、扣非-0.57亿元,由盈转亏(p10)。\n\n一份张力:经营现金流-0.51亿元,由上年+0.03亿元转负,降幅1705.99%,销售回款随收入大降;同期存货2.60亿元(较期初+18.9%)逆势抬升,而营收同比降逾七成,库存与现金的走向并不一致(p10/p51/p135)。\n\n另一份张力:年报审计中,部分收入确认时点被会计师基于谨慎性调整至2026年上半年,导致已披露的2025年季度数据与本年报存在差异;非经常性损益+0.19亿元(主系理财收益)使归母亏损小于扣非,主业亏损更深(p10/p90/p154)。\n\n半导体设备需求阶段性调整之下,验收节奏与收入确认时点的摆动,会直接反映在这类订单式厂商的年度营收与现金流上。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225522393.PDF",
+    "stock_code": "688478",
+    "announcement_date": "2026-08-28"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "国晟世安科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523424.PDF"
+    },
+    "header": {
+      "company_name": "国晟世安科技股份有限公司",
+      "ticker": "603778",
+      "exchange": "上交所",
+      "sector_tag": [
+        "光伏",
+        "光伏电站EPC"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-28",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块，出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 3.43,
+        "unit": "亿元",
+        "page": "p12",
+        "period": "2026H1",
+        "yoy": "+11.93%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -0.86,
+        "unit": "亿元",
+        "page": "p12",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-0.96亿,本报告期减亏约10.3%;同比因上年为负列为不适用"
+      },
+      "net_profit_deducted": {
+        "value": -0.85,
+        "unit": "亿元",
+        "page": "p12",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-0.99亿;同比因上年为负列为不适用"
+      },
+      "gross_margin": {
+        "value": -6.75,
+        "unit": "%",
+        "page": "p12·衍生",
+        "period": "2026H1",
+        "yoy": "+5.40 pct",
+        "is_derived": true,
+        "derivation": "1-(营业成本/营业收入);2025H1为-12.15%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -25.16,
+        "unit": "%",
+        "page": "p12·衍生",
+        "period": "2026H1",
+        "yoy": "+6.25 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为-31.41%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -1.41,
+        "unit": "亿元",
+        "page": "p12",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-0.64亿,本期净流出扩大至-1.41亿(原文同比列为不适用)"
+      },
+      "biggest_mover": {
+        "value": "营收3.43亿(+11.93%),但归母-0.86亿、经营现金流-1.41亿,增收不增利且现金净流出扩大",
+        "page": "p12",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未披露重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p171",
+          "note": "前期会计差错更正:追溯重述法不适用/未来适用法不适用"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p120",
+          "note": "商誉账面原值不适用(无商誉);27、商誉(1)商誉账面原值□适用√不适用"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东国晟能源股份有限公司质押107,895,827股(持股108,295,827股,占比99.63%),并冻结16,803,000股",
+          "page": "p27",
+          "note": "控股股东近乎全数质押+部分冻结;其余前十大股东无大额质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未检获违规担保或资金占用;注3固定资产/无形资产抵押、PPP应收质押为借款担保(资产质押非资金占用)"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不分配(不派息、不送红股、不转增)",
+        "page": "p2/p18",
+        "note": "利润分配预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.86亿、扣非-0.85亿,差异约0.01亿(非经常性损益-0.01亿),不显著背离",
+        "page": "p12/p57",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+11.93%至3.43亿,经营现金流-1.41亿(上年-0.64亿,净流出扩大逾一倍),利润未转化为现金且流出加剧",
+        "page": "p12",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率-6.75%(+5.40pct,仍为负)、净利率-25.16%(+6.25pct)均改善,未反向",
+        "page": "p12·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款2.55亿(较期初2.06亿+23.4%)逆势上升,而营收仅+11.93%;存货0.30亿(较期初1.00亿-70.2%)因销售光伏组件下降",
+        "page": "p32",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收+11.93%但续亏、经营现金净流出扩大、控股股东质押99.63%;无审计非标、无商誉减值,维持合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3看点→小型看点合集,每点一段+行业句",
+      "headline_number": "经营现金流-1.41亿,净流出较上年扩大逾一倍",
+      "block_text": "国晟科技(603778)2026年上半年营收3.43亿元(+11.93%),归母净利润-0.86亿元,较上年-0.96亿元减亏约一成,仍处亏损(p12)。\n\n一份张力:经营现金流-1.41亿元,较上年同期-0.64亿元净流出扩大逾一倍;应收账款2.55亿元(较期初+23.4%)逆势抬升,营收增长未带来现金回笼(p12/p32)。\n\n另一份张力:控股股东国晟能源股份有限公司质押1.08亿股(占其持股99.63%),并冻结1680万股,股权高比例受限(p27)。\n\n光伏制造价格仍处低位,营业成本高于营业收入使综合毛利率为-6.75%(较上年-12.15%回升但仍为负),这类组件与电站EPC厂商的现金回款节奏,与行业价格战同步承压。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523424.PDF",
+    "stock_code": "603778",
+    "announcement_date": "2026-08-28"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "山东新华锦国际股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523413.PDF"
+    },
+    "header": {
+      "company_name": "山东新华锦国际股份有限公司",
+      "ticker": "600735",
+      "exchange": "上交所",
+      "sector_tag": [
+        "出口贸易",
+        "新材料"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "2026年半年度报告未经审计;2025年度财务报告为带强调事项段的无保留意见、2025年度内部控制审计为否定意见,公司被叠加实施其他风险警示(ST)"
+      },
+      "disclosure_date": "2026-08-28",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块，出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 6.05,
+        "unit": "亿元",
+        "page": "p14",
+        "period": "2026H1",
+        "yoy": "-9.50%",
+        "note": "自2026年4月1日起上海荔之不再纳入合并,本期未含其4-6月数据,同比口径不可比",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.06,
+        "unit": "亿元",
+        "page": "p14",
+        "period": "2026H1",
+        "yoy": "-53.97%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.03,
+        "unit": "亿元",
+        "page": "p14",
+        "period": "2026H1",
+        "yoy": "-156.35%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 26.26,
+        "unit": "%",
+        "page": "p14·衍生",
+        "period": "2026H1",
+        "yoy": "+0.99 pct",
+        "is_derived": true,
+        "derivation": "1-(营业成本/营业收入);2025H1为25.26%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 0.98,
+        "unit": "%",
+        "page": "p14·衍生",
+        "period": "2026H1",
+        "yoy": "-0.94 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为1.92%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 0.37,
+        "unit": "亿元",
+        "page": "p14",
+        "period": "2026H1",
+        "yoy": "-51.57%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非-0.03亿,由正转负(-156.35%);归母0.06亿靠非经常性损益撑正",
+        "page": "p14",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": true,
+        "detail": {
+          "value": "2025年度财务报告为带强调事项段的无保留意见(非标准审计意见);2025年度内部控制审计为否定意见",
+          "page": "p29",
+          "note": "2026年半年度报告未经审计;但上年年度报告为非标准审计意见(强调事项段),且公司因前述事项被叠加实施其他风险警示(ST)、因涉嫌信息披露违法违规被立案调查;2026年度审计报告存在被出具非标准审计意见的风险(p21/p22/p29)"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未披露重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p199",
+          "note": "前期会计差错更正:追溯重述法/未来适用法均不适用"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p139/p143",
+          "note": "商誉含上海荔之资产组2.43亿元,因上海荔之2026年4月1日出表转入其他非流动资产,公司表示无法取得相关资料、无法判断及测算其减值情况;本期未计提商誉减值损失"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "控股股东山东鲁锦进出口集团有限公司质押184,920,000股(持股185,532,352股,占比99.67%),并冻结612,352股、标记184,920,000股",
+          "page": "p37",
+          "note": "控股股东近乎全数质押+冻结+标记;其余前十大股东无大额质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "非经常性损益含向非金融企业收取资金占用费1326.09万元(p108),但属正常资金拆借收益列示,未检获违规资金占用提示"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "本报告期不分配(不派息、不送红股、不转增)",
+        "page": "p2/p23",
+        "note": "利润分配或资本公积金转增预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.06亿、扣非-0.03亿,非经常性损益+0.09亿(含向非金融企业收取资金占用费0.13亿、处置损益-0.06亿等)使归母为正、扣非转负,主业贡献为负",
+        "page": "p14/p108",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-9.50%至6.05亿,经营现金流0.37亿(较上年0.77亿-51.57%)仍为正但大幅收窄,降幅大于营收",
+        "page": "p14",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "毛利率26.26%(+0.99pct)、净利率0.98%(-0.94pct)一升一降,方向未明显反转",
+        "page": "p14·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收账款0.86亿(较期初1.06亿-18.9%)、存货2.63亿(较期初2.60亿+1.2%),随营收小幅下降,无显著逆势异动",
+        "page": "p43",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "意外信号",
+      "roundup_priority": "高",
+      "promote_to_standalone": true,
+      "promote_note": "信号集群强:2025年报带强调事项段无保留意见+2025内控否定意见+ST+因涉嫌信披违规被立案调查+控股股东近全数质押(99.67%)冻结标记;扣非转负靠非经常性损益撑正归母,建议单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3看点(含强意外信号)→小型看点合集,每点一段+行业句",
+      "headline_number": "扣非-0.03亿,由正转负;归母0.06亿靠非经常性损益撑正",
+      "block_text": "ST新华锦(600735)2026年上半年营收6.05亿元(-9.50%,受上海荔之4月出表影响同比口径不完全可比),归母净利润592万元(-53.97%);扣非归母净利润-299万元,由正转负(p14)。\n\n一份张力:归母净利润为正,靠约891万元非经常性损益撑起——其中向非金融企业收取资金占用费1326万元,另有处置损益-619万元等;扣除后主业贡献为负(p14/p108)。\n\n另一份张力:控股股东山东鲁锦进出口集团有限公司质押1.85亿股(占其持股99.67%),并冻结61万股、标记1.85亿股(p37);公司2025年度财务报告被出具带强调事项段的无保留意见、内部控制审计为否定意见,并因相关事项被叠加实施其他风险警示、因涉嫌信息披露违法违规被立案调查(p21/p29)。\n\n跨境进口电商资产的出清与减值认定,在出表语境下,是这类贸易公司共同的待解变量。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523413.PDF",
+    "stock_code": "600735",
+    "announcement_date": "2026-08-28"
   }
 ]
