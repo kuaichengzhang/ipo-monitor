@@ -15903,5 +15903,983 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523413.PDF",
     "stock_code": "600735",
     "announcement_date": "2026-08-28"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "美芯晟科技（北京）股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535290.PDF"
+    },
+    "header": {
+      "company_name": "美芯晟科技（北京）股份有限公司",
+      "ticker": "688458",
+      "exchange": "上交所",
+      "sector_tag": [
+        "半导体",
+        "模拟芯片设计"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2.78,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+4.85%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -0.05,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-202.55%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.12,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-253.97%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 32.68,
+        "unit": "%",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-2.32 pct",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -1.85,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": "-3.74 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为+1.89%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -0.53,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-34.88%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润由盈转亏,同比-202.55%(上年+501万元→本期-513万元)",
+        "page": "p7",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出大股东质押/减持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1不分配不转增",
+        "page": "[缺出处·待核]",
+        "note": "利润分配预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.05亿、扣非-0.12亿,非经常性损益+0.07亿(金融资产公允价值变动0.07亿为主)拉窄账面亏损",
+        "page": "p8",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+4.85%至2.78亿,但经营现金流-0.53亿(同比-34.88%),盈利未转化为现金且净流出扩大",
+        "page": "p7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率32.68%(-2.32pct)、净利率-1.85%(-3.74pct),同向下行",
+        "page": "p7·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离(由盈转亏+经营现金流转负扩大)",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "亏损幅度有限、无审计/信号类硬看点,合辑中一句带过即可"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "归母净利-513万元(同比-202.55%,由盈转亏)",
+      "block_text": "美芯晟(688458)2026年上半年营收2.78亿元(+4.85%),归母净利润-513万元,由上年同期+501万元转为亏损,同比-202.55%(p7)。\n\n转亏主因上游晶圆与封测涨价压低毛利率至32.68%(-2.32个百分点),叠加研发费用增至8445万元(+1062万元);非经常性损益(金融资产公允价值变动)677万元使账面亏损窄于扣非的-1190万元(p7/p8)。\n\nAI推高存储成本、终端需求偏弱的阶段里,模拟与电源管理芯片设计公司的毛利与现金流同时承压,并非个例。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535290.PDF",
+    "stock_code": "688458",
+    "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "山西杏花村汾酒厂股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535289.PDF"
+    },
+    "header": {
+      "company_name": "山西杏花村汾酒厂股份有限公司",
+      "ticker": "600809",
+      "exchange": "上交所",
+      "sector_tag": [
+        "白酒",
+        "消费品"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 210.44,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "-12.18%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 64.39,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "-24.29%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 64.39,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "-24.39%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本未给出毛利率"
+      },
+      "net_margin": {
+        "value": 30.59,
+        "unit": "%",
+        "page": "p5·衍生",
+        "period": "2026H1",
+        "yoy": "-4.90 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为+35.49%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 66.52,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+11.23%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "营收-12.18%、归母净利-24.29%,高端白酒需求承压下营收净利双降",
+        "page": "p5",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出大股东质押/减持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1不分配不转增(注:2025年度已派现80.03亿元,属上年利润分配,已于报告期内审议通过)",
+        "page": "[缺出处·待核]",
+        "note": "本期利润分配预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母64.39亿、扣非64.39亿,差异仅0.004亿,非经常性损益44.47万元,基本无背离",
+        "page": "p5",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-12.18%而经营现金流+11.23%至66.52亿,回款未随收入下滑,质量未恶化",
+        "page": "p5",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率30.59%(-4.90pct),毛利率缺失无法对照,未现反向",
+        "page": "p5·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化(高端白酒营收净利双降)",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "头部酒企H1双位数下滑,但财务干净无信号触发,合辑呈现即可"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1看点→极简2-3段,核心看点收在行业句",
+      "headline_number": "营收210.44亿(-12.18%)、归母净利64.39亿(-24.29%)双降",
+      "block_text": "山西汾酒(600809)2026年上半年营收210.44亿元(-12.18%),归母净利润64.39亿元(-24.29%),营收与净利双降(p5)。\n\n下滑主要来自高端白酒需求承压,但经营现金流不降反升——净额66.52亿元(+11.23%),回款质量未随收入走弱(p5)。\n\n行业处去库存与需求换挡期,头部清香龙头的波动,是板块价格与动销共振的缩影。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535289.PDF",
+    "stock_code": "600809",
+    "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "美克国际家居用品股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535288.PDF"
+    },
+    "header": {
+      "company_name": "美克国际家居用品股份有限公司",
+      "ticker": "600337",
+      "exchange": "上交所",
+      "sector_tag": [
+        "家居",
+        "零售"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 9.01,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "-39.95%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -5.01,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-0.88亿,亏损扩大,同比因上年为负列为不适用"
+      },
+      "net_profit_deducted": {
+        "value": -4.42,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-3.17亿,同比因上年为负列为不适用"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本未给出毛利率"
+      },
+      "net_margin": {
+        "value": -55.66,
+        "unit": "%",
+        "page": "p5·衍生",
+        "period": "2026H1",
+        "yoy": "-49.80 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为-5.86%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 0.71,
+        "unit": "亿元",
+        "page": "p5",
+        "period": "2026H1",
+        "yoy": "+26.93%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "营收-39.95%至9.01亿,归母净利亏损扩大至-5.01亿(同比不适用)",
+        "page": "p5",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出大股东质押/减持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "抽取未检出2026H1利润分配预案(待核)",
+        "page": "[缺出处·待核]",
+        "note": "抽取文本未含本期预案段落"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-5.01亿、扣非-4.42亿,非经常性损益-0.60亿(资产处置-0.25亿、一次性费用-0.32亿为主)使账面亏损大于扣非",
+        "page": "p6",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-39.95%但经营现金流+0.71亿(同比+26.93%),收入大降而现金回正,需结合应收/存货看",
+        "page": "p5",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率-55.66%(-49.80pct),毛利率缺失无法对照,未现反向",
+        "page": "p5·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化(营收腰斩、亏损扩大)",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收-40%、归母亏损扩大、净资产较年初-85%至0.91亿,但抽取未检出审计非标/违规担保等硬信号,先合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "营收9.01亿(-39.95%)、归母亏损扩大至-5.01亿",
+      "block_text": "ST美克(600337)2026年上半年营收9.01亿元(-39.95%),归母净利润-5.01亿元,亏损较上年同期的-0.88亿元扩大(p5)。\n\n非经常性损益-0.60亿元(资产处置与一次性费用为主)使账面亏损大于扣非的-4.42亿元;经营现金流+0.71亿元(+26.93%),收入大降但现金回正(p5/p6)。\n\n地产链深度调整、家具消费偏弱的背景下,新房业务占比较高的家居企业盈利普遍承压。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535288.PDF",
+    "stock_code": "600337",
+    "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "中科微至科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535287.PDF"
+    },
+    "header": {
+      "company_name": "中科微至科技股份有限公司",
+      "ticker": "688211",
+      "exchange": "上交所",
+      "sector_tag": [
+        "智能物流装备",
+        "自动化"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 11.26,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+12.37%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.13,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-0.62亿,由亏转盈,同比不适用"
+      },
+      "net_profit_deducted": {
+        "value": -0.08,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "上年同期-0.85亿,减亏,同比不适用"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本未给出毛利率"
+      },
+      "net_margin": {
+        "value": 1.16,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "+7.39 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为-6.24%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 0.96,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+69.12%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利由-0.62亿扭亏至+0.13亿,扣非仍亏-0.08亿",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东质押/冻结标注均为'无'",
+          "page": "[缺出处·待核]",
+          "note": "半年报摘要前10名股东情况表,主要股东无质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "抽取未检出2026H1利润分配预案(待核)",
+        "page": "[缺出处·待核]",
+        "note": "抽取文本未含本期预案段落"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母+0.13亿、扣非-0.08亿,非经常性损益约0.21亿(由归母与扣非差额推算)撑起账面盈利",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+12.37%至11.26亿,经营现金流+0.96亿(+69.12%),同向改善",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率1.16%(+7.39pct),毛利率缺失无法对照,未现反向",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离(归母扭亏靠非经常性损益,扣非仍亏)",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "归母扭亏至0.13亿但扣非仍亏0.08亿,盈利质量待察,合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "归母净利扭亏至1300万,但扣非仍亏786万",
+      "block_text": "中科微至(688211)2026年上半年营收11.26亿元(+12.37%),归母净利润1300万元,由上年同期-6248万元扭亏(主要财务数据表)。\n\n但扣非净利润仍亏786万元,非经常性损益约2100万元(由归母与扣非差额推算)撑起账面盈利,主业盈利尚未完全转正。\n\n智能物流装备需求温和复苏的阶段,设备商的盈利质量修复,要看订单毛利与回款节奏。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535287.PDF",
+    "stock_code": "688211",
+    "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "仙鹤股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535286.PDF"
+    },
+    "header": {
+      "company_name": "仙鹤股份有限公司",
+      "ticker": "603733",
+      "exchange": "上交所",
+      "sector_tag": [
+        "特种纸",
+        "造纸"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿；非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 63.04,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+5.23%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 5.4,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+13.88%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 4.96,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+11.95%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本未给出毛利率"
+      },
+      "net_margin": {
+        "value": 8.57,
+        "unit": "%",
+        "page": "p6·衍生",
+        "period": "2026H1",
+        "yoy": "+0.65 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为+7.92%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 4.17,
+        "unit": "亿元",
+        "page": "p6",
+        "period": "2026H1",
+        "yoy": "+26.93%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利+13.88%至5.40亿,经营现金流+26.93%至4.17亿",
+        "page": "p6",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出大股东质押/减持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1不分配不转增",
+        "page": "[缺出处·待核]",
+        "note": "利润分配预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母5.40亿、扣非4.96亿,非经常性损益0.44亿(政府补助0.47亿为主),占比约8%,背离不显著",
+        "page": "p7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+5.23%至63.04亿,经营现金流+4.17亿(+26.93%),健康",
+        "page": "p6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率8.57%(+0.65pct),毛利率缺失无法对照,未现反向",
+        "page": "p6·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化"
+      ],
+      "triggered_count": 1,
+      "spine": "本期变化(营收净利双增、现金流改善)",
+      "roundup_priority": "低",
+      "promote_to_standalone": false,
+      "promote_note": "特种纸龙头稳健双增、现金流改善,无背离无信号,合辑低优先级一句带过"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1看点→极简2-3段,核心看点收在行业句",
+      "headline_number": "归母净利5.40亿(+13.88%)、经营现金流+26.93%",
+      "block_text": "仙鹤股份(603733)2026年上半年营收63.04亿元(+5.23%),归母净利润5.40亿元(+13.88%),经营现金流4.17亿元(+26.93%)(p6)。\n\n扣非净利润4.96亿元(+11.95%),非经常性损益0.44亿元(政府补助为主),占比约8%,背离不显著(p6/p7)。\n\n禁塑与消费升级推高食品医疗包装纸需求,特种纸龙头的稳健双增,与大宗纸厂的周期波动形成对照。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535286.PDF",
+    "stock_code": "603733",
+    "announcement_date": "2026-08-31"
   }
 ]
