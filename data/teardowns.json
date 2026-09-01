@@ -17978,5 +17978,1122 @@
     "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535260.PDF",
     "stock_code": "688026",
     "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "长春英利汽车工业股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536246.PDF"
+    },
+    "header": {
+      "company_name": "长春英利汽车工业股份有限公司",
+      "ticker": "601279",
+      "exchange": "上交所",
+      "sector_tag": [
+        "汽车",
+        "汽车零部件"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-09-01",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 17.71,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-14.96%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -0.81,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "报告标注同比不适用(两期均为亏损)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.89,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "报告标注同比不适用(两期均为亏损)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本(摘要版)未给出毛利率"
+      },
+      "net_margin": {
+        "value": -4.57,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "-2.84 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为-1.73%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 2.53,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-24.83%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "营收同比-14.96%至17.71亿;归母净利-0.81亿延续亏损(报告标同比不适用)",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东质押/冻结标注均为'无'",
+          "page": "[缺出处·待核]",
+          "note": "半年报摘要前10名股东情况表,主要股东无质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "抽取未检出2026H1利润分配预案(待核)",
+        "page": "[缺出处·待核]",
+        "note": "抽取文本(摘要)未含本期预案段落"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.81亿、扣非-0.89亿,非经常性损益约+0.08亿拉窄账面亏损,主业亏损更实",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-14.96%至17.71亿,经营现金流+2.53亿(同比-24.83%)仍为正,营收降但现金未转负",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率-4.57%(-2.84pct),毛利率缺失无法对照",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离(扣非比归母多亏,非经常性损益拉窄账面亏损)+营收下滑",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "亏损幅度有限、无审计/信号类硬看点,合辑中一句带过即可"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "营收17.71亿(同比-14.96%)",
+      "block_text": "英利汽车(601279)2026年上半年营收17.71亿元,同比-14.96%;归母净利润-0.81亿元,延续并扩大亏损(上年同期-0.36亿元,报告标注同比不适用)(主要财务数据表)。\n\n扣非归母净利润-0.89亿元,比归母多亏约0.08亿元,非经常性损益(政府补助等)小幅拉窄账面亏损,主业亏损更实。经营现金流2.53亿元仍为正,但同比-24.83%,回款随收入下滑走弱。\n\n汽车冲压焊接零部件行业,下游整车价格战向 Tier1 供应商传导,营收与利润同步承压并非孤例。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225536246.PDF",
+    "stock_code": "601279",
+    "announcement_date": "2026-09-01"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "融发核电设备股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535822.PDF"
+    },
+    "header": {
+      "company_name": "融发核电设备股份有限公司",
+      "ticker": "002366",
+      "exchange": "深交所",
+      "sector_tag": [
+        "电力设备",
+        "核电装备"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-09-01",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 3.62,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+7.15%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -0.23,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+26.26%",
+        "note": "亏损收窄(报告口径同比)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.33,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-68.44%",
+        "note": "扣非亏损扩大(报告口径同比)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本(摘要版)未给出毛利率"
+      },
+      "net_margin": {
+        "value": -6.26,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "+2.83 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为-9.09%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -0.79,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+53.55%",
+        "note": "经营现金净流出收窄(报告口径同比)",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "扣非归母-0.33亿(同比-68.44%,主业亏损扩大);归母-0.23亿(亏损收窄26.26%)",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未含前十大股东表,未检出质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "抽取未检出2026H1利润分配预案(待核)",
+        "page": "[缺出处·待核]",
+        "note": "抽取文本(摘要)未含本期预案段落"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-0.23亿(亏损收窄26.26%),扣非-0.33亿(亏损扩大68.44%),非经常性损益约+0.10亿拉窄账面亏损,主业亏损实更重",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+7.15%至3.62亿,经营现金流-0.79亿(同比收窄53.55%,仍净流出)",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率-6.26%(+2.83pct),毛利率缺失无法对照",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离(扣非亏损扩大、归母靠非经常性损益收窄)",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "无审计/违规类硬信号,主业亏损靠非经常性损益修饰,合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "扣非归母-0.33亿(同比-68.44%,主业亏损扩大)",
+      "block_text": "融发核电(002366)2026年上半年营收3.62亿元(+7.15%),但归母净利润-0.23亿元(亏损收窄26.26%),扣非归母净利润-0.33亿元、同比-68.44%,主业亏损反而扩大(主要会计数据表)。\n\n差额来自非经常性损益约0.10亿元(资产处置、政府补助等),拉窄了账面亏损;经营现金流-0.79亿元,虽同比收窄53.55%仍净流出。\n\n核电主管道、主泵泵壳等核岛主设备交付周期长、回款慢,在收入确认与现金回笼之间留有一段时差,是这类重装制造企业的共同节奏。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-01/1225535822.PDF",
+    "stock_code": "002366",
+    "announcement_date": "2026-09-01"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "珠海华发实业股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535257.PDF"
+    },
+    "header": {
+      "company_name": "珠海华发实业股份有限公司",
+      "ticker": "600325",
+      "exchange": "上交所",
+      "sector_tag": [
+        "房地产",
+        "住宅开发"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 190.29,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-50.18%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -36.54,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "由盈转亏,报告标注同比不适用",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -36.48,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "由盈转亏,报告标注同比不适用",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本(摘要版)未给出毛利率"
+      },
+      "net_margin": {
+        "value": -19.2,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "-19.65 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为+0.45%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -8.64,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "由正转负,报告标注同比不适用",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "营收同比-50.18%至190.29亿;归母净利由上年+1.72亿转为-36.54亿(报告标同比不适用)",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东质押/冻结标注均为'无'",
+          "page": "[缺出处·待核]",
+          "note": "半年报摘要前10名股东情况表,主要股东无质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "抽取未检出2026H1利润分配预案(待核)",
+        "page": "[缺出处·待核]",
+        "note": "抽取文本(摘要)未含本期预案段落"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-36.54亿、扣非-36.48亿,差0.06亿,非经常性损益极小,背离不显著",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-50.18%至190.29亿,经营现金流-8.64亿(上年同期+94.96亿,由正转负),收入腰斩且现金流转负",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "净利率-19.20%(-19.65pct,由盈转亏),毛利率缺失无法对照",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "本期变化(营收腰斩+由盈转亏)",
+      "roundup_priority": "高",
+      "promote_to_standalone": false,
+      "promote_note": "头部房企营收腰斩、转亏36亿,体量大、合辑高优先;无审计/违规类硬信号,不单列深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "归母净利-36.54亿(由盈转亏,营收190.29亿同比-50.18%)",
+      "block_text": "华发股份(600325)2026年上半年营收190.29亿元,同比-50.18%;归母净利润-36.54亿元,由上年同期+1.72亿元转为亏损(主要财务数据表)。\n\n扣非归母净利润-36.48亿元,与归母基本持平,非经常性损益很小,亏损主要来自主业;经营现金流-8.64亿元,上年同期为+94.96亿元,由正转负。\n\n房地产行业调整期,头部房企营收与利润同步下探、销售回款走弱,并非单家现象——结转节奏与去化速度,共同决定报表端的表现。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535257.PDF",
+    "stock_code": "600325",
+    "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "江苏先锋精密科技股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535256.PDF"
+    },
+    "header": {
+      "company_name": "江苏先锋精密科技股份有限公司",
+      "ticker": "688605",
+      "exchange": "上交所",
+      "sector_tag": [
+        "半导体",
+        "半导体设备零部件"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿;非医疗板块,出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 6.63,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+1.25%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.55,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-48.17%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.55,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-47.40%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本(摘要版)未给出毛利率(仅披露'毛利率下降')"
+      },
+      "net_margin": {
+        "value": 8.31,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "-7.92 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为16.23%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": -0.54,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-183.48%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流-0.54亿(由上年+0.64亿转负,同比-183.48%);归母净利-48.17%至0.55亿",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未含前十大股东表,未检出质押/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1不分配不转增",
+        "page": "[缺出处·待核]",
+        "note": "利润分配预案:否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.55亿、扣非0.55亿,非经常性损益仅3.65万元,几乎无差异,背离不显著",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+1.25%至6.63亿,经营现金流-0.54亿(上年同期+0.64亿,由正转负,-183.48%),收入微增但现金流转负",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "净利率8.31%(-7.92pct),毛利率缺失无法对照",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货金额增加、库龄延长、存货跌价准备上升;应收账款增加、坏账损失同比增加(管理层讨论与分析原因说明)",
+        "page": "[缺出处·待核]",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离(营收微增但经营现金流转负+应收/存货走升)",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "利润与现金承压主因产能爬坡期投入,无审计/违规硬信号,合辑级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段,核心看点讲透+行业句",
+      "headline_number": "归母净利0.55亿(同比-48.17%);经营现金流-0.54亿由正转负",
+      "block_text": "先锋精科(688605)2026年上半年营收6.63亿元(+1.25%),归母净利润0.55亿元,同比-48.17%;扣非0.55亿元(-47.40%),非经常性损益仅3.65万元,利润下滑来自主业(主要财务数据表)。\n\n经营现金流-0.54亿元,上年同期为+0.64亿元,由正转负(-183.48%);公司披露存货增加、库龄延长、跌价准备上升,应收账款与坏账损失同步走高。\n\n半导体设备精密零部件国产替代提速,但产能爬坡期的折旧、人力与质量管控投入先行,收入稳、利润与现金承压,是扩产阶段的普遍错位。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535256.PDF",
+    "stock_code": "688605",
+    "announcement_date": "2026-08-31"
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "generated_by": "agent-direct",
+      "source_report": "浙江司太立制药股份有限公司2026年半年度报告",
+      "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535246.PDF"
+    },
+    "header": {
+      "company_name": "浙江司太立制药股份有限公司",
+      "ticker": "603520",
+      "exchange": "上交所",
+      "sector_tag": [
+        "医疗健康",
+        "化学制药"
+      ],
+      "tier": "healthcare_article",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p2",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-31",
+      "existing_listing_note": "已上市→默认不写主稿;医疗板块拆到成稿级仅供合辑"
+    },
+    "movements": {
+      "revenue": {
+        "value": 14.14,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+1.18%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.4,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+37.05%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.14,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-48.53%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "抽取文本(摘要版)未给出毛利率"
+      },
+      "net_margin": {
+        "value": 2.82,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "+0.74 pct",
+        "is_derived": true,
+        "derivation": "归母净利润/营业收入;2025H1为2.08%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "operating_cash_flow": {
+        "value": 1.11,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-12.74%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利+37.05%至0.40亿,但扣非-48.53%至0.14亿,非经常性损益拉开缺口",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "p2",
+          "note": "半年度报告未经审计"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出重大会计政策变更"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出前期差错更正/财务重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出商誉减值"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "胡锦生持股10.19%、质押3837万股(占其持股约85.9%);胡健持股10.56%、质押312万股(约6.7%)",
+          "page": "[缺出处·待核]",
+          "note": "前十大股东情况表,控股股东之一胡锦生质押比例偏高"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出违规担保或资金占用"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未检出业绩预告与正式财报差异"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派现0.5元(含税),合计约2192万元",
+        "page": "[缺出处·待核]",
+        "note": "利润分配预案:每10股派0.5元"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.40亿(+37.05%)、扣非0.14亿(-48.53%),非经常性损益约0.26亿拉开账面缺口,背离显著",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+1.18%至14.14亿,经营现金流+1.11亿(同比-12.74%)仍为正,背离不显著",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "净利率2.82%(+0.74pct),毛利率缺失无法对照",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未给出应收/存货明细异动",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "healthcare_plugin": {
+      "cash_runway": {
+        "cash_reserve": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "period": "2026H1末",
+          "note": "抽取文本未给出货币资金余额"
+        },
+        "annual_cash_burn": {
+          "value": -1.11,
+          "unit": "亿元",
+          "page": "[缺出处·待核]·衍生",
+          "period": "2026",
+          "note": "H1经营性现金流+1.11亿(净流入),无现金消耗压力"
+        },
+        "runway_years": {
+          "value": null,
+          "unit": "年",
+          "page": "p.xx·衍生",
+          "is_derived": true,
+          "derivation": "经营现金流为正,不适用跑道测算"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "经营现金流为正,不适用跑道预警"
+      },
+      "pipeline": {
+        "core_assets": [
+          {
+            "name": "碘造影剂系列(原料药及制剂)",
+            "stage": "已上市/商业化",
+            "indication": "X射线造影",
+            "period_change": "本期未披露临床或获批推进(化学制药,非创新药管线)",
+            "page": "[缺出处·待核]"
+          }
+        ],
+        "single_asset_dependence": {
+          "value": "造影剂系列为核心产品,存在一定系列依赖(化学制药,非单一创新药品种)",
+          "page": "[缺出处·待核]",
+          "note": "主营碘造影剂原料药及制剂"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "无创新药临床管线披露"
+      },
+      "license_in_out": {
+        "license_in_share": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "note": "未检出授权引进收入占比"
+        },
+        "milestone_obligations": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "note": "未检出待付里程碑款"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "无授权引进披露"
+      },
+      "vbp_reimbursement": {
+        "products_affected": {
+          "value": "抽取文本未检出集采/医保相关披露(待核)",
+          "page": "[缺出处·待核]",
+          "note": "主力产品是否进集采/医保谈判未在抽取文本体现"
+        },
+        "price_cut": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "note": "不适用/待核"
+        },
+        "revenue_impact": {
+          "value": "不适用/待核",
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未提及集采收入影响"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "无集采/医保披露"
+      },
+      "selling_expense": {
+        "selling_expense_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "period": "2026H1",
+          "yoy": null,
+          "note": "抽取文本未给出销售费用率"
+        },
+        "vs_peer": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "未与同业比较"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "销售费用率未披露"
+      },
+      "rnd": {
+        "rnd_expense": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "period": "2026H1",
+          "yoy": null,
+          "note": "抽取文本未给出研发费用"
+        },
+        "capitalization_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "note": "未披露资本化比例"
+        },
+        "trigger": false,
+        "trigger_rule_hit": "研发投入未披露,无异常"
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "意外信号",
+        "质量背离",
+        "本期变化"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离(归母+37%但扣非-48%)+大股东高比例质押",
+      "roundup_priority": "高",
+      "promote_to_standalone": false,
+      "promote_note": "大股东胡锦生质押约85.9%持股+扣非下滑,无审计/现金危机硬信号,合辑高优先但不单列"
+    },
+    "roundup_block": {
+      "headline_number": "扣非归母0.14亿(同比-48.53%);大股东胡锦生质押85.9%持股",
+      "block_text": "司太立(603520)2026年上半年营收14.14亿元(+1.18%),归母净利润0.40亿元(+37.05%),但扣非归母净利润0.14亿元、同比-48.53%,非经常性损益约0.26亿元拉开账面缺口(主要财务数据表)。\n\n经营现金流1.11亿元,同比-12.74%仍为正。前十大股东中,胡锦生持股10.19%、质押3837万股(占其持股约85.9%),胡健持股10.56%、质押312万股,质押比例偏高。\n\n造影剂原料药企业的利润,受上游碘化工原料价格与下游制剂客户需求周期牵动;大股东高比例质押,是这类公司的资金面观察点之一。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-31/1225535246.PDF",
+    "stock_code": "603520",
+    "announcement_date": "2026-08-31"
   }
 ]
