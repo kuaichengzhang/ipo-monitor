@@ -45,6 +45,21 @@
     "uid": "a7f1762b2539cb32"
   },
   {
+    "exchange": "港交所",
+    "company_name": "HYBRID KINETIC",
+    "stock_code": "01188",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Revision of Information in Published Preliminary Results / Suspension]",
+    "announcement_date": "2026-09-01",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0901/2026090103471.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "3c46dc780c092d03"
+  },
+  {
     "exchange": "上交所",
     "company_name": "美芯晟",
     "stock_code": "688458",
