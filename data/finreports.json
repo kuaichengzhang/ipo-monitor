@@ -60,6 +60,21 @@
     "uid": "eb7deb68f459045b"
   },
   {
+    "exchange": "港交所",
+    "company_name": "SHANSHUI CEMENT",
+    "stock_code": "00691",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results]",
+    "announcement_date": "2026-09-02",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202518.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "b9c1cf7f5a3855cc"
+  },
+  {
     "exchange": "深交所",
     "company_name": "中国广核",
     "stock_code": "003816",
@@ -21013,21 +21028,6 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "9d6608d4eb61d3e4"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "SHANSHUI CEMENT",
-    "stock_code": "00691",
-    "report_type": "Interim Results",
-    "report_period": "",
-    "title": "Announcements and Notices - [Interim Results]",
-    "announcement_date": "2026-08-05",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0805/2026080501859.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "b9c1cf7f5a3855cc"
   },
   {
     "exchange": "深交所",
