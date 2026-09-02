@@ -45,6 +45,21 @@
     "uid": "496e8bbd7869d018"
   },
   {
+    "exchange": "港交所",
+    "company_name": "JIHONG CO",
+    "stock_code": "02603",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Other - Miscellaneous]",
+    "announcement_date": "2026-09-02",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0902/2026090202257.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "eb7deb68f459045b"
+  },
+  {
     "exchange": "深交所",
     "company_name": "中国广核",
     "stock_code": "003816",
