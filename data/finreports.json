@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "港交所",
+    "company_name": "UNITED LAB",
+    "stock_code": "03933",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Other - Miscellaneous]",
+    "announcement_date": "2026-09-03",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0903/2026090302333.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "dd6cf843c2ed0b09"
+  },
+  {
     "exchange": "深交所",
     "company_name": "金发拉比",
     "stock_code": "002762",
