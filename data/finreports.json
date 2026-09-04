@@ -1,6 +1,21 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "UMP",
+    "stock_code": "00722",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-09-04",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0904/2026090402367.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "c4e8f867cfaef979"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "UNITED LAB",
     "stock_code": "03933",
     "report_type": "Interim Results",
