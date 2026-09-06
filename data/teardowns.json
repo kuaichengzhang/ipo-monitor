@@ -22786,5 +22786,635 @@
       "headline_number": "归母净利399万元，扣非却亏3535万元",
       "block_text": "◆ 宏微科技｜2026H1\n归母净利399万元，扣非却亏3535万元\n营收7.38亿元，同比+8.49%；归母净利润398.57万元（同比+33.84%），但扣非归母净利润-3535万元，亏损较上年同期的-18万元大幅扩大。两者差额约3933万元，主要是政府补助3535万元——账面微利靠补助补出（p.8）。\n（张力：主业扣非亏损加深，毛利率12.00%而扣非净利率约-4.79%，研发+管理+财务费用吃掉利润；经营现金流+2.10亿元（由负转正），但增长主要系政府补助同比增加。）\n以IGBT、SiC为核心的功率半导体企业，处在新能源与工业控制需求上行周期，但二三线厂商的盈利仍高度依赖补贴与产能爬坡——这不是宏微科技一家面对的行情。"
     }
+  },
+  {
+    "uid": "d198f84b3f0f36b0",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225533617.PDF",
+    "stock_code": "601992",
+    "announcement_date": "2026-08-29",
+    "header": {
+      "company_name": "北京金隅集团股份有限公司",
+      "ticker": "601992",
+      "exchange": "上交所",
+      "sector_tag": [
+        "建材",
+        "水泥",
+        "地产开发"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计（半年报不强制审计）",
+        "page": "[缺出处·待核]",
+        "note": "半年报未经审计，无审计意见事项"
+      },
+      "disclosure_date": "2026-08-29",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 359.16,
+        "unit": "亿元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "-21.18%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -21.72,
+        "unit": "亿元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "-45.22%",
+        "accounting_standard": "PRC GAAP",
+        "note": "亏损较上年同期-14.96亿元扩大"
+      },
+      "net_profit_deducted": {
+        "value": -24.29,
+        "unit": "亿元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "-10.42%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 12.39,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-8.32 pct",
+        "accounting_standard": "PRC GAAP",
+        "note": "为水泥及熟料综合毛利率（分部口径，非合并口径）；混凝土毛利率7.43%、新材料业务毛利率14.1%（同比-0.7pct）"
+      },
+      "net_margin": {
+        "value": -6.05,
+        "unit": "%",
+        "page": "p.5·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利÷营收 = -21.72÷359.16 ≈ -6.05%"
+      },
+      "operating_cash_flow": {
+        "value": 26.78,
+        "unit": "亿元",
+        "page": "p.5",
+        "period": "2026H1",
+        "yoy": "+274.12%",
+        "accounting_standard": "PRC GAAP",
+        "note": "上年同期为-15.38亿元，由负转正"
+      },
+      "biggest_mover": {
+        "value": "营收-21.18%、归母亏损扩大至-21.72亿元",
+        "page": "p.5",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "note": "意外信号,两档都填;任一命中即高看点。二元事件用 true/false + 说明。",
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": "前十大股东中润丰投资集团（持股0.70%）所持75,140,000股全部冻结；控股股东北京国有资本运营管理有限公司（45.28%）及HKSCC NOMINEES（21.90%）均无质押/冻结。未构成控股股东层面重大股东行为",
+          "page": "[缺出处·待核]",
+          "note": "质押/减持/增持/冻结"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "业绩预告与正式财报是否打架、差多少"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配、不转增",
+        "page": "[缺出处·待核]",
+        "note": "抽取到'拟定的利润分配预案…是否分配或转增 否，每10股派息数0'"
+      }
+    },
+    "quality_divergence": {
+      "note": "两档都填。财报独有的张力:数字自不自洽。",
+      "net_vs_deducted": {
+        "value": "归母-21.72亿、扣非-24.29亿，差额+2.57亿系非经常性损益（资产处置收益1.81亿、政府补助1.29亿、投资性房地产公允价值变动-0.59亿等），归母亏损小于扣非",
+        "page": "p.5/p.7",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-21.18%，经营现金流+26.78亿（上年同期-15.38亿）由负转正；现金流改善与营收下滑方向相反，非靠应收撑收入",
+        "page": "p.5",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "水泥及熟料综合毛利率12.39%（同比-8.32pct），归母净利率约-6.05%（上年约-3.28%），同向下行，无反向",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未含应收/存货余额明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "note": "计数制,两档共用,决定长度与排序。",
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "营收-21%、归母亏损扩大至-21.72亿，靠2.57亿非经常性损益使归母亏损小于扣非",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "亏损扩大+质量背离是看点，但无审计非标/违规担保/商誉减值等硬负面，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "note": "非医疗档产出:轻量拆解稿,动态长度。",
+      "length_by_score": "命中1-2→极简2-3段、一个核心看点收",
+      "headline_number": "归母净亏-21.72亿元（同比扩大45%）",
+      "block_text": "◆ 金隅集团｜2026H1\n归母净亏-21.72亿元，同比扩大45%\n营收359.16亿元，同比-21.18%；归母净利润-21.72亿元（上年同期-14.96亿元，亏损扩大45.22%），扣非-24.29亿元（亏损扩大10.42%）。归母与扣非之间差约2.57亿元，来自非经常性损益——资产处置收益1.81亿元、政府补助1.29亿元等，使归母亏损小于扣非（p.5/p.7）。\n（张力：账面亏损靠非经常性损益缩窄；水泥及熟料综合毛利率12.39%，同比降8.32个百分点，主业盈利继续受压；经营现金流+26.78亿元由负转正，与营收下滑不同向。）\n以京津冀为核心的水泥与建材、地产龙头，处在水泥需求单边下行、地产深度调整的周期里，营收与毛利同步承压——这不是金隅集团一家面对的行情。"
+    }
+  },
+  {
+    "uid": "5cebd7d59b38ff65",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225533549.PDF",
+    "stock_code": "603843",
+    "announcement_date": "2026-08-29",
+    "header": {
+      "company_name": "正平路桥建设股份有限公司",
+      "ticker": "603843",
+      "exchange": "上交所",
+      "sector_tag": [
+        "基建",
+        "路桥工程",
+        "文旅"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计（半年报不强制审计）",
+        "page": "[缺出处·待核]",
+        "note": "半年报未经审计，抽取文本未含审计意见段"
+      },
+      "disclosure_date": "2026-08-29",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 2.2,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-36.13%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -1.51,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-70.86%",
+        "accounting_standard": "PRC GAAP",
+        "note": "亏损较上年同期-0.88亿元扩大"
+      },
+      "net_profit_deducted": {
+        "value": -1.94,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-68.63%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -68.48,
+        "unit": "%",
+        "page": "p.6·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利÷营收 = -1.51÷2.20 ≈ -68.48%"
+      },
+      "operating_cash_flow": {
+        "value": -0.04,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "+94.22%",
+        "accounting_standard": "PRC GAAP",
+        "note": "上年同期为-0.67亿元，仍为负但亏损收窄"
+      },
+      "biggest_mover": {
+        "value": "归母净资产由+5.05亿元转负至-1.02亿元",
+        "page": "p.6",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "note": "意外信号,两档都填;任一命中即高看点。二元事件用 true/false + 说明。",
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "实控人金生光（持股17.33%）质押117,855,273股，占其持股约97%；金生辉（持股6.61%）质押并冻结46,228,594股（100%）；李建莉（持股2.14%）质押15,000,000股、冻结13,702,963股。控股股东层面高比例质押",
+          "page": "[缺出处·待核]",
+          "note": "质押/减持/增持/冻结；数据取自报告前10名股东持股情况表"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "业绩预告与正式财报是否打架、差多少"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配、不转增",
+        "page": "[缺出处·待核]",
+        "note": "抽取到'拟定的利润分配预案…是否分配或转增 否，每10股派息数0'"
+      }
+    },
+    "quality_divergence": {
+      "note": "两档都填。财报独有的张力:数字自不自洽。",
+      "net_vs_deducted": {
+        "value": "归母-1.51亿、扣非-1.94亿，差额+0.43亿系非经常性损益（含应收款项减值准备转回0.53亿），归母亏损小于扣非；应收减值转回属一次性调节，主业仍亏1.94亿",
+        "page": "p.6/p.7",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-36.13%，经营现金流-385万元（上年同期-6666万元）收窄94%但仍为负；收入大幅缩水同时现金未转正",
+        "page": "p.6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "抽取文本未含综合毛利率，归母净利率约-68.48%（衍生），缺毛利率对照无法判断方向",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "非经常性损益中含应收款项减值准备转回0.53亿，但抽取文本未含应收/存货余额明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "note": "计数制,两档共用,决定长度与排序。",
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "归母净资产由+5.05亿转负至-1.02亿，实控人持股约97%质押",
+      "roundup_priority": "高",
+      "promote_to_standalone": true,
+      "promote_note": "归母净资产由正转负(-1.02亿)、实控人持股约97%质押、营收-36%三张力叠加，建议单独深写核查净资产为负与持续经营"
+    },
+    "tier_basic_article": {
+      "note": "非医疗档产出:轻量拆解稿,动态长度。",
+      "length_by_score": "命中≥3→小型看点合集(每点一段)",
+      "headline_number": "归母净资产-1.02亿元（由正转负）",
+      "block_text": "◆ *ST正平｜2026H1\n归母净资产-1.02亿元，由正转负\n营收2.20亿元，同比-36.13%；归母净利润-1.51亿元（上年同期-0.88亿元，亏损扩大70.86%），扣非-1.94亿元。截至报告期末，归属于上市公司股东的净资产-1.02亿元，上年末为+5.05亿元，由正转负（p.6）。\n（张力①·股东：实控人金生光持股17.33%，其中1.18亿股质押，占其持股约97%；金生辉持股6.61%全部质押并冻结。控股股东层面高比例质押。）\n（张力②·质量：归母-1.51亿与扣非-1.94亿差0.43亿，来自非经常性损益，其中应收款项减值准备转回0.53亿——账面亏损靠一次性转回缩窄，主业仍亏。）\n路桥施工与文旅类企业处在地方财政与项目资金收紧的周期里，营收与净资产同步承压——对高负债、高质押的小市值工程企业，现金与净资产的边界更窄。"
+    }
+  },
+  {
+    "uid": "c8de807ce1dc7b5b",
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-29/1225533609.PDF",
+    "stock_code": "000401",
+    "announcement_date": "2026-08-29",
+    "_meta": {
+      "source_report": "金隅冀东水泥集团股份有限公司2026年半年度报告全文",
+      "note": "数据异常：本条目在仓库 finreports.json 中误挂于 金隅集团(601992) 名下（uid c8de807ce1dc7b5b 对应的 PDF 实为冀东水泥 000401 的半年报）。已按真实主体更正为金隅冀东水泥/000401 出卡，避免与 601992 金隅集团合并。"
+    },
+    "header": {
+      "company_name": "金隅冀东水泥集团股份有限公司",
+      "ticker": "000401",
+      "exchange": "深交所",
+      "sector_tag": [
+        "水泥",
+        "建材"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026H1",
+      "audit_status": {
+        "value": "未经审计（半年报不强制审计）",
+        "page": "[缺出处·待核]",
+        "note": "半年报未经审计，无审计意见事项"
+      },
+      "disclosure_date": "2026-08-29",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档出轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 96.42,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "-18.02%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -9.57,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "-523.24%",
+        "accounting_standard": "PRC GAAP",
+        "note": "亏损较上年同期-1.54亿元大幅扩大"
+      },
+      "net_profit_deducted": {
+        "value": -10.33,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "-300.26%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -9.93,
+        "unit": "%",
+        "page": "p.9·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利÷营收 = -9.57÷96.42 ≈ -9.93%"
+      },
+      "operating_cash_flow": {
+        "value": 3.25,
+        "unit": "亿元",
+        "page": "p.9",
+        "period": "2026H1",
+        "yoy": "-74.74%",
+        "accounting_standard": "PRC GAAP",
+        "note": "上年同期为+12.87亿元，仍为净流入但大幅收窄"
+      },
+      "biggest_mover": {
+        "value": "归母亏损扩大523%至-9.57亿元",
+        "page": "p.9",
+        "note": "供 basic 档与 article 档共用"
+      }
+    },
+    "signals": {
+      "note": "意外信号,两档都填;任一命中即高看点。二元事件用 true/false + 说明。",
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": "公司是否需追溯调整或重述以前年度会计数据：否",
+          "page": "p.9",
+          "note": "明确勾选『否』，非追溯重述"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未含前10名股东质押/冻结情况"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "业绩预告与正式财报是否打架、差多少"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "note": "抽取文本仅含历次权益分派（可转债转股价格调整历史），未含2026H1利润分配预案，待核"
+      }
+    },
+    "quality_divergence": {
+      "note": "两档都填。财报独有的张力:数字自不自洽。",
+      "net_vs_deducted": {
+        "value": "归母-9.57亿、扣非-10.33亿，差额+0.76亿系非经常性损益，归母亏损略小于扣非",
+        "page": "p.9",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-18.02%，经营现金流+3.25亿（上年同期+12.87亿，降74.74%），仍为净流入但大幅收窄；非营收涨现金流转负格局",
+        "page": "p.9",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "抽取文本未含综合毛利率，归母净利率约-9.93%（衍生），缺毛利率对照无法判断方向",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未含应收/存货余额明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "note": "计数制,两档共用,决定长度与排序。",
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "营收-18%、归母亏损扩大至-9.57亿（由-1.54亿扩大）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "亏损大幅扩大+质量背离是看点，但无审计非标/违规担保/商誉减值等硬负面，且为子公司口径，未达单独深写阈值"
+    },
+    "tier_basic_article": {
+      "note": "非医疗档产出:轻量拆解稿,动态长度。",
+      "length_by_score": "命中1-2→极简2-3段、一个核心看点收",
+      "headline_number": "归母净亏-9.57亿元（同比扩大523%）",
+      "block_text": "◆ 金隅冀东水泥｜2026H1\n归母净亏-9.57亿元，同比扩大523%\n营收96.42亿元，同比-18.02%；归母净利润-9.57亿元（上年同期-1.54亿元，亏损扩大523.24%），扣非-10.33亿元。经营现金流+3.25亿元，同比降74.74%（上年同期+12.87亿元），仍为净流入但明显收窄（p.9）。\n（张力：归母-9.57亿与扣非-10.33亿差0.76亿，来自非经常性损益；主业扣非亏损更深，水泥量价齐跌下盈利继续受压。）\n处在水泥需求单边下行、价格『量价齐跌』的周期里，北方主要水泥厂商的盈利随行业供需失衡同步走弱——这不是冀东水泥一家面对的行情。"
+    }
   }
 ]
