@@ -1,5 +1,35 @@
 [
   {
+    "exchange": "深交所",
+    "company_name": "TCL科技",
+    "stock_code": "000100",
+    "report_type": "半年报",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度报告（英文版）",
+    "announcement_date": "2026-09-09",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-09-09/1225554075.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "91ef21cf537bd9d0"
+  },
+  {
+    "exchange": "深交所",
+    "company_name": "TCL科技",
+    "stock_code": "000100",
+    "report_type": "半年报",
+    "report_period": "2026年半年度",
+    "title": "2026年半年度报告摘要（英文版）",
+    "announcement_date": "2026-09-09",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-09-09/1225554074.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "a01151f897357cf5"
+  },
+  {
     "exchange": "港交所",
     "company_name": "LEADWAY TECH",
     "stock_code": "02086",
