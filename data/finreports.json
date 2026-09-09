@@ -61,6 +61,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "JNBY",
+    "stock_code": "03306",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-09-09",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0909/2026090901121.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "7e0a85f87b83b037"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "LEADWAY TECH",
     "stock_code": "02086",
     "report_type": "Annual Results",
