@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "上交所",
+    "company_name": "梅花生物",
+    "stock_code": "600873",
+    "report_type": "半年报",
+    "report_period": "2026年半年度",
+    "title": "梅花生物2026年半年度报告（英文版）",
+    "announcement_date": "2026-09-10",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-09-10/1225554926.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "0709e61d0658e92b"
+  },
+  {
     "exchange": "深交所",
     "company_name": "TCL科技",
     "stock_code": "000100",
