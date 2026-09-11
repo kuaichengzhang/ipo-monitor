@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "深交所",
+    "company_name": "荣盛石化",
+    "stock_code": "002493",
+    "report_type": "半年报",
+    "report_period": "",
+    "title": "2026 Semi-annual Report",
+    "announcement_date": "2026-09-11",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-09-11/1225556869.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "2accad4c1af52727"
+  },
+  {
     "exchange": "上交所",
     "company_name": "梅花生物",
     "stock_code": "600873",
