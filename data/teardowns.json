@@ -26660,5 +26660,580 @@
       "headline_number": "归母净利同比-127.97%（由盈转亏）",
       "block_text": "◆ 可靠股份｜2026H1\n归母净利同比-127.97%，由盈转亏\n\n上半年营收5.83亿（同比+6.29%），但归母净利-0.08亿（上年同期+0.28亿），扣非-0.11亿，双双由盈转亏。非经常性损益+286万（委托理财损益281万）仅小幅收窄亏损。\n\n收入增长但经营现金流0.26亿（同比-37.14%），两者方向相反；应收账款1.92亿、存货1.42亿均较期初基本持平。\n\n成人失禁用品随老龄化与长护险落地而需求释放，但单家企业的盈利，仍取决于品牌溢价与原材料成本。"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523390.PDF",
+    "stock_code": "600481",
+    "announcement_date": "2026-08-28",
+    "_meta": {
+      "schema_version": "1.0",
+      "note": "基于半年报全文(499e519d5481c713)抽取；综合毛利率/应收存货明细抽取文本未含→待核；审计意见因H1未经审计未出具。"
+    },
+    "header": {
+      "company_name": "双良节能系统股份有限公司",
+      "ticker": "600481",
+      "exchange": "上交所",
+      "sector_tag": [
+        "节能节水装备",
+        "新能源装备",
+        "光伏产品"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": "H1半年报",
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计（半年报）",
+        "page": "[缺出处·待核]",
+        "note": "半年报未经审计，未出具审计意见"
+      },
+      "disclosure_date": "2026-08-28",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 30.7,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-30.03%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -7.66,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-28.31%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -8.67,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-43.76%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -24.95,
+        "unit": "%",
+        "page": "p.5/p.6·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利(-7.66亿)÷营收(30.70亿)"
+      },
+      "operating_cash_flow": {
+        "value": 8.19,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "+18.21%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净亏损同比扩大28.31%（亏损由5.97亿扩至7.66亿）",
+        "page": "p.5/p.6",
+        "note": "basic/article 共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报未经审计，无当期审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未含前10名股东持股情况表，质押/减持待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "无业绩预告对照信息"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配、不转增",
+        "page": "[缺出处·待核]",
+        "note": "利润分配预案：是否分配或转增=否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-7.66亿元、扣非-8.67亿元，非经常性损益+1.01亿元（政府补助、金融资产公允价值变动等）使账面亏损较扣非窄约1.01亿",
+        "page": "p.6/p.7",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-30.03%但经营现金流+18.21%（现金回款优于利润，非典型背离）",
+        "page": "p.5/p.6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "综合毛利率缺出处，毛利率与净利率方向无法比对",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未含应收/存货明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离（归母亏7.66亿 vs 扣非亏8.67亿，非经常性损益+1.01亿撑窄账面亏损）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "无叠加高看点，不建议单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段，核心看点(质量背离)讲透，收在行业句",
+      "headline_number": "归母净亏损 7.66 亿元（同比 -28.31%，亏损扩大）",
+      "block_text": "◆ 双良节能｜2026H1\n归母净亏损 7.66 亿元，同比扩大 28.31%\n\n营收 30.70 亿元，同比下降 30.03%；归母净利润 -7.66 亿元，亏损较上年同期（-5.97 亿元）进一步走深。扣非归母净利润 -8.67 亿元，比归母多亏约 1.01 亿元——差额来自非经常性损益（政府补助、金融资产公允价值变动等合计约 1.01 亿元），使账面亏损较扣非口径收窄一档。\n\n经营现金流 8.19 亿元，同比不降反升 18.21%，现金回款未随利润同步恶化。\n\n这不是它一家：双良节能的光伏硅片、组件业务处在产能出清阶段，上游硅料与硅片价格下行，营收随行业量价齐跌。半年报未经审计。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523355.PDF",
+    "stock_code": "600598",
+    "announcement_date": "2026-08-28",
+    "_meta": {
+      "schema_version": "1.0",
+      "note": "基于半年报全文(610c2e3f7555eb9e)抽取；综合毛利率/应收存货明细抽取文本未含→待核；审计意见因H1未经审计未出具。"
+    },
+    "header": {
+      "company_name": "黑龙江北大荒农业股份有限公司",
+      "ticker": "600598",
+      "exchange": "上交所",
+      "sector_tag": [
+        "农业",
+        "种植业"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": "H1半年报",
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计（半年报）",
+        "page": "[缺出处·待核]",
+        "note": "半年报未经审计，未出具审计意见"
+      },
+      "disclosure_date": "2026-08-28",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 21.28,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-29.39%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -5.37,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-154.50%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -2.09,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-121.22%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": -25.24,
+        "unit": "%",
+        "page": "p.5/p.6·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利(-5.37亿)÷营收(21.28亿)"
+      },
+      "operating_cash_flow": {
+        "value": 24.86,
+        "unit": "亿元",
+        "page": "p.5/p.6",
+        "period": "2026H1",
+        "yoy": "-32.68%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润由盈转亏，同比-154.50%（由+9.84亿转为-5.37亿）",
+        "page": "p.5/p.6",
+        "note": "basic/article 共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报未经审计，无当期审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "抽取文本未含前10名股东持股情况表，质押/减持待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "无业绩预告对照信息"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配、不转增",
+        "page": "[缺出处·待核]",
+        "note": "利润分配预案：是否分配或转增=否"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-5.37亿元、扣非-2.09亿元，非经常性损益-3.28亿元（其中其他营业外收支-3.90亿元）使账面亏损较扣非更深",
+        "page": "p.6/p.7",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收-29.39%、经营现金流-32.68%（双双回落，但OCF 24.86亿仍为正，现金回款未随利润恶化）",
+        "page": "p.5/p.6",
+        "hit": false
+      },
+      "margin_direction": {
+        "value": "综合毛利率缺出处，毛利率与净利率方向无法比对",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未含应收/存货明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离（归母亏5.37亿 vs 扣非亏2.09亿，非经常性损益-3.28亿含其他营业外-3.90亿拉深账面亏损）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "无叠加高看点，不建议单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2看点→极简2-3段，核心看点(质量背离)讲透，收在行业句",
+      "headline_number": "归母净利润 -5.37 亿元，同比 -154.50%（由盈转亏）",
+      "block_text": "◆ 北大荒｜2026H1\n归母净利润 -5.37 亿元，同比 -154.50%（由盈转亏）\n\n营收 21.28 亿元，同比下降 29.39%；归母净利润 -5.37 亿元，由上年同期盈利 9.84 亿元转为亏损。扣非归母净利润 -2.09 亿元，比归母少亏约 3.28 亿元——差额来自非经常性损益，其中「其他营业外收支」单项 -3.90 亿元，把账面亏损进一步拉深；经营现金流 24.86 亿元仍为正，现金回款未随利润恶化。\n\n这不是它一家：北大荒收入下滑主因化肥等农业投入品由购销改为代销、确认收入减少；资产负债率较上年末升 26.59 个百分点至 39.52%。半年报未经审计。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-28/1225523281.PDF",
+    "stock_code": "601678",
+    "announcement_date": "2026-08-28",
+    "_meta": {
+      "schema_version": "1.0",
+      "note": "本卡基于半年报摘要(535504587ec09d24)；前10名股东持股表(含质押)与分红预案取自摘要；综合毛利率/应收存货明细摘要未含→待核；审计意见因H1未经审计未出具。"
+    },
+    "header": {
+      "company_name": "滨化集团股份有限公司",
+      "ticker": "601678",
+      "exchange": "上交所",
+      "sector_tag": [
+        "氯碱化工",
+        "化工"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告（摘要）",
+      "report_type_enum": "H1半年报",
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计（半年报摘要）",
+        "page": "[缺出处·待核]",
+        "note": "半年报摘要未经审计，未出具审计意见"
+      },
+      "disclosure_date": "2026-08-28",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 82.6,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+12.32%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 3.44,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+208.25%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 2.86,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母；去年同期为-0.13亿（由亏转盈，同比不适用）"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 4.16,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利(3.44亿)÷营收(82.60亿)"
+      },
+      "operating_cash_flow": {
+        "value": 9.09,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-30.72%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利润同比+208.25%（由1.11亿增至3.44亿）",
+        "page": "[缺出处·待核]",
+        "note": "basic/article 共用"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "半年报摘要未经审计，无当期审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "第一大流通股东滨州和宜产业投资合伙企业(有限合伙)质押7200万股(占其持股约31%)；自然人于江质押630万股(另标记质押1025万股)",
+          "page": "[缺出处·待核]",
+          "note": "摘自半年报摘要前10名股东持股情况表"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "无业绩预告对照信息"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派发现金红利0.20元（含税）",
+        "page": "[缺出处·待核]",
+        "note": "中期利润分配预案"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母3.44亿、扣非2.86亿，非经常性损益0.58亿占归母约17%",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+12.32%但经营现金流-30.72%（营收涨、现金回款缩）",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率缺出处，毛利率与净利率方向无法比对",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "抽取文本未含应收/存货明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "质量背离（营收+12.32%但经营现金流-30.72%）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "无叠加高看点（无审计非标/违规担保/商誉减值等硬信号），不建议单独深写"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中3看点→小型看点合集，每点一段，末段行业句收",
+      "headline_number": "归母净利润 3.44 亿元，同比 +208.25%",
+      "block_text": "◆ 滨化股份｜2026H1\n归母净利润 3.44 亿元，同比 +208.25%\n\n营收 82.60 亿元，同比增长 12.32%；归母净利润 3.44 亿元，由去年同期微利 1.11 亿元回到正常盈利区间。质量面有两点张力：一是经营现金流 9.09 亿元，同比下降 30.72%，与利润走强反向——营收在涨、现金回款反而在缩；二是非经常性损益 0.58 亿元占归母约 17%，扣非净利 2.86 亿元（去年同期为亏 0.13 亿元），主业修复是真，但利润含少量非经常水分。\n\n股东动作：第一大流通股东滨州和宜产业投资合伙企业（有限合伙）质押 7200 万股（占其持股约 31%），自然人于江亦有质押。中期分红预案为每 10 股派 0.20 元。\n\n这不是它一家：滨化主营环氧丙烷、烧碱等氯碱化工，盈利随化工周期波动；现金流与利润节奏不一致在重资产化工企业里常见。半年报（摘要）未经审计。"
+    }
   }
 ]
