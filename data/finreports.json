@@ -15,6 +15,21 @@
     "uid": "66592c13230fabb0"
   },
   {
+    "exchange": "港交所",
+    "company_name": "BAIC MOTOR",
+    "stock_code": "01958",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Other - Miscellaneous / Final Results]",
+    "announcement_date": "2026-09-15",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0915/2026091501077.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "d0d98f668a1277f1"
+  },
+  {
     "exchange": "深交所",
     "company_name": "岩山科技",
     "stock_code": "002195",
