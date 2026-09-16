@@ -1,6 +1,21 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "BENQ HOLDING",
+    "stock_code": "02581",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Other - Miscellaneous]",
+    "announcement_date": "2026-09-16",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0916/2026091601283.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "ff913f74119f70d5"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "SKYFAME REALTY<br/>SKYFAME B3311<br/>SKYFAME B3311B<br/>SKYFAME B3111B<br/>SKYFAME B3211<br/>SKYFAME B3111",
     "stock_code": "00059<br/>05311<br/>05379<br/>05567<br/>05602<br/>05855",
     "report_type": "Annual Results",
