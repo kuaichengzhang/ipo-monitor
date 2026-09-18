@@ -1,6 +1,36 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "TAI PING CARPET",
+    "stock_code": "00146",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-09-18",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0918/2026091801446.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "ee92d811bbacfa7b"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CCIAM FUTURE EN",
+    "stock_code": "00145",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Other - Miscellaneous]",
+    "announcement_date": "2026-09-18",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0918/2026091801354.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "85506e7998e6d9d8"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "CONTINENTAL H",
     "stock_code": "00513",
     "report_type": "Profit Warning",
