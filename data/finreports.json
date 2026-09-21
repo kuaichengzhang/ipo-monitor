@@ -1,6 +1,36 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "TIANJUDIHE",
+    "stock_code": "02479",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Suspension]",
+    "announcement_date": "2026-09-20",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0920/2026092000033.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "04fabd3dae2b7fbc"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "TIANJUDIHE",
+    "stock_code": "02479",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Modified Report by Auditors / Suspension]",
+    "announcement_date": "2026-09-20",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0920/2026092000023.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "f800cc8c29409c6d"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "TAI PING CARPET",
     "stock_code": "00146",
     "report_type": "Annual Results",
