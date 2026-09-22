@@ -106,6 +106,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "YSB",
+    "stock_code": "09885",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Other - Miscellaneous]",
+    "announcement_date": "2026-09-22",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0922/2026092201375.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "1fec8c9bd0d56732"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "TIANJUDIHE",
     "stock_code": "02479",
     "report_type": "Interim Results",
