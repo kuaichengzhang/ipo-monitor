@@ -1,6 +1,51 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "CHAMPION TECH",
+    "stock_code": "00092",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-09-25",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0925/2026092501017.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "c0c03a0ed3925856"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "TOP EDUCATION",
+    "stock_code": "01752",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-09-25",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0925/2026092501055.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "4ec2c519fee4ce12"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "NWDS CHINA",
+    "stock_code": "00825",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information / Profit Warning]",
+    "announcement_date": "2026-09-25",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0925/2026092500897.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "94cb02283c65a7db"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "LUZHU BIOTECH-B",
     "stock_code": "02480",
     "report_type": "Annual Results",
@@ -748,21 +793,6 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "d0d98f668a1277f1"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "CHAMPION TECH",
-    "stock_code": "00092",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
-    "announcement_date": "2026-09-15",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0915/2026091501445.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "c0c03a0ed3925856"
   },
   {
     "exchange": "港交所",
