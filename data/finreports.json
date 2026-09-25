@@ -1,21 +1,6 @@
 [
   {
     "exchange": "港交所",
-    "company_name": "CHAMPION TECH",
-    "stock_code": "00092",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
-    "announcement_date": "2026-09-25",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0925/2026092501017.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "c0c03a0ed3925856"
-  },
-  {
-    "exchange": "港交所",
     "company_name": "TOP EDUCATION",
     "stock_code": "01752",
     "report_type": "Annual Results",
@@ -43,6 +28,21 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "94cb02283c65a7db"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CENTURY ENT INT",
+    "stock_code": "00959",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results]",
+    "announcement_date": "2026-09-25",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0925/2026092501203.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "2a645774645b6df1"
   },
   {
     "exchange": "港交所",
@@ -778,6 +778,21 @@
     "sub_industry": "中药",
     "is_18a": false,
     "uid": "b5606a54b444d5aa"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CHAMPION TECH",
+    "stock_code": "00092",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-09-15",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0915/2026091501445.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "c0c03a0ed3925856"
   },
   {
     "exchange": "港交所",
