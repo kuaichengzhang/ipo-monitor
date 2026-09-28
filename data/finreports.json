@@ -1,6 +1,36 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "FSE LIFESTYLE",
+    "stock_code": "00331",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-09-28",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0928/2026092800255.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "6c71cef151d843b4"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CENTURY ENT INT",
+    "stock_code": "00959",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "(Headlines Revised) Announcements and Notices - [Final Results / Modified Report by Auditors]",
+    "announcement_date": "2026-09-28",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0928/2026092501203.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "d7120d4ae21bbfd3"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "TOP EDUCATION",
     "stock_code": "01752",
     "report_type": "Annual Results",
@@ -43,6 +73,21 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "2a645774645b6df1"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CENTURY ENT INT",
+    "stock_code": "00959",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "(Cancelled since Headlines Superseded and Replaced) Announcements and Notices - [Final Results]",
+    "announcement_date": "2026-09-25",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0925/2026092501203.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "852b1e15524b81b4"
   },
   {
     "exchange": "港交所",
