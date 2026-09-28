@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "上交所",
+    "company_name": "芯联集成",
+    "stock_code": "688469",
+    "report_type": "业绩预告",
+    "report_period": "",
+    "title": "芯联集成电路制造股份有限公司2026年前三季度业绩预告的自愿性披露公告",
+    "announcement_date": "2026-09-29",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-09-29/1225585941.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "ce6e2420ce93abe8"
+  },
+  {
     "exchange": "港交所",
     "company_name": "FSE LIFESTYLE",
     "stock_code": "00331",
