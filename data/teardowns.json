@@ -29044,5 +29044,739 @@
       "routing": "healthcare_article",
       "note": "prep 抽取为空（英文版半年报摘要），已 curl 直下 PDF + pdfplumber 补抽关键财务数据；综合毛利率未直接披露（仅分部）、license引进占比英文摘要未披露→标待核"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-15/1225563583.PDF",
+    "stock_code": "002139",
+    "announcement_date": "2026-09-15",
+    "header": {
+      "company_name": "深圳拓邦股份有限公司",
+      "ticker": "002139",
+      "exchange": "深交所",
+      "sector_tag": [
+        "智能控制器",
+        "电子制造"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p49",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-09-15",
+      "existing_listing_note": "已上市→不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 58.09,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "+5.57%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 1.29,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-60.98%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 1.11,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-64.14%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 19.69,
+        "unit": "%",
+        "page": "p31",
+        "period": "2026H1",
+        "yoy": "-2.86 pct",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 2.22,
+        "unit": "%",
+        "page": "p8·衍生",
+        "period": "2026H1",
+        "yoy": "-3.78 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利1.29亿÷营收58.09亿"
+      },
+      "operating_cash_flow": {
+        "value": -1.01,
+        "unit": "亿元",
+        "page": "p8",
+        "period": "2026H1",
+        "yoy": "-128.63%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流由正转负，同比 -128.63%（由去年同期 +3.53 亿转为 -1.01 亿）",
+        "page": "p8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "半年度报告未经审计",
+          "page": "p49"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "第一大自然人股东吴永强(持股 17.00%)质押 83,820,000 股，占其持股约 39.5%",
+          "page": "p58",
+          "note": "质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利、不送红股、不以资本公积转增股本",
+        "page": "p2/p43"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母 1.29 亿、扣非 1.11 亿，非经常性损益仅 0.18 亿(占归母约 13.6%)，归母/扣非同向下滑(分别 -60.98%/-64.14%)，非经常性未显著修饰账面",
+        "page": "p8/p9",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 +5.57% 但经营现金流 -128.63%，由 +3.53 亿转为 -1.01 亿(净流出)",
+        "page": "p8",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率 19.69%(-2.86pct)与净利率 2.22%(-3.78pct)同向走低，未反向",
+        "page": "p31/p8·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "存货 31.36 亿，较期初 21.96 亿 +42.8%(为下半年订单备货)；应收 33.67 亿，较期初 30.25 亿 +11.3%；均快于营收 +5.57%",
+        "page": "p63/p64",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "营收微增但净利腰斩、经营现金流转负，叠加大股东质押与存货走高",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3看点→小型看点合集(每点一段)，末段行业句收",
+      "headline_number": "归母净利 1.29 亿，同比 -60.98%",
+      "block_text": "◆ 拓邦股份｜2026H1\n归母净利 1.29 亿，同比 -60.98%\n\n拓邦股份 2026 上半年营收 58.09 亿(+5.57%)，但归母净利 1.29 亿(-60.98%)、扣非 1.11 亿(-64.14%)；净利腰斩而营收仅小增，落差来自成本与费用端压力，综合毛利率 19.69%(-2.86pct)。\n经营现金流 -1.01 亿，同比 -128.63%，由去年同期 +3.53 亿转为净流出；同期存货 31.36 亿、较期初 +42.8%(为下半年订单备货)，应收 33.67 亿(+11.3%)，均快于营收增速。\n第一大自然人股东吴永强(持股 17.00%)质押 83,820,000 股，占其持股约 39.5%(p58)；半年度不派发现金红利。\n智能控制器赛道海外需求分化、原材料与汇率扰动未消，靠规模与品类扩张对冲盈利波动，是这类制造企业的共同处境。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-15/1225562889.PDF",
+    "stock_code": "002531",
+    "announcement_date": "2026-09-15",
+    "header": {
+      "company_name": "天顺风能（苏州）股份有限公司",
+      "ticker": "002531",
+      "exchange": "深交所",
+      "sector_tag": [
+        "风电设备",
+        "新能源"
+      ],
+      "tier": "basic",
+      "report_type": "2026H1半年报",
+      "report_type_enum": "H1半年报",
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "p41",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-09-15",
+      "existing_listing_note": "已上市→不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 20.2,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-7.76%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 1.16,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "+115.57%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": -0.29,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-155.28%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_margin": {
+        "value": 5.75,
+        "unit": "%",
+        "page": "p7·衍生",
+        "period": "2026H1",
+        "yoy": "+3.29 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母1.16亿÷营收20.20亿"
+      },
+      "operating_cash_flow": {
+        "value": -3.49,
+        "unit": "亿元",
+        "page": "p7",
+        "period": "2026H1",
+        "yoy": "-263.46%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利 +115.57%，但扣非 -155.28%，非经常性损益 1.45 亿使账面由亏转盈",
+        "page": "p7/p8"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "半年度报告未经审计",
+          "page": "p41"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": true,
+        "detail": {
+          "value": "第一大股东上海天神投资管理有限公司(持股 29.52%)质押 235,900,000 股，占其持股约 44.49%",
+          "page": "p37",
+          "note": "质押"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "半年度不派发现金红利、不送红股、不以资本公积转增股本",
+        "page": "p2/p20"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母 +115.57% 但扣非 -155.28%；非经常性损益 1.45 亿(政府补助等)，使账面由亏(-0.29亿)转盈(+1.16亿)，扣非仍亏损",
+        "page": "p7/p8",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 -7.76% 但经营现金流 -263.46%，由 +2.14 亿转为 -3.49 亿(净流出)",
+        "page": "p7",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率未披露，毛利率与净利率方向不可比",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "[缺出处·待核]：应收/存货明细抽取文本未含，无法判定",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "意外信号"
+      ],
+      "triggered_count": 3,
+      "spine": "非经常性损益 1.45 亿撑起账面扭亏，扣非仍亏、经营现金流转负、大股东高比例质押",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中≥3看点→小型看点合集(每点一段)，末段行业句收",
+      "headline_number": "归母 +115.57%，扣非 -155.28%",
+      "block_text": "◆ 天顺风能｜2026H1\n归母 +115.57%，扣非 -155.28%\n\n天顺风能 2026 上半年营收 20.20 亿(-7.76%)，归母净利 1.16 亿(+115.57%)；表面扭亏为盈，但扣非净利 -0.29 亿(-155.28%)，主业仍亏。\n非经常性损益 1.45 亿(政府补助等)撑高账面，使归母由亏转盈(p7/p8)；经营现金流 -3.49 亿，同比 -263.46%，由正转负(p7)。\n第一大股东上海天神投资(持股 29.52%)质押 2.36 亿股，占其持股约 44.49%(p37)；半年度不分配。\n海上风电处在\"十五五\"扩容前夜，但塔筒/管桩产能与交付节奏的错配，让产业链中游盈利仍随项目节奏大幅摆动。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-12/1225561079.PDF",
+    "stock_code": "002195",
+    "announcement_date": "2026-09-12",
+    "header": {
+      "company_name": "上海岩山科技股份有限公司",
+      "ticker": "002195",
+      "exchange": "深交所",
+      "sector_tag": [
+        "互联网信息服务",
+        "人工智能"
+      ],
+      "tier": "basic",
+      "report_type": "2024年报",
+      "report_type_enum": "FY年报",
+      "period": "2024",
+      "audit_status": {
+        "value": "标准无保留意见",
+        "page": "[缺出处·待核]"
+      },
+      "disclosure_date": "2026-09-12",
+      "existing_listing_note": "已上市→不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 6.62,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2024",
+        "yoy": "+17.06%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.32,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2024",
+        "yoy": "-90.22%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.16,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2024",
+        "yoy": "-94.32%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 33.48,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2024",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "营收6.62亿-营业成本4.40亿"
+      },
+      "net_margin": {
+        "value": 4.91,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2024",
+        "yoy": "-53.79 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母0.32亿÷营收6.62亿"
+      },
+      "operating_cash_flow": {
+        "value": -2.0,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2024",
+        "yoy": "-140.72%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利 -90.22%、扣非 -94.32%，盈利近乎归零、经营现金流转负",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "标准无保留意见",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母 0.32 亿、扣非 0.16 亿，非经常性损益 0.16 亿占归母约 50%，账面净利约一半来自非经常性",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 +17.06% 但经营现金流 -2.00 亿(同比 -140.72%)，由正转负",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "[缺出处·待核]：毛利率(衍生33.48%)与净利率(衍生4.91%)方向不可比(缺上年毛利率)",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "[缺出处·待核]：应收/存货明细抽取文本未含，无法判定",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "营收小增但净利近乎归零、扣非仅 0.16 亿、经营现金流转负，盈利质量薄弱",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简 2-3 段、一个核心看点收",
+      "headline_number": "归母净利 0.32 亿，同比 -90.22%",
+      "block_text": "◆ 岩山科技｜2024年报\n归母净利 0.32 亿，同比 -90.22%\n\n岩山科技 2024 年营收 6.62 亿(+17.06%)，但归母净利 0.32 亿(-90.22%)、扣非 0.16 亿(-94.32%)，盈利近乎归零。\n非经常性损益 0.16 亿占归母约 50%，扣非仅 0.16 亿；经营现金流 -2.00 亿、同比 -140.72%，由正转负，账面利润与现金回款脱节。\n从互联网工具转向 AI(智能驾驶/脑机接口)的跨界公司，研发投入高、兑现周期长，盈利在转型期剧烈波动并不少见。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-09-12/1225561078.PDF",
+    "stock_code": "002195",
+    "announcement_date": "2026-09-12",
+    "header": {
+      "company_name": "上海岩山科技股份有限公司",
+      "ticker": "002195",
+      "exchange": "深交所",
+      "sector_tag": [
+        "互联网信息服务",
+        "人工智能"
+      ],
+      "tier": "basic",
+      "report_type": "2025年报",
+      "report_type_enum": "FY年报",
+      "period": "2025",
+      "audit_status": {
+        "value": "标准无保留意见",
+        "page": "[缺出处·待核]"
+      },
+      "disclosure_date": "2026-09-12",
+      "existing_listing_note": "已上市→不写主稿；basic 档轻量拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 6.53,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": "-1.27%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.92,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": "+184.19%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.87,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": "+429.64%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": 28.71,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2025",
+        "yoy": "-4.77 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "营收6.53亿-营业成本4.66亿"
+      },
+      "net_margin": {
+        "value": 14.13,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2025",
+        "yoy": "+9.22 pct",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母0.92亿÷营收6.53亿"
+      },
+      "operating_cash_flow": {
+        "value": -2.66,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2025",
+        "yoy": "-33.22%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "归母净利 +184.19%、扣非 +429.64%，但经营现金流 -2.66 亿(同比再扩 -33.22%)",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "标准无保留意见",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派发现金红利 0.02 元(含税)",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母 0.92 亿、扣非 0.87 亿，非经常性损益仅 0.05 亿(占归母约 5.4%)，归母/扣非同向高增、非经常性未显著修饰",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 -1.27% 但经营现金流 -2.66 亿(同比 -33.22%)，连续两年净流出且扩大",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "毛利率 28.71%(-4.77pct)下行，但净利率 14.13%(+9.22pct)上行，方向背离(费用端或投资损益影响)",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "receivable_inventory": {
+        "value": "[缺出处·待核]：应收/存货明细抽取文本未含，无法判定",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "净利大幅反弹但经营现金流连续两年净流出且扩大，毛利率与净利率反向",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2→极简 2-3 段、一个核心看点收",
+      "headline_number": "归母净利 0.92 亿，同比 +184.19%",
+      "block_text": "◆ 岩山科技｜2025年报\n归母净利 0.92 亿，同比 +184.19%\n\n岩山科技 2025 年营收 6.53 亿(-1.27%)，归母净利 0.92 亿(+184.19%)、扣非 0.87 亿(+429.64%)，较 2024 年低谷明显反弹。\n但经营现金流 -2.66 亿、同比再扩 -33.22%，连续两年净流出；毛利率 28.71%(-4.77pct)下行，而净利率 14.13%(+9.22pct)上行，两者反向，盈利改善更多体现在费用或投资端而非主业毛利。\nAI 转型期的跨界公司，利润弹性大但现金回款与主业毛利的背离，是需要持续观察的变量。"
+    }
   }
 ]
