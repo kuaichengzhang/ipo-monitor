@@ -15,6 +15,21 @@
     "uid": "46285e8dd06eac93"
   },
   {
+    "exchange": "港交所",
+    "company_name": "HAO TIAN INTL",
+    "stock_code": "01341",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results]",
+    "announcement_date": "2026-09-30",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0930/2026093000241.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "81591e90aef861d0"
+  },
+  {
     "exchange": "上交所",
     "company_name": "芯联集成",
     "stock_code": "688469",
