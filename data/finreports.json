@@ -60,6 +60,21 @@
     "uid": "fb4feb0e9e93960c"
   },
   {
+    "exchange": "港交所",
+    "company_name": "CHEUK NANG HOLD",
+    "stock_code": "00131",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "(Cancelled since Headlines Superseded and Replaced) Announcements and Notices - [Dividend or Distribution / Final Results...  More(Cancelled since Headlines Superseded and Replaced) Announcements and Notices - [Dividend or Distribution / Final Results / Closure of Books or Change of Book Closure Period]]",
+    "announcement_date": "2026-10-01",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1001/2026100100025.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "dd643a94b3069749"
+  },
+  {
     "exchange": "深交所",
     "company_name": "华东医药",
     "stock_code": "000963",
@@ -403,6 +418,21 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "d237688451533aa7"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "LITIAN PICTURES",
+    "stock_code": "09958",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "(Cancelled since Headlines Superseded and Replaced) Announcements and Notices - [Final Results]",
+    "announcement_date": "2026-09-30",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0930/2026093002795.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "02a1dc80a237030d"
   },
   {
     "exchange": "上交所",
