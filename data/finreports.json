@@ -1,6 +1,21 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "PACIFIC LEGEND",
+    "stock_code": "08547",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results]",
+    "announcement_date": "2026-10-05",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/gem/2026/1005/2026100502173.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "a86e7b22b4ee43c9"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "TAIHE M-FIN",
     "stock_code": "01915",
     "report_type": "Interim Results",
