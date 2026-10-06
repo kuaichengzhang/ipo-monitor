@@ -1,6 +1,21 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "ETHK LABS INC.",
+    "stock_code": "01931",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Other - Business Update / Interim Results / Other - Miscellaneous]",
+    "announcement_date": "2026-10-06",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1006/2026100601531.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "aeb7338b0c9114c7"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "PACIFIC LEGEND",
     "stock_code": "08547",
     "report_type": "Interim Results",
