@@ -1,6 +1,21 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "LESI GROUP",
+    "stock_code": "02540",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Other - Miscellaneous]",
+    "announcement_date": "2026-10-07",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1007/2026100701859.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "7e0fc0b958787e82"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "ETHK LABS INC.",
     "stock_code": "01931",
     "report_type": "Interim Results",
