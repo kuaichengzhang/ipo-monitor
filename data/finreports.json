@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "深交所",
+    "company_name": "飞龙股份",
+    "stock_code": "002536",
+    "report_type": "业绩预告",
+    "report_period": "",
+    "title": "飞龙汽车部件股份有限公司2026年前三季度业绩预告",
+    "announcement_date": "2026-10-08",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-10-08/1225590407.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "3e80e6ca1b8ffa7b"
+  },
+  {
     "exchange": "港交所",
     "company_name": "LESI GROUP",
     "stock_code": "02540",
