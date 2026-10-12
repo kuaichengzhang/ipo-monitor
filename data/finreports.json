@@ -1,5 +1,35 @@
 [
   {
+    "exchange": "港交所",
+    "company_name": "PANGAEA CONNECT",
+    "stock_code": "01473",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Other - Business Update / Inside Information]",
+    "announcement_date": "2026-10-12",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1012/2026101200169.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "967311f0953ad199"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "DELTON",
+    "stock_code": "01989",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-10-11",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1011/2026101100001.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "5438a0a49bb0c226"
+  },
+  {
     "exchange": "深交所",
     "company_name": "沃华医药",
     "stock_code": "002107",
@@ -31303,21 +31333,6 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "82afa245aaabe9ba"
-  },
-  {
-    "exchange": "港交所",
-    "company_name": "DELTON",
-    "stock_code": "01989",
-    "report_type": "Profit Warning",
-    "report_period": "",
-    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
-    "announcement_date": "2026-07-07",
-    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/0707/2026070701869.pdf",
-    "source": "HKEX",
-    "industry": "",
-    "sub_industry": "",
-    "is_18a": false,
-    "uid": "5438a0a49bb0c226"
   },
   {
     "exchange": "港交所",
