@@ -33543,5 +33543,602 @@
       "headline_number": "归母净利8.68亿，同比-7.70%",
       "block_text": "◆ 苏泊尔｜2026H1\n归母净利8.68亿，同比-7.70%\n\n情况：上半年营收114.10亿、同比微降0.59%，归母净利8.68亿、同比-7.70%，扣非8.40亿、同比-7.42%；非经常性损益2749万（占归母约3.2%），账面基本靠主业。炊具主业收入33.29亿、同比+5.26%，是少数保持增长的板块。\n\n张力：营收基本守平、利润小幅回落，未出现盈利与现金流的明显背离（经营现金流4.84亿、同比-5.50%）。\n\n行业句：厨房小家电上半年全渠道零售额同比-4.8%（奥维云网），整体需求偏弱、消费趋于理性；这家炊具与小家电龙头的收入守平、利润小降，体现的是存量市场的稳态，而非失速。"
     }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507537.PDF",
+    "stock_code": "688598",
+    "announcement_date": "2026-08-26",
+    "header": {
+      "company_name": "金博股份",
+      "ticker": "688598",
+      "exchange": "上交所",
+      "sector_tag": [
+        "先进碳基材料",
+        "碳陶制动盘"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "[缺出处·待核]",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；basic档轻量拆解稿仅供看板"
+    },
+    "movements": {
+      "revenue": {
+        "value": 4.56,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+11.08%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -1.42,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+15.6%（亏损收窄；表列不适用，按金额计算）",
+        "accounting_standard": "PRC GAAP",
+        "note": "归母净亏损1.42亿，较上年1.68亿收窄"
+      },
+      "net_profit_deducted": {
+        "value": -1.51,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+24.0%（亏损收窄；表列不适用，按金额计算）",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非亏损1.51亿，较上年1.99亿收窄"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "综合毛利率抽取文本未含"
+      },
+      "net_margin": {
+        "value": -31.0,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "+9.9pct（亏损率收窄；表列不适用）",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利-1.42亿÷营收4.56亿"
+      },
+      "operating_cash_flow": {
+        "value": -1.67,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-14.3%（净流出扩大；表列不适用，按金额计算）",
+        "accounting_standard": "PRC GAAP",
+        "note": "经营现金流净额-1.67亿，较上年-1.46亿净流出扩大"
+      },
+      "biggest_mover": {
+        "value": "研发费用9182.46万，同比+76.09%（由5215万增至9182万），为本期增速最高科目；研发投入占营收比例升至20.13%（+7.43pct）",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "前十大股东章节未抽取，质押/减持/冻结情况待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1利润分配预案：不分配不转增（是否分配或转增：否）",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-1.42亿、扣非-1.51亿，非经常性损益990.84万（占归母约7.0%），未修饰账面",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+11.08%至4.56亿，但经营现金流净额-1.67亿（较上年-1.46亿净流出扩大约14.3%），收入增长未带来现金回笼改善",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率未披露；净利率-31.0%（亏损率收窄）",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "[应收/存货明细待核]",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "营收+11.08%但经营现金流净流出扩大至-1.67亿，盈利改善未传导至现金",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收增长与现金流背离2维度触发，维持中优先级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2看点→极简2-3段、一个核心看点收",
+      "headline_number": "营收4.56亿，同比+11.08%",
+      "block_text": "◆ 金博股份｜2026H1\n营收4.56亿，同比+11.08%\n\n情况：上半年营收4.56亿、同比+11.08%，归母净亏损1.42亿（较上年1.68亿收窄），扣非亏损1.51亿（较上年1.99亿收窄）；非经常性损益990.84万（占归母约7.0%），未明显修饰账面。公司主业为碳基复合材料，并向碳陶制动盘延伸，碳陶制动盘已配套多家主流车企中高端新能源车型。\n\n张力：经营现金流净额-1.67亿，较上年-1.46亿净流出扩大约14.3%，收入增长没有同步改善现金回笼，盈利修复与现金流背离。\n\n行业句：碳陶制动盘处于规模化放量、国产替代加速的关键阶段，已切入小米、比亚迪等中高端新能源车型；但新能源汽车国内需求承压、行业竞争加剧，上游材料商的放量节奏与回款质量仍是同一道考题。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507507.PDF",
+    "stock_code": "688023",
+    "announcement_date": "2026-08-26",
+    "header": {
+      "company_name": "安恒信息",
+      "ticker": "688023",
+      "exchange": "上交所",
+      "sector_tag": [
+        "AI+网络安全",
+        "信息安全"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "[缺出处·待核]",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；basic档轻量拆解稿仅供看板"
+    },
+    "movements": {
+      "revenue": {
+        "value": 7.39,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+0.86%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": -1.76,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+9.22%（亏损收窄；表列不适用，prep提及减亏9.22%）",
+        "accounting_standard": "PRC GAAP",
+        "note": "归母净亏损1.76亿，较上年1.94亿收窄"
+      },
+      "net_profit_deducted": {
+        "value": -1.9,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+8.65%（亏损收窄；表列不适用，按金额计算）",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非亏损1.90亿，较上年2.08亿收窄"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "综合毛利率抽取文本未含"
+      },
+      "net_margin": {
+        "value": -23.8,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "+2.7pct（亏损率收窄；表列不适用）",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利-1.76亿÷营收7.39亿"
+      },
+      "operating_cash_flow": {
+        "value": -3.94,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-22.7%（净流出扩大；表列不适用，按金额计算）",
+        "accounting_standard": "PRC GAAP",
+        "note": "经营现金流净额-3.94亿，较上年-3.21亿净流出扩大"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额-3.94亿，净流出较上年扩大约22.7%（由-3.21亿至-3.94亿），为本期最大现金缺口",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "前十大股东章节未抽取，质押/减持/冻结情况待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1利润分配预案：不分配不转增（每10股送0、派0、转0）",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母-1.76亿、扣非-1.90亿，非经常性损益1414.11万（占归母约8.0%），未修饰账面",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+0.86%基本持平至7.39亿，但经营现金流净额-3.94亿（较上年-3.21亿净流出扩大约22.7%），收入平稳而现金净流出扩大",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率未披露；净利率-23.8%（亏损率收窄）",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "[应收/存货明细待核]",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "营收持平（7.39亿、+0.86%）但经营现金流净流出扩大至-3.94亿",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "营收平稳与现金流背离2维度触发，维持中优先级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2看点→极简2-3段、一个核心看点收",
+      "headline_number": "营收7.39亿，同比+0.86%",
+      "block_text": "◆ 安恒信息｜2026H1\n营收7.39亿，同比+0.86%\n\n情况：上半年营收7.39亿、同比+0.86%，归母净亏损1.76亿（较上年1.94亿减亏约9.22%），扣非亏损1.90亿（较上年2.08亿收窄）；非经常性损益1414.11万（占归母约8.0%），未明显修饰账面。公司主业为AI+网络安全，报告期内推进恒脑安全垂域大模型等AI产品线。\n\n张力：经营现金流净额-3.94亿，较上年-3.21亿净流出扩大约22.7%，收入基本持平而现金净流出持续扩大，盈利修复尚未传导至现金。\n\n行业句：网络安全行业在AI驱动下进入产品重构期，毛利率回升、费用率下降带动账面亏损收窄；但To G/大B客户的回款周期长，是安全厂商普遍面对的现金流考题。"
+    }
+  },
+  {
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507445.PDF",
+    "stock_code": "000563",
+    "announcement_date": "2026-08-26",
+    "header": {
+      "company_name": "陕国投Ａ",
+      "ticker": "000563",
+      "exchange": "深交所",
+      "sector_tag": [
+        "信托",
+        "金融"
+      ],
+      "tier": "basic",
+      "report_type": "H1半年报",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "[缺出处·待核]",
+        "note": "半年度报告未经审计"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；basic档轻量拆解稿仅供看板"
+    },
+    "movements": {
+      "revenue": {
+        "value": 14.06,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+2.85%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 7.28,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+0.32%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 7.29,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "+0.72%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "note": "金融信托业无综合毛利率可比口径"
+      },
+      "net_margin": {
+        "value": 51.8,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": "-1.3pct（表列不适用）",
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母净利7.28亿÷营收14.06亿"
+      },
+      "operating_cash_flow": {
+        "value": 1.38,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-85.95%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额1.38亿，同比-85.95%（由9.81亿降至1.38亿），为本期降幅最大科目",
+        "page": "[缺出处·待核]",
+        "note": "本期变动最大科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "前十大股东章节未抽取，质押/减持/冻结情况待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "2026H1利润分配预案：每10股派0.10元（含税），以总股本51.14亿股为基数，现金分红总额5113.97万元（占归母净利7.03%）",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母7.28亿、扣非7.29亿，非经常性损益-75.27万（占比极小），归母与扣非基本一致",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收+2.85%至14.06亿、归母+0.32%，但经营现金流净额1.38亿（较上年9.81亿-85.95%），盈利平稳而现金大幅净流出",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "金融信托无综合毛利率可比；净利率约51.8%（衍生）",
+        "page": "[缺出处·待核]",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "信托业以发放贷款及金融资产投资为主，应收/存货口径不适用",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "na_dimensions": [],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "营收14.06亿（+2.85%）平稳，但经营现金流1.38亿同比-85.95%（由9.81亿降至1.38亿）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": "经营现金流大幅净流出为显著张力，但公司整体平稳、金融属性OCF基数效应明显，维持中优先级"
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中1-2看点→极简2-3段、一个核心看点收",
+      "headline_number": "营收14.06亿，同比+2.85%",
+      "block_text": "◆ 陕国投Ａ｜2026H1\n营收14.06亿，同比+2.85%\n\n情况：上半年营业总收入14.06亿、同比+2.85%，归母净利7.28亿、同比+0.32%，扣非7.29亿、同比+0.72%，整体经营平稳；固有业务收入7.37亿、同比+12.06%。中期拟每10股派0.10元（含税），现金分红5113.97万元，占归母净利7.03%。\n\n张力：经营现金流净额1.38亿，同比-85.95%（上年同期9.81亿），盈利平稳而现金大幅净流出；信托业务现金流受信托计划资金收付周期影响，基数效应明显，仅作观察。\n\n行业句：信托行业在“三分类”改革与资管新规深化下加速回归本源，标品信托与资产服务信托成为增长引擎；资本底盘稳固、行业整体回暖，是陕国投这类老牌信托公司的底色。"
+    }
   }
 ]
