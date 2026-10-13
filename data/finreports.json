@@ -331,6 +331,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "MAN WAH HLDGS",
+    "stock_code": "01999",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information / Profit Warning]",
+    "announcement_date": "2026-10-13",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1013/2026101300015.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "46549b99c9436871"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "PANGAEA CONNECT",
     "stock_code": "01473",
     "report_type": "Profit Warning",
