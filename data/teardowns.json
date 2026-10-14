@@ -34140,5 +34140,703 @@
       "headline_number": "营收14.06亿，同比+2.85%",
       "block_text": "◆ 陕国投Ａ｜2026H1\n营收14.06亿，同比+2.85%\n\n情况：上半年营业总收入14.06亿、同比+2.85%，归母净利7.28亿、同比+0.32%，扣非7.29亿、同比+0.72%，整体经营平稳；固有业务收入7.37亿、同比+12.06%。中期拟每10股派0.10元（含税），现金分红5113.97万元，占归母净利7.03%。\n\n张力：经营现金流净额1.38亿，同比-85.95%（上年同期9.81亿），盈利平稳而现金大幅净流出；信托业务现金流受信托计划资金收付周期影响，基数效应明显，仅作观察。\n\n行业句：信托行业在“三分类”改革与资管新规深化下加速回归本源，标品信托与资产服务信托成为增长引擎；资本底盘稳固、行业整体回暖，是陕国投这类老牌信托公司的底色。"
     }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "source_report": "首创证券2026年半年度报告(全文)",
+      "routing_note": "basic 档；非医疗，不挂医疗插件。已上市→只出拆解稿。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507425.PDF",
+    "stock_code": "601136",
+    "announcement_date": "2026-08-26",
+    "header": {
+      "company_name": "首创证券股份有限公司",
+      "ticker": "601136",
+      "exchange": "上交所",
+      "sector_tag": [
+        "证券"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "[缺出处·待核]",
+        "note": "2026H1 半年报未经审计，无当期审计意见"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 15.44,
+        "unit": "亿元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "+20.25%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 6.72,
+        "unit": "亿元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "+37.01%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 6.65,
+        "unit": "亿元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": "+37.43%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "note": "证券业无综合毛利率口径"
+      },
+      "net_margin": {
+        "value": 43.5,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母6.72亿÷营收15.44亿"
+      },
+      "operating_cash_flow": {
+        "value": -15.99,
+        "unit": "亿元",
+        "page": "p.11",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "note": "公司标注'不适用'（两期均为净流出）；净流出由-3.83亿扩大至-15.99亿"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净流出扩大至 -15.99 亿，约为上年同期（-3.83亿）的 4.2 倍",
+        "page": "p.11",
+        "note": "本期变化最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "[缺出处·待核]",
+          "note": "2026H1 未经审计，无当期审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "note": "商誉约1.26亿，较年初持平，无减值披露"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "p.12",
+          "note": "前10名股东质押/冻结均为0（北京首都创业集团等国有股东）"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "不分配不转增（2026H1）",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母6.72亿、扣非6.65亿，差额约0.07亿（占归母约1.0%），非经常性损益几乎未修饰账面",
+        "page": "p.11/p.12",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 +20.25%（增至15.44亿）但经营现金流净流出扩大至 -15.99 亿（上年 -3.83 亿），盈利增长与现金回款背离",
+        "page": "p.11",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "证券业无综合毛利率口径；净利率约43.5%（归母/营收衍生），归母与扣非净利率同向，无反向",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "应收款项 18.69 亿，较年初 5.96 亿 +213.46%，资产端随业务扩张显著膨胀",
+        "page": "p.12",
+        "hit": true
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离（营收增、现金大幅净流出 + 应收激增）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2（本期变化+质量背离）→ 极简 2-3 段",
+      "headline_number": "经营现金流净流出 15.99 亿，约为上年同期 4.2 倍",
+      "block_text": "◆ 首创证券｜2026H1半年报\n经营现金流净流出 15.99 亿，约为上年同期的 4.2 倍。\n\n上半年营收 15.44 亿、归母净利 6.72 亿，同比分别 +20.25%、+37.01%，投资类与财富管理业务回暖带动账面利润增长（归母与扣非仅差约 0.07 亿，非经常性损益几乎未修饰业绩）。另一边，经营现金流净流出从上年 3.83 亿扩大到 15.99 亿；应收款项较年初 +213.46% 至 18.69 亿，资产端随业务扩张显著膨胀。\n\n这不是它一家的问题——在自营与信用业务敞口走阔的周期里，券商的账面利润与现金回款之间常常出现时差。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "source_report": "威高骨科2026年半年度报告(全文)",
+      "routing_note": "healthcare_article 档；医疗健康/医疗器械，挂医疗插件+合辑块。已上市→只出拆解稿。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507422.PDF",
+    "stock_code": "688161",
+    "announcement_date": "2026-08-26",
+    "header": {
+      "company_name": "山东威高骨科材料股份有限公司",
+      "ticker": "688161",
+      "exchange": "上交所",
+      "sector_tag": [
+        "医疗健康",
+        "医疗器械"
+      ],
+      "tier": "healthcare_article",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计（prep 捕获的'标准无保留意见'系往年/模板引用，非本期意见）",
+        "page": "[缺出处·待核]",
+        "note": "2026H1 未经审计"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；医疗板块拆到成稿级供合辑"
+    },
+    "movements": {
+      "revenue": {
+        "value": 7.04,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-4.93%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 1.32,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-6.85%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 1.26,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-7.28%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": 63.59,
+        "unit": "%",
+        "page": "p.29·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "（营收7.04亿-营业成本2.57亿）÷营收"
+      },
+      "net_margin": {
+        "value": 18.8,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母1.32亿÷营收7.04亿"
+      },
+      "operating_cash_flow": {
+        "value": 1.4,
+        "unit": "亿元",
+        "page": "p.6",
+        "period": "2026H1",
+        "yoy": "-24.59%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "经营现金流净额 1.40 亿，同比 -24.59%（公司归因利息收入减少及进口原材料采购集中上半年支付）",
+        "page": "p.6",
+        "note": "本期变化最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "[缺出处·待核]",
+          "note": "2026H1 未经审计；prep 抽取到的'标准无保留意见'为往年/模板引用，非本期意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "note": "prep 未披露商誉科目"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "prep 抽取文本未含前10名股东表，待核"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": "每10股派0.90元（含税），现金分红总额3,575.58万元，约占半年度归母净利27.04%",
+        "page": "[缺出处·待核]"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母1.32亿、扣非1.26亿，差额约0.06亿（占归母约4.8%），非经常性损益未修饰账面",
+        "page": "p.6/p.7",
+        "hit": false
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 -4.93%、经营现金流 -24.59%，现金回款降幅约为营收降幅的 5 倍（公司归因利息收入减少及进口原材料集中上半年支付）",
+        "page": "p.6",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "综合毛利率约63.6%（营收-成本衍生），净利率约18.8%（归母/营收衍生），同向小幅下行，无反向",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "[缺出处·待核]：prep 抽取文本未含应收/存货明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "healthcare_plugin": {
+      "cash_runway": {
+        "cash_reserve": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]",
+          "period": "2026H1末"
+        },
+        "annual_cash_burn": {
+          "value": null,
+          "unit": "亿元",
+          "page": "p.6",
+          "period": "2026H1",
+          "note": "经营现金流净额 +1.40亿为正，无年度燃烧"
+        },
+        "runway_years": {
+          "value": null,
+          "unit": "年",
+          "page": "[缺出处·待核]·衍生",
+          "is_derived": true,
+          "derivation": "现金储备÷年经营现金消耗（本期为正，不适用）"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "pipeline": {
+        "core_assets": [
+          {
+            "name": "寰枢椎脱位治疗产品（枕颈）",
+            "stage": "在研/临床评价",
+            "indication": "上颈椎（寰枢椎）脱位",
+            "period_change": "在研推进（本期投入41.08万元）",
+            "page": "p.29(在研项目)"
+          }
+        ],
+        "single_asset_dependence": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "产品覆盖脊柱/创伤/关节/运动医学多线，未见单一品种依赖披露"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "license_in_out": {
+        "license_in_share": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]"
+        },
+        "milestone_obligations": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "vbp_reimbursement": {
+        "products_affected": {
+          "value": "脊柱/创伤/关节/运动医学类骨科植入物，受带量采购接续采购影响",
+          "page": "p.8(行业情况)"
+        },
+        "price_cut": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]"
+        },
+        "revenue_impact": {
+          "value": "公司称集采致主要产品销量短期小幅下降（照原文，不判定利空利好）",
+          "page": "p.7(会计数据说明)"
+        },
+        "trigger": true,
+        "trigger_rule_hit": "主力品种进带量采购，集采重塑竞争逻辑（照原文）"
+      },
+      "selling_expense": {
+        "selling_expense_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]",
+          "period": "2026H1",
+          "yoy": null,
+          "note": "prep 披露销售费用同比 -12.55%，费用率待核"
+        },
+        "vs_peer": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      },
+      "rnd": {
+        "rnd_expense": {
+          "value": 0.55,
+          "unit": "亿元",
+          "page": "p.40·衍生",
+          "period": "2026H1",
+          "yoy": "-5.94%",
+          "is_derived": true,
+          "derivation": "营收7.04亿×研发投入占比7.77%"
+        },
+        "capitalization_ratio": {
+          "value": null,
+          "unit": "%",
+          "page": "[缺出处·待核]"
+        },
+        "trigger": false,
+        "trigger_rule_hit": null
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions": [
+        "意外信号",
+        "质量背离",
+        "现金跑道",
+        "管线进展",
+        "license依赖",
+        "集采医保",
+        "销售费用率",
+        "研发",
+        "业绩兑现",
+        "本期变化"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离",
+        "集采医保"
+      ],
+      "triggered_count": 3,
+      "spine": "集采常态化下骨科植入物销量短期承压 + 现金回款降幅大于营收",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "roundup_block": {
+      "headline_number": "营收 7.04 亿，同比 -4.93%",
+      "block_text": "◆ 威高骨科｜2026H1半年报\n营收 7.04 亿，同比 -4.93%。\n\n骨科植入物（脊柱、创伤、关节、运动医学）上半年收入小幅回落，归母净利 1.32 亿（-6.85%）。公司把下滑归因到终端临床手术量的阶段性波动、竞争加剧和带量采购接续推进。经营现金流 1.40 亿，同比 -24.59%，降幅约为营收降幅的 5 倍，公司解释为利息收入减少与进口原材料采购集中上半年支付。\n\n集采不是新事——接续采购把竞争逻辑从渠道利润转向规模与成本，头部国产企业靠供应链弹性持续替代进口。对威高这类全产品线骨科商，价格闸门长期开着。"
+    }
+  },
+  {
+    "_meta": {
+      "schema_version": "1.0",
+      "source_report": "宁夏建材2026年半年度报告(摘要)",
+      "routing_note": "basic 档；建材/水泥，非医疗，不挂医疗插件。已上市→只出拆解稿。prep 仅摘要版，页码多标待核。"
+    },
+    "source_url": "https://static.cninfo.com.cn/finalpage/2026-08-26/1225507394.PDF",
+    "stock_code": "600449",
+    "announcement_date": "2026-08-26",
+    "header": {
+      "company_name": "宁夏建材集团股份有限公司",
+      "ticker": "600449",
+      "exchange": "上交所",
+      "sector_tag": [
+        "建材",
+        "水泥"
+      ],
+      "tier": "basic",
+      "report_type": "2026年半年度报告",
+      "report_type_enum": [
+        "H1半年报"
+      ],
+      "period": "2026",
+      "audit_status": {
+        "value": "未经审计",
+        "page": "[缺出处·待核]",
+        "note": "2026H1 未经审计"
+      },
+      "disclosure_date": "2026-08-26",
+      "existing_listing_note": "已上市→默认不写主稿；basic 档拆解稿"
+    },
+    "movements": {
+      "revenue": {
+        "value": 15.86,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-37.95%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_attributable": {
+        "value": 0.58,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-45.29%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "net_profit_deducted": {
+        "value": 0.44,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-41.84%",
+        "accounting_standard": "PRC GAAP",
+        "note": "扣非归母"
+      },
+      "gross_margin": {
+        "value": null,
+        "unit": "%",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "note": "摘要未含毛利率"
+      },
+      "net_margin": {
+        "value": 3.65,
+        "unit": "%",
+        "page": "[缺出处·待核]·衍生",
+        "period": "2026H1",
+        "yoy": null,
+        "accounting_standard": "PRC GAAP",
+        "is_derived": true,
+        "derivation": "归母0.58亿÷营收15.86亿"
+      },
+      "operating_cash_flow": {
+        "value": 1.08,
+        "unit": "亿元",
+        "page": "[缺出处·待核]",
+        "period": "2026H1",
+        "yoy": "-69.66%",
+        "accounting_standard": "PRC GAAP"
+      },
+      "biggest_mover": {
+        "value": "营收 15.86 亿，同比 -37.95%（降幅最大）",
+        "page": "[缺出处·待核]",
+        "note": "本期变化最大的科目"
+      }
+    },
+    "signals": {
+      "non_standard_audit": {
+        "hit": false,
+        "detail": {
+          "value": "未经审计",
+          "page": "[缺出处·待核]",
+          "note": "2026H1 未经审计，无当期审计意见"
+        }
+      },
+      "accounting_policy_change": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "financial_restatement": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "goodwill_impairment": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "unit": "亿元",
+          "page": "[缺出处·待核]"
+        }
+      },
+      "major_shareholder_action": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]",
+          "note": "摘要前10名股东（中国建材股份49.03%）质押/冻结均为0"
+        }
+      },
+      "irregular_guarantee_or_fund_occupation": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "forecast_vs_actual_gap": {
+        "hit": false,
+        "detail": {
+          "value": null,
+          "page": "[缺出处·待核]"
+        }
+      },
+      "dividend_or_buyback": {
+        "value": null,
+        "page": "[缺出处·待核]",
+        "note": "摘要未含2026H1利润分配预案"
+      }
+    },
+    "quality_divergence": {
+      "net_vs_deducted": {
+        "value": "归母0.58亿、扣非0.44亿，差额约0.14亿（占归母约23.1%），非经常性损益撑高账面",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "revenue_vs_ocf": {
+        "value": "营收 -37.95%、经营现金流 -69.66%，现金回款降幅约为营收降幅的 1.8 倍",
+        "page": "[缺出处·待核]",
+        "hit": true
+      },
+      "margin_direction": {
+        "value": "净利率约3.65%（归母/营收衍生），营收与净利同向下滑，无反向",
+        "page": "[缺出处·待核]·衍生",
+        "hit": false
+      },
+      "receivable_inventory": {
+        "value": "[缺出处·待核]：摘要未含应收/存货明细",
+        "page": "[缺出处·待核]",
+        "hit": false
+      }
+    },
+    "scorecard": {
+      "scoreable_dimensions_basic": [
+        "本期变化",
+        "质量背离",
+        "意外信号",
+        "业绩兑现"
+      ],
+      "triggered": [
+        "本期变化",
+        "质量背离"
+      ],
+      "triggered_count": 2,
+      "spine": "质量背离（净利靠非经常性损益撑高 + 现金回款降幅远超营收）",
+      "roundup_priority": "中",
+      "promote_to_standalone": false,
+      "promote_note": null
+    },
+    "tier_basic_article": {
+      "length_by_score": "命中2（本期变化+质量背离）→ 极简 2-3 段",
+      "headline_number": "营收 15.86 亿，同比 -37.95%",
+      "block_text": "◆ 宁夏建材｜2026H1半年报\n营收 15.86 亿，同比 -37.95%。\n\n上半年归母净利 0.58 亿（-45.29%），扣非 0.44 亿（-41.84%），非经常性损益约 0.14 亿占归母约 23%，账面利润有一部分靠非经常性损益撑着。经营现金流 1.08 亿（-69.66%），现金回款降幅约为营收降幅的 1.8 倍。\n\n这不是它一家——在水泥需求走弱、价格承压的周期里，区域建材商的营收与现金回款同步收缩是普遍现象。"
+    }
   }
 ]
