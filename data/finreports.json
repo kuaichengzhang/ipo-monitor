@@ -45,6 +45,21 @@
     "uid": "25e4914ff5bc7572"
   },
   {
+    "exchange": "港交所",
+    "company_name": "TCL ELECTRONICS",
+    "stock_code": "01070",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-10-19",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1019/2026101900005.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "209074372d2b5ddd"
+  },
+  {
     "exchange": "深交所",
     "company_name": "卫星化学",
     "stock_code": "002648",
