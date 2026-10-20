@@ -495,6 +495,21 @@
     "uid": "b074f5b37e9a35f8"
   },
   {
+    "exchange": "港交所",
+    "company_name": "FAIRWOOD HOLD",
+    "stock_code": "00052",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-10-20",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1020/2026102000265.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "ab4e334485e81d7e"
+  },
+  {
     "exchange": "上交所",
     "company_name": "信达证券",
     "stock_code": "601059",
