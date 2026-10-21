@@ -540,6 +540,21 @@
     "uid": "5db3b7fbecc86b94"
   },
   {
+    "exchange": "深交所",
+    "company_name": "建新股份",
+    "stock_code": "300107",
+    "report_type": "业绩快报",
+    "report_period": "",
+    "title": "建新股份2026年前三季度业绩快报",
+    "announcement_date": "2026-10-21",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-10-21/1225614512.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "a9013f7b2a4f85a1"
+  },
+  {
     "exchange": "上交所",
     "company_name": "福日电子",
     "stock_code": "600203",
