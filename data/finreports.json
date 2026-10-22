@@ -481,6 +481,21 @@
   },
   {
     "exchange": "深交所",
+    "company_name": "双林股份",
+    "stock_code": "300100",
+    "report_type": "三季报",
+    "report_period": "2026年三季度",
+    "title": "2026年三季度报告",
+    "announcement_date": "2026-10-22",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-10-22/1225615069.pdf",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "5a4dce22ffd21598"
+  },
+  {
+    "exchange": "深交所",
     "company_name": "宁德时代",
     "stock_code": "300750",
     "report_type": "三季报",
