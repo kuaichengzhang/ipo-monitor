@@ -495,6 +495,36 @@
     "uid": "5a4dce22ffd21598"
   },
   {
+    "exchange": "港交所",
+    "company_name": "SENIOR MATERIAL",
+    "stock_code": "06067",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Quarterly Results / Inside Information]",
+    "announcement_date": "2026-10-22",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1022/2026102201265.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "a10153983f82b373"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CHINA TELECOM",
+    "stock_code": "00728",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information / Quarterly Results]",
+    "announcement_date": "2026-10-22",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1022/2026102201245.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "f795bce379a7c3da"
+  },
+  {
     "exchange": "深交所",
     "company_name": "宁德时代",
     "stock_code": "300750",
