@@ -496,6 +496,21 @@
   },
   {
     "exchange": "深交所",
+    "company_name": "初灵信息",
+    "stock_code": "300250",
+    "report_type": "三季报",
+    "report_period": "2026年三季度",
+    "title": "2026年三季度报告",
+    "announcement_date": "2026-10-30",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-10-30/1225646046.pdf",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "5b61d99a6b3f988b"
+  },
+  {
+    "exchange": "深交所",
     "company_name": "东晶电子",
     "stock_code": "002199",
     "report_type": "半年报",
