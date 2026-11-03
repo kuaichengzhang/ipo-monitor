@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "深交所",
+    "company_name": "泸州老窖",
+    "stock_code": "000568",
+    "report_type": "三季报",
+    "report_period": "2026年第三季度",
+    "title": "2026年第三季度报告（英文）",
+    "announcement_date": "2026-11-04",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-11-04/1225654974.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "260d9d3c9e880ac9"
+  },
+  {
     "exchange": "上交所",
     "company_name": "绿的谐波",
     "stock_code": "688017",
@@ -43,6 +58,36 @@
     "sub_industry": "",
     "is_18a": false,
     "uid": "ad158bc7c44d3ee6"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "ANCHORSTONE",
+    "stock_code": "01592",
+    "report_type": "Annual Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Final Results / Other - Miscellaneous]",
+    "announcement_date": "2026-11-03",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1103/2026110302431.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "fc3b21eb292b10eb"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "GOLDPAC GROUP",
+    "stock_code": "03315",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-11-03",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1103/2026110302349.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "bfd0c3706b56f63b"
   },
   {
     "exchange": "港交所",
