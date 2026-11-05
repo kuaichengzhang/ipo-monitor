@@ -1,5 +1,20 @@
 [
   {
+    "exchange": "上交所",
+    "company_name": "华虹宏力",
+    "stock_code": "688347",
+    "report_type": "三季报",
+    "report_period": "2026年第三季度",
+    "title": "2026年第三季度报告",
+    "announcement_date": "2026-11-06",
+    "announcement_url": "https://static.cninfo.com.cn/finalpage/2026-11-06/1225659080.PDF",
+    "source": "CNINFO",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "5b168c41a16fa2f7"
+  },
+  {
     "exchange": "深交所",
     "company_name": "泸州老窖",
     "stock_code": "000568",
