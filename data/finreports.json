@@ -15,6 +15,36 @@
     "uid": "5b168c41a16fa2f7"
   },
   {
+    "exchange": "港交所",
+    "company_name": "HIGH FASHION",
+    "stock_code": "00608",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Other - Miscellaneous]",
+    "announcement_date": "2026-11-06",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1106/2026110600261.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "91b0209362b90c1d"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "HKEX<br/>HKEX-R",
+    "stock_code": "00388<br/>80388",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Quarterly Results]",
+    "announcement_date": "2026-11-06",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1106/2026110600217.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "f6b62e17ef9b77eb"
+  },
+  {
     "exchange": "深交所",
     "company_name": "泸州老窖",
     "stock_code": "000568",
