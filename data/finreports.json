@@ -31,6 +31,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "HESAI-W",
+    "stock_code": "02525",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information / Other - Business Update / Quarterly Results]",
+    "announcement_date": "2026-11-10",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1110/2026111001053.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "fb7863c73b2acabf"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "CB GLOBAL",
     "stock_code": "08026",
     "report_type": "Profit Warning",
