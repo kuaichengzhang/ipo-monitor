@@ -1,5 +1,35 @@
 [
   {
+    "exchange": "港交所",
+    "company_name": "NISSIN FOODS",
+    "stock_code": "01475",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Quarterly Results / Inside Information]",
+    "announcement_date": "2026-11-11",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1111/2026111100191.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "b8ed2bcfb6614f85"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "CA CULTURAL",
+    "stock_code": "01566",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-11-11",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1111/2026111100189.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "23108c0b0f1f7a07"
+  },
+  {
     "exchange": "深交所",
     "company_name": "凯龙股份",
     "stock_code": "002783",
