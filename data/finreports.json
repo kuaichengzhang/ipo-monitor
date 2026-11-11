@@ -30,6 +30,36 @@
     "uid": "23108c0b0f1f7a07"
   },
   {
+    "exchange": "港交所",
+    "company_name": "CPBIO",
+    "stock_code": "03839",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Quarterly Results]",
+    "announcement_date": "2026-11-11",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1111/2026111101353.pdf",
+    "source": "HKEX",
+    "industry": "医疗健康",
+    "sub_industry": "其他医疗",
+    "is_18a": false,
+    "uid": "573ff1f6aa0e9256"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "MEGA GENOMICS",
+    "stock_code": "06667",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Other - Miscellaneous]",
+    "announcement_date": "2026-11-11",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1111/2026111101319.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "e02275b5647aedf9"
+  },
+  {
     "exchange": "深交所",
     "company_name": "凯龙股份",
     "stock_code": "002783",
