@@ -61,6 +61,21 @@
   },
   {
     "exchange": "港交所",
+    "company_name": "IMS GROUP",
+    "stock_code": "08136",
+    "report_type": "Profit Warning",
+    "report_period": "",
+    "title": "Announcements and Notices - [Profit Warning / Inside Information]",
+    "announcement_date": "2026-11-17",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/gem/2026/1117/2026111701319.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "6dab554e08d7b2ed"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "MAN WAH HLDGS",
     "stock_code": "01999",
     "report_type": "Interim Results",
