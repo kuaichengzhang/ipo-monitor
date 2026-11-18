@@ -1,6 +1,36 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "CSPC PHARMA",
+    "stock_code": "01093",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Quarterly Results]",
+    "announcement_date": "2026-11-18",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1118/2026111800389.pdf",
+    "source": "HKEX",
+    "industry": "医疗健康",
+    "sub_industry": "化学制药",
+    "is_18a": false,
+    "uid": "41195a24f0631b3a"
+  },
+  {
+    "exchange": "港交所",
+    "company_name": "ZTO EXPRESS-W",
+    "stock_code": "02057",
+    "report_type": "Quarterly Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Inside Information / Other - Business Update / Quarterly Results / Change in Directors or of...  MoreAnnouncements and Notices - [Inside Information / Other - Business Update / Quarterly Results / Change in Directors or of Important Executive Functions or Responsibilities / Change of Audit Committee Member / Change of Remuneration Committee Member]]",
+    "announcement_date": "2026-11-18",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1118/2026111800005.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "7ba4107c279468ff"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "WISDOM EDU INTL",
     "stock_code": "06068",
     "report_type": "Profit Warning",
