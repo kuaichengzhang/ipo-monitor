@@ -1,6 +1,21 @@
 [
   {
     "exchange": "港交所",
+    "company_name": "VITASOY INT'L",
+    "stock_code": "00345",
+    "report_type": "Interim Results",
+    "report_period": "",
+    "title": "Announcements and Notices - [Interim Results / Dividend or Distribution / Closure of Books or Change of Book Closure Period]",
+    "announcement_date": "2026-11-20",
+    "announcement_url": "https://www1.hkexnews.hk/listedco/listconews/sehk/2026/1120/2026112000175.pdf",
+    "source": "HKEX",
+    "industry": "",
+    "sub_industry": "",
+    "is_18a": false,
+    "uid": "a6dd83c6f43eae68"
+  },
+  {
+    "exchange": "港交所",
     "company_name": "SA SA INT'L",
     "stock_code": "00178",
     "report_type": "Interim Results",
